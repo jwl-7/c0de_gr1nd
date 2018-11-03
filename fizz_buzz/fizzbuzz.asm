@@ -47,8 +47,8 @@ PrintStr PROTO,                                 ; prints a string to console
 ;=                              MAIN                                =
 ;====================================================================
 main PROC
-	INVOKE PrintStr, OFFSET fizz
-	call fizzy
+    INVOKE PrintStr, OFFSET fizz
+    call fizzy
 
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
@@ -97,7 +97,7 @@ print_fizzbuzz:
     INVOKE PrintStr, OFFSET fizzbuzz   ; print 'FizzBuzz'
     call NewLine                       ; print '\n'
 
-    popad	                           ; restore 32-bit registers
+    popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_fizz:
@@ -106,7 +106,7 @@ print_fizz:
     INVOKE PrintStr, OFFSET fizz       ; print 'fizz'
     call NewLine                       ; print '\n'
 
-    popad	                           ; restore 32-bit registers
+    popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_buzz:
@@ -115,17 +115,17 @@ print_buzz:
     INVOKE PrintStr, OFFSET buzz       ; print 'buzz'
     call NewLine                       ; print '\n'
 
-    popad	                           ; restore 32-bit registers
+    popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_num:
     pushad                             ; save 32-bit registers
 
     mov eax, ecx                       ; EAX = number
-    ;INVOKE PrintNum                    ; print number
-    call NewLine					   ; print '\n'
+    call PrintNum                      ; print number
+    call NewLine                       ; print '\n'
 
-    popad	                           ; restore 32-bit registers
+    popad                              ; restore 32-bit registers
     jmp f_loop
 
 f_end:
@@ -178,7 +178,7 @@ PrintStr PROC,
         OFFSET bytesWritten,           ; returns number of bytes written
         0
 
-    popad	                           ; restore 32-bit registers
+    popad                              ; restore 32-bit registers
     ret
 PrintStr ENDP
 
@@ -189,36 +189,36 @@ PrintStr ENDP
 ;- EAX = number to print                                            -
 ;--------------------------------------------------------------------
 PrintNum PROC
-	pushad                             ; save 32-bit registers
+    pushad                             ; save 32-bit registers
 
-	xor ecx, ecx                       ; digit counter
-	mov edi, OFFSET num_buffer
-	add edi, (num_buffer_size - 1)
-	mov ebx, 10	                       ; decimal number base
+    xor ecx, ecx                       ; digit counter
+    mov edi, OFFSET num_buffer
+    add edi, (num_buffer_size - 1)
+    mov ebx, 10                        ; decimal number base
 L1:
     xor edx, edx                       ; dividend = 0
-	div ebx            	               ; EAX / radix
+    div ebx                            ; EAX / radix
 
-	xchg eax, edx        	           ; swap quotient, remainder
-	push ebx
-	mov ebx, OFFSET xtable             ; get translation table
-	xlat                               ; convert to ASCII
-	pop ebx
+    xchg eax, edx                      ; swap quotient, remainder
+    push ebx
+    mov ebx, OFFSET xtable             ; get translation table
+    xlat                               ; convert to ASCII
+    pop ebx
 
-	mov [edi], al       	           ; save the digit
-	dec edi            	               ; back up in buffer
-	xchg eax, edx        	           ; swap quotient, remainder
+    mov [edi], al                      ; save the digit
+    dec edi                               ; back up in buffer
+    xchg eax, edx                      ; swap quotient, remainder
 
-	inc ecx            	               ; digit counter++
-	or eax, eax        	               ; quotient = 0?
-	jnz L1            	               ; no: divide again
+    inc ecx                            ; digit counter++
+    or eax, eax                        ; quotient = 0?
+    jnz L1                             ; no: divide again
 
-	inc edi                             
-	mov edx, edi                       ; EDX = number string
-	;INVOKE PrintStr                    ; print digits
+    inc edi                             
+    ;mov edx, edi                      ; EDX = number string
+    INVOKE PrintStr, edi                    ; print digits
 
-	popad	                           ; restore 32-bit registers
-	ret
+    popad                              ; restore 32-bit registers
+    ret
 PrintNum ENDP
 
 ;====================================================================
@@ -229,8 +229,7 @@ PrintNum ENDP
 NewLine PROC
     pushad                             ; save 32-bit registers
     INVOKE PrintStr, OFFSET new_line   ; print '\n'
-    popad	                           ; restore 32-bit registers
-
+    popad                              ; restore 32-bit registers
     ret
 NewLine ENDP
 
