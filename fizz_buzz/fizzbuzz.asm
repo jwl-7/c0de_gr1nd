@@ -46,10 +46,91 @@ PrintStr PROTO,                                 ; prints a string to console
 ;====================================================================
 ;=                              MAIN                                =
 ;====================================================================
-main PROC      
+main PROC
+	INVOKE PrintStr, OFFSET fizz
+	call fizzy
 
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
+
+;====================================================================
+;=                             FIZZY                                =
+;====================================================================
+fizzy PROC USES eax ebx ecx edx
+    mov ecx, 1                         ; counter = 1
+
+f_test:
+    push ecx
+    xor edx, edx                       ; clear EDX
+    mov eax, ecx                       ; EAX = number
+    mov ebx, 15                        ; EBX = 15
+    div ebx                            ; number / 15
+    cmp edx, 0                         ; if divisible by both 3 and 5
+    jz print_fizzbuzz                  ;   print 'FizzBuzz'
+
+    xor edx, edx                       ; clear EDX
+    mov eax, ecx                       ; EAX = number
+    mov ebx, 3                         ; EBX = 3
+    div ebx                            ; number / 3
+    cmp edx, 0                         ; else if divisible by 3
+    jz print_fizz                      ;   print 'Fizz'
+
+    xor edx, edx                       ; clear EDX
+    mov eax, ecx                       ; EAX = number
+    mov ebx, 5                         ; EBX = 5
+    div ebx                            ; number / 5
+    cmp edx, 0                         ; else if divisible by 5
+    jz print_buzz                      ;   print 'Buzz'
+    
+    jmp print_num                      ; else print number
+
+f_loop:
+    pop ecx
+    inc ecx                            ; counter++
+    cmp ecx, 100                       ; if counter <= 100
+    jbe f_test                         ;    loop
+    jmp f_end                          ; else exit
+
+print_fizzbuzz:
+    pushad                             ; save 32-bit registers
+
+    INVOKE PrintStr, OFFSET fizzbuzz   ; print 'FizzBuzz'
+    call NewLine                       ; print '\n'
+
+    popad	                           ; restore 32-bit registers
+    jmp f_loop
+
+print_fizz:
+    pushad                             ; save 32-bit registers
+
+    INVOKE PrintStr, OFFSET fizz       ; print 'fizz'
+    call NewLine                       ; print '\n'
+
+    popad	                           ; restore 32-bit registers
+    jmp f_loop
+
+print_buzz:
+    pushad                             ; save 32-bit registers
+
+    INVOKE PrintStr, OFFSET buzz       ; print 'buzz'
+    call NewLine                       ; print '\n'
+
+    popad	                           ; restore 32-bit registers
+    jmp f_loop
+
+print_num:
+    pushad                             ; save 32-bit registers
+
+    mov eax, ecx                       ; EAX = number
+    ;INVOKE PrintNum                    ; print number
+    call NewLine					   ; print '\n'
+
+    popad	                           ; restore 32-bit registers
+    jmp f_loop
+
+f_end:
+    ret
+fizzy ENDP
 
 ;====================================================================
 ;=                            StrLength                             =
@@ -134,7 +215,7 @@ L1:
 
 	inc edi                             
 	mov edx, edi                       ; EDX = number string
-	INVOKE PrintStr                    ; print digits
+	;INVOKE PrintStr                    ; print digits
 
 	popad	                           ; restore 32-bit registers
 	ret
@@ -147,92 +228,10 @@ PrintNum ENDP
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
-    INVOKE PrintStr, new_line          ; print '\n'
+    INVOKE PrintStr, OFFSET new_line   ; print '\n'
     popad	                           ; restore 32-bit registers
-    
+
     ret
 NewLine ENDP
-
-;====================================================================
-;=                             FIZZY                                =
-;====================================================================
-fizzy PROC USES eax ebx ecx edx
-    mov ecx, 1                         ; counter = 1
-
-f_test:
-    push ecx
-    xor edx, edx                       ; clear EDX
-    mov eax, ecx                       ; EAX = number
-    mov ebx, 15                        ; EBX = 15
-    div ebx                            ; number / 15
-    cmp edx, 0                         ; if divisible by both 3 and 5
-    jz print_fizzbuzz                  ;   print 'FizzBuzz'
-
-    xor edx, edx                       ; clear EDX
-    mov eax, ecx                       ; EAX = number
-    mov ebx, 3                         ; EBX = 3
-    div ebx                            ; number / 3
-    cmp edx, 0                         ; else if divisible by 3
-    jz print_fizz                      ;   print 'Fizz'
-
-    xor edx, edx                       ; clear EDX
-    mov eax, ecx                       ; EAX = number
-    mov ebx, 5                         ; EBX = 5
-    div ebx                            ; number / 5
-    cmp edx, 0                         ; else if divisible by 5
-    jz print_buzz                      ;   print 'Buzz'
-    
-    jmp print_num                      ; else print number
-
-f_loop:
-    pop ecx
-    inc ecx                            ; counter++
-    cmp ecx, 100                       ; if counter <= 100
-    jbe f_test                         ;    loop
-    jmp f_end                          ; else exit
-
-print_fizzbuzz:
-    pushad                             ; save 32-bit registers
-
-    mov edx, OFFSET fizzbuzz           ; get fizzbuzz string
-    INVOKE PrintStr                    ; print 'FizzBuzz'
-    INVOKE NewLine                     ; print '\n'
-
-    popad	                           ; restore 32-bit registers
-    jmp f_loop
-
-print_fizz:
-    pushad                             ; save 32-bit registers
-
-    mov edx, OFFSET fizz               ; get fizz string
-    INVOKE PrintStr                    ; print 'fizz'
-    INVOKE NewLine                     ; print '\n'
-
-    popad	                           ; restore 32-bit registers
-    jmp f_loop
-
-print_buzz:
-    pushad                             ; save 32-bit registers
-
-    mov edx, OFFSET buzz               ; get buzz string
-    INVOKE PrintStr                    ; print 'buzz'
-    INVOKE NewLine                     ; print '\n'
-
-    popad	                           ; restore 32-bit registers
-    jmp f_loop
-
-print_num:
-    pushad                             ; save 32-bit registers
-
-    mov eax, ecx                       ; EAX = number
-    INVOKE PrintNum                    ; print number
-    INVOKE NewLine                     ; print '\n'
-
-    popad	                           ; restore 32-bit registers
-    jmp f_loop
-
-f_end:
-    ret
-fizzy ENDP
 
 END main
