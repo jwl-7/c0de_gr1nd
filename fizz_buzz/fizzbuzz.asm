@@ -2,7 +2,7 @@
 ;=                            FIZZ BUZZ                             =                    
 ;====================================================================
 
-; This is written in x86 assembly for MASM.
+; This is written in x86 Assembly for MASM.
 ; This program prints each number from 1 to 100 on a new line.
 ; For each multiple of 3, it prints 'Fizz' instead of the number.
 ; For each multiple of 5, it prints 'Buzz' instead of the number.
@@ -47,7 +47,7 @@ PrintStr PROTO,                                 ; prints a string to console
 ;=                              MAIN                                =
 ;====================================================================
 main PROC
-    call fizzy
+    call fizzy                         ; perform FizzBuzz
 
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
@@ -95,7 +95,7 @@ print_fizzbuzz:
 
     INVOKE PrintStr, OFFSET fizzbuzz   ; print 'FizzBuzz'
     call NewLine                       ; print '\n'
-
+    
     popad                              ; restore 32-bit registers
     jmp f_loop
 
@@ -197,22 +197,22 @@ PrintNum PROC
 L1:
     xor edx, edx                       ; dividend = 0
     div ebx                            ; EAX / radix
-
     xchg eax, edx                      ; swap quotient, remainder
+
     push ebx
     mov ebx, OFFSET xtable             ; get translation table
     xlat                               ; convert to ASCII
     pop ebx
 
     mov [edi], al                      ; save the digit
-    dec edi                               ; back up in buffer
+    dec edi                            ; back up in buffer
     xchg eax, edx                      ; swap quotient, remainder
 
     inc ecx                            ; digit counter++
     or eax, eax                        ; quotient = 0?
     jnz L1                             ; no: divide again
 
-    inc edi                             
+    inc edi                      
     INVOKE PrintStr, edi               ; print digits
 
     popad                              ; restore 32-bit registers
@@ -226,7 +226,9 @@ PrintNum ENDP
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
+
     INVOKE PrintStr, OFFSET new_line   ; print '\n'
+
     popad                              ; restore 32-bit registers
     ret
 NewLine ENDP
