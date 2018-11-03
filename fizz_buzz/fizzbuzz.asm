@@ -74,7 +74,7 @@ f_loop:
     inc ecx                                     ; counter++
     cmp ecx, 100                                ; if counter = 100
     je f_end                                    ;   exit loop
-    loop fizzy_loop
+    loop f_loop
 
 print_fizzbuzz:
     INVOKE GetStdHandle,                        ; get standard handle 
