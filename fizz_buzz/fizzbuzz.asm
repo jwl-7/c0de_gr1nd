@@ -26,6 +26,8 @@ WriteConsole PROTO,                             ; write a buffer to the console
     nNumberOfCharsToWrite:DWORD,                ; size of buffer
     lpNumberOfCharsWritten:PTR DWORD,           ; number of chars written
     lpReserved:PTR DWORD                        ; 0 (not used)
+PrintStr PROTO,                                 ; prints a string to console
+    lpString:PTR BYTE                           ; pointer to string
 
 .DATA
     fizz BYTE 'Fizz', 0
@@ -44,8 +46,7 @@ WriteConsole PROTO,                             ; write a buffer to the console
 ;====================================================================
 ;=                              MAIN                                =
 ;====================================================================
-main PROC
-    call fizzy                         ; execute fizzy       
+main PROC      
 
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
@@ -78,19 +79,20 @@ StrLength ENDP
 ;- Writes a null-terminated string to console.                      -
 ;- EDX -> points to string                                          -
 ;--------------------------------------------------------------------
-PrintStr PROC
+PrintStr PROC,
+    pString:PTR BYTE                   ; points to string
     pushad                             ; save 32-bit registers
 
-    mov [consoleOutHandle], eax        ; store address of handle
     INVOKE GetStdHandle,               ; get standard device handle
         STD_OUTPUT_HANDLE              ; standard output device
+    mov [consoleOutHandle], eax        ; store address of handle
 
-    INVOKE StrLength, edx              ; EAX = length of string
+    INVOKE StrLength, pString          ; EAX = length of string
     cld                                ; clear direction flag
 
     INVOKE WriteConsole,               ; write buffer to console
         consoleOutHandle,              ; output handle
-        edx,                           ; points to string
+        pString,                       ; points to string
         eax,                           ; string length
         OFFSET bytesWritten,           ; returns number of bytes written
         0
@@ -115,8 +117,8 @@ PrintNum PROC
 L1:
     xor edx, edx                       ; dividend = 0
 	div ebx            	               ; EAX / radix
+
 	xchg eax, edx        	           ; swap quotient, remainder
-    
 	push ebx
 	mov ebx, OFFSET xtable             ; get translation table
 	xlat                               ; convert to ASCII
@@ -145,11 +147,9 @@ PrintNum ENDP
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
-
-    mov edx, OFFSET new_line           ; get new_line string
-    INVOKE PrintStr                    ; print '\n'
-
+    INVOKE PrintStr, new_line          ; print '\n'
     popad	                           ; restore 32-bit registers
+    
     ret
 NewLine ENDP
 
@@ -182,7 +182,7 @@ f_test:
     cmp edx, 0                         ; else if divisible by 5
     jz print_buzz                      ;   print 'Buzz'
     
-    jmp print_num                     ; else print number
+    jmp print_num                      ; else print number
 
 f_loop:
     pop ecx
