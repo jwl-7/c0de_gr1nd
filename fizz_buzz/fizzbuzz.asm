@@ -121,7 +121,6 @@ L1:
 	mov ebx, OFFSET xtable             ; get translation table
 	xlat                               ; convert to ASCII
 	pop ebx
-	ret
 
 	mov [edi], al       	           ; save the digit
 	dec edi            	               ; back up in buffer
@@ -135,7 +134,7 @@ L1:
 	mov edx, edi                       ; EDX = number string
 	INVOKE PrintStr                    ; print digits
 
-	popad	                           ; restore 32-bit registers	                           ; restore 32-bit registers
+	popad	                           ; restore 32-bit registers
 	ret
 PrintNum ENDP
 
@@ -147,9 +146,6 @@ PrintNum ENDP
 NewLine PROC
     pushad                             ; save 32-bit registers
 
-    INVOKE GetStdHandle,               ; get standard device handle
-        STD_OUTPUT_HANDLE              ; standard output device
-    mov [consoleOutHandle], eax        ; store address of handle
     mov edx, OFFSET new_line           ; get new_line string
     INVOKE PrintStr                    ; print '\n'
 
@@ -186,7 +182,7 @@ f_test:
     cmp edx, 0                         ; else if divisible by 5
     jz print_buzz                      ;   print 'Buzz'
     
-    ;jmp print_num                     ; else print number
+    jmp print_num                     ; else print number
 
 f_loop:
     pop ecx
@@ -200,6 +196,7 @@ print_fizzbuzz:
 
     mov edx, OFFSET fizzbuzz           ; get fizzbuzz string
     INVOKE PrintStr                    ; print 'FizzBuzz'
+    INVOKE NewLine                     ; print '\n'
 
     popad	                           ; restore 32-bit registers
     jmp f_loop
@@ -209,6 +206,7 @@ print_fizz:
 
     mov edx, OFFSET fizz               ; get fizz string
     INVOKE PrintStr                    ; print 'fizz'
+    INVOKE NewLine                     ; print '\n'
 
     popad	                           ; restore 32-bit registers
     jmp f_loop
@@ -218,12 +216,17 @@ print_buzz:
 
     mov edx, OFFSET buzz               ; get buzz string
     INVOKE PrintStr                    ; print 'buzz'
+    INVOKE NewLine                     ; print '\n'
 
     popad	                           ; restore 32-bit registers
     jmp f_loop
 
 print_num:
     pushad                             ; save 32-bit registers
+
+    mov eax, ecx                       ; EAX = number
+    INVOKE PrintNum                    ; print number
+    INVOKE NewLine                     ; print '\n'
 
     popad	                           ; restore 32-bit registers
     jmp f_loop
