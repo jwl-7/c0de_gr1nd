@@ -86,51 +86,47 @@ f_loop:
     jmp f_end                                   ; else exit
 
 print_fizzbuzz:
+    pushad                                      ; save general-purpose registers
+
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET fizzbuzz,                        ; points to fizzbuzz
-        LENGTHOF fizzbuzz - 1,                  ; number of chars in fizzbuzz
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
+    mov edx, OFFSET fizzbuzz                    ; get fizzbuzz string
+    INVOKE PrintStr                             ; print 'FizzBuzz'
+
+    popad
     jmp f_loop
 
 print_fizz:
+    pushad                                      ; save general-purpose registers
+
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET fizz,                            ; points to fizz
-        LENGTHOF fizz - 1,                      ; number of chars in fizz
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
+    mov edx, OFFSET fizz                        ; get fizz string
+    INVOKE PrintStr                             ; print 'fizz'
+
+    popad
     jmp f_loop
 
 print_buzz:
+    pushad                                      ; save general-purpose registers
+
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET buzz,                            ; points to buzz
-        LENGTHOF buzz - 1,                      ; number of chars in buzz
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
+    mov edx, OFFSET buzz                        ; get buzz string
+    INVOKE PrintStr                             ; print 'buzz'
+
+    popad
     jmp f_loop
 
 print_num:
+    pushad                                      ; save general-purpose registers
+
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET num,                             ; points to num
-        SIZEOF num - 1,                         ; number of chars in num
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
     jmp f_loop
 
 f_end:
