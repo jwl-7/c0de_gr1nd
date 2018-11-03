@@ -81,6 +81,10 @@ StrLength ENDP
 PrintStr PROC
     pushad                             ; save 32-bit registers
 
+    mov [consoleOutHandle], eax        ; store address of handle
+    INVOKE GetStdHandle,               ; get standard device handle
+        STD_OUTPUT_HANDLE              ; standard output device
+
     INVOKE StrLength, edx              ; EAX = length of string
     cld                                ; clear direction flag
 
@@ -194,9 +198,6 @@ f_loop:
 print_fizzbuzz:
     pushad                             ; save 32-bit registers
 
-    INVOKE GetStdHandle,               ; get standard device handle
-        STD_OUTPUT_HANDLE              ; standard output device
-    mov [consoleOutHandle], eax        ; store address of handle
     mov edx, OFFSET fizzbuzz           ; get fizzbuzz string
     INVOKE PrintStr                    ; print 'FizzBuzz'
 
@@ -206,9 +207,6 @@ print_fizzbuzz:
 print_fizz:
     pushad                             ; save 32-bit registers
 
-    INVOKE GetStdHandle,               ; get standard device handle
-        STD_OUTPUT_HANDLE              ; standard output device
-    mov [consoleOutHandle], eax        ; store address of handle
     mov edx, OFFSET fizz               ; get fizz string
     INVOKE PrintStr                    ; print 'fizz'
 
@@ -218,9 +216,6 @@ print_fizz:
 print_buzz:
     pushad                             ; save 32-bit registers
 
-    INVOKE GetStdHandle,               ; get standard device handle
-        STD_OUTPUT_HANDLE              ; standard output device
-    mov [consoleOutHandle], eax        ; store address of handle
     mov edx, OFFSET buzz               ; get buzz string
     INVOKE PrintStr                    ; print 'buzz'
 
@@ -229,9 +224,7 @@ print_buzz:
 
 print_num:
     pushad                             ; save 32-bit registers
-    mov [consoleOutHandle], eax        ; store address of handle
-    INVOKE GetStdHandle,               ; get standard device handle
-        STD_OUTPUT_HANDLE              ; standard output device
+
     popad	                           ; restore 32-bit registers
     jmp f_loop
 
