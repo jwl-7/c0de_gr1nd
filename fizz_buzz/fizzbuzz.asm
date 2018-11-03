@@ -14,9 +14,10 @@ TITLE FizzBuzz
 .MODEL flat, stdcall
 .STACK 4096
 
-ExitProcess PROTO, dwExitCode:DWORD			; ends process and its threads
 STD_OUTPUT_HANDLE EQU -11					; standard output device
-WriteConsole EQU <WriteConsoleA>
+WriteConsole EQU <WriteConsoleA>            ; alias WriteConsole
+
+ExitProcess PROTO, dwExitCode:DWORD			; ends process and its threads
 GetStdHandle PROTO,               			; get standard handle
 	nStdHandle:DWORD  						; type of console handle
 WriteConsole PROTO,							; write a buffer to the console
@@ -32,20 +33,22 @@ WriteConsole PROTO,							; write a buffer to the console
     fizzbuzz BYTE 'FizzBuzz', 0
 
 .DATA?
-	consoleOutHandle dword ?
-	bytesWritten dword ?
+	consoleOutHandle DWORD ?
+	bytesWritten DWORD ?
 
 .CODE
 main PROC
     ;mov ecx, 100							; set counter to 100
+    
 	INVOKE GetStdHandle,					; get standard handle 
 		STD_OUTPUT_HANDLE					; standard output device
+
 	mov consoleOutHandle, eax				; EAX = consoleOutHandle
 	INVOKE WriteConsole,					; write buffer to console
 		consoleOutHandle,					; output handle	
-		OFFSET fizz,						; address of fizz
-		LENGTHOF fizz - 1,					; length of fizz
-		OFFSET bytesWritten, 0				; address of bytesWriten
+		OFFSET fizz,						; points to fizz
+		LENGTHOF fizz - 1,					; number of chars in fizz
+		OFFSET bytesWritten, 0				; points to bytesWritten
 
 ;fizzy:
 
