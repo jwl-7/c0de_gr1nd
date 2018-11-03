@@ -133,7 +133,7 @@ f_loop:
 print_fizzbuzz:
     pushad                                      ; save general-purpose registers
 
-    INVOKE GetStdHandle,                        ; get standard handle 
+    INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
 
     mov edx, OFFSET fizzbuzz                    ; get fizzbuzz string
@@ -145,7 +145,7 @@ print_fizzbuzz:
 print_fizz:
     pushad                                      ; save general-purpose registers
 
-    INVOKE GetStdHandle,                        ; get standard handle 
+    INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
 
     mov edx, OFFSET fizz                        ; get fizz string
@@ -157,7 +157,7 @@ print_fizz:
 print_buzz:
     pushad                                      ; save general-purpose registers
 
-    INVOKE GetStdHandle,                        ; get standard handle 
+    INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
 
     mov edx, OFFSET buzz                        ; get buzz string
@@ -169,7 +169,7 @@ print_buzz:
 print_num:
     pushad                                      ; save general-purpose registers
 
-    INVOKE GetStdHandle,                        ; get standard handle 
+    INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
     popad
     jmp f_loop
