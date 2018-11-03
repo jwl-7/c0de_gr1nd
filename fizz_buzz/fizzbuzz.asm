@@ -32,7 +32,7 @@ WriteConsole PROTO,                             ; write a buffer to the console
     buzz BYTE 'Buzz', 0
     fizzbuzz BYTE 'FizzBuzz', 0
     xtable BYTE '0123456789ABCDEF'
-    new_line BYTE '', 13, 10, 0
+    new_line BYTE ' ', 13, 10, 0
     num_buffer_size = 12
     num_buffer BYTE num_buffer_size DUP(?), 0
 
