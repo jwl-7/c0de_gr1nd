@@ -1,5 +1,5 @@
 ;=====================
-;=     Fizz Buzz     =
+;=     FIZZ BUZZ     =
 ;=====================
 
 ; This is written in x86 assembly for MASM.
@@ -37,9 +37,27 @@ WriteConsole PROTO,                             ; write a buffer to the console
     bytesWritten DWORD ?
 
 .CODE
+;=====================
+;=       MAIN        =
+;=====================
 main PROC
-    ;mov ecx, 100                               ; set counter to 100
-    
+    call fizzy                                  ; execute fizzy       
+
+    INVOKE ExitProcess, 0                       ; exit code = 0
+main ENDP
+
+;=====================
+;=       FIZZY       =
+;=====================
+fizzy PROC USES eax, ecx
+    mov ecx, 100
+
+fizzy_loop:
+
+    loop fizzy_loop
+    jmp fizzy_end
+
+fizzy_fizz:
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
@@ -50,10 +68,37 @@ main PROC
         LENGTHOF fizz - 1,                      ; number of chars in fizz
         OFFSET bytesWritten, 0                  ; points to bytesWritten
 
-;fizzy:
+    ret
 
-    ;loop fizzy            
+fizzy_buzz:
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
 
-    INVOKE ExitProcess, 0                       ; exit code = 0
-main ENDP
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET buzz,                            ; points to buzz
+        LENGTHOF buzz - 1,                      ; number of chars in buzz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
+
+    ret
+
+fizzy_fizzbuzz:
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
+
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET fizzbuzz,                        ; points to fizzbuzz
+        LENGTHOF fizzbuzz - 1,                  ; number of chars in fizzbuzz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
+
+    ret
+
+fizzy_end:
+    ret
+    
+fizz ENDP
+
 END main
