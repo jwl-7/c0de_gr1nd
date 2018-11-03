@@ -7,7 +7,7 @@
 // For each multiple of 5, it prints "Buzz" instead of the number.
 // For numbers which are multiples of both 3 and 5, it prints "FizzBuzz" instead of the number.
 
-#include <stdio.h>
+#include <iostream>
 
 int main(void) {
     int i;
