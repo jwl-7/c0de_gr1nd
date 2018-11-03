@@ -14,18 +14,18 @@ TITLE FizzBuzz
 .MODEL flat, stdcall
 .STACK 4096
 
-STD_OUTPUT_HANDLE EQU -11					; standard output device
-WriteConsole EQU <WriteConsoleA>            ; alias WriteConsole
+STD_OUTPUT_HANDLE EQU -11                       ; standard output device
+WriteConsole EQU <WriteConsoleA>                ; alias WriteConsole
 
-ExitProcess PROTO, dwExitCode:DWORD			; ends process and its threads
-GetStdHandle PROTO,               			; get standard handle
-    nStdHandle:DWORD  						; type of console handle
-WriteConsole PROTO,							; write a buffer to the console
-    handle:DWORD,							; output handle
-    lpBuffer:PTR BYTE,						; pointer to buffer
-    nNumberOfCharsToWrite:DWORD,			; size of buffer
-    lpNumberOfCharsWritten:PTR DWORD,		; number of chars written
-    lpReserved:PTR DWORD					; 0 (not used)
+ExitProcess PROTO, dwExitCode:DWORD             ; ends process and its threads
+GetStdHandle PROTO,                             ; get standard handle
+    nStdHandle:DWORD                            ; type of console handle
+WriteConsole PROTO,                             ; write a buffer to the console
+    handle:DWORD,                               ; output handle
+    lpBuffer:PTR BYTE,                          ; pointer to buffer
+    nNumberOfCharsToWrite:DWORD,                ; size of buffer
+    lpNumberOfCharsWritten:PTR DWORD,           ; number of chars written
+    lpReserved:PTR DWORD                        ; 0 (not used)
 
 .DATA
     fizz BYTE 'Fizz', 0
@@ -38,22 +38,22 @@ WriteConsole PROTO,							; write a buffer to the console
 
 .CODE
 main PROC
-    ;mov ecx, 100							; set counter to 100
+    ;mov ecx, 100                               ; set counter to 100
     
-    INVOKE GetStdHandle,					; get standard handle 
-        STD_OUTPUT_HANDLE					; standard output device
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
 
-    mov consoleOutHandle, eax				; EAX = consoleOutHandle
-    INVOKE WriteConsole,					; write buffer to console
-        consoleOutHandle,					; output handle	
-        OFFSET fizz,						; points to fizz
-        LENGTHOF fizz - 1,					; number of chars in fizz
-        OFFSET bytesWritten, 0				; points to bytesWritten
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET fizz,                            ; points to fizz
+        LENGTHOF fizz - 1,                      ; number of chars in fizz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
 
 ;fizzy:
 
     ;loop fizzy            
 
-    INVOKE ExitProcess, 0	; exit code = 0
+    INVOKE ExitProcess, 0                       ; exit code = 0
 main ENDP
 END main
