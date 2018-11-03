@@ -1,6 +1,6 @@
-;=====================
-;=     FIZZ BUZZ     =
-;=====================
+;====================================================================
+;=                            FIZZ BUZZ                             =                    
+;====================================================================
 
 ; This is written in x86 assembly for MASM.
 ; This program prints each number from 1 to 100 on a new line.
@@ -38,18 +38,18 @@ WriteConsole PROTO,                             ; write a buffer to the console
     bytesWritten DWORD ?
 
 .CODE
-;=====================
-;=       MAIN        =
-;=====================
+;====================================================================
+;=                              MAIN                                =
+;====================================================================
 main PROC
     call fizzy                                  ; execute fizzy       
 
     INVOKE ExitProcess, 0                       ; terminate program
 main ENDP
 
-;=====================
-;=       FIZZY       =
-;=====================
+;====================================================================
+;=                             FIZZY                                =
+;====================================================================
 fizzy PROC USES eax ebx ecx edx
     mov ecx, 1                                  ; counter = 1
 
@@ -136,5 +136,15 @@ print_num:
 f_end:
     ret
 fizzy ENDP
+
+;====================================================================
+;=                            PrintStr                              =
+;====================================================================
+PrintStr PROC
+    pushad
+
+    popad
+    ret
+PrintStr ENDP
 
 END main
