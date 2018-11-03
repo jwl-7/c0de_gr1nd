@@ -135,7 +135,7 @@ print_fizzbuzz:
 
     INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
-
+    mov [consoleOutHandle], eax                 ; store address of handle
     mov edx, OFFSET fizzbuzz                    ; get fizzbuzz string
     INVOKE PrintStr                             ; print 'FizzBuzz'
 
@@ -147,7 +147,7 @@ print_fizz:
 
     INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
-
+    mov [consoleOutHandle], eax                 ; store address of handle
     mov edx, OFFSET fizz                        ; get fizz string
     INVOKE PrintStr                             ; print 'fizz'
 
@@ -159,7 +159,7 @@ print_buzz:
 
     INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
-
+    mov [consoleOutHandle], eax                 ; store address of handle
     mov edx, OFFSET buzz                        ; get buzz string
     INVOKE PrintStr                             ; print 'buzz'
 
@@ -168,7 +168,7 @@ print_buzz:
 
 print_num:
     pushad                                      ; save general-purpose registers
-
+    mov [consoleOutHandle], eax                 ; store address of handle
     INVOKE GetStdHandle,                        ; get standard device handle
         STD_OUTPUT_HANDLE                       ; standard output device
     popad
