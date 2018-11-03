@@ -48,6 +48,51 @@ main PROC
 main ENDP
 
 ;====================================================================
+;=                            StrLength                             =
+;====================================================================
+;- Gets length of a null-terminated string.                         -
+;- Receives: pString -> string pointer                              -
+;- Returns: EAX = string length                                     -
+;--------------------------------------------------------------------
+StrLength PROC USES edi,                        
+    pString:PTR BYTE                            ; points to string
+
+    mov edi, pString
+    xor eax, eax                                ; EAX = character count
+L1:
+    cmp BYTE PTR [edi],0                        ; end of string?
+    je  L2                                      ; yes: quit
+    inc edi                                     ; no: point to next
+    inc eax                                     ; count++
+    jmp L1
+L2: 
+    ret
+StrLength ENDP
+
+;====================================================================
+;=                            PrintStr                              =
+;====================================================================
+;- Writes a null-terminated string to standard output               -
+;- EDX -> points to string                                          -
+;--------------------------------------------------------------------
+PrintStr PROC
+    pushad                                      ; save general-purpose registers
+
+    INVOKE StrLength, edx                       ; EAX = length of string
+    cld                                         ; clear direction flag
+
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle
+        edx,                                    ; points to string
+        eax,                                    ; string length
+        OFFSET bytesWritten,                    ; returns number of bytes written
+        0
+
+    popad
+    ret
+PrintStr ENDP
+
+;====================================================================
 ;=                             FIZZY                                =
 ;====================================================================
 fizzy PROC USES eax ebx ecx edx
@@ -126,56 +171,11 @@ print_num:
 
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
-
+    popad
     jmp f_loop
 
 f_end:
     ret
 fizzy ENDP
-
-;====================================================================
-;=                            PrintStr                              =
-;====================================================================
-;- Writes a null-terminated string to standard output               -
-;- EDX -> points to string                                          -
-;--------------------------------------------------------------------
-PrintStr PROC
-    pushad                                      ; save general-purpose registers
-
-    INVOKE StrLength, edx                       ; EAX = length of string
-    cld                                         ; clear direction flag
-
-    INVOKE WriteConsole,                        ; write buffer to console
-	    consoleOutHandle,     	                ; output handle
-	    edx,	                                ; points to string
-	    eax,	                                ; string length
-	    OFFSET bytesWritten,  	                ; returns number of bytes written
-	    0
-
-    popad
-    ret
-PrintStr ENDP
-
-;====================================================================
-;=                            StrLength                             =
-;====================================================================
-;- Gets length of a null-terminated string.                         -
-;- Receives: pString -> string pointer                              -
-;- Returns: EAX = string length                                     -
-;--------------------------------------------------------------------
-StrLength PROC USES edi,                        
-	pString:PTR BYTE                            ; points to string
-
-	mov edi, pString
-	xor eax, eax    	                        ; EAX = character count
-L1:
-	cmp BYTE PTR [edi],0	                    ; end of string?
-	je  L2	                                    ; yes: quit
-	inc edi	                                    ; no: point to next
-	inc eax	                                    ; count++
-	jmp L1
-L2: 
-    ret
-StrLength ENDP
 
 END main
