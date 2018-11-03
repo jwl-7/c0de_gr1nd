@@ -49,41 +49,29 @@ main ENDP
 ;=====================
 ;=       FIZZY       =
 ;=====================
-fizzy PROC USES eax ecx
-    mov ecx, 100
+fizzy PROC USES eax ecx edx
+    mov ecx, 1                                  ; counter = 1
 
-fizzy_loop:
+f_loop:
 
+f1:
+    mov eax, ecx                                ; EAX = current number (dividend)
+    mov ebx, 3                                  ; EBX = 3 (divisor)
+    div ebx                                     ; EAX / EBX (dividend / divisor)
+    cmp edx, 0
+
+f2:
+    mov eax, ecx                                ; EAX = current number (dividend)
+    mov ebx, 5                                  ; EBX = 5 (divisor)
+    div ebx                                     ; EAX / EBX (dividend / divisor)
+    cmp edx, 0                                  ; compare remainder to 0
+
+    inc ecx                                     ; counter++
+    cmp ecx, 100                                ; if counter = 100
+    je f_end                                    ;   exit loop
     loop fizzy_loop
-    jmp fizzy_end
 
-fizzy_fizz:
-    INVOKE GetStdHandle,                        ; get standard handle 
-        STD_OUTPUT_HANDLE                       ; standard output device
-
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET fizz,                            ; points to fizz
-        LENGTHOF fizz - 1,                      ; number of chars in fizz
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
-
-    ret
-
-fizzy_buzz:
-    INVOKE GetStdHandle,                        ; get standard handle 
-        STD_OUTPUT_HANDLE                       ; standard output device
-
-    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
-    INVOKE WriteConsole,                        ; write buffer to console
-        consoleOutHandle,                       ; output handle    
-        OFFSET buzz,                            ; points to buzz
-        LENGTHOF buzz - 1,                      ; number of chars in buzz
-        OFFSET bytesWritten, 0                  ; points to bytesWritten
-
-    ret
-
-fizzy_fizzbuzz:
+print_fizzbuzz:
     INVOKE GetStdHandle,                        ; get standard handle 
         STD_OUTPUT_HANDLE                       ; standard output device
 
@@ -96,9 +84,47 @@ fizzy_fizzbuzz:
 
     ret
 
-fizzy_end:
+print_fizz:
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
+
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET fizz,                            ; points to fizz
+        LENGTHOF fizz - 1,                      ; number of chars in fizz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
+
     ret
 
+print_buzz:
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
+
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET buzz,                            ; points to buzz
+        LENGTHOF buzz - 1,                      ; number of chars in buzz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
+
+    ret
+
+print_num:
+    INVOKE GetStdHandle,                        ; get standard handle 
+        STD_OUTPUT_HANDLE                       ; standard output device
+
+    mov consoleOutHandle, eax                   ; EAX = consoleOutHandle
+    INVOKE WriteConsole,                        ; write buffer to console
+        consoleOutHandle,                       ; output handle    
+        OFFSET buzz,                            ; points to buzz
+        LENGTHOF buzz - 1,                      ; number of chars in buzz
+        OFFSET bytesWritten, 0                  ; points to bytesWritten
+
+    ret
+
+f_end:
+    ret
 fizzy ENDP
 
 END main
