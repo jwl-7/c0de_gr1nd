@@ -47,7 +47,6 @@ PrintStr PROTO,                                 ; prints a string to console
 ;=                              MAIN                                =
 ;====================================================================
 main PROC
-    INVOKE PrintStr, OFFSET fizz
     call fizzy
 
     INVOKE ExitProcess, 0              ; terminate program
@@ -214,8 +213,7 @@ L1:
     jnz L1                             ; no: divide again
 
     inc edi                             
-    ;mov edx, edi                      ; EDX = number string
-    INVOKE PrintStr, edi                    ; print digits
+    INVOKE PrintStr, edi               ; print digits
 
     popad                              ; restore 32-bit registers
     ret
