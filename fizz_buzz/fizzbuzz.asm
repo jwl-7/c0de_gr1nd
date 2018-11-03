@@ -32,6 +32,7 @@ WriteConsole PROTO,                             ; write a buffer to the console
     buzz BYTE 'Buzz', 0
     fizzbuzz BYTE 'FizzBuzz', 0
     xtable BYTE '0123456789ABCDEF'
+    new_line BYTE '', 13, 10, 0
     num_buffer_size = 12
     num_buffer BYTE num_buffer_size DUP(?), 0
 
@@ -133,6 +134,24 @@ L1:
 	popad	                           ; restore 32-bit registers	                           ; restore 32-bit registers
 	ret
 PrintNum ENDP
+
+;====================================================================
+;=                             NewLine                              =
+;====================================================================
+;- Writes a carriage return to console.                             -
+;--------------------------------------------------------------------
+NewLine PROC
+    pushad                             ; save 32-bit registers
+
+    INVOKE GetStdHandle,               ; get standard device handle
+        STD_OUTPUT_HANDLE              ; standard output device
+    mov [consoleOutHandle], eax        ; store address of handle
+    mov edx, OFFSET new_line           ; get new_line string
+    INVOKE PrintStr                    ; print '\n'
+
+    popad	                           ; restore 32-bit registers
+    ret
+NewLine ENDP
 
 ;====================================================================
 ;=                             FIZZY                                =
