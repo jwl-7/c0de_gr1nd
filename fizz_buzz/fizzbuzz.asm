@@ -53,15 +53,23 @@ fizzy PROC USES eax ebx ecx edx
     mov ecx, 1                                  ; counter = 1
 
 f_loop:
-    mov eax, ecx                                ; EAX = current number (dividend)
-    mov ebx, 3                                  ; EBX = 3 (divisor)
-    div ebx                                     ; EAX / EBX (dividend / divisor)
-    cmp edx, 0
-    
-    mov eax, ecx                                ; EAX = current number (dividend)
-    mov ebx, 5                                  ; EBX = 5 (divisor)
-    div ebx                                     ; EAX / EBX (dividend / divisor)
-    cmp edx, 0                                  ; compare remainder to 0
+    mov eax, ecx                                ; EAX = number
+    mov ebx, 15                                 ; EBX = 15
+    div ebx                                     ; number / 15
+    cmp edx, 0                                  ; if divisible by both 3 and 5
+    jz print_fizzbuzz                           ;   print 'FizzBuzz'
+
+    mov eax, ecx                                ; EAX = number
+    mov ebx, 3                                  ; EBX = 3
+    div ebx                                     ; number / 3
+    cmp edx, 0                                  ; if divisible by 3
+    jz print_fizz                               ;   print 'Fizz'
+
+    mov eax, ecx                                ; EAX = number
+    mov ebx, 5                                  ; EBX = 5
+    div ebx                                     ; number / 5
+    cmp edx, 0                                  ; if divisible by 5
+    jz print_buzz                               ;   print 'Buzz'
 
     inc ecx                                     ; counter++
     cmp ecx, 100                                ; if counter = 100
