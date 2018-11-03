@@ -31,6 +31,7 @@ WriteConsole PROTO,                             ; write a buffer to the console
     fizz BYTE 'Fizz', 0
     buzz BYTE 'Buzz', 0
     fizzbuzz BYTE 'FizzBuzz', 0
+    xtable BYTE '0123456789ABCDEF'
     num_buffer_size = 12
     num_buffer BYTE num_buffer_size DUP(?), 0
 
@@ -110,22 +111,27 @@ L1:
     xor edx, edx                       ; dividend = 0
 	div ebx            	               ; EAX / radix
 	xchg eax, edx        	           ; swap quotient, remainder
-	call AsciiDigit     	; convert AL to ASCII
-	mov [edi],al       	; save the digit
-	dec edi            	; back up in buffer
-	xchg eax,edx        	; swap quotient, remainder
+    
+	push ebx
+	mov ebx, OFFSET xtable             ; get translation table
+	xlat                               ; convert to ASCII
+	pop ebx
+	ret
 
-	inc ecx            	; increment digit count
-	or eax,eax        	; quotient = 0?
-	jnz L1            	; no, divide again
+	mov [edi], al       	           ; save the digit
+	dec edi            	               ; back up in buffer
+	xchg eax, edx        	           ; swap quotient, remainder
 
-	 ; Display the digits (CX = count)
-	 inc edi
-	 mov edx,edi
-	 call  WriteString
+	inc ecx            	               ; digit counter++
+	or eax, eax        	               ; quotient = 0?
+	jnz L1            	               ; no: divide again
 
-	 popad	                           ; restore 32-bit registers	                           ; restore 32-bit registers
-	 ret
+	inc edi                             
+	mov edx, edi                       ; EDX = number string
+	INVOKE PrintStr                    ; print digits
+
+	popad	                           ; restore 32-bit registers	                           ; restore 32-bit registers
+	ret
 PrintNum ENDP
 
 ;====================================================================
