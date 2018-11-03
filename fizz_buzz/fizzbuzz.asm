@@ -49,7 +49,7 @@ main ENDP
 ;=====================
 ;=       FIZZY       =
 ;=====================
-fizzy PROC USES eax, ecx
+fizzy PROC USES eax ecx
     mov ecx, 100
 
 fizzy_loop:
@@ -98,7 +98,7 @@ fizzy_fizzbuzz:
 
 fizzy_end:
     ret
-    
-fizz ENDP
+
+fizzy ENDP
 
 END main
