@@ -53,14 +53,11 @@ fizzy PROC USES eax ebx ecx edx
     mov ecx, 1                                  ; counter = 1
 
 f_loop:
-
-f1:
     mov eax, ecx                                ; EAX = current number (dividend)
     mov ebx, 3                                  ; EBX = 3 (divisor)
     div ebx                                     ; EAX / EBX (dividend / divisor)
     cmp edx, 0
-
-f2:
+    
     mov eax, ecx                                ; EAX = current number (dividend)
     mov ebx, 5                                  ; EBX = 5 (divisor)
     div ebx                                     ; EAX / EBX (dividend / divisor)
