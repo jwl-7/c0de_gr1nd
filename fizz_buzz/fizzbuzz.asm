@@ -154,17 +154,19 @@ PrintStr ENDP
 ;- Receives: pString -> string pointer                              -
 ;- Returns: EAX = string length                                     -
 ;--------------------------------------------------------------------
-StrLength PROC USES edi,
-	pString:PTR BYTE
-	mov edi,pString
-	mov eax,0     	                ; character count
+StrLength PROC USES edi,                        
+	pString:PTR BYTE                            ; points to string
+
+	mov edi, pString
+	xor eax, eax    	                        ; EAX = character count
 L1:
-	cmp BYTE PTR [edi],0	      ; end of string?
-	je  L2	                     ; yes: quit
-	inc edi	                     ; no: point to next
-	inc eax	                     ; add 1 to count
+	cmp BYTE PTR [edi],0	                    ; end of string?
+	je  L2	                                    ; yes: quit
+	inc edi	                                    ; no: point to next
+	inc eax	                                    ; count++
 	jmp L1
-L2: ret
+L2: 
+    ret
 StrLength ENDP
 
 END main
