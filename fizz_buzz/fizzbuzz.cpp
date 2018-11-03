@@ -9,9 +9,8 @@
 
 #include <iostream>
 
-int main(void) {
-    int i;
-    for (i = 1; i <= 100; i++) {
+void fizzy() {
+    for (int i = 1; i <= 100; i++) {
         if (i % 3 == 0 && i % 5 == 0)
             std::cout << "FizzBuzz\n";
         else if (i % 3 == 0)
@@ -20,7 +19,11 @@ int main(void) {
             std::cout << "Buzz\n";
         else
             std::cout << i << "\n";
-    }
+    }    
+}
+
+int main(void) {
+    fizzy();
 
     return 0;
 }
