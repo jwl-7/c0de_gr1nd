@@ -49,7 +49,7 @@ main ENDP
 ;=====================
 ;=       FIZZY       =
 ;=====================
-fizzy PROC USES eax ecx edx
+fizzy PROC USES eax ebx ecx edx
     mov ecx, 1                                  ; counter = 1
 
 f_loop:
