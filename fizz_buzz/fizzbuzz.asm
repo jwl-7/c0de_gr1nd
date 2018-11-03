@@ -140,8 +140,21 @@ fizzy ENDP
 ;====================================================================
 ;=                            PrintStr                              =
 ;====================================================================
+;- Writes a null-terminated string to standard output               -
+;- EDX -> points to string                                          -
+;--------------------------------------------------------------------
 PrintStr PROC
-    pushad
+    pushad                                      ; save general-purpose registers
+
+    INVOKE StrLength, edx                       ; EAX = length of string
+    cld                                         ; clear direction flag
+
+    INVOKE WriteConsole,                        ; write buffer to console
+	    consoleOutHandle,     	                ; output handle
+	    edx,	                                ; points to string
+	    eax,	                                ; string length
+	    OFFSET bytesWritten,  	                ; returns number of bytes written
+	    0
 
     popad
     ret
