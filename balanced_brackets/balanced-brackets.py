@@ -8,7 +8,7 @@
 # Time Complexity = 
 
 class Solution:
-    def balanced_brackets(self, expression):
+    def is_balanced(self, expression):
         opening = tuple('[({')
         closing = tuple('])}')
         brackets = dict(zip(opening, closing))
@@ -26,11 +26,11 @@ class Solution:
             print('> NOT BALANCED')
     
 def main():
-    sol = Solution()
+    s = Solution()
 
     #print('Enter expression: ')
     #statement = input()
     expression = 'test() 123[]}'
-    sol.balanced_brackets(expression)
+    s.is_balanced(expression)
 
 main()
