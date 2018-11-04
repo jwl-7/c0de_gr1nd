@@ -35,8 +35,7 @@ PrintStr PROTO,                                 ; prints a string to console
     fizzbuzz BYTE 'FizzBuzz', 0
     xtable BYTE '0123456789ABCDEF'
     new_line BYTE ' ', 13, 10, 0
-    num_buffer_size = 12
-    num_buffer BYTE num_buffer_size DUP(?), 0
+    num_buffer BYTE 12 DUP(?), 0
 
 .DATA?
     consoleOutHandle DWORD ?
@@ -59,7 +58,7 @@ fizzy PROC USES eax ebx ecx edx
     mov ecx, 1                         ; counter = 1
 
 f_test:
-    push ecx
+    push ecx                           ; save counter
     xor edx, edx                       ; clear EDX
     mov eax, ecx                       ; EAX = number
     mov ebx, 15                        ; EBX = 15
@@ -84,7 +83,7 @@ f_test:
     jmp print_num                      ; else print number
 
 f_loop:
-    pop ecx
+    pop ecx                            ; restore counter
     inc ecx                            ; counter++
     cmp ecx, 100                       ; if counter <= 100
     jbe f_test                         ;    loop
@@ -141,7 +140,7 @@ fizzy ENDP
 StrLength PROC USES edi,                        
     pString:PTR BYTE                   ; points to string
 
-    mov edi, pString
+    mov edi, pString                   ; EDI = pString
     xor eax, eax                       ; EAX = character count
 L1:
     cmp BYTE PTR [edi],0               ; end of string?
@@ -175,7 +174,7 @@ PrintStr PROC,
         pString,                       ; points to string
         eax,                           ; string length
         OFFSET bytesWritten,           ; returns number of bytes written
-        0
+        0                              ; not used
 
     popad                              ; restore 32-bit registers
     ret
@@ -191,18 +190,18 @@ PrintNum PROC
     pushad                             ; save 32-bit registers
 
     xor ecx, ecx                       ; digit counter
-    mov edi, OFFSET num_buffer
-    add edi, (num_buffer_size - 1)
+    mov edi, OFFSET num_buffer         ; EDI points to num_buffer
+    add edi, 11                        ; EDI += 11
     mov ebx, 10                        ; decimal number base
 L1:
     xor edx, edx                       ; dividend = 0
     div ebx                            ; EAX / radix
     xchg eax, edx                      ; swap quotient, remainder
 
-    push ebx
+    push ebx                           ; save EBX
     mov ebx, OFFSET xtable             ; get translation table
     xlat                               ; convert to ASCII
-    pop ebx
+    pop ebx                            ; restore EBX
 
     mov [edi], al                      ; save the digit
     dec edi                            ; back up in buffer
@@ -212,7 +211,7 @@ L1:
     or eax, eax                        ; quotient = 0?
     jnz L1                             ; no: divide again
 
-    inc edi                      
+    inc edi                            ; EDI++
     INVOKE PrintStr, edi               ; print digits
 
     popad                              ; restore 32-bit registers
