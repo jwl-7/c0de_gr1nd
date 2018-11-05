@@ -19,14 +19,10 @@ class Solution:
             elif not stack and char in closing:
                 return False
             elif stack:
-                last = stack[-1]
-                if stack and last in brackets and brackets[last] == char:
+                peek = stack[-1]
+                if stack and peek in brackets and brackets[peek] == char:
                     stack.pop()
-        print(stack)
-        if not stack:
-            return True
-        else:
-            return False
+        return True
     
 def main():
     s = Solution()
