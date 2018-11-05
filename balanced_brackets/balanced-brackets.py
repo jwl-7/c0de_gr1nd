@@ -17,13 +17,15 @@ class Solution:
         for char in expression:
             if char in opening:
                 stack.append(char)
-            #elif stack and char in closing:
-                #stack.pop()
+            elif not stack and char in closing:
+                return False
+            else:
+                stack.pop()
         print(stack)
         if not stack:
-            print('> BALANCED')
+            return True
         else:
-            print('> NOT BALANCED')
+            return False
     
 def main():
     s = Solution()
