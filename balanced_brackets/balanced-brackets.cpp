@@ -21,6 +21,7 @@ class Solution {
                     stack.push(str[i]);
                 }
                 else if (str[i] == ']' || str[i] == ')' || str[i] == '}') {
+                    // TODO: test for correct pairs
                     if (stack.empty()) return false;
                     else stack.pop();
                 }
@@ -33,7 +34,7 @@ int main(void) {
     Solution s;
     std::string test1 = "()[]{}";    // true
     std::string test2 = "{([])}";    // true
-    std::string test3 = "()[";       // false
+    std::string test3 = "[)";        // false (program is wrongly saying true)
 
     //std::cout << "Enter expression: ";
     std::cout << std::boolalpha << s.is_balanced(test1) << '\n';
