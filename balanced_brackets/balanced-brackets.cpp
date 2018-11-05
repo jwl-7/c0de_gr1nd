@@ -7,6 +7,8 @@
 // Runtime: O(n)
 
 #include <iostream>
+#include <stack>
+#include <string>
 
 class Solution {
     public bool is_balanced(string expression) {
