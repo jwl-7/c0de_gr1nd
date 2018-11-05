@@ -11,10 +11,22 @@
 #include <string>
 
 class Solution {
-    public bool is_balanced(string expression) {
+    public: 
+        bool is_pair(char opening, char closing) {
+            if (opening == '[' && closing == ']')
+                return true;
+            else if (opening == '(' && closing == ')')
+                return true;
+            else if (opening == '{' && closing == '}')
+                return true;
+            else
+                return false;
+        }
 
-    }
-}
+        bool is_balanced(std::string expression) {
+
+        }
+};
 
 int main(void) {
     Solution s;
