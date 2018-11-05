@@ -14,22 +14,29 @@ class Solution {
     public: 
         bool is_balanced(std::string expression) {
             std::string str = expression;
-            stack<char> stack;
+            std::stack<char> stack;
 
             for (int i = 0; i < str.length(); i++) {
                 if (str[i] == '[' || str[i] == '(' || str[i] == '{') {
                     stack.push(str[i]);
                 }
-                else if (stack.empty() && )
+                else if (str[i] == ']' || str[i] == ')' || str[i] == '}') {
+                    if (stack.empty()) return false;
+                    else stack.pop();
+                }
             }
+            return stack.empty();
         }
 };
 
 int main(void) {
-    //Solution s;
+    Solution s;
     std::string test1 = "()[]{}";    // true
     std::string test2 = "{([])}";    // true
     std::string test3 = "()[";       // false
+
+    //std::cout << "Enter expression: ";
+    std::cout << s.is_balanced(test1);
 
     return 0;
 }
