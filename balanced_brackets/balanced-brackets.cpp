@@ -29,7 +29,11 @@ class Solution {
 };
 
 int main(void) {
-    Solution s;
+    //Solution s;
+    std::string test1 = "()[]{}";    // true
+    std::string test2 = "{([])}";    // true
+    std::string test3 = "()[";       // false
+
 
     return 0;
 }
