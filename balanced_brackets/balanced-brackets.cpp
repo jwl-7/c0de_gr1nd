@@ -12,6 +12,13 @@
 
 class Solution {
     public: 
+        bool is_pair(char opening, char closing) {
+            if (opening == '[' && closing == ']') return true;
+            if (opening == '(' && closing == ')') return true;
+            if (opening == '{' && closing == '}') return true;
+            else return false;
+        }
+
         bool is_balanced(std::string expression) {
             std::string str = expression;
             std::stack<char> stack;
