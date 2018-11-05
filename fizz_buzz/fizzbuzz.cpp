@@ -24,6 +24,5 @@ void fizzy() {
 
 int main(void) {
     fizzy();
-
     return 0;
 }
