@@ -40,14 +40,11 @@ class Solution {
 
 int main(void) {
     Solution s;
-    std::string test1 = "()[]{}";    // true
-    std::string test2 = "{([])}";    // true
-    std::string test3 = "[)";        // false
+    std::string expression;
 
-    //std::cout << "Enter expression: ";
-    std::cout << std::boolalpha << s.is_balanced(test1) << '\n';
-    std::cout << std::boolalpha << s.is_balanced(test2) << '\n';
-    std::cout << std::boolalpha << s.is_balanced(test3) << '\n';
+    std::cout << "Enter expression: ";
+    std::cin >> expression;
+    std::cout << std::boolalpha << s.is_balanced(expression);
 
     return 0;
 }
