@@ -17,16 +17,15 @@ class Solution:
             if char in opening:
                 print('push char: ' + char)
                 print('brackets[char] = ' + brackets[char])
-                print('')
+                print('--------------------------------------')
                 stack.append(char)
                 match = brackets[char]
                 peek = stack[-1]
             elif not stack and char in closing:
-                return False
-            if stack and peek in brackets and brackets[peek] == char:
-                    print('peek = ' + peek)
-                    print('brackets[peek] ' + brackets[peek])
+                return False     
+            elif stack and brackets[peek] == char:
                     stack.pop()
+                    print('stack after pop = ' + str(stack))
         return False
     
 def main():
