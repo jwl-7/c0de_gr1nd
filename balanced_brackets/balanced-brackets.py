@@ -22,8 +22,7 @@ class Solution:
                 peek = stack[-1]
             elif not stack and char in closing:
                 return False
-            if stack:
-                if peek in brackets and brackets[peek] == char:
+            if stack and peek in brackets and brackets[peek] == char:
                     print("peek = " + peek)
                     print("brackets[peek] " + brackets[peek])
                     stack.pop()
