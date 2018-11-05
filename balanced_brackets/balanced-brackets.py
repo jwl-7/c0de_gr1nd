@@ -19,8 +19,10 @@ class Solution:
                 stack.append(char)
             elif not stack and char in closing:
                 return False
-            else:
-                stack.pop()
+            elif stack:
+                last = stack[-1]
+                if stack and last in brackets and brackets[last] == char:
+                    stack.pop()
         print(stack)
         if not stack:
             return True
@@ -32,7 +34,7 @@ def main():
 
     #print('Enter expression: ')
     #statement = input()
-    expression = 'test() 123[]}'
-    s.is_balanced(expression)
+    expression = 'test() 123[]{}'
+    print(s.is_balanced(expression))
 
 main()
