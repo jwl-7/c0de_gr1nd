@@ -26,12 +26,8 @@ class Solution:
     
 def main():
     s = Solution()
-
-    #print('Enter expression: ')
-    #expression = input()
-    #print(s.is_balanced(expression))
-    print(s.is_balanced('(([])){[()][]}'))
-    print(s.is_balanced('())[]{}'))
-    print(s.is_balanced('[(])'))
+    print('Enter expression:')
+    expression = input()
+    print(s.is_balanced(expression))
 
 main()
