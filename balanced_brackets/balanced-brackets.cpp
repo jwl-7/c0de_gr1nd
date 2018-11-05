@@ -12,22 +12,15 @@
 
 class Solution {
     public: 
-        bool is_pair(char opening, char closing) {
-            if (opening == '[' && closing == ']')
-                return true;
-            else if (opening == '(' && closing == ')')
-                return true;
-            else if (opening == '{' && closing == '}')
-                return true;
-            else
-                return false;
-        }
-
         bool is_balanced(std::string expression) {
             std::string str = expression;
+            stack<char> stack;
 
             for (int i = 0; i < str.length(); i++) {
-                
+                if (str[i] == '[' || str[i] == '(' || str[i] == '{') {
+                    stack.push(str[i]);
+                }
+                else if (stack.empty() && )
             }
         }
 };
