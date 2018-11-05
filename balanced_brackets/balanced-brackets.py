@@ -4,8 +4,7 @@
 
 # Problem: Given an expression string, determine whether or not
 #          each sequence of '[](){}' is balanced.
-#
-# Time Complexity = 
+# Runtime: O(n)
 
 class Solution:
     def is_balanced(self, expression):
@@ -34,7 +33,7 @@ def main():
 
     #print('Enter expression: ')
     #statement = input()
-    expression = 'test() 123[]{}'
+    expression = 'test() 123[]'
     print(s.is_balanced(expression))
 
 main()
