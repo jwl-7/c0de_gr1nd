@@ -24,7 +24,11 @@ class Solution {
         }
 
         bool is_balanced(std::string expression) {
+            std::string str = expression;
 
+            for (int i = 0; i < str.length(); i++) {
+                
+            }
         }
 };
 
@@ -33,7 +37,6 @@ int main(void) {
     std::string test1 = "()[]{}";    // true
     std::string test2 = "{([])}";    // true
     std::string test3 = "()[";       // false
-
 
     return 0;
 }
