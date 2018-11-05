@@ -15,21 +15,24 @@ class Solution:
 
         for char in expression:
             if char in opening:
+                print("push char: " + char)
                 stack.append(char)
             elif not stack and char in closing:
                 return False
-            elif stack:
+            if stack:
                 peek = stack[-1]
-                if stack and peek in brackets and brackets[peek] == char:
+                if peek in brackets and brackets[peek] == char:
+                    print("peek = " + peek)
+                    print("brackets[peek] " + brackets[peek])
                     stack.pop()
-        return True
+        return False
     
 def main():
     s = Solution()
 
     #print('Enter expression: ')
     #statement = input()
-    expression = 'test() 123[]'
+    expression = 'test() {123[]'
     print(s.is_balanced(expression))
 
 main()
