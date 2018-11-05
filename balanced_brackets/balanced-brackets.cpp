@@ -36,7 +36,7 @@ int main(void) {
     std::string test3 = "()[";       // false
 
     //std::cout << "Enter expression: ";
-    std::cout << s.is_balanced(test1);
+    std::cout << std::boolalpha << s.is_balanced(test1);
 
     return 0;
 }
