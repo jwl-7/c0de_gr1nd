@@ -28,12 +28,12 @@ class Solution {
                     stack.push(str[i]);
                 }
                 else if (str[i] == ']' || str[i] == ')' || str[i] == '}') {
-                    if (stack.empty()) 
-                        return false;
-                    else if (is_pair(stack.top(), str[i]))
-                        stack.pop();
+                    if (stack.empty()) return false;
+                    else if (is_pair(stack.top(), str[i])) stack.pop();
+                    else return false;
                 }
             }
+            
             return stack.empty();
         }
 };
