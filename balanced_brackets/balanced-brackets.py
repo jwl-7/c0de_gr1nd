@@ -15,16 +15,17 @@ class Solution:
 
         for char in expression:
             if char in opening:
-                print("push char: " + char)
-                print("brackets[char] = " + brackets[char])
-                match = brackets[char]
+                print('push char: ' + char)
+                print('brackets[char] = ' + brackets[char])
+                print('')
                 stack.append(char)
+                match = brackets[char]
                 peek = stack[-1]
             elif not stack and char in closing:
                 return False
             if stack and peek in brackets and brackets[peek] == char:
-                    print("peek = " + peek)
-                    print("brackets[peek] " + brackets[peek])
+                    print('peek = ' + peek)
+                    print('brackets[peek] ' + brackets[peek])
                     stack.pop()
         return False
     
@@ -33,7 +34,7 @@ def main():
 
     #print('Enter expression: ')
     #statement = input()
-    expression = 'test() 123[]'
+    expression = 'test() 123('
     print(s.is_balanced(expression))
 
 main()
