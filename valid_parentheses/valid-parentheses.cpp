@@ -46,13 +46,11 @@ class Solution {
         }
 };
 
-int main(void) {
+int main() {
     Solution s;
     std::string expression;
 
     std::cout << "Enter expression: ";
     std::cin >> expression;
     std::cout << std::boolalpha << s.is_balanced(expression);
-
-    return 0;
 }
