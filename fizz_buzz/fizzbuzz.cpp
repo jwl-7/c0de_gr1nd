@@ -11,20 +11,29 @@
 // Space Complexity: O(n)
 
 #include <iostream>
+#include <string>
+#include <vector>
 
 class Solution {
     public:
-        void fizzy() {
-            for (int i = 1; i <= 100; i++) {
-                if (i % 15 == 0) std::cout << "FizzBuzz\n";
-                else if (i % 3 == 0) std::cout << "Fizz\n";
-                else if (i % 5 == 0) std::cout << "Buzz\n";
-                else std::cout << i << "\n";
-            }    
+        std::vector<string> fizzy(int n) {
+            std::vector<string> result;
+            for (int i = 1; i <= n; i++) {
+                if (i % 15 == 0) result.push_back("FizzBuzz");
+                else if (i % 3 == 0) result.push_back("Fizz");
+                else if (i % 5 == 0) result.push_back("Buzz");
+                else result.push_back(to_string(i));
+            }
+            return result;    
+        }
+
+        void print(std::vector<string> const &input) {
+            for (int i = 0; i < input.size(); i++)
+                std::cout << input.at(i) << '\n';
         }
 };
 
 int main() {
     Solution s;
-    s.fizzy();
+    s.print(s.fizzy(100));
 }
