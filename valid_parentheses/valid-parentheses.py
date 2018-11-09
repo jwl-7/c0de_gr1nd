@@ -16,19 +16,19 @@
 
 class Solution:
     def is_balanced(self, string):
-        opening = tuple('[({')
-        closing = tuple('])}')
-        brackets = dict(zip(opening, closing))
+        open = tuple('[({')
+        close = tuple('])}')
+        brackets = dict(zip(open, close))
         stack = []
 
         for char in string:
-            if char in opening:
+            if char in open:
                 stack.append(char)
-            elif not stack and char in closing:
+            elif not stack and char in close:
                 return False     
             elif stack:
                 peek = stack[-1]
-                if char in closing and char == brackets[peek]:
+                if char in close and char == brackets[peek]:
                     stack.pop()
         return not stack
     

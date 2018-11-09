@@ -20,15 +20,14 @@
 
 class Solution {
     public: 
-        bool is_pair(char opening, char closing) {
-            if (opening == '[' && closing == ']') return true;
-            if (opening == '(' && closing == ')') return true;
-            if (opening == '{' && closing == '}') return true;
+        bool is_pair(char open, char close) {
+            if (open == '[' && close == ']') return true;
+            if (open == '(' && close == ')') return true;
+            if (open == '{' && close == '}') return true;
             else return false;
         }
 
-        bool is_balanced(std::string expression) {
-            std::string str = expression;
+        bool is_balanced(std::string str) {
             std::stack<char> stack;
 
             for (int i = 0; i < str.length(); i++) {
@@ -48,9 +47,9 @@ class Solution {
 
 int main() {
     Solution s;
-    std::string expression;
+    std::string str;
 
-    std::cout << "Enter expression: ";
-    std::cin >> expression;
-    std::cout << std::boolalpha << s.is_balanced(expression);
+    std::cout << "Enter string: ";
+    std::cin >> str;
+    std::cout << std::boolalpha << s.is_balanced(str) << '\n';
 }
