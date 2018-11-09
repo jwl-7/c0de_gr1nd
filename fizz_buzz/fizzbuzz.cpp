@@ -26,6 +26,4 @@ class Solution {
 int main() {
     Solution s;
     s.fizzy();
-
-    return 0;
 }
