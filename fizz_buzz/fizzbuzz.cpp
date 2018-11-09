@@ -23,7 +23,7 @@ class Solution {
         }
 };
 
-int main(void) {
+int main() {
     Solution s;
     s.fizzy();
 
