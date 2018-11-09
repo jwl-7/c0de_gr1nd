@@ -47,7 +47,7 @@ class Solution {
 int main() {
     Solution s;
     std::string str;
-
+    
     std::cout << "Enter string: ";
     std::cin >> str;
     std::cout << std::boolalpha << s.is_balanced(str) << '\n';
