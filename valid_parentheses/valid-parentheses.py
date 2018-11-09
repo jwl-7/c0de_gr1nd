@@ -34,8 +34,7 @@ class Solution:
     
 def main():
     s = Solution()
-    print('Enter string:')
-    string = input()
+    string = input('Enter string: ')
     print(s.is_balanced(string))
 
 if __name__ == "__main__":
