@@ -32,6 +32,8 @@ WriteConsole PROTO,                             ; write a buffer to the console
     lpReserved:PTR DWORD                        ; 0 (not used)
 PrintStr PROTO,                                 ; prints a string to console
     lpString:PTR BYTE                           ; pointer to string
+fizzy PROTO,                                    ; runs FizzBuzz test
+    n:DWORD                                     ; input count
 
 .DATA
     fizz BYTE 'Fizz', 0
@@ -50,7 +52,7 @@ PrintStr PROTO,                                 ; prints a string to console
 ;=                              MAIN                                =
 ;====================================================================
 main PROC
-    call fizzy                         ; perform FizzBuzz
+    INVOKE fizzy, 100                  ; perform FizzBuzz
 
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
@@ -58,9 +60,13 @@ main ENDP
 ;====================================================================
 ;=                             FIZZY                                =
 ;====================================================================
-fizzy PROC USES eax ebx ecx edx
-    mov ecx, 1                         ; counter = 1
+;- Runs FizzBuzz test                                               -
+;- Receives: n = input count                                        -
+;--------------------------------------------------------------------
+fizzy PROC USES eax ebx ecx edx,
+    n:DWORD                            ; input count
 
+    mov ecx, 1                         ; counter = 1
 f_test:
     push ecx                           ; save counter
     xor edx, edx                       ; clear EDX
@@ -89,7 +95,7 @@ f_test:
 f_loop:
     pop ecx                            ; restore counter
     inc ecx                            ; counter++
-    cmp ecx, 100                       ; if counter <= 100
+    cmp ecx, n                         ; if counter <= n
     jbe f_test                         ;    loop
     jmp f_end                          ; else exit
 
