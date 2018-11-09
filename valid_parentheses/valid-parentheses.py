@@ -15,13 +15,13 @@
 # Space Complexity: O(n)
 
 class Solution:
-    def is_balanced(self, expression):
+    def is_balanced(self, string):
         opening = tuple('[({')
         closing = tuple('])}')
         brackets = dict(zip(opening, closing))
         stack = []
 
-        for char in expression:
+        for char in string:
             if char in opening:
                 stack.append(char)
             elif not stack and char in closing:
@@ -34,8 +34,9 @@ class Solution:
     
 def main():
     s = Solution()
-    print('Enter expression:')
-    expression = input()
-    print(s.is_balanced(expression))
+    print('Enter string:')
+    string = input()
+    print(s.is_balanced(string))
 
-main()
+if __name__ == "__main__":
+    main()
