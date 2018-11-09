@@ -40,7 +40,6 @@ class Solution {
                     else return false;
                 }
             }
-            
             return stack.empty();
         }
 };
