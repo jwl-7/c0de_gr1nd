@@ -21,4 +21,5 @@ def main():
     s = Solution()
     s.fizzy()
 
-main()
+if __name__ == "__main__":
+    main()
