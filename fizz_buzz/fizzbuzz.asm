@@ -10,7 +10,7 @@
 ;          For numbers which are multiples of both 3 and 5, print 'FizzBuzz' instead of the number.
 ;
 ;  Time Complexity: O(n)
-; Space Complexity: O(n)
+; Space Complexity: O(1)
 
 TITLE FizzBuzz
 
