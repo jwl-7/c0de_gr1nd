@@ -53,7 +53,6 @@ fizzy PROTO,                                    ; runs FizzBuzz test
 ;====================================================================
 main PROC
     INVOKE fizzy, 100                  ; perform FizzBuzz
-
     INVOKE ExitProcess, 0              ; terminate program
 main ENDP
 
@@ -101,38 +100,30 @@ f_loop:
 
 print_fizzbuzz:
     pushad                             ; save 32-bit registers
-
     INVOKE PrintStr, OFFSET fizzbuzz   ; print 'FizzBuzz'
     call NewLine                       ; print '\n'
-    
     popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_fizz:
     pushad                             ; save 32-bit registers
-
     INVOKE PrintStr, OFFSET fizz       ; print 'fizz'
     call NewLine                       ; print '\n'
-
     popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_buzz:
     pushad                             ; save 32-bit registers
-
     INVOKE PrintStr, OFFSET buzz       ; print 'buzz'
     call NewLine                       ; print '\n'
-
     popad                              ; restore 32-bit registers
     jmp f_loop
 
 print_num:
     pushad                             ; save 32-bit registers
-
     mov eax, ecx                       ; EAX = number
     call PrintNum                      ; print number
     call NewLine                       ; print '\n'
-
     popad                              ; restore 32-bit registers
     jmp f_loop
 
@@ -158,6 +149,7 @@ L1:
     inc edi                            ; no: point to next
     inc eax                            ; count++
     jmp L1
+
 L2: 
     ret
 StrLength ENDP
@@ -170,8 +162,8 @@ StrLength ENDP
 ;--------------------------------------------------------------------
 PrintStr PROC,
     pString:PTR BYTE                   ; points to string
-    pushad                             ; save 32-bit registers
 
+    pushad                             ; save 32-bit registers
     INVOKE GetStdHandle,               ; get standard device handle
         STD_OUTPUT_HANDLE              ; standard output device
     mov [consoleOutHandle], eax        ; store address of handle
@@ -185,8 +177,8 @@ PrintStr PROC,
         eax,                           ; string length
         OFFSET bytesWritten,           ; returns number of bytes written
         0                              ; not used
-
     popad                              ; restore 32-bit registers
+
     ret
 PrintStr ENDP
 
@@ -198,7 +190,6 @@ PrintStr ENDP
 ;--------------------------------------------------------------------
 PrintNum PROC
     pushad                             ; save 32-bit registers
-
     xor ecx, ecx                       ; digit counter
     mov edi, OFFSET num_buffer         ; EDI points to num_buffer
     add edi, 11                        ; EDI += 11
@@ -207,24 +198,21 @@ L1:
     xor edx, edx                       ; dividend = 0
     div ebx                            ; EAX / radix
     xchg eax, edx                      ; swap quotient, remainder
-
     push ebx                           ; save EBX
     mov ebx, OFFSET xtable             ; get translation table
     xlat                               ; convert to ASCII
     pop ebx                            ; restore EBX
-
     mov [edi], al                      ; save the digit
     dec edi                            ; back up in buffer
     xchg eax, edx                      ; swap quotient, remainder
-
     inc ecx                            ; digit counter++
     or eax, eax                        ; quotient = 0?
     jnz L1                             ; no: divide again
 
     inc edi                            ; EDI++
     INVOKE PrintStr, edi               ; print digits
-
     popad                              ; restore 32-bit registers
+
     ret
 PrintNum ENDP
 
@@ -235,10 +223,9 @@ PrintNum ENDP
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
-
     INVOKE PrintStr, OFFSET new_line   ; print '\n'
-
     popad                              ; restore 32-bit registers
+
     ret
 NewLine ENDP
 
