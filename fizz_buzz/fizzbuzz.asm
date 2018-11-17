@@ -25,15 +25,15 @@ ExitProcess     PROTO, dwExitCode: DWORD        ; ends process and its threads
 GetStdHandle    PROTO,                          ; get standard handle
     nStdHandle: DWORD                           ; type of console handle
 WriteConsole    PROTO,                          ; write a buffer to the console
-    handle:      WORD,                          ; output handle
+    handle:     DWORD,                          ; output handle
     lpBuffer:   PTR BYTE,                       ; pointer to buffer
     nNumberOfCharsToWrite:  DWORD,              ; size of buffer
     lpNumberOfCharsWritten: PTR DWORD,          ; number of chars written
     lpReserved: PTR DWORD                       ; 0 (not used)
-PrintStr PROTO,                                 ; prints a string to console
+PrintStr        PROTO,                          ; prints a string to console
     lpString:   PTR BYTE                        ; pointer to string
-fizzy    PROTO,                                 ; runs FizzBuzz test
-    n:   DWORD                                  ; input count
+fizzy           PROTO,                          ; runs FizzBuzz test
+    n:          DWORD                           ; input count
 
 .DATA
     fizz       BYTE 'Fizz',      0
