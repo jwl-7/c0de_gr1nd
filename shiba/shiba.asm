@@ -138,7 +138,7 @@ shiba ENDP
 ;  Returns: string to standard output                               |
 ;--------------------------------------------------------------------
 MuchPrint PROC,
-    pawString: PTR BYTE                  ; points to string
+    pawString: PTR BYTE                ; points to string
 
     pushad                             ; save 32-bit registers
     INVOKE GetStdHandle,               ; get standard device handle
