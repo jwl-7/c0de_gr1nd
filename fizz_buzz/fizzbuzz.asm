@@ -1,16 +1,18 @@
 ;====================================================================
 ;=                            FIZZ BUZZ                             =                    
 ;====================================================================
-
-; This is written in x86 Assembly (MASM).
-;
-; Problem: Write a program that outputs the string representation of numbers from 1 to n. 
-;          For each multiple of 3, print 'Fizz' instead of the number. 
-;          For each multiple of 5, print 'Buzz' instead of the number. 
-;          For numbers which are multiples of both 3 and 5, print 'FizzBuzz' instead of the number.
-;
-;  Time Complexity: O(n)
-; Space Complexity: O(1)
+;                                                                   
+;----------------------------------------------------------------------------------------------------
+; This is written in x86 Assembly (MASM).                                                           |
+;                                                                                                   |
+; Problem: Write a program that outputs the string representation of numbers from 1 to n.           |
+;          For each multiple of 3, print 'Fizz' instead of the number.                              |
+;          For each multiple of 5, print 'Buzz' instead of the number.                              |
+;          For numbers which are multiples of both 3 and 5, print 'FizzBuzz' instead of the number. |
+;                                                                                                   |
+;  Time Complexity: O(n)                                                                            |
+; Space Complexity: O(1)                                                                            |
+;----------------------------------------------------------------------------------------------------
 
 TITLE FizzBuzz
 
@@ -59,8 +61,9 @@ main ENDP
 ;====================================================================
 ;=                             FIZZY                                =
 ;====================================================================
-;- Runs FizzBuzz test                                               -
-;- Receives: n = input count                                        -
+; Runs FizzBuzz test                                                |
+; Receives: n = input count                                         |
+;  Returns: fizzbuzz test to standard output                        |
 ;--------------------------------------------------------------------
 fizzy PROC USES eax ebx ecx edx,
     n: DWORD                           ; input count
@@ -102,21 +105,21 @@ f_loop:
 print_fizzbuzz:
     pushad                             ; save 32-bit registers
     INVOKE PrintStr, OFFSET fizzbuzz   ; print 'FizzBuzz'
-    call   NewLine                     ; print '\n'
+    call   NewLine                     ; print '\r\n'
     popad                              ; restore 32-bit registers
     jmp    f_loop
 
 print_fizz:
     pushad                             ; save 32-bit registers
     INVOKE PrintStr, OFFSET fizz       ; print 'fizz'
-    call   NewLine                     ; print '\n'
+    call   NewLine                     ; print '\r\n'
     popad                              ; restore 32-bit registers
     jmp    f_loop
 
 print_buzz:
     pushad                             ; save 32-bit registers
     INVOKE PrintStr, OFFSET buzz       ; print 'buzz'
-    call   NewLine                     ; print '\n'
+    call   NewLine                     ; print '\r\n'
     popad                              ; restore 32-bit registers
     jmp    f_loop
 
@@ -124,7 +127,7 @@ print_num:
     pushad                             ; save 32-bit registers
     mov    eax, ecx                    ; EAX = number
     call   PrintNum                    ; print number
-    call   NewLine                     ; print '\n'
+    call   NewLine                     ; print '\r\n'
     popad                              ; restore 32-bit registers
     jmp    f_loop
 
@@ -135,9 +138,9 @@ fizzy ENDP
 ;====================================================================
 ;=                            StrLength                             =
 ;====================================================================
-;- Gets length of a null-terminated string.                         -
-;- Receives: pString -> string pointer                              -
-;- Returns: EAX = string length                                     -
+; Gets length of a null-terminated string.                          |
+; Receives: pString -> string pointer                               |
+;  Returns: EAX = string length                                     |
 ;--------------------------------------------------------------------
 StrLength PROC USES edi,                        
     pString: PTR BYTE                  ; points to string
@@ -185,8 +188,9 @@ PrintStr ENDP
 ;====================================================================
 ;=                            PrintNum                              =
 ;====================================================================
-;- Writes an unsigned 32-bit decimal number to console.             -
-;- EAX = number to print                                            -
+; Writes an unsigned 32-bit decimal number to console.              |
+; Receives: EAX = number to print                                   |
+;  Returns: number to standard output                               |
 ;--------------------------------------------------------------------
 PrintNum PROC
     pushad                             ; save 32-bit registers
@@ -219,11 +223,13 @@ PrintNum ENDP
 ;====================================================================
 ;=                             NewLine                              =
 ;====================================================================
-;- Writes a carriage return to console.                             -
+; Writes a carriage return and line feed to console                 |
+; Receives: none                                                    |
+;  Returns: '\r\n' to standard output                               |
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
-    INVOKE PrintStr, OFFSET new_line   ; print '\n'
+    INVOKE PrintStr, OFFSET new_line   ; print '\r\n'
     popad                              ; restore 32-bit registers
     ret
 NewLine ENDP
