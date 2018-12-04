@@ -153,7 +153,7 @@ FindShiBYTES:
     je     FoundShibes                 ; yes: quit
     inc    esi                         ; no: point to next
     inc    ecx                         ; count++
-    jmp    FindShiBYTES
+    jmp    FindShiBYTES                ; loop
 
 FoundShibes:
     cld                                ; clear direction flag
