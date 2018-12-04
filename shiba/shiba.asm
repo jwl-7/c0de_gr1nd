@@ -22,7 +22,7 @@ WriteConsole    PROTO,                          ; write a buffer to the console
     nNumberOfCharsToWrite:  DWORD,              ; size of buffer
     lpNumberOfCharsWritten: PTR DWORD,          ; number of chars written
     lpReserved: PTR DWORD                       ; 0 (not used)
-PrintStr        PROTO,                          ; prints a string to console
+MuchPrint       PROTO,                          ; prints a string to console
     lpString:   PTR BYTE                        ; pointer to string
 
 .DATA?
@@ -126,25 +126,25 @@ shiba PROC
               32,  32,  32,  32,  87,  48, 119,  46,  13,  10,   0      
 
 .CODE
-    INVOKE PrintStr, OFFSET s1
+    INVOKE MuchPrint, OFFSET s1
     ret
 shiba ENDP
 
 ;====================================================================
-;=                            PrintStr                              =
+;=                           MuchPrint                              =
 ;====================================================================
-;  Writes a null-terminated string to console.                      |
-; Receives: pString -> string pointer                               |
+;  So string. Many BYTES. Very Print.                               |
+; Receives: pawString -> string pointer                             |
 ;  Returns: string to standard output                               |
 ;--------------------------------------------------------------------
-PrintStr PROC,
-    pString: PTR BYTE                  ; points to string
+MuchPrint PROC,
+    pawString: PTR BYTE                  ; points to string
 
     pushad                             ; save 32-bit registers
     INVOKE GetStdHandle,               ; get standard device handle
            STD_OUTPUT_HANDLE           ; standard output device
     mov    [consoleOutHandle], eax     ; store address of handle
-    mov    esi, pString                ; ESI = pString
+    mov    esi, pawString              ; ESI = pawString
     xor    ecx, ecx                    ; ECX = character count
 
 FindShiBYTES:
@@ -158,12 +158,12 @@ FoundShibes:
     cld                                ; clear direction flag
     INVOKE WriteConsole,               ; write buffer to console
            consoleOutHandle,           ; output handle
-           pString,                    ; points to string
+           pawString,                  ; points to string
            ecx,                        ; string length
            OFFSET bytesWritten,        ; returns number of bytes written
            0                           ; not used
     popad                              ; restore 32-bit registers
     ret
-PrintStr ENDP
+MuchPrint ENDP
 
 END main
