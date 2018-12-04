@@ -131,30 +131,6 @@ shiba PROC
 shiba ENDP
 
 ;====================================================================
-;=                            StrLength                             =
-;====================================================================
-;  Gets length of a null-terminated string.                         |
-;  Receives: pString -> string pointer                              |
-;   Returns: EAX = string length                                    |
-;--------------------------------------------------------------------
-StrLength PROC USES edi,                        
-    pString: PTR BYTE                  ; points to string
-
-    mov    edi, pString                ; EDI = pString
-    xor    eax, eax                    ; EAX = character count
-
-L1:
-    cmp    BYTE PTR [edi], 0           ; end of string?
-    je     L2                          ; yes: quit
-    inc    edi                         ; no: point to next
-    inc    eax                         ; count++
-    jmp    L1
-
-L2: 
-    ret
-StrLength ENDP
-
-;====================================================================
 ;=                            PrintStr                              =
 ;====================================================================
 ;  Writes a null-terminated string to console.                      |
@@ -168,12 +144,22 @@ PrintStr PROC,
     INVOKE GetStdHandle,               ; get standard device handle
            STD_OUTPUT_HANDLE           ; standard output device
     mov    [consoleOutHandle], eax     ; store address of handle
-    INVOKE StrLength, pString          ; EAX = length of string
+    mov    esi, pString                ; ESI = pString
+    xor    ecx, ecx                    ; ECX = character count
+
+FindShiBYTES:
+    cmp    BYTE PTR [esi], 0           ; end of string?
+    je     FoundShibes                 ; yes: quit
+    inc    esi                         ; no: point to next
+    inc    ecx                         ; count++
+    jmp    FindShiBYTES
+
+FoundShibes:
     cld                                ; clear direction flag
     INVOKE WriteConsole,               ; write buffer to console
            consoleOutHandle,           ; output handle
            pString,                    ; points to string
-           eax,                        ; string length
+           ecx,                        ; string length
            OFFSET bytesWritten,        ; returns number of bytes written
            0                           ; not used
     popad                              ; restore 32-bit registers
