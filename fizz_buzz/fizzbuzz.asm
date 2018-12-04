@@ -23,19 +23,20 @@ TITLE FizzBuzz
 STD_OUTPUT_HANDLE EQU -11                       ; standard output device
 WriteConsole      EQU <WriteConsoleA>           ; alias WriteConsole
 
-ExitProcess     PROTO, dwExitCode: DWORD        ; ends process and its threads
-GetStdHandle    PROTO,                          ; get standard handle
+ExitProcess PROTO,                              ; ends process and its threads
+    dwExitCode: DWORD                           ; the exit code for the thread
+GetStdHandle PROTO,                             ; get standard handle
     nStdHandle: DWORD                           ; type of console handle
-WriteConsole    PROTO,                          ; write a buffer to the console
-    handle:     DWORD,                          ; output handle
-    lpBuffer:   PTR BYTE,                       ; pointer to buffer
-    nNumberOfCharsToWrite:  DWORD,              ; size of buffer
+WriteConsole PROTO,                             ; write a buffer to the console
+    handle: DWORD,                              ; output handle
+    lpBuffer: PTR BYTE,                         ; pointer to buffer
+    nNumberOfCharsToWrite: DWORD,               ; size of buffer
     lpNumberOfCharsWritten: PTR DWORD,          ; number of chars written
     lpReserved: PTR DWORD                       ; 0 (not used)
-PrintStr        PROTO,                          ; prints a string to console
-    lpString:   PTR BYTE                        ; pointer to string
-fizzy           PROTO,                          ; runs FizzBuzz test
-    n:          DWORD                           ; input count
+PrintStr PROTO,                                 ; prints a string to console
+    lpString: PTR BYTE                          ; pointer to string
+fizzy PROTO,                                    ; runs FizzBuzz test
+    n: DWORD                                    ; input count
 
 .DATA
     fizz       BYTE 'Fizz',      0
