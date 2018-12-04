@@ -159,8 +159,9 @@ StrLength ENDP
 ;====================================================================
 ;=                            PrintStr                              =
 ;====================================================================
-;- Writes a null-terminated string to console.                      -
-;- EDX -> points to string                                          -
+;  Writes a null-terminated string to console.                      |
+; Receives: pString -> string pointer                               |
+;  Returns: string to standard output                               |
 ;--------------------------------------------------------------------
 PrintStr PROC,
     pString: PTR BYTE                  ; points to string
