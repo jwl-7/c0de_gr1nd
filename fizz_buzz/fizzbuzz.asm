@@ -63,8 +63,8 @@ main ENDP
 ;=                             FIZZY                                =
 ;====================================================================
 ; Runs FizzBuzz test                                                |
-; Receives: n = input count                                         |
-;  Returns: fizzbuzz test to standard output                        |
+;  Receives: n = input count                                        |
+;   Returns: fizzbuzz test to standard output                       |
 ;--------------------------------------------------------------------
 fizzy PROC USES eax ebx ecx edx,
     n: DWORD                           ; input count
@@ -140,8 +140,8 @@ fizzy ENDP
 ;=                            StrLength                             =
 ;====================================================================
 ; Gets length of a null-terminated string.                          |
-; Receives: pString -> string pointer                               |
-;  Returns: EAX = string length                                     |
+;  Receives: pString -> string pointer                              |
+;   Returns: EAX = string length                                    |
 ;--------------------------------------------------------------------
 StrLength PROC USES edi,                        
     pString: PTR BYTE                  ; points to string
@@ -163,9 +163,9 @@ StrLength ENDP
 ;====================================================================
 ;=                            PrintStr                              =
 ;====================================================================
-;  Writes a null-terminated string to console.                      |
-; Receives: pString -> string pointer                               |
-;  Returns: string to standard output                               |
+; Writes a null-terminated string to console.                       |
+;  Receives: pString -> string pointer                              |
+;   Returns: string to standard output                              |
 ;--------------------------------------------------------------------
 PrintStr PROC,
     pString: PTR BYTE                  ; points to string
@@ -190,8 +190,8 @@ PrintStr ENDP
 ;=                            PrintNum                              =
 ;====================================================================
 ; Writes an unsigned 32-bit decimal number to console.              |
-; Receives: EAX = number to print                                   |
-;  Returns: number to standard output                               |
+;  Receives: EAX = number to print                                  |
+;   Returns: number to standard output                              |
 ;--------------------------------------------------------------------
 PrintNum PROC
     pushad                             ; save 32-bit registers
@@ -225,8 +225,8 @@ PrintNum ENDP
 ;=                             NewLine                              =
 ;====================================================================
 ; Writes a carriage return and line feed to console                 |
-; Receives: none                                                    |
-;  Returns: '\r\n' to standard output                               |
+;  Receives: none                                                   |
+;   Returns: '\r\n' to standard output                              |
 ;--------------------------------------------------------------------
 NewLine PROC
     pushad                             ; save 32-bit registers
