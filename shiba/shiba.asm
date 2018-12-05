@@ -134,9 +134,9 @@ shiba ENDP
 ;====================================================================
 ;=                           MuchPrint                              =
 ;====================================================================
-;  So string. Many BYTES. Very Print.                               |
-; Receives: pawString -> string pointer                             |
-;  Returns: string to standard output                               |
+; So string. Many BYTES. Very Print.                                |
+;  Receives: pawString -> string pointer                            |
+;   Returns: string to standard output                              |
 ;--------------------------------------------------------------------
 MuchPrint PROC,
     pawString: PTR BYTE                ; points to string
