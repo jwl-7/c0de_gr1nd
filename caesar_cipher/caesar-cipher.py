@@ -20,13 +20,9 @@ class Solution:
             else:
                 char_freq[char] = 1
 
-        sorted_char_freq = sorted(char_freq.values(), reverse = True)
-        kk_freq = sorted_char_freq[:4]
+        sorted_char_freq = sorted(char_freq.items(), key = lambda x: x[1], reverse = True)
 
-        print(kk_freq)
-
-        for char in kk_freq:
-            print(char[0], ' : ', char[1])
+        return sorted_char_freq[:4]
 
     def cipher_key(self, string):
         sdalphabet = tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
@@ -36,10 +32,16 @@ class Solution:
 
     def decrypt(self):
         ciphertext = input('Enter ciphertext: ')
+        top_letters = self.check_frequency(ciphertext)
+
+        print('Top Four Letters')
+        print('-----------------')
+        for item in top_letters:
+            print(item[0], ' : ', item[1])
 
 def main():
     s = Solution()
-    s.check_frequency('hellobro')
+    s.decrypt()
 
 if __name__ == "__main__":
     main()
