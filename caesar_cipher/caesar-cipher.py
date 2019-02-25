@@ -2,10 +2,7 @@
 #=                          CAESAR CIPHER                           =                    
 #====================================================================
 
-# Problem: Write a program that decrypts ciphertext that has been encrypted
-#          using the Caesar Cipher. Find the plaintext and the shift key.
-
-class Solution:
+class Cipher:
     def check_frequency(self, string):
         char_freq = {}
 
@@ -37,13 +34,13 @@ class Solution:
 
     def display(self):
         #ciphertext = str.upper(input('Enter ciphertext: '))
-        ciphertext = str.upper('OTWEWNGWCBPQABIZVQAPMLJGZWTTQVOBQUMAPMIDGZCAB')
+        ciphertext = str.upper('OTWEWNGWCBPQABIZVQAPMLJGZWTTQVOBQUMAPMIDGZCABEQVBMZLZIXMLAXZQVOQVLMMXAVWEIVLLIZSNZWABJQZLWNLMTQOPBVIUMLGWCBPAEQNBTGTMNBBPMVMABITIAKWCTLVBBQUMQBEPQTMQBEIAQVUGBZCAB')
         top_letters = self.check_frequency(ciphertext)
 
         p_keys = []
 
         print('Top Four Letters')
-        print('-----------------')
+        print('-------------------')
         for item in top_letters:
             print(item[0], ' : ', item[1])
 
@@ -53,13 +50,18 @@ class Solution:
             num = min(a, b)
             p_keys.append(num)
 
-        print(p_keys)
+        print('\nPossible Shift Keys: ' + str(p_keys))
+        print('\nPossible Translations')
+        print('-----------------------')
 
-        print(self.decrypt(ciphertext, 8))
+        for key in p_keys:
+            p_msg = self.decrypt(ciphertext, key)
+            print(key)
+            print(p_msg + '\n')
 
 def main():
-    s = Solution()
-    s.display()
+    c = Cipher()
+    c.display()
 
 if __name__ == "__main__":
     main()
