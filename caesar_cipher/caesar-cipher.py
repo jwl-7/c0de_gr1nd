@@ -53,6 +53,8 @@ class Cipher:
         return translation
 
     def get_key(self):
+        "Prompts user for shift key for encryption."
+
         while True:
             try:
                 u_key = int(input('Enter shift key [1-26]: '))
@@ -82,7 +84,7 @@ class Cipher:
         return char_freq[:4]
 
     def find_key(self, msg, top_char):
-        """Finds possible cipher keys using most frequently used letters."""
+        """Finds top four most likely cipher keys using 'E' as a reference."""
 
         p_keys = []
 
@@ -97,7 +99,7 @@ class Cipher:
 
 
     def cipher_run(self):
-        """Runs the Caesar cipher decryption / frequency analysis."""
+        """Runs the Caesar cipher encryption / decryption."""
 
         cipher_mode = self.prompt()
 
@@ -107,7 +109,7 @@ class Cipher:
             user_msg = self.transcipher(1, plaintext, user_key)
 
             print('\nEncipherment')
-            print('------------------------')
+            print('-------------------------------------------')
             print(f'[{user_key}] {user_msg} \n')
             
         elif cipher_mode == 2:
@@ -115,23 +117,24 @@ class Cipher:
             top_letters = self.find_frequency(ciphertext)
             possible_keys = self.find_key(ciphertext, top_letters)
 
-            print('\nTop Four Letters')
-            print('-------------------')
+            print('\nFrequency Analysis')
+            print('-------------------------------------------')
+
             for letter in top_letters:
                 print(f'{letter[0]} : {letter[1]}')
 
-            print(f'\nPossible Shift Keys: {possible_keys}')
+            print(f'\nTop Possible Shift Keys: {possible_keys}')
+            print('\nTop Possible Translations')
+            print('-------------------------------------------')
 
-            print('\nPossible Translations')
-            print('-----------------------')
             for p_key in possible_keys:
                 p_msg = self.transcipher(2, ciphertext, p_key)
                 print(f'[{p_key}] {p_msg}')
         elif cipher_mode == 3:
             ciphertext = str.upper(input('Enter ciphertext: '))
 
-            print('\nPossible Translations')
-            print('-----------------------')
+            print('\nBrute Force')
+            print('-------------------------------------------')
 
             for i in range (1, 27):
                 p_msg = self.transcipher(3, ciphertext, i)
