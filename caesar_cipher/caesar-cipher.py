@@ -21,10 +21,25 @@ class Solution:
         return char_freq[:4]
 
     def check_word(self, string):
-        d = enchant.Dict('en_US')
-        return d.check(string)
+        dictionary = enchant.Dict('en_US')
+        return dictionary.check(string)
+    
+    def decrypt(self, string, key):
+        decrypted = ''
+        key =- key
+        for char in string:
+            num = ord(char)
+            num += key
 
-    def decrypt(self):
+            if num > ord('Z'):
+                num -= 26
+            elif num < ord('A'):
+                num += 26
+
+            decrypted += chr(num)
+        return decrypted
+
+    def display(self):
         #ciphertext = str.upper(input('Enter ciphertext: '))
         ciphertext = str.upper('OTWEWNGWCBPQABIZVQAPMLJGZWTTQVOBQUMAPMIDGZCAB')
         top_letters = self.check_frequency(ciphertext)
@@ -34,10 +49,11 @@ class Solution:
         for item in top_letters:
             print(str.upper(item[0]), ' : ', item[1])
         
+        print(self.decrypt(ciphertext, 8))
 
 def main():
     s = Solution()
-    s.decrypt()
+    s.display()
 
 if __name__ == "__main__":
     main()
