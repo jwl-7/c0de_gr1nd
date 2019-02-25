@@ -42,23 +42,29 @@ class Cipher:
 
         return char_freq[:4]
     
-    def decrypt(self, msg, key):
+    def transcipher(self, mode, msg, key):
         """Shifts each letter in the ciphertext n positions to the right."""
 
-        decrypted = ''
-        key =- key
+        translation = ''
+
+        if mode == 2 or mode == 3:
+            key =- key
 
         for char in msg:
-            num = ord(char)
-            num += key
+            if char.isalpha():
+                num = ord(char)
+                num += key
 
-            if num > ord('Z'):
-                num -= 26
-            elif num < ord('A'):
-                num += 26
-            decrypted += chr(num)
+                if num > ord('Z'):
+                    num -= 26
+                elif num < ord('A'):
+                    num += 26
 
-        return decrypted
+                translation += chr(num)
+            else:
+                translation += char
+
+        return translation
 
     def cipher_key(self, msg, top_char):
         """Finds possible cipher keys using most frequently used letters."""
