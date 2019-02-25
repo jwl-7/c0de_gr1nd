@@ -115,7 +115,7 @@ class Cipher:
             top_letters = self.find_frequency(ciphertext)
             possible_keys = self.find_key(ciphertext, top_letters)
 
-            print('Top Four Letters')
+            print('\nTop Four Letters')
             print('-------------------')
             for letter in top_letters:
                 print(f'{letter[0]} : {letter[1]}')
@@ -129,6 +129,13 @@ class Cipher:
                 print(f'[{p_key}] {p_msg}')
         elif cipher_mode == 3:
             ciphertext = str.upper(input('Enter ciphertext: '))
+
+            print('\nPossible Translations')
+            print('-----------------------')
+
+            for i in range (1, 27):
+                p_msg = self.transcipher(3, ciphertext, i)
+                print(f'[{i}] {p_msg}')
 
 def main():
     c = Cipher()
