@@ -72,10 +72,11 @@ class Cipher:
 
         for char in msg:
             freq = char_freq.keys()
-            if char in freq:
-                char_freq[char] += 1
-            else:
-                char_freq[char] = 1
+            if char.isalpha():
+                if char in freq:
+                    char_freq[char] += 1
+                else:
+                    char_freq[char] = 1
         char_freq = sorted(char_freq.items(), key = lambda x: x[1], reverse = True)
 
         return char_freq[:4]
