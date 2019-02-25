@@ -21,9 +21,10 @@ class Cipher:
                 mode = int(input('Pick a mode [1-3]: '))
                 if mode < 1 or mode > 3:
                     raise ValueError
-                break
             except ValueError:
                 print('[ERROR] INVALID INPUT!')
+            else:
+                break
 
         return mode
     
