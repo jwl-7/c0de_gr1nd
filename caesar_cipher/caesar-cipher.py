@@ -45,18 +45,16 @@ class Solution:
         print('Top Four Letters')
         print('-----------------')
         for item in top_letters:
-            print(str.upper(item[0]), ' : ', item[1])
+            print(item[0], ' : ', item[1])
 
-            num = ord(item[0])
-            if num > ord('Z'):
-                num -= 26
-            elif num < ord('A'):
-                num += 26
-            print(ord(item[0]))
+            num = ord(item[0]) - 65
+            a = (num - 4) % 26
+            b = (4 - num) % 26
+            num = min(a, b)
+            p_keys.append(num)
 
+        print(p_keys)
 
-            
-        
         print(self.decrypt(ciphertext, 8))
 
 def main():
