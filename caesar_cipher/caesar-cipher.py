@@ -56,7 +56,7 @@ class Cipher:
         while True:
             try:
                 u_key = int(input('Enter shift key [1-26]: '))
-                if u_key < 1 or u_key > 26
+                if u_key < 1 or u_key > 26:
                     raise ValueError
             except ValueError:
                 print('[ERROR] INVALID INPUT!')
@@ -101,7 +101,13 @@ class Cipher:
         cipher_mode = self.prompt()
 
         if cipher_mode == 1:
-            ciphertext = str.upper(input('Enter plaintext: '))
+            plaintext = str.upper(input('Enter plaintext: '))
+            user_key = self.get_key()
+            user_msg = self.transcipher(1, plaintext, user_key)
+
+            print('\nEncipherment')
+            print('------------------------')
+            print(f'[{user_key}] {user_msg} \n')
             
         elif cipher_mode == 2:
             ciphertext = str.upper(input('Enter ciphertext: '))
@@ -118,7 +124,7 @@ class Cipher:
             print('\nPossible Translations')
             print('-----------------------')
             for key in possible_keys:
-                p_msg = self.decrypt(ciphertext, key)
+                p_msg = self.transcipher(ciphertext, key)
                 print(f'[{key}] {p_msg} \n')
         elif cipher_mode == 3:
             ciphertext = str.upper(input('Enter ciphertext: '))
