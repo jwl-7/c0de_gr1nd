@@ -2,6 +2,10 @@
 #=                          CAESAR CIPHER                           =                    
 #====================================================================
 
+# This program allows you to encrypt / decrypt ciphertexts using the Caesar cipher.
+# Plaintext is encrypted using shifts to the right.
+# Ciphertext is decrypted using either basic frequency analysis or brute force.
+
 class Cipher:
     def check_frequency(self, msg):
         """Finds the top four most frequently used letters in the ciphertext."""
