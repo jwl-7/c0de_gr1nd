@@ -52,6 +52,19 @@ class Cipher:
 
         return translation
 
+    def get_key(self):
+        while True:
+            try:
+                u_key = int(input('Enter shift key [1-26]: '))
+                if u_key < 1 or u_key > 26
+                    raise ValueError
+            except ValueError:
+                print('[ERROR] INVALID INPUT!')
+            else:
+                break
+
+        return u_key
+
     def find_frequency(self, msg):
         """Finds the top four most frequently used letters in the ciphertext."""
 
@@ -67,7 +80,7 @@ class Cipher:
 
         return char_freq[:4]
 
-    def cipher_key(self, msg, top_char):
+    def find_key(self, msg, top_char):
         """Finds possible cipher keys using most frequently used letters."""
 
         p_keys = []
@@ -89,10 +102,11 @@ class Cipher:
 
         if cipher_mode == 1:
             ciphertext = str.upper(input('Enter plaintext: '))
+            
         elif cipher_mode == 2:
             ciphertext = str.upper(input('Enter ciphertext: '))
             top_letters = self.find_frequency(ciphertext)
-            possible_keys = self.cipher_key(ciphertext, top_letters)
+            possible_keys = self.find_key(ciphertext, top_letters)
 
             print('Top Four Letters')
             print('-------------------')
