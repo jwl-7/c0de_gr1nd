@@ -7,6 +7,26 @@
 # Ciphertext is decrypted using either basic frequency analysis or brute force.
 
 class Cipher:
+    def prompt(self):
+        """Displays information about program and asks user to pick mode."""
+
+        print('Caesar Cipher')
+        print('---------------------------------------------------------------')
+        print('1 - Encrypt plaintext -> ciphertext')
+        print('2 - Decrypt ciphertext -> plaintext using frequency analysis')
+        print('3 - Decrypt ciphertext -> plaintext using brute force\n')
+
+        while True:
+            try:
+                mode = int(input('Pick a mode [1-3]: '))
+                if mode < 1 or mode > 3:
+                    raise ValueError
+                break
+            except ValueError:
+                print('[ERROR] INVALID INPUT!')
+
+        return mode
+        
     def check_frequency(self, msg):
         """Finds the top four most frequently used letters in the ciphertext."""
 
@@ -57,6 +77,8 @@ class Cipher:
 
     def display(self):
         """Runs the Caesar cipher decryption / frequency analysis."""
+
+        cipher_mode = self.prompt()
 
         ciphertext = str.upper(input('Enter ciphertext: '))
         top_letters = self.check_frequency(ciphertext)
