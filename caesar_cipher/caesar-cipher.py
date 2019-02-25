@@ -116,16 +116,16 @@ class Cipher:
 
             print('Top Four Letters')
             print('-------------------')
-            for item in top_letters:
-                print(f'{item[0]} : {item[1]}')
+            for letter in top_letters:
+                print(f'{letter[0]} : {letter[1]}')
 
             print(f'\nPossible Shift Keys: {possible_keys}')
 
             print('\nPossible Translations')
             print('-----------------------')
-            for key in possible_keys:
-                p_msg = self.transcipher(ciphertext, key)
-                print(f'[{key}] {p_msg} \n')
+            for p_key in possible_keys:
+                p_msg = self.transcipher(2, ciphertext, p_key)
+                print(f'[{p_key}] {p_msg}')
         elif cipher_mode == 3:
             ciphertext = str.upper(input('Enter ciphertext: '))
 
