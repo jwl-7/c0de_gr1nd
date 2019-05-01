@@ -1,5 +1,7 @@
 # c0de_gr1nd
 the pursuit of ameloriation as a programmer
 
+[![codegrind-banner.png](https://i.imgur.com/2GJnHcq.gif)(https://imgur.com/2GJnHcq)
+
 ## License
 This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
