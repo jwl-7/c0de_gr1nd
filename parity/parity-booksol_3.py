@@ -1,6 +1,6 @@
 """Lookup Table Algorithm
 
-Time Complexity = O(log n), where n is the word size
+Time Complexity: O(log n), where n is the word size
 """
 
 class Solution:

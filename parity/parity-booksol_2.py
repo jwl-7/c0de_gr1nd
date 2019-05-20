@@ -1,6 +1,6 @@
 """Improved Brute-Force Algorithm
 
-Time Complexity = O(k), where n is the word size
+Time Complexity: O(k), where n is the word size
 """
 
 class Solution:

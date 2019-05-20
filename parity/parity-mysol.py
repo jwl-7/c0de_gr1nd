@@ -1,6 +1,6 @@
 """Brute-Force Algorithm
 
-Time Complexity = O(n), where n is the word size
+Time Complexity: O(n), where n is the word size
 """
 
 class Solution:
