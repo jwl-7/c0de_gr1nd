@@ -9,7 +9,7 @@ Example:
 Let x = 1234 (decimal value)  
 
 1234 in binary:
-|MSB |   |   |   |   |   |   |   |   |   |LSB|
+|MSB | &nbsp;|  |  &nbsp;| | &nbsp;|  | &nbsp;|  | &nbsp;|  | &nbsp;|  | &nbsp;|  |&nbsp;|   |&nbsp;|LSB|
 |---:|---|---|---|---|---|---|---|---|---|---|
 |  1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 
   
