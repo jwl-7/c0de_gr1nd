@@ -1,5 +1,7 @@
 class Solution:
-    def parity(self, x):
+    def parity1(self, x):
+        # brute-force algorithm
+        # time complexity = O(n)
         result = 0
         while x:
             result ^= x & 1
@@ -8,14 +10,14 @@ class Solution:
     
 def main():
     s = Solution()
-    test_cases = [ # these are not actually words - used for proof of concept
+    test_cases = [
         0b1011,
         0b1001,
         0b100100,
         0b1110000
         ]
     for num in test_cases:
-        result = s.parity(num)
+        result = s.parity1(num)
         print(f'{bin(num)[2:]} -> {result}')
 
 if __name__ == '__main__':
