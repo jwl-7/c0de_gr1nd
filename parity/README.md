@@ -35,6 +35,6 @@ Explanation:
     ```  
 3. return the parity  
   
-
+  
   
 [Python Bitwise Operators Reference](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
