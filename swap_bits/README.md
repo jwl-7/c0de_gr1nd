@@ -51,7 +51,7 @@ index_j = x >> j & 1
 x ^= 1 << i
 x ^= 1 << j
 ```  
-5. return the swapped number  
+5. Return the swapped number  
   
 </br>  
   
