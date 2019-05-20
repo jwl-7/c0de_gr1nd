@@ -12,7 +12,7 @@ Examples:
 111000 -> 1  
 ```  
   
-Solution (from parity-mysol.py):  
+Solution (from [parity-mysol.py](parity-mysol.py)):  
 ```
 def parity(x):
     result = 0
