@@ -1,7 +1,10 @@
+"""Brute-Force Algorithm
+
+Time Complexity = O(n)
+"""
+
 class Solution:
-    def parity1(self, x):
-        # brute-force algorithm
-        # time complexity = O(n)
+    def parity(self, x):
         result = 0
         while x:
             result ^= x & 1
@@ -17,7 +20,7 @@ def main():
         0b1110000
         ]
     for num in test_cases:
-        result = s.parity1(num)
+        result = s.parity(num)
         print(f'{bin(num)[2:]} -> {result}')
 
 if __name__ == '__main__':
