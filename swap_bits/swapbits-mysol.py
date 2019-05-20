@@ -5,12 +5,11 @@ Time Complexity: O(1), independent of the word size
 
 class Solution:
     def swap_bits(self, x, i, j):
-        pos_i = x >> i & 1
-        pos_j = x >> j & 1
-        if pos_i != pos_j:
-            a = 1 << i
-            b = 1 << j
-            x ^= a | b
+        index_i = x >> i & 1
+        index_j = x >> j & 1
+        if index_i != index_j:
+            x ^= 1 << i
+            x ^= 1 << j
         return x
     
 def main():
