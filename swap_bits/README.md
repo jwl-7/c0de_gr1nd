@@ -9,14 +9,16 @@ Example:
 Let x = 1234 (decimal value)  
 
 1234 in binary:  
+
 |MSB | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |LSB|  
 |---:|---|---|---|---|---|---|---|---|---|---|
 |  1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |   
   
-Let i = 3 and j = 7
+Let i = 3 and j = 7  
 ```swap_bits(x, i, j)```  
   
-Bits 3 (0) and 7 (1) will be swapped resulting in:    
+Bits 3 (0) and 7 (1) will be swapped resulting in:  
+
 |MSB | 9 | 8 |   7   | 6 | 5 | 4 |   3   | 2 | 1 |LSB|  
 |---:|---|---|-------|---|---|---|-------|---|---|---|
 |  1 | 0 | 0 | **0** | 1 | 0 | 1 | **1** | 0 | 1 | 0 | 
