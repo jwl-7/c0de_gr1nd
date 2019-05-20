@@ -32,4 +32,4 @@ bin(x)[2:].zfill(64)[::-1]
 ```python
 int(bin(x)[2:].zfill(64)[::-1], 2)
 ```  
-5. 
+5. Return the 64-bit unsigned integer with reversed bits
