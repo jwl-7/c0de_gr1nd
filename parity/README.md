@@ -31,7 +31,10 @@ Explanation:
     ```  
     b. Erase lowest (rightmost) set bit   
     ```python
-    x = x & (x - 1)```  
+    x = x & (x - 1)
+    ```  
 3. return the parity  
+  
+
   
 [Python Bitwise Operators Reference](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
