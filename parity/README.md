@@ -13,7 +13,7 @@ Examples:
 ```  
   
 Solution (from [parity-mysol.py](parity-mysol.py)):  
-```
+```python
 def parity(x):
     result = 0
     while x:
