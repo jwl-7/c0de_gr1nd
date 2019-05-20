@@ -10,10 +10,10 @@ class Solution:
 def main():
     s = Solution()
     test_cases = [
-        0b1011,
-        0b1001,
-        0b100100,
-        0b1110000
+        0b1110000000000001,
+        0b1001111000110101,
+        0b1001011100111000,
+        0b1110011001100000
         ]
     for num in test_cases:
         reversed_num = s.parity(num)
