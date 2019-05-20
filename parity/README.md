@@ -33,7 +33,7 @@ Explanation:
     ```python
     x = x & (x - 1)
     ```  
-3. return the parity  
+3. Return the parity  
   
 </br>  
   
