@@ -45,7 +45,7 @@ def fizzy(n):
 Explanation:  
 1. Create a list that will hold the output of numbers 1 to n  
 2. Loop over the numbers from 1 to n  
-3. Use the % modulo operator to computer what the number is divisible by  
+3. Use the % modulo operator to compute what the number is divisible by  
     a. If the number is divisible by both 3 and 5, add 'FizzBuzz' to the list  
     ```python
     if i % 15 == 0: list.append('FizzBuzz')
