@@ -1,6 +1,6 @@
 """Valid Parenthesis
 
-Time Complexity: O(n)
+ Time Complexity: O(n)
 Space Complexity: O(n)
 """
 
