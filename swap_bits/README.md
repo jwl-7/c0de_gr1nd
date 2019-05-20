@@ -25,7 +25,7 @@ Bits 3 (0) and 7 (1) will be swapped resulting in:
   
 The swapped number in decimal would be: 1114  
   
-Solution (from [swapbits-mysol.py](swapbits-mysol.py)): 
+Solution - from [swapbits-mysol.py](swapbits-mysol.py): 
 ```python
 def swap_bits(x, i, j):
     index_i = x >> i & 1

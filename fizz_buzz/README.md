@@ -30,7 +30,7 @@ Return:
 ]
 ```  
   
-Solution (from [fizzbuzz.py](fizzbuzz.py)): 
+Solution - from [fizzbuzz.py](fizzbuzz.py): 
 ```python
 def fizzy(n):
     list = []

@@ -9,7 +9,7 @@ Example:
 Output: 1000000000000111
 ```  
   
-Solution (from [reversebits-pythonicsol.py](reversebits-pythonicsol.py)): 
+Solution - from [reversebits-pythonicsol.py](reversebits-pythonicsol.py): 
 ```python
 def reverse_bits(x):
     return int(bin(x)[2:].zfill(64)[::-1], 2)
