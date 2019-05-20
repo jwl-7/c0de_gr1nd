@@ -10,4 +10,14 @@ Examples:
 1001   -> 0  
 100100 -> 0  
 111000 -> 1  
+```  
+  
+Solution (from parity-mysol.py):  
+```
+def parity(x):
+    result = 0
+    while x:
+        result = not result
+        x = x & (x - 1)
+    return int(result)
 ```
