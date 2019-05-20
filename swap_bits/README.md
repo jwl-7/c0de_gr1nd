@@ -8,7 +8,7 @@ Write code that swaps the bits of a 64-bit integer at indices i and j.</p>
 Example:  
 Let x = 1234 (decimal value)  
 
-1234 in binary:
+1234 in binary:  
 |MSB |9|8|7|6|5|4|3|2|1|LSB|  
 |---:|---|---|---|---|---|---|---|---|---|---|  
 |  1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |   
