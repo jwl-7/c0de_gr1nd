@@ -23,12 +23,10 @@ def parity(x):
 ```  
   
 Explanation:
-```
 1. Initialize parity = 0  
 2. Loop while x != 0  
 a. Invert parity ```result = not result```  
 b. Erase lowest (rightmost) set bit ```x = x & (x - 1)```  
-3. return the parity 
-``` 
+3. return the parity  
   
 [Python Bitwise Operators Reference](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
