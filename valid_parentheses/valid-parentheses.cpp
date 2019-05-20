@@ -16,7 +16,7 @@ class Solution {
             if (open == '{' && close == '}') return true;
             else return false;
         }
-
+        
         bool is_balanced(std::string str) {
             std::stack<char> stack;
 
@@ -37,7 +37,6 @@ class Solution {
 int main() {
     Solution s;
     std::string str;
-    
     std::cout << "Enter string: ";
     std::cin >> str;
     std::cout << std::boolalpha << s.is_balanced(str) << '\n';

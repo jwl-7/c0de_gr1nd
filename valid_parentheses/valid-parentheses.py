@@ -10,7 +10,6 @@ class Solution:
         close = tuple('])}')
         brackets = dict(zip(open, close))
         stack = []
-
         for char in string:
             if char in open:
                 stack.append(char)
