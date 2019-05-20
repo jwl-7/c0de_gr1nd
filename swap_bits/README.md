@@ -7,11 +7,11 @@ Write code that swaps the bits of a 64-bit integer at indices i and j.</p>
 
 Example:  
 Let x = 1234 (decimal value)  
-  
+
 1234 in binary:
-|MSB|   |   |   |   |   |   |   |   |   |LSB| 
-| ---:| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 
+|MSB |   |   |   |   |   |   |   |   |   |LSB|
+|---:|---|---|---|---|---|---|---|---|---|---|
+|  1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 
   
 Let i = 3 and j = 7
 ```swap_bits(x, i, j)```  
