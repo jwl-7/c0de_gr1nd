@@ -1,4 +1,4 @@
-# Computer x * y without Arithmetical Operators
+# Compute x * y without Arithmetical Operators
 
 "Sometimes the processors used in ultra low-power devices such as hearing aids do not have dedicated hardware for performing multiplication. A program that needs to perform  multiplication must do so explicitly using lower-level primitives." - EPI  
   
@@ -18,7 +18,12 @@ Examples:
   
 Solution - from [primitive-multiply-mysol.py](primitive-multiply-mysol.py):  
 ```python
-
+def add(x, y):
+    while y != 0:
+        carry = x & y
+        x ^= y
+        y = carry << 1
+    return x
 ```  
   
 Explanation:
