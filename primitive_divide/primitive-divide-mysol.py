@@ -1,14 +1,19 @@
-"""Brute-Force Algorithm
+"""Schoolbook Division Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(n)
 """
 
 class Solution:
     def divide(self, x, y):
         quotient = 0
         while x >= y:
-            x -= y
-            quotient += 1
+            y2 = y
+            multiple = 1
+            while x >= y2 << 1:
+                multiple <<= 1
+                y2 <<= 1
+            quotient += multiple
+            x -= y2
         return quotient
     
 def main():
