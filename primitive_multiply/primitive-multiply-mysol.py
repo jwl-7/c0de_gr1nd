@@ -1,6 +1,6 @@
-"""(FILL IN) Algorithm
+"""Shift and Add Algorithm
 
-Time Complexity: (FILL IN)
+Time Complexity: O(n^2)
 """
 
 class Solution:
@@ -12,6 +12,12 @@ class Solution:
         return x
 
     def multiply(self, x, y):
+        result_sum = 0
+        while y != 0:
+            if y & 1:
+                result_sum = self.add(result_sum, x)
+            x <<= 1
+            y >>= 1
         return result_sum
     
 def main():
