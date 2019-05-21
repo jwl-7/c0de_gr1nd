@@ -12,13 +12,13 @@ class Solution:
         return x
 
     def multiply(self, x, y):
-        result_sum = 0
+        product = 0
         while y != 0:
             if y & 1:
-                result_sum = self.add(result_sum, x)
+                product = self.add(product, x)
             x <<= 1
             y >>= 1
-        return result_sum
+        return product
     
 def main():
     s = Solution()
@@ -29,8 +29,8 @@ def main():
         (10, 8)
         ]
     for num in test_cases:
-        result_sum = s.multiply(num[0], num[1])
-        print(f'{num[0]} * {num[1]} = {result_sum}')
+        product = s.multiply(num[0], num[1])
+        print(f'{num[0]} * {num[1]} = {product}')
 
 if __name__ == '__main__':
     main()
