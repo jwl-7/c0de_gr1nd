@@ -16,8 +16,8 @@ def main():
         (11.274393136707644, 5)
         ]
     for num in test_cases:
-        quotient = s.divide(num[0], num[1])
-        print(f'{num[0]} / {num[1]} = {quotient}')
+        result = s.power(num[0], num[1])
+        print(f'{num[0]} ^ {num[1]} = {result}')
 
 if __name__ == '__main__':
     main()
