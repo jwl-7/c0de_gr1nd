@@ -38,19 +38,19 @@ def swap_bits(x, i, j):
   
 Explanation:  
 1. Grab i-th bit at index i  
-```python
-index_i = x >> i & 1
-```
+    ```python
+    index_i = x >> i & 1
+    ```
 2. Grab j-th bit at index j  
-```python
-index_j = x >> j & 1
-```
+    ```python
+    index_j = x >> j & 1
+    ```
 3. Check that the i-th and j-th bit are not the same value  
 4. Swap the bits using XOR to toggle the bits  
-```python
-x ^= 1 << i
-x ^= 1 << j
-```  
+    ```python
+    x ^= 1 << i
+    x ^= 1 << j
+    ```  
 5. Return the swapped number  
   
 </br>  

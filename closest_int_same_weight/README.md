@@ -30,16 +30,16 @@ def closest_int_same_bit_count(x):
 Explanation:  
 1. Loop through all 64 bits of the integer  
 2. Grab the two rightmost consecutive bits  
-```python
-index_i = x >> i & 1
-index_j = x >> i + 1 & 1
-```  
+    ```python
+    index_i = x >> i & 1
+    index_j = x >> i + 1 & 1
+    ```  
 3. Check that the two rightmost consecutive bits are not the same value  
 4. Swap the bits using XOR to toggle the bits  
-```python
-x ^= 1 << i
-x ^= 1 << i + 1
-```  
+    ```python
+    x ^= 1 << i
+    x ^= 1 << i + 1
+    ```  
 5. Return the closest integer with the same weight  
   
 </br>  

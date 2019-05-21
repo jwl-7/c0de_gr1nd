@@ -17,19 +17,19 @@ def reverse_bits(x):
   
 Explanation: 
 1. Reverse the bits  
-```python
-bin(x)[::-1]
-```  
+    ```python
+    bin(x)[::-1]
+    ```  
 2. Remove the '0b' from the binary number  
-```python
-bin(x)[2:][::-1]
-```  
+    ```python
+    bin(x)[2:][::-1]
+    ```  
 3. Pad the binary number to 64 bits
-```python
-bin(x)[2:].zfill(64)[::-1]
-```  
+    ```python
+    bin(x)[2:].zfill(64)[::-1]
+    ```  
 4. Convert the number from base 2 (binary) to base 10 (decimal integer)
-```python
-int(bin(x)[2:].zfill(64)[::-1], 2)
-```  
+    ```python
+    int(bin(x)[2:].zfill(64)[::-1], 2)
+    ```  
 5. Return the 64-bit unsigned integer with reversed bits
