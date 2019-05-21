@@ -47,13 +47,13 @@ The approach is based off the brute-force solution where subtracting the divisor
     y2 <<= 1
     ```  
 4. Add the multiple to the quotient  
-```python
-quotient += multiple
-```
+    ```python
+    quotient += multiple
+    ```
 5. Subtract the temporary divisor (y2) from the dividend (x)  
-```python
-x -= y2
-```  
+    ```python
+    x -= y2
+    ```  
 6. Return the quotient  
   
 </br>  
