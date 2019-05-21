@@ -1,10 +1,19 @@
-"""[FILL IN] Algorithm
+"""Iterative Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(n)
 """
 
 class Solution:
     def power(self, x, y):
+        result = 1
+        if y < 0:
+            y = -y
+            x = 1 / x
+        while y:
+            if y & 1:
+                result *= x
+            x *= x
+            y >>= 1
         return result
     
 def main():
