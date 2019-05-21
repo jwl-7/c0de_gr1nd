@@ -4,6 +4,13 @@ Time Complexity: (FILL IN)
 """
 
 class Solution:
+    def add(self, x, y):
+        while y != 0:
+            carry = x & y
+            x ^= y
+            y = carry << 1
+        return x
+
     def multiply(self, x, y):
         return result_sum
     
