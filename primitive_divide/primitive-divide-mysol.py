@@ -1,10 +1,14 @@
-"""[FILL IN] Algorithm
+"""Brute-Force Algorithm
 
 Time Complexity: [FILL IN]
 """
 
 class Solution:
     def divide(self, x, y):
+        quotient = 0
+        while x >= y:
+            x -= y
+            quotient += 1
         return quotient
     
 def main():
