@@ -18,11 +18,39 @@ Output: 133.45455538332973
 Solution - from [power-x-y-mysol.py](power-x-y-mysol.py):  
 ```python
 def power(x, y):
+    result = 1
+    if y < 0:
+        y = -y
+        x = 1 / x
+    while y:
+        if y & 1:
+            result *= x
+        x *= x
+        y >>= 1
     return result
 ```  
   
 Explanation:  
-
+  
+1. Initialize the result to 1  
+2. If the power (y) is negative, get the absolute value of y, and replace x with 1 / x  
+    ```python
+    if y < 0:
+        y = -y
+        x = 1 / x
+    ```  
+3. Loop over the power (y)  
+    a. If y is odd, set the result = result * the base (x)  
+    ```python
+    if y & 1:
+        result *= x
+    ```  
+    b. Set the base (x) = x * x, and divide the power (y) in half  
+    ```python
+    x *= x
+    y >>= 1
+    ```  
+4. Return the result (also sometimes referred to as the power)  
   
 </br>  
   
