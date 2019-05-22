@@ -1,11 +1,18 @@
-"""[FILL IN] Algorithm
+"""String Reversal Algorithm
 
-Time Complexity: [FILL IN]
+ Time Complexity: O(n)
+Space Complexity: O(n)
 """
 
 class Solution:
     def is_palindrome_number(self, x):
-        return True
+        if x < 0:
+            return False
+        reverse = str(x)[::-1]
+        if x == int(reverse):
+            return True
+        else:
+            return False
     
 def main():
     s = Solution()
