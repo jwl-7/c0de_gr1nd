@@ -1,11 +1,17 @@
-"""[FILL IN] Algorithm
+"""String Slicing Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(n), where n is the number of digits
 """
 
 class Solution:
     def reverse(self, x):
-        return x
+        if x < 0:
+            x = str(abs(x))[::-1]
+            x = -int(x)
+            return x
+        else:
+            x = str(x)[::-1]
+            return int(x)
     
 def main():
     s = Solution()
