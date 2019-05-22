@@ -13,10 +13,7 @@ class Solution:
     def uniform_random(self, lower_bound, upper_bound):
         p = upper_bound - lower_bound + 1
         while True:
-            x = random.randrange(p)
-            y = self.zero_one_random()
-            if y < p:
-                break
+            
         return x
     
 def main():
