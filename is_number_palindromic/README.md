@@ -17,8 +17,32 @@ Examples:
 Solution - from [is-number-palindromic-mysol.py](is-number-palindromic-mysol.py):  
 ```python
 def is_palindrome_number(x):
-    return True
+    if x < 0:
+        return False
+    reverse = str(x)[::-1]
+    if x == int(reverse):
+        return True
+    else:
+        return False
 ```  
   
 Explanation:  
   
+Python Slicing can be used for strings, lists, tuples, arrays, and custom data structures.  
+  
+The slicing notation follows the syntax: ```a[start:stop:step]```  
+  
+```a[::-1]``` steps backwards through the entirety of a, and thus reverses a.  
+  
+1. Check if the number (x) is negative, because a negative number in its string representation cannot be palindromic, since it starts with a -   
+2. Convert the number (x) to a string and grab the reversed representation  
+    ```python
+    reverse = str(x)[::-1]
+    ```  
+3. If the original number (x) is the same as the reversed number (reverse), then it is a palindrome, else it is not
+    ```python
+    if x == int(reverse):
+        return True
+    else:
+        return False
+    ```  
