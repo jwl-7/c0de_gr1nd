@@ -1,7 +1,6 @@
 """Coin Toss Algorithm
 
- Time Complexity: O(log(b - a + 1))
-Space Complexity: O(1)
+Time Complexity: O(log(b - a + 1))
 """
 
 import random
