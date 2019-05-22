@@ -12,9 +12,15 @@ class Solution:
     def uniform_random(self, lower_bound, upper_bound):
         p = upper_bound - lower_bound + 1
         while True:
-            
-        return x
-    
+            num = 0
+            i = 0
+            while 1 << i < p:
+                num = num << 1 | self.zero_one_random()
+                i += 1
+            if num < p:
+                break
+        return num
+        
 def main():
     s = Solution()
     test_cases = [
