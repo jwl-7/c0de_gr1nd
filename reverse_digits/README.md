@@ -24,6 +24,13 @@ def reverse(x):
 ```  
   
 Explanation:  
+  
+Python Slicing can be used for strings, lists, tuples, arrays, and custom data structures.  
+  
+The slicing notation follows the syntax: ```a[start:stop:step]```  
+  
+```a[::-1]``` steps backwards through the entirety of a, and thus reverses a.  
+  
 1. If the number (x) is negative, get the absolute value of x, convert to string, reverse the digits, convert back to a negative integer, and return the reversed number.  
     ```python
     if x < 0:
