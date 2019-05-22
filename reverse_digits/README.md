@@ -44,7 +44,3 @@ The slicing notation follows the syntax: ```a[start:stop:step]```
         x = str(x)[::-1]
         return int(x)
     ```  
-  
-</br>  
-  
-[Python Bitwise Operators Reference](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
