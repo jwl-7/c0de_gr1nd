@@ -1,4 +1,4 @@
-"""Rejection Sampling Algorithm
+"""Coin Toss Algorithm
 
  Time Complexity: O(log(b - a + 1))
 Space Complexity: O(1)
