@@ -31,9 +31,31 @@ Before: [2, 0, 1, 2, 2, 1, 1, 2, 1]
 Solution - from [dutch-national-flag-mysol.py](dutch-national-flag-mysol.py):  
 ```python
 def dutch_flag_partition(pivot_index, A):
-    # TODO - you fill in here.
-    return
+    pivot = A[pivot_index]
+    low = 0
+    mid = 0
+    high = len(A) - 1
+    while mid <= high:
+        if A[mid] < pivot:
+            A[mid], A[low] = A[low], A[mid]
+            low += 1
+            mid += 1
+        elif A[mid] == pivot:
+            mid += 1
+        elif A[mid] > pivot:
+            A[mid], A[high] = A[high], A[mid]
+            high -= 1
+    return A
 ```  
   
 Explanation:  
   
+The solution uses an efficient [quicksort](https://opendatastructures.org/ods-python/11_1_Comparison_Based_Sorti.html#49745) algorithm.  
+  
+3 pointers are used to iterate through the array and swap the elements - low, mid, and high.  
+
+Using the example Array [1, 1, 0, 2], here is where the pointers would start:    
+    
+|low, mid|   |   |high|  
+|-------:|---|---|----|
+|      1 | 1 | 0 | 2  |
