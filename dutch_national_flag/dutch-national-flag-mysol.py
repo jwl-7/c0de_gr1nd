@@ -3,12 +3,21 @@
 Time Complexity: [FILL IN]
 """
 
-RED, WHITE, BLUE = range(3)
-
 class Solution:
-    def dutch_flag_partition(pivot_index, A):
-        # TODO - you fill in here.
-        return
+    def dutch_flag_partition(self, pivot_index, A):
+        less = []
+        equal = []
+        greater = []
+        pivot = A[pivot_index]
+        for i in range(len(A)):
+            if A[i] < pivot:
+                less.append(A[i])
+            elif A[i] == pivot:
+                equal.append(A[i])
+            elif A[i] > pivot:
+                greater.append(A[i])
+        A = less + equal + greater
+        return A
     
 def main():
     s = Solution()
