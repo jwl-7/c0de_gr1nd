@@ -1,6 +1,6 @@
-"""[FILL IN] Algorithm
+"""Trivial Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(n)
 """
 
 class Solution:
