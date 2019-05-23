@@ -70,10 +70,41 @@ There are 4 cases where the two rectangles (R1 and R2) do not intersect:
 4. R1 is below R2  
     ```
     +----------+
-    |    R1    |
+    |    R2    |
     +----------+
 
     +----------+
-    |    R2    |
+    |    R1    |
     +----------+
     ```  
+  
+The given Rectangle tuple is defined with the parameters (x, y, width, height).  
+
+To test for the 4 cases above, you need to understand how to grab the 4 edges of a rectangle:  
+```
+x = left edge
+x + width = right edge
+y = bottom edge
+y + height = top edge
+```  
+  
+is_intersect function:  
+1. Test for case 1 - R1's right edge is left of R2's left edge  
+    ```python
+    R1.x + R1.width < R2.x
+    ```  
+2. Test for case 2 - R1's left edge is right of R2's right edge  
+    ```python
+    R1.x > R2.x + R2.width
+    ```  
+3. Test for case 3 - R1's bottom edge is above R2's top edge 
+    ```python
+    R1.y > R2.y + R2.height
+    ```  
+4. Test for case 4 - R1's top edge is below R2's bottom edge 
+    ```python
+    R1.y + R1.height < R2.y
+    ```  
+5. Return False if any of these cases are True  
+  
+  
