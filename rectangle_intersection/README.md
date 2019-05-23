@@ -3,7 +3,9 @@
 Problem:  
 Write a program which tests if two rectangles have a nonempty intersection. If the intersection is nonempty, return the rectangle formed by their intersection.  
 
-The Rectangle is defined by the parameters [x, y, width, height]. The (x, y) coordinate corresponds to the bottom-left corner of the rectangle.   
+The Rectangle is defined by the parameters [x, y, width, height]. The (x, y) coordinate corresponds to the bottom-left corner of the rectangle.  
+  
+If two boundaries of the rectangle touch, it is considered an intersection.  
   
 Examples:  
 ```
