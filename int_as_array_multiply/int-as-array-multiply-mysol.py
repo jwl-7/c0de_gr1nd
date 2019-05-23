@@ -4,6 +4,15 @@ Time Complexity: O(nm)
 """
 
 class Solution:
+    def remove_leading_zeroes(self, num):
+        i = 0
+        while i < len(num):
+            if num[i] > 0:
+                break
+            num.remove(i)
+            i += 1
+        return num
+
     def multiply(self, num1, num2):
         product = [0] * len(num1 + num2)
         for i in reversed(range(len(num1))):
@@ -11,6 +20,7 @@ class Solution:
                 product[i + j + 1] += num1[i] * num2[j]
                 product[i + j] += product[i + j + 1] // 10
                 product[i + j + 1] %= 10
+        product = self.remove_leading_zeroes(product)
         return product
     
 def main():
