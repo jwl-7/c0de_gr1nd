@@ -21,7 +21,6 @@ class Solution:
                 A[mid], A[high] = A[high], A[mid]
                 high -= 1
         return A
-
     
 def main():
     s = Solution()
