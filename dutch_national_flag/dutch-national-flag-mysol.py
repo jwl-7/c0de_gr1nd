@@ -1,6 +1,7 @@
 """Quicksort Based Algorithm
 
-Time Complexity: O(n)
+ Time Complexity: O(n)
+Space Complexity: O(1)
 """
 
 class Solution:
