@@ -5,7 +5,7 @@ Write a program that takes two arrays representing integers, and returns an inte
     
 Examples:  
 ```  
-[1, 2, 9] * [1, 3, 0] = [1, 6, 7, 7, 0]
+[1, 2, 3] * [3, 2, 1] = [3, 9, 4, 8, 3]
 
 [7, 0, 4, 9] * [1, 9, 8, 4] = [1, 3, 9, 8, 5, 2, 1, 6]
 
