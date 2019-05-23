@@ -16,8 +16,7 @@ class Solution:
                 equal.append(A[i])
             elif A[i] > pivot:
                 greater.append(A[i])
-        A = less + equal + greater
-        return A
+        return less + equal + greater
     
 def main():
     s = Solution()
