@@ -107,4 +107,22 @@ is_intersect function:
     ```  
 5. Return False if any of these cases are True  
   
-  
+intersect_rectangle function:  
+1. If R1 and R2 intersect, return the Rectangle formed by the intersection  
+    a. Get the bottom-left point of the intersection rectangle  
+    ```python
+    max(R1.x, R2.x), max(R1.y, R2.y)
+    ```  
+    b. Get the width of the intersection rectangle  
+    ```python
+    min(R1.x + R1.width, R2.x + R2.width) - max(R1.x, R2.x)
+    ```    
+    c. Get the height of the intersection rectangle  
+    ```python
+    min(R1.y + R1.height, R2.y + R2.height) - max(R1.y, R2.y)
+    ```  
+    d. Return the Rectangle formed by the intersection  
+2. Else return an empty Rectangle  
+    ```python
+    return Rectangle(0, 0, -1, -1)
+    ```  
