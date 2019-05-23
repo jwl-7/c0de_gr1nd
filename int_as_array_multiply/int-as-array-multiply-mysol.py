@@ -1,12 +1,17 @@
-"""[FILL IN] Algorithm
+"""Grade School Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(nm)
 """
 
 class Solution:
     def multiply(self, num1, num2):
-        # TODO - you fill in here.
-        return []
+        product = [0] * len(num1 + num2)
+        for i in reversed(range(len(num1))):
+            for j in reversed(range(len(num2))):
+                product[i + j + 1] += num1[i] * num2[j]
+                product[i + j] += product[i + j + 1] // 10
+                product[i + j + 1] %= 10
+        return product
     
 def main():
     s = Solution()
