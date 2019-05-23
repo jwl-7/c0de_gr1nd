@@ -27,10 +27,53 @@ Conclusion: Nonempty Intersection
   
 Solution - from [rectangle-intersection-mysol.py](rectangle-intersection-mysol.py):  
 ```python
+def is_intersect(R1, R2):
+    return not (R1.x + R1.width < R2.x or
+                R1.x > R2.x + R2.width or
+                R1.y > R2.y + R2.height or
+                R1.y + R1.height < R2.y)
+
 def intersect_rectangle(R1, R2):
-    # TODO - you fill in here.
-    return Rectangle(0, 0, 0, 0)
+    if is_intersect(R1, R2):
+        return (Rectangle(max(R1.x, R2.x), max(R1.y, R2.y), 
+                        min(R1.x + R1.width, R2.x + R2.width) - max(R1.x, R2.x),
+                        min(R1.y + R1.height, R2.y + R2.height) - max(R1.y, R2.y)))
+    return Rectangle(0, 0, -1, -1)
 ```  
   
-Explanation:   
+Explanation:  
   
+There are 4 cases where the two rectangles (R1 and R2) do not intersect:  
+  
+1. R1 is left of R2  
+    ```
+    +----------+    +----------+
+    |    R1    |    |    R2    | 
+    +----------+    +----------+
+    ```  
+2. R1 is right of R2  
+    ```
+    +----------+    +----------+
+    |    R2    |    |    R1    | 
+    +----------+    +----------+
+    ```  
+3. R1 is above R2  
+    ```
+    +----------+
+    |    R1    |
+    +----------+
+
+    +----------+
+    |    R2    |
+    +----------+
+    ```  
+4. R1 is below R2  
+    ```
+    +----------+
+    |    R1    |
+    +----------+
+
+    +----------+
+    |    R2    |
+    +----------+
+    ```  
