@@ -5,18 +5,18 @@ Time Complexity: O(n)
 
 class Solution:
     def dutch_flag_partition(self, pivot_index, A):
-        less = []
+        smaller = []
         equal = []
-        greater = []
+        larger = []
         pivot = A[pivot_index]
         for i in range(len(A)):
             if A[i] < pivot:
-                less.append(A[i])
+                smaller.append(A[i])
             elif A[i] == pivot:
                 equal.append(A[i])
             elif A[i] > pivot:
-                greater.append(A[i])
-        return less + equal + greater
+                larger.append(A[i])
+        return smaller + equal + larger
     
 def main():
     s = Solution()
