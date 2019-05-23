@@ -1,4 +1,4 @@
-"""Quicksort Based Algorithm
+"""Quicksort Algorithm
 
  Time Complexity: O(n)
 Space Complexity: O(1)
