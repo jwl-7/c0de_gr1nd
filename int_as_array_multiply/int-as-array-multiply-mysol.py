@@ -7,9 +7,7 @@ class Solution:
     def remove_leading_zeroes(self, num):
         i = 0
         length = len(num) - 1
-        while i < length:
-            if num[0] > 0:
-                break
+        while i < length and num[0] == 0:
             num.remove(0)
             i += 1
         return num
