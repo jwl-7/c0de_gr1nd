@@ -6,10 +6,11 @@ Time Complexity: O(nm)
 class Solution:
     def remove_leading_zeroes(self, num):
         i = 0
-        while i < len(num):
-            if num[i] > 0:
+        length = len(num) - 1
+        while i < length:
+            if num[0] > 0:
                 break
-            num.remove(i)
+            num.remove(0)
             i += 1
         return num
 
