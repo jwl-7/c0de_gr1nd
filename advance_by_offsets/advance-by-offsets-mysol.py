@@ -1,12 +1,17 @@
-"""[FILL IN] Algorithm
+"""Furthest Reach Algorithm
 
-Time Complexity: [FILL IN]
+Time Complexity: O(n)
 """
 
 class Solution:
-    def can_reach_end(A):
-        # TODO - you fill in here.
-        return True
+    def can_reach_end(self, A):
+        furthest = 0
+        end = len(A) - 1
+        i = 0
+        while i <= furthest and furthest < end:
+            furthest = max(furthest, A[i] + i)
+            i += 1
+        return furthest >= end
     
 def main():
     s = Solution()
