@@ -6,12 +6,12 @@ Space Complexity: O(1)
 
 class Solution:
     def delete_duplicates(self, A):
-        valid = 1
+        valid = 0
         for i in range(1, len(A)):
-            if A[i] != A[valid - 1]:
+            if A[valid] != A[i]:
                 valid += 1
-                A[valid - 1] = A[i]
-        return valid
+                A[valid] = A[i]
+        return valid + 1
     
 def main():
     s = Solution()
