@@ -1,8 +1,9 @@
 # Computing the Parity of a Word
 
 "Parity checks are used to detect single bit errors in data storage and communication." - EPI  
-  
-The parity of a binary word is 1 if the number of 1s in the word is odd. Conversely, the parity of a binary word is 0 if the number of 1s in the word is even.  
+
+Problem:
+The parity of a binary word is 1 if the number of 1s in the word is odd. Conversely, the parity of a binary word is 0 if the number of 1s in the word is even. How would you compute the parity of a very large number of 64-bit words?   
   
 Examples:  
 ```
