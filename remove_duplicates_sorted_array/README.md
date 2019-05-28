@@ -24,9 +24,31 @@ Updated: [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 3, 4, 5, 5]
 Solution - from [sorted-array-remove-dups-mysol.py](sorted-array-remove-dups-mysol.py):  
 ```python
 def delete_duplicates(A):
-    # TODO - you fill in here.
-    return 0
+    valid = 0
+    for i in range(1, len(A)):
+        if A[valid] != A[i]:
+            valid += 1
+            A[valid] = A[i]
+    return valid + 1
 ```    
   
 Explanation:  
   
+1. Since the array is already sorted, we can use two pointers to iterate through the array and identify duplicates:  
+    ```python
+    valid = 0
+    for i in range(1, len(A)):
+    ```  
+    -- valid -> starts at index[0], also keeps track of number of valid entries  
+    -- i -> starts at index[1]  
+2. If A[valid] != A[i], there is no duplicate, and A[i] is copied into A[valid + 1]  
+    ```python
+    if A[valid] != A[i]:
+        valid += 1
+        A[valid] = A[i]
+    ```  
+3. Return the number of valid elements  
+    ```python
+    return valid + 1
+    ```  
+    -- 1 is added to valid, since the count originally started at 0 (for array index purposes)  
