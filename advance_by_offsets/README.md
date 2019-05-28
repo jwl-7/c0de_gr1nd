@@ -48,11 +48,11 @@ The solution takes the approach of trying to advance as far as index i allows, w
     ```python
     return furthest >= end
     ```  
-    If the furthest index reached >= the last index, then this statement will return True  
+    -- If the furthest index reached >= the last index, this statement returns True    
   
 </br>  
   
-Example if the Array = [3, 3, 1, 0, 2, 0, 1]  
+Example if the Array = [3, 3, 1, 0, 2, 0, 1]:    
    
 Let i = current index and f = furthest index reached  
   
