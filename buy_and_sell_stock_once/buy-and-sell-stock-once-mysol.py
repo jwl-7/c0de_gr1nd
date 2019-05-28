@@ -1,12 +1,19 @@
-"""[FILL IN] Algorithm
+"""Min-Max Algorithm
 
- Time Complexity: [FILL IN]
-Space Complexity: [FILL IN]
+ Time Complexity: O(n)
+Space Complexity: O(1)
 """
 
 class Solution:
     def buy_and_sell_stock_once(self, prices):
-        return
+        minimum = float('inf')
+        max_profit = float('-inf')
+        max_profit_today = float('-inf')
+        for price in prices:
+            minimum = min(minimum, price)
+            max_profit_today = price - minimum
+            max_profit = max(max_profit, max_profit_today)
+        return max_profit
     
 def main():
     s = Solution()
