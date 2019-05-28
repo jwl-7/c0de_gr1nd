@@ -12,9 +12,23 @@ Examples:
 Solution - from [advance-by-offsets-mysol.py](advance-by-offsets-mysol.py):  
 ```python
 def can_reach_end(A):
-    # TODO - you fill in here.
-    return True
-```  
+    furthest = 0
+    end = len(A) - 1
+    i = 0
+    while i <= furthest and furthest < end:
+        furthest = max(furthest, A[i] + i)
+        i += 1
+    return furthest >= end
+```    
   
 Explanation:  
   
+The solution takes the approach of trying to advance as far as index i allows, while taking into account the other indexes along the way without backtracking.  
+  
+1. Set 3 variables that are used to iterate through the array:  
+    ```python
+    furthest = 0
+    end = len(A) - 1
+    i = 0
+    ```  
+    i signifies
