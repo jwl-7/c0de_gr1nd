@@ -23,12 +23,59 @@ def can_reach_end(A):
   
 Explanation:  
   
-The solution takes the approach of trying to advance as far as index i allows, while taking into account the other indexes along the way without backtracking.  
+The solution takes the approach of trying to advance as far as index i allows, while iterating through all entries in A.   
   
-1. Set 3 variables that are used to iterate through the array:  
+1. Set 3 variables that are used to advance through the array:  
     ```python
     furthest = 0
     end = len(A) - 1
     i = 0
     ```  
-    i signifies
+    -- furthest is used to store the furthest index reached  
+    -- end represents the last index of the array  
+    -- i is used to iterate through the array  
+2. Loop while the current index is before the furthest reached and the furthest index reached is before the end  
+    ```python
+    while i <= furthest and furthest < end:
+    ```  
+3. Iterate through each entry in the array and track the furthest index that can be reached  
+    ```python
+    furthest = max(furthest, A[i] + i)
+    i += 1
+    ```  
+    -- The furthest index i that can be reached from the current index i = A[i] + i  
+4. Return whether or not it is possible to advance to the end of the array  
+    ```python
+    return furthest >= end
+    ```  
+    If the furthest index reached >= the last index, then this statement will return True  
+  
+</br>  
+  
+Example if the Array = [3, 3, 1, 0, 2, 0, 1]  
+   
+Let i = current index and f = furthest index reached  
+  
+|f, i|   |   |   |   |   |   |
+|---:|---|---|---|---|---|---|
+|  3 | 3 | 1 | 0 | 2 | 0 | 1 |  
+
+|   | i |   | f |   |   |   |
+|---|---|---|---|---|---|---|
+| 3 | 3 | 1 | 0 | 2 | 0 | 1 |  
+
+|   |   | i |   | f |   |   |
+|---|---|---|---|---|---|---|
+| 3 | 3 | 1 | 0 | 2 | 0 | 1 |  
+
+|   |   |   | i | f |   |   |
+|---|---|---|---|---|---|---|
+| 3 | 3 | 1 | 0 | 2 | 0 | 1 |  
+
+|   |   |   |   |f, i |   |   |
+|---|---|---|---|:---:|---|---|
+| 3 | 3 | 1 | 0 |  2  | 0 | 1 |  
+
+|   |   |   |   |   | i | f |
+|---|---|---|---|---|---|---|
+| 3 | 3 | 1 | 0 | 2 | 0 | 1 |  
