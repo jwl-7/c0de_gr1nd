@@ -21,9 +21,27 @@ Conclusion: Buy at 0.2 and sell at 1.7
 Solution - from [buy-and-sell-stock-once-mysol.py](buy-and-sell-stock-once-mysol.py):  
 ```python
 def buy_and_sell_stock_once(prices):
-    # TODO - you fill in here.
-    return 0.0
+    minimum = float('inf')
+    max_profit = float('-inf')
+    max_profit_today = float('-inf')
+    for price in prices:
+        minimum = min(minimum, price)
+        max_profit_today = price - minimum
+        max_profit = max(max_profit, max_profit_today)
+    return max_profit
 ```    
   
-Explanation:  
+Explanation:   
   
+1. Create 3 variables to keep track of the minimum price, the max profit that can be made from selling on current day, and the max profit that can be made overall:  
+    ```python
+    minimum = float('inf')
+    max_profit = float('-inf')
+    max_profit_today = float('-inf')
+    ```  
+    -- The initial values are set to inf and -inf so that they will be lower / higher when doing the initial comparison  
+2. Loop over each price  
+3. Set the minimum price to ```min(minimum, price)```  
+4. Set the max daily profit to ```max_profit_today = price - minimum```  
+5. Set the max profit overall to ```max_profit = max(max_profit, max_profit_today)```
+6. Return the max profit
