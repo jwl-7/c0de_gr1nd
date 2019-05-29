@@ -8,7 +8,7 @@ def parity(x):
     x ^= x >> 4
     x ^= x >> 2
     x ^= x >> 1
-    return x & 0x1
+    return x & 1
 
 
 if __name__ == '__main__':
