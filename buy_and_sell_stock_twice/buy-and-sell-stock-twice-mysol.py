@@ -17,8 +17,8 @@ class Solution:
             profits.append(max_profit)
         for i, price in reversed(list(enumerate(prices[1:]))):
             max_price = max(max_price, price)
-            profit = max_price - price
-            max_profit = max(max_profit, profit + profits[i])
+            profit = max_price - price + profits[i]
+            max_profit = max(max_profit, profit)
         return max_profit
     
 def main():
