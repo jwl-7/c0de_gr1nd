@@ -39,7 +39,7 @@ def generic_test_main(test_file,
 
         set_output_opts(config.tty_mode, config.color_mode)
 
-        test_handler = GenericTestHandler(test_func, Solution, comparator=comparator)
+        test_handler = GenericTestHandler(test_func, comparator=comparator)
         return run_tests(test_handler, config, res_printer)
     except RuntimeError as e:
         print(
