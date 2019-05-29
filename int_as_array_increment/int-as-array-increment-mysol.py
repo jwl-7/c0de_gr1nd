@@ -5,8 +5,16 @@ Time Complexity: O(n), where n is the length of A
 
 class Solution:
     def plus_one(self, A):
-        # TODO - you fill in here.
-        return []
+        for i in reversed(range(len(A))):
+            A[i] += 1
+            if A[i] < 10:
+                break
+            elif A[i] == A[0]:
+                A[0] = 1
+                A.append(0)
+            else:
+                A[i] = 0
+        return A
     
 def main():
     s = Solution()
