@@ -1,26 +1,24 @@
 # Computing the Parity of a Word
-
-"Parity checks are used to detect single bit errors in data storage and communication." - EPI  
-
-Problem:  
-The parity of a binary word is 1 if the number of 1s in the word is odd. Conversely, the parity of a binary word is 0 if the number of 1s in the word is even. How would you compute the parity of a very large number of 64-bit words?   
+The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0. How would you compute the parity of a very large number of 64-bit words?  
   
-Examples:  
+## Examples
 ```
-1011   -> 1  
-1001   -> 0  
-100100 -> 0  
-111000 -> 1  
-```  
+1011   -> 1
+1001   -> 0
+100100 -> 0
+111000 -> 1
+```
   
-Solution - from [parity-mysol.py](parity-mysol.py):  
+## Solution 
 ```python
 def parity(x):
-    result = 0
-    while x:
-        result = not result
-        x = x & (x - 1)
-    return int(result)
+    x ^= x >> 32
+    x ^= x >> 16
+    x ^= x >> 8
+    x ^= x >> 4
+    x ^= x >> 2
+    x ^= x >> 1
+    return x & 1
 ```  
   
 Explanation:
