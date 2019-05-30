@@ -57,7 +57,7 @@ def parity(x):
     ```
   
 ## Step-by-Step Example
-Let x = 11010111  
+Let _x_ = 11010111  
 ```
 1. 10110111
 2. 10110111
