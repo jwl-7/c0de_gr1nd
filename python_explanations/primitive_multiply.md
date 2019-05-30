@@ -59,7 +59,7 @@ Result of 1101 &times; 1011 = 10001101
 </code></pre>
   
 ## Code Dissection - add
-1. Create a loop that runs while _y_ != 0, which is the case when the sum has been computed  
+1. Create a loop that runs while _y_ != 0, which stops when the sum has been computed  
     ```python
     while y != 0:
     ```
@@ -85,7 +85,7 @@ Result of 1101 &times; 1011 = 10001101
     ```python
     product = 0
     ```
-2. Create a loop that runs while _y_ != 0, which is the case when the product has been computed  
+2. Create a loop that runs while _y_ != 0, which stops when the product has been computed  
     ```python
     while y != 0:
     ```
