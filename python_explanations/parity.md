@@ -1,5 +1,6 @@
 # Computing the Parity of a Word
-The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0. How would you compute the parity of a very large number of 64-bit words?  
+The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0.  
+How would you compute the parity of a very large number of 64-bit words?  
   
 ## Examples
 ```
