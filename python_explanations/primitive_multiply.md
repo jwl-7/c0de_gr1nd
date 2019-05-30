@@ -40,12 +40,12 @@ Let's take a look at multiplying two binary numbers
 <code>
               1 1 0 1
       &times; 1 0 1 1
-      ----------------
+                  ---
               1 1 0 1  (1101 &times; 1)
             1 1 0 1    (1101 &times; 1 shifted once)
           0 0 0 0      (1101 &times; 0 shifted twice)
  &plus; 1 1 0 1        (1101 &times; 1 shifted thrice)
- ---------------------
+                  ---
                     1
                   1 1
                 1 1 1
