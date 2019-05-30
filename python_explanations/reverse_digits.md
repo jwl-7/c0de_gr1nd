@@ -1,17 +1,15 @@
-# Reverse Digits  
-  
-Problem:  
+# Reverse Digits
 Write a program which takes an integer and returns the integer corresponding to the digits of the input written in reverse order.  
   
-Examples:  
+## Examples
 ```
-42   -> 24  
--314 -> -413  
-2117 -> 7112  
--94  -> -49  
-```  
+42 -> 24
+-94 -> -49
+-314 -> -413
+2117 -> 7112
+```
   
-Solution - from [reverse-digits-mysol.py](reverse-digits-mysol.py):  
+## Solution
 ```python
 def reverse(x):
     if x < 0:
@@ -21,26 +19,24 @@ def reverse(x):
     else:
         x = str(x)[::-1]
         return int(x)
-```  
+```
   
-Explanation:  
+## Explanation
+* The solution uses the brute-force algorithm, which is to convert the input to a string, reverse the string, and convert back to an integer  
+* Python slicing notation follows the syntax: ```a[start:stop:step]```  
+* ```a[::-1]``` steps backwards through the entirety of a, thus reversing a  
   
-Python Slicing can be used for strings, lists, tuples, arrays, and custom data structures.  
-  
-The slicing notation follows the syntax: ```a[start:stop:step]```  
-  
-```a[::-1]``` steps backwards through the entirety of a, and thus reverses a.  
-  
-1. If the number (x) is negative, get the absolute value of x, convert to string, reverse the digits, convert back to a negative integer, and return the reversed number.  
+## Code Dissection
+1. If _x_ is negative, compute the absolute value of _x_, convert _x_ to a string, reverse the string, convert _x_ back into a negative integer, and return the input written in reverse order  
     ```python
     if x < 0:
         x = str(abs(x))[::-1]
         x = -int(x)
         return x
-    ```  
-2. Else if the number (x) is positive, convert to string, reverse the digits, and return the reversed number in an integer.  
+    ```
+2. If _x_ is positive, convert _x_ to a string, reverse the string, convert _x_ back into an integer, and return the input written in reverse order  
     ```python
     else:
         x = str(x)[::-1]
         return int(x)
-    ```  
+    ```
