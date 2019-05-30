@@ -37,7 +37,7 @@ def multiply(x, y):
 * Since we cannot use arithmetical operators, we have to define our own addition function  
   
 Let's take a look at multiplying two binary numbers  
-<code>
+<pre><code>
               1 1 0 1
       &times; 1 0 1 1
                   ---
@@ -56,4 +56,4 @@ Let's take a look at multiplying two binary numbers
       1 0 0 0 1 1 0 1  (carry-in = 1)
 
 Result of 1101 &times; 1011 = 10001101
-</code>
+</code></pre>
