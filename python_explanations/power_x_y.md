@@ -29,12 +29,12 @@ def power(x, y):
 ```
   
 ## Explanation
-* The brute-force algorithm is to compute _x <sup>2</sup>_ = _x_ &times; _x_, then _x <sup>3</sup>_ = _x <sup>2</sup>_ &times; _x_, and so on  
+* The brute-force algorithm is to compute _x<sup>2</sup>_ = _x_ &times; _x_, then _x<sup>3</sup>_ = _x<sup>2</sup>_ &times; _x_, and so on  
 * The algorithm is made more efficient by exploiting the properties of exponentiation  
-* When _y_ is a power of 2, the multiplications can be iterated by squaring like _x_, _x <sup>2</sup>_, (_x <sup>2</sup>_) _<sup>2</sup>_  
-* When _y_ is nonnegative, if the least significant bit of _y_ is 0, the result is (_x <sup>y &#8725; 2</sup>_) <sup>2</sup>  
-* When _y_ is nonnegative, if the least significant bit of _y_ is 1, the result is _x_ &times; (_x <sup>y &#8725; 2</sup>_) <sup>2</sup>  
-* When _y_ is negative, if the least significant bit of _y_ is 0, the result is (_1&#8725;x <sup>-y &#8725; 2</sup>_) <sup>2</sup>  
-* When _y_ is negative, if the least significant bit of _y_ is 1, the result is _1&#8725;x_ &times; (_1&#8725;x <sup>-y &#8725; 2</sup>_) <sup>2</sup>  
+* When _y_ is a power of 2, the multiplications can be iterated by squaring like _x_, _x<sup>2</sup>_, (_x<sup>2</sup>_ )_<sup>2</sup>_  
+* When _y_ is nonnegative, if the least significant bit of _y_ is 0, the result is (_x <sup>y &#8725; 2</sup>_ )_<sup>2</sup>_  
+* When _y_ is nonnegative, if the least significant bit of _y_ is 1, the result is _x_ &times; (_x <sup>y &#8725; 2</sup>_)_<sup>2</sup>_  
+* When _y_ is negative, if the least significant bit of _y_ is 0, the result is (_1 &#8725; x <sup>-y &#8725; 2</sup>_ )_<sup>2</sup>_  
+* When _y_ is negative, if the least significant bit of _y_ is 1, the result is _1 &#8725; x_ &times; (_1 &#8725; x <sup>-y &#8725; 2</sup>_)_<sup>2</sup>_  
   
 ## Code Dissection
