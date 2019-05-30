@@ -1,17 +1,15 @@
-# Compute x / y
+# Compute _x_ &#8725; _y_
+Given two positive integers, compute their quotient, using only the addition, subtraction, and shifting operators.  
   
-Problem:  
-Given two positive integers, compute their quotient, using only the addition, subtraction, and shifting operators.   
-  
-Examples:  
+## Examples
 ```
 12 / 4 = 3
 7 / 7  = 1
 10 / 5 = 2
 42 / 7 = 6
-```  
+```
   
-Solution - from [primitive-divide-mysol.py](primitive-divide-mysol.py):  
+## Solution
 ```python
 def divide(x, y):
     quotient = 0
@@ -24,38 +22,44 @@ def divide(x, y):
         quotient += multiple
         x -= y2
     return quotient
-```  
+```
   
-Explanation:  
+## Explanation
+* The brute-force algorithm is to iteratively subtract _y_ from _x_ until _x_ < _y_, the quotient is the number of subtractions  
   
-The approach is based off the brute-force solution where subtracting the divisor from the divident until the dividend < divisor results in the dividend = remainder, and the number of subtractions = quotient.  
-  
-1. Initialize quotient = 0  
-2. Loop until the dividend (x) < divisor (y)  
-    a. Create a temporary y and multiple variable - these will help with optimizing the solution  
+## Code Dissection
+1. Initialize the quotient to zero  
+    ```python
+    quotient = 0
+    ```
+2. Create an outer loop that runs until _x_ <= _y_, which stops when the quotient has been computed  
+    ```python
+    while x >= y:
+    ```
+3. Create a temporary _y_ and multiple variable that will help with optimizing the algorithm  
     ```python
     y2 = y
     multiple = 1
-    ```  
-3. (Nested Loop) Loop until dividend (x) < temporary divisor (y2) * 2  
-    ```python
+    ```
+4. Create an inner loop that runs until _x_ < _y2_ &times; 2  
+    ``` python
     while x >= y2 << 1:
-    ```  
-    a. Set multiple = multiple * 2 and y2 = y2 * 2
+    ```
+5. Shift the multiple and _y2_ to the left once, which is equivalent to multiple *= 2 and _y2_ *= 2  
     ```python
     multiple <<= 1
     y2 <<= 1
-    ```  
-4. Add the multiple to the quotient  
+    ```
+6. Add the multiple to the quotient and subtract _y2_ from _x_  
     ```python
     quotient += multiple
-    ```
-5. Subtract the temporary divisor (y2) from the dividend (x)  
-    ```python
     x -= y2
-    ```  
-6. Return the quotient  
+    ```
+7. Return the quotient of _x_ &#8725; _y_  
+    ```python
+    return quotient
+    ```
   
-</br>  
-  
-[Python Bitwise Operators Reference](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
+## Useful References
+* [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
+* [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
