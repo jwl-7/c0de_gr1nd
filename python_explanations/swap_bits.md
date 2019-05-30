@@ -50,11 +50,11 @@ def swap_bits(x, i, j):
     ```python
     x ^= 1 << i
     ```
-4. Flip the _j_-th bit  
+5. Flip the _j_-th bit  
     ```python
     x ^= 1 << j
     ```
-5. Return the decimal number with the swapped bits  
+6. Return the decimal number with the swapped bits  
     ```python
     return x
     ```
