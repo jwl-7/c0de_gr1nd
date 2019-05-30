@@ -24,8 +24,7 @@ def parity(x):
 ## Explanation
 * The XOR of two bits is 0 if both bits are 0 or both bits are 1  
 * The XOR of a group of bits is its parity  
-* The parity of 64-bit integer [_b<sub>63</sub>_,..., _b<sub>0</sub>_] = the parity of the XOR of  
-  [_b<sub>63</sub>_,..., _b<sub>32</sub>_] and [_b<sub>31</sub>_,..., _b<sub>0</sub>_]  
+* The parity of 64-bit integer [_b<sub>63</sub>_,..., _b<sub>0</sub>_] = the parity of the XOR of [_b<sub>63</sub>_,..., _b<sub>32</sub>_] and [_b<sub>31</sub>_,..., _b<sub>0</sub>_]  
   
 ## Code Dissection
 1. XOR two 32-bit values = parity of 64-bit operand  
@@ -71,4 +70,4 @@ Let x = 11010111
   
 ## Useful References
 * [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
-* [Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
+* [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
