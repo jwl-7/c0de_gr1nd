@@ -1,35 +1,27 @@
 # Reverse Bits
-
-Problem:  
-Write a program that reverses the bits of a given 64-bit unsigned integer.  
+Write a program that takes a 64-bit unsigned integer and returns the 64-bit unsigned integer consisting of the bits of the input in reverse order.  
   
-Example:    
-```
- Input: 1110000000000001
-Output: 1000000000000111
-```  
+## Example
+* Let _x_ = 1110000000000001  
   
-Solution - from [reversebits-pythonicsol.py](reversebits-pythonicsol.py): 
+The bits in reverse order = 1000000000000111  
+  
+## Pythonic Solution
 ```python
 def reverse_bits(x):
     return int(bin(x)[2:].zfill(64)[::-1], 2)
-```  
+```
   
-Explanation: 
-1. Reverse the bits  
-    ```python
-    bin(x)[::-1]
-    ```  
-2. Remove the '0b' from the binary number  
-    ```python
-    bin(x)[2:][::-1]
-    ```  
-3. Pad the binary number to 64 bits
-    ```python
-    bin(x)[2:].zfill(64)[::-1]
-    ```  
-4. Convert the number from base 2 (binary) to base 10 (decimal integer)
-    ```python
-    int(bin(x)[2:].zfill(64)[::-1], 2)
-    ```  
-5. Return the 64-bit unsigned integer with reversed bits
+## Bit Manipulation Solution
+```python
+def reverse_bits(x):
+    result = 0
+    for i in range(64):
+        result = (result << 1) + (x & 1)
+        x >>= 1
+    return result
+```
+  
+## Explanation
+* The fastest way to reverse the bits would be to build an array-based lookup, however, that would require much additional code and calculations unless hardcoded  
+* 
