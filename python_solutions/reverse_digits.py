@@ -12,6 +12,4 @@ def reverse(x):
 
 
 if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("reverse_digits.py",
-                                       'reverse_digits.tsv', reverse))
+    exit(generic_test.generic_test_main("reverse_digits.py", 'reverse_digits.tsv', reverse))
