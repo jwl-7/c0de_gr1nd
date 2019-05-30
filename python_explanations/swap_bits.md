@@ -6,12 +6,12 @@ A 64-bit integer can be viewed as an array of 64-bits, with the bit at index 0 c
 * Let _i_ = 3  
 * Let _j_ = 7  
   
-1234 in binary viewed as array of bits
+##### 1234 in binary viewed as array of bits
 |MSB | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |LSB|
 |---:|---|---|---|---|---|---|---|---|---|---|
 |  1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
   
-Bits [3] and [7] (0 and 1) will be swapped
+##### Bits [3] and [7] (0 and 1) will be swapped
 |MSB | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |LSB|
 |---:|---|---|---|---|---|---|---|---|---|---|
 |  1 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 1 | 0 |
