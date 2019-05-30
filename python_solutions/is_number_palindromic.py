@@ -12,7 +12,4 @@ def is_palindrome_number(x):
 
 
 if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("is_number_palindromic.py",
-                                       "is_number_palindromic.tsv",
-                                       is_palindrome_number))
+    exit(generic_test.generic_test_main("is_number_palindromic.py", "is_number_palindromic.tsv", is_palindrome_number))
