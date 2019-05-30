@@ -13,7 +13,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|-------------|
 |4.1|Computing the Parity of a Word|[Python](./python_solutions/parity.py)|_O(logn)_|_O(1)_|[Link](./python_explanations/parity.md)|
 |4.2|Swap Bits|[Python](./python_solutions/swap_bits.py)|_O(1)_|_O(1)_|[Link](./python_explanations/swap_bits.md)|
-|4.3|Reverse Bits|[Python](./python_solutions/reverse_bits.py)|_O(n)_|_O(n)_|[Link](./python_explanations/reverse_bits.md)|
+|4.3|Reverse Bits|[Python](./python_solutions/reverse_bits.py)|_O(n)_|_O(1)_|[Link](./python_explanations/reverse_bits.md)|
 |4.4|Find a Closest Integer with the Same Weight|[Python](./python_solutions/closest_int_same_weight.py)|_O(n)_|_O(1)_|[Link](./python_explanations/closest_int_same_weight.md)|
 |4.5|Compute _x_ &times; _y_ Without Arithmetical Operators|[Python](./python_solutions/primitive_multiply.py)|_O(n)_|_O(n<sup>2</sup>)_|[Link](./python_explanations/primitive_multiply.md)|
 |4.6|Compute _x_ &#8725; _y_|[Python](./python_solutions/primitive_divide.py)|_O(n)_|_O(1)_|[Link](./python_explanations/primitive_divide.md)|
