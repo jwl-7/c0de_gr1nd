@@ -2,9 +2,9 @@ from test_framework import generic_test
 
 
 def swap_bits(x, i, j):
-    index_i = x >> i & 1
-    index_j = x >> j & 1
-    if index_i != index_j:
+    bit_i = x >> i & 1
+    bit_j = x >> j & 1
+    if bit_i != bit_j:
         x ^= 1 << i
         x ^= 1 << j
     return x
