@@ -36,7 +36,7 @@ def multiply(x, y):
 * The algorithm is based off the grade-school method for multiplication, which uses shifting and adding  
 * Since we cannot use arithmetical operators, we have to define our own addition function  
   
-Let's take a look at multiplying two binary numbers  
+Let's take a look at multiplying two binary numbers using shifts and adds 
 <pre><code>
               1 1 0 1
             &times; 1 0 1 1
@@ -57,3 +57,6 @@ Let's take a look at multiplying two binary numbers
 
 Result of 1101 &times; 1011 = 10001101
 </code></pre>
+  
+## Code Dissection
+1. 
