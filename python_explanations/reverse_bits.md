@@ -31,7 +31,7 @@ def reverse_bits(x):
 * The brute-force algorithm is to iterate through the 32 least significant bits of the input, and swap each with the corresponding most significant bit  
 * The Pythonic solution is ~5x faster than the Bit Manipulation solution, however, the lack of bitwise operators defeats some of the purpose of the problem  
   
-## Code Dissection 1
+## Code Dissection
 1. Define a variable that starts at 63 (the index of the most significant bit)  
     ```python
     j = 63
