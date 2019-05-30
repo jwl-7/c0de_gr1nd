@@ -38,3 +38,35 @@ def power(x, y):
 * When _y_ is negative, if the least significant bit of _y_ is 1, the result is _1 &#8725; x_ &times; (_1 &#8725; x <sup>-y &#8725; 2</sup>_ ) _<sup>2</sup>_  
   
 ## Code Dissection
+1. Initialize the result to 1  
+    ```python
+    result = 1
+    ```
+2. If _y_ is negative, replace _y_ with _-y_ and _x_ with _1 &#8725; x_  
+    ```python
+    if y < 0:
+        y = -y
+        x = 1 / x
+    ```
+3. Create a loop that runs until _y_ == 0  
+    ```python
+    while y:
+    ```
+4. If the least significant bit of _y_ is 1, compute the result = result &times; _x_  
+    ```python
+    if y & 1:
+        result *= x
+    ```
+5. Compute _x_ = _x_ &times; _x_ and _y_ = _y_ &#8725; 2  
+    ```python
+    x *= x
+    y >>= 1
+    ```
+6. Return the result of _x <sup>y</sup>_  
+    ```python
+    return result
+    ```
+  
+## Useful References
+* [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
+* [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
