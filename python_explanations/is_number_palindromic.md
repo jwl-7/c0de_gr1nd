@@ -1,20 +1,17 @@
-# Check if a Decimal Integer is a Palindrome  
-
-"A palindromic string is one which reads the same forwards and backwards, e.g., 'redivider'." - EPI  
+# Check if a Decimal Integer is a Palindrome
+A palindromic string is one which reads the same forwards and backwards, such as the string 'racecar'.  
+Write a program which determines if the decimal representation of an integer is a palindromic string.  
   
-Problem:  
-Write a program that takes an integer and determines if that integer's representation as a decimal string is a palindrome.  
-  
-Examples:  
+## Examples
 ```
 0    -> True
 11   -> True
 215  -> False
 -1   -> False
 777  -> True
-```  
+```
   
-Solution - from [is-number-palindromic-mysol.py](is-number-palindromic-mysol.py):  
+## Solution
 ```python
 def is_palindrome_number(x):
     if x < 0:
@@ -24,25 +21,27 @@ def is_palindrome_number(x):
         return True
     else:
         return False
-```  
+```
   
-Explanation:  
+## Explanation
+* The solution uses a simple approach of comparing the integer _x_ to a copy of it in reverse order, if the two numbers are the same, then _x_ is a palindrome   
+* Python slicing notation follows the syntax: ```a[start:stop:step]```  
+* ```a[::-1]``` steps backwards through the entirety of a, thus reversing a  
   
-Python Slicing can be used for strings, lists, tuples, arrays, and custom data structures.  
-  
-The slicing notation follows the syntax: ```a[start:stop:step]```  
-  
-```a[::-1]``` steps backwards through the entirety of a, and thus reverses a.  
-  
-1. Check if the number (x) is negative, because a negative number in its string representation cannot be palindromic, since it starts with a -   
-2. Convert the number (x) to a string and grab the reversed representation  
+## Code Dissection
+1. If _x_ is negative, its decimal representation cannot be palindromic  
+    ```python
+    if x < 0:
+        return False
+    ```
+2. Create a copy of the string representation of _x_ in reverse order  
     ```python
     reverse = str(x)[::-1]
-    ```  
-3. If the original number (x) is the same as the reversed number (reverse), then it is a palindrome, else it is not
+    ```
+3. If _x_ is equal to the decimal representation of reverse, then _x_ is palindromic, else it is not  
     ```python
     if x == int(reverse):
         return True
     else:
         return False
-    ```  
+    ```
