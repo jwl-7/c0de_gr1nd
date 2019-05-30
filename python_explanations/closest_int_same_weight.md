@@ -1,5 +1,6 @@
 # Find a Closest Integer with the Same Weight  
 Define the _weight_ of a nonnegative integer _x_ to be the number of bits that are set to 1 in its binary representation.  
+  
 Write a program which takes as input a nonnegative integer _x_ and returns a number _y_ which is not equal to _x_, but has the same weight as _x_ and their difference, |_y_&minus;_x_|, is as small as possible. You can assume _x_ is not 0, or all 1s.  
   
 ## Example
