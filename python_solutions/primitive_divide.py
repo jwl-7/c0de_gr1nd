@@ -15,6 +15,4 @@ def divide(x, y):
 
 
 if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("primitive_divide.py",
-                                       "primitive_divide.tsv", divide))
+    exit(generic_test.generic_test_main("primitive_divide.py", "primitive_divide.tsv", divide))
