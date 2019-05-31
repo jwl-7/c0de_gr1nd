@@ -30,6 +30,7 @@ the pursuit of ameloriation as a programmer
 |5.2|Increment an Arbitrary-Precision Integer|[Python](./python_solutions/int_as_array_increment.py)|_O(n)_|_O(1)_|[Link](./python_explanations/int_as_array_increment.md)|
 |5.3|Multiply Two Arbitrary-Precision Integers|[Python](./python_solutions/int_as_array_multiply.py)|_O(nm)_|_O(n+m)_|[Link](./python_explanations/int_as_array_multiply.md)|
 |5.4|Advancing Through an Array|[Python](./python_solutions/advance_by_offsets.py)|_O(n)_|_O(1)_|[Link](./python_explanations/advance_by_offsets.md)|
+|5.5|Delete Duplicates from a Sorted Array|[Python](./python_solutions/sorted_array_remove_dups.py)|_O(n)_|_O(1)_|[Link](./python_explanations/sorted_array_remove_dups.md)|
   
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)  
