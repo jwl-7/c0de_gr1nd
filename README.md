@@ -34,6 +34,11 @@ the pursuit of ameloriation as a programmer
 |5.6|Buy and Sell a Stock Once|[Python](./python_solutions/buy_and_sell_stock.py)|_O(n)_|_O(1)_|[Link](./python_explanations/buy_and_sell_stock.md)|
 |5.7|Buy and Sell a Stock Twice|[Python](./python_solutions/buy_and_sell_stock_twice.py)|_O(n)_|_O(n)_|[Link](./python_explanations/buy_and_sell_stock_twice.md)|
   
+## Random Code -- Not from EPI
+| Title | Solution | Time | Space |
+|-------|----------|------|-------|
+|Shiba|[ASM](./)
+  
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)  
 * [Open Data Structures](https://opendatastructures.org/)  
