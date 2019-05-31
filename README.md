@@ -35,9 +35,11 @@ the pursuit of ameloriation as a programmer
 |5.7|Buy and Sell a Stock Twice|[Python](./python_solutions/buy_and_sell_stock_twice.py)|_O(n)_|_O(n)_|[Link](./python_explanations/buy_and_sell_stock_twice.md)|
   
 ## Random Code -- Not from EPI
-| Title | Solution | Time | Space |
-|-------|----------|------|-------|
-|Shiba|[ASM](./)
+| Title | Solution | Time | Space | Explanation |
+|-------|----------|------|-------|-------------|
+|Shiba|[ASM](./random_code/shiba/shiba.asm)|_O(w0w)_|_O(such)_|[Link](./random_code/shiba/README.md)|
+|Caesar Cipher|[Python](./random_code/caesar_cipher/caesar_cipher.py)|_N/A_|_N/A_|[Link](./random_code/caesar_cipher/README.md)|
+|FizzBuzz|[Python](./random_code/fizz_buzz/fizzbuzz.py)[C++](./random_code/fizz_buzz/fizzbuzz.cpp)[ASM](./random_code/fizz_buzz/fizzbuzz.asm)|_O(n)_|_O(1)_|[Link](./random_code/fizz_buzz/README.md)|
   
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)  
