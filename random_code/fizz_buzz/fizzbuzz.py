@@ -1,9 +1,3 @@
-"""Fizz Buzz
-
- Time Complexity: O(n)
-Space Complexity: O(1)
-"""
-
 class Solution:
     def fizzy(self, n):
         list = []
