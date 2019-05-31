@@ -5,7 +5,7 @@ the pursuit of ameloriation as a programmer
 
 ## Introduction
 * This repository features my solutions and explanations to the problems presented in  
-  [Elements of Programming Interviews in python](http://bit.ly/epipython)  
+  [Elements of Programming Interviews in Python](http://bit.ly/epipython)  
 * The book solutions and test framework included are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)  
   
 ## Primitive Types
