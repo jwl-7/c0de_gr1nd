@@ -39,7 +39,7 @@ the pursuit of ameloriation as a programmer
 |-------|----------|------|-------|-------------|
 |Shiba|[ASM](./random_code/shiba/shiba.asm)|_O(w0w)_|_O(such)_|[Link](./random_code/shiba/README.md)|
 |Caesar Cipher|[Python](./random_code/caesar_cipher/caesar_cipher.py)|_N/A_|_N/A_|[Link](./random_code/caesar_cipher/README.md)|
-|FizzBuzz|[Python](./random_code/fizz_buzz/fizzbuzz.py) [C++](./random_code/fizz_buzz/fizzbuzz.cpp) [ASM](./random_code/fizz_buzz/fizzbuzz.asm)|_O(n)_|_O(1)_|[Link](./random_code/fizz_buzz/README.md)|
+|FizzBuzz|[Python](./random_code/fizz_buzz/fizzbuzz.py) </br> [C++](./random_code/fizz_buzz/fizzbuzz.cpp) </br> [ASM](./random_code/fizz_buzz/fizzbuzz.asm)|_O(n)_|_O(1)_|[Link](./random_code/fizz_buzz/README.md)|
   
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)  
