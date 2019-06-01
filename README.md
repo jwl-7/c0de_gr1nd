@@ -37,6 +37,7 @@ the pursuit of ameloriation as a programmer
 |5.9|Enumerate All Primes to _n_|[Python](./python_solutions/prime_sieve.py)|_O(nloglogn)_|_O(n)_|[INFO](./python_explanations/prime_sieve.md)|
 |5.10|Permute the Elements of an Array|[Python](./python_solutions/apply_permutation.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/apply_permutation.md)|
 |5.11|Compute the Next Permutation|[Python](./python_solutions/next_permutation.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/next_permutation.md)|
+|5.12|Sample Offline Data|[Python](./python_solutions/offline_sampling.py)|_O(k)_|_O(1)_|[INFO](./python_explanations/offline_sampling.md)|
 
 <!---
 |5.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
