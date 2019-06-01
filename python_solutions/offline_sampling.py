@@ -9,9 +9,7 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def random_sampling(k, A):
-    for i in range(k):
-        r_num = randint(i, k)
-        A[i], A[r_num] = A[r_num], A[i]
+    A[:] = random.sample(A, k)
 
 
 @enable_executor_hook
