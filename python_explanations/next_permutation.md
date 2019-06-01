@@ -93,7 +93,7 @@ The general algorithm for computing the next permutation:
 | 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
 
 ##### 8 >= 8, continue
-|   |   |   |   |   |   |   |   |
+|   |   |   |_i_|   |   |   |   |
 |---|---|---|---|---|---|---|---|
 | 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
 
