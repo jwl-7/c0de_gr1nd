@@ -39,7 +39,7 @@ The general algorithm for computing the next permutation:
 4. Reverse the sequence after position _i_  
   
 ## Code Dissection
-1. Define _i_ to be 2 positions from the last index of perm  
+1. Define _i_ to be 2 positions before last index of perm  
     ```python
     i = len(perm) - 2
     ```
@@ -80,10 +80,56 @@ The general algorithm for computing the next permutation:
     ```
   
 ## Step-by-Step Example
-* Let perm = [4, 2, 3, 0, 3, 1, 8, 4]  
-  
-1. asdf
+* Let perm = [7, 5, 6, 8, 8, 3, 2, 1]
 
+##### _i_ starts 2 positions before last index
 |   |   |   |   |   |_i_|   |   |
 |---|---|---|---|---|---|---|---|
-| 4 | 2 | 3 | 0 | 3 | 1 | 8 | 4 |
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 8 > 3, continue
+|   |   |   |   |_i_|   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 8 >= 8, continue
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 6 < 8, _i_ has been found
+|   |   |_i_|   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### _j_ starts at last index
+|   |   |_i_|   |   |   |   |_j_|
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 2 < 6, continue
+|   |   |_i_|   |   |   |_j_|   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 3 < 6, continue
+|   |   |_i_|   |   |_j_|   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### 8 > 6, _j_ has been found
+|   |   |_i_|   |_j_|   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 6 | 8 | 8 | 3 | 2 | 1 |
+
+##### swap _i_ and _j_
+|   |   |_i_|   |_j_|   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 8 | 8 | 6 | 3 | 2 | 1 |
+
+##### reverse sequence after _i_
+|   |   |_i_|   |_j_|   |   |   |
+|---|---|---|---|---|---|---|---|
+| 7 | 5 | 8 | 1 | 2 | 3 | 6 | 8 |
+
+Output: [7, 5, 8, 1, 2, 3, 6, 8]
