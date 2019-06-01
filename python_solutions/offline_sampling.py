@@ -1,4 +1,5 @@
 import functools
+import random
 
 from test_framework import generic_test
 from test_framework.random_sequence_checker import (
@@ -8,8 +9,9 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def random_sampling(k, A):
-    # TODO - you fill in here.
-    return
+    for i in range(k):
+        r_num = randint(i, k)
+        A[i], A[r_num] = A[r_num], A[i]
 
 
 @enable_executor_hook
@@ -38,9 +40,5 @@ def random_sampling_wrapper(executor, k, A):
     run_func_with_retries(
         functools.partial(random_sampling_runner, executor, k, A))
 
-
 if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("offline_sampling.py",
-                                       'offline_sampling.tsv',
-                                       random_sampling_wrapper))
+    exit(generic_test.generic_test_main("offline_sampling.py", 'offline_sampling.tsv', random_sampling_wrapper))
