@@ -17,12 +17,28 @@ Output: [1, 3, 2, 0, 5, 4]
 ## Solution
 ```python
 def apply_permutation(perm, A):
-    # TODO - you fill in here.
-    return
+    B = [0] * len(A)
+    for i in range(len(A)):
+        B[perm[i]] = A[i]
+    A[:] = B
 ```
   
 ## Explanation
-* [FILL IN]
+* The solution is quite simple -- create an array _B_ to hold the desired sequence, fill it, and then make _A_ = _B_  
   
 ## Code Dissection
-1. [FILL IN]
+1. Create an array _B_ that will hold the desired sequence from the permutation and a loop to iterate through _A_  
+    ```python
+    B = [0] * len(A)
+    for i in range(len(A)):
+    ```
+2. Get the value at _A_[_i_], and put it in _B_ at the index of perm[_i_]  
+    ```python
+    B[perm[i]] = A[i]
+    ```
+3. Set _A_ = _B_, since _B_ now holds the desired permutation  
+    ```python
+    A[:] = B
+    ```
+    * This particular way of replacing the elements of _A_ with the ones in _B_ is called slice assignment  
+    * Slice assignment is more optimized than ```list.copy()``` and much faster than creating another loop to assign _A_[_i_] = _B_[_i_]  
