@@ -28,4 +28,29 @@ def generate_primes(n):
 * The basic idea of the Sieve of Eratosthenes is to use a table of numbers 1 to _n_, and for every prime number we fine, we eliminate the multiples of that number since they must be composite  
   
 ## Code Dissection
-1. [FILL IN]
+1. Create an array to hold the prime numbers and a boolean array initialized to True for numbers 1 to _n_  
+    ```python
+    primes = []
+    sieve = [True] * (n + 1)
+    ```
+2. Loop over the numbers from 2 to _n_, we start at 2, since 1 is composite  
+    ```python
+    for i in range(2, n + 1):
+    ```
+3. If the bool in the sieve[_i_] is True, then _i_ is prime and added to primes[]  
+    ```python
+    if sieve[i]:
+        primes.append(i)
+    ```
+4. If _i_ is prime, then all multiples of _i_ are composite (such as 2 &times; 2 = 4, and 4 is not prime)  
+    ```python
+    for i in range(i * i, n + 1, i):
+        sieve[i] = False
+    ```
+    * ```i * i``` finds the multiples of _i_  
+    * ```n +  1``` simply defines the limit of the loop  
+    * ```i``` defines the steps to take in the loop, which is the multiples of _i_  
+5. Return the list of prime numbers  
+    ```python
+    return primes
+    ```
