@@ -5,8 +5,7 @@ def apply_permutation(perm, A):
     B = [0] * len(A)
     for i in range(len(A)):
         B[perm[i]] = A[i]
-    for i in range(len(A)):
-        A[i] = B[i]
+    A[:] = B
 
 
 def apply_permutation_wrapper(perm, A):
