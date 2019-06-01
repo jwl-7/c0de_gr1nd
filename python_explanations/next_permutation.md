@@ -15,14 +15,23 @@ Output: []
 ## Solution
 ```python
 def next_permutation(perm):
-    # TODO - you fill in here.
-    return []
+    i = len(perm) - 2
+    while i >= 0 and perm[i] >= perm[i + 1]:
+        i -= 1
+    if i == -1:
+        return []
+    for j in reversed(range(i + 1, len(perm))):
+        if perm[j] > perm[i]:
+            perm[i], perm[j] = perm[j], perm[i]
+            break
+    perm[i + 1:len(perm) + 1] = perm[i + 1:len(perm) + 1][::-1]
+    return perm
 ```
   
 ## Explanation
 The general algorithm for computing the next permutation:  
 1. Find _i_ such that _p_[_i_] < _p_[_i_ + 1] and entries after index _i_ appear in decreasing order  
-2. Find the smallest _p_[_j_] such that _p_[_j_] > _p_[_i_]  (note that _j_ > _i_)  
+2. Find the smallest _p_[_j_] such that _p_[_j_] > _p_[_i_]  (note that _p_[_j_] occurs after _p_[_i_])  
 3. Swap _p_[_j_] and _p_[_i_]  
 4. Reverse the sequence after position _i_  
   
