@@ -33,6 +33,12 @@ the pursuit of ameloriation as a programmer
 |5.5|Delete Duplicates from a Sorted Array|[Python](./python_solutions/sorted_array_remove_dups.py)|_O(n)_|_O(1)_|[Link](./python_explanations/sorted_array_remove_dups.md)|
 |5.6|Buy and Sell a Stock Once|[Python](./python_solutions/buy_and_sell_stock.py)|_O(n)_|_O(1)_|[Link](./python_explanations/buy_and_sell_stock.md)|
 |5.7|Buy and Sell a Stock Twice|[Python](./python_solutions/buy_and_sell_stock_twice.py)|_O(n)_|_O(n)_|[Link](./python_explanations/buy_and_sell_stock_twice.md)|
+|5.8|Computing an Alternation|[Python](./python_solutions/alternating_array.py)|_O(n)_|_O(1)_|[Link](./python_explanations/alternating_array.md)|
+|5.9|Enumerate All Primes to _n_|[Python](./python_solutions/prime_sieve.py)|_O(BLANK)_|_O(BLANK)_|[Link](./python_explanations/prime_sieve.md)|
+
+<!---
+|5.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[Link](./python_explanations/BLANK.md)|
+-->
   
 ## Random Code -- Not from EPI
 | Title | Solution | Time | Space | Explanation |
