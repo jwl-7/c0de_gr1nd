@@ -36,7 +36,7 @@ the pursuit of ameloriation as a programmer
 |5.8|Computing an Alternation|[Python](./python_solutions/alternating_array.py)|_O(n)_|_O(1)_|[Link](./python_explanations/alternating_array.md)|
 |5.9|Enumerate All Primes to _n_|[Python](./python_solutions/prime_sieve.py)|_O(nloglogn)_|_O(n)_|[Link](./python_explanations/prime_sieve.md)|
 |5.10|Permute the Elements of an Array|[Python](./python_solutions/apply_permutation.py)|_O(n)_|_O(n)_|[Link](./python_explanations/apply_permutation.md)|
-|5.11|Compute the Next Permutation|[Python](./python_solutions/next_permutation.py)|_O(BLANK)_|_O(BLANK)_|[Link](./python_explanations/next_permutation.md)|
+|5.11|Compute the Next Permutation|[Python](./python_solutions/next_permutation.py)|_O(n)_|_O(1)_|[Link](./python_explanations/next_permutation.md)|
 
 <!---
 |5.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[Link](./python_explanations/BLANK.md)|
