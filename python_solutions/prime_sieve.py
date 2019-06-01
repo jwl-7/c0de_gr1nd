@@ -1,19 +1,14 @@
 from test_framework import generic_test
 
 
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
-
 def generate_primes(n):
     primes = []
-    for i in range(1, n + 1):
-        if is_prime(i):
+    sieve = [True] * (n + 1)
+    for i in range(2, n + 1):
+        if sieve[i]:
             primes.append(i)
+            for i in range(i * i, n + 1, i):
+                sieve[i] = False
     return primes
 
 
