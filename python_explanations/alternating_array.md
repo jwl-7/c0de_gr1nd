@@ -22,8 +22,8 @@ def rearrange(A):
   
 ## Explanation
 * The solution follows a simple algorithm, which is to iterate through the array and swapping _A_[_i_] and _A_[_i_ + 1] for two cases  
-    1. _i_ is even and _A_[_i_] > _A_[_i_ + 1]  
-    2. _i_ is odd and _A_[_i_] < _A_[_i_ + 1]  
+    * _i_ is even and _A_[_i_] > _A_[_i_ + 1]  
+    * _i_ is odd and _A_[_i_] < _A_[_i_ + 1]  
   
 ## Code Dissection
 1. Create a loop that iterates through _A_ - 1, since we will be using _A_[_i_ + 1] and dont want to get an index range error  
