@@ -41,4 +41,5 @@ def apply_permutation(perm, A):
     A[:] = B
     ```
     * This particular way of replacing the elements of _A_ with the ones in _B_ is called slice assignment  
-    * Slice assignment is more optimized than ```list.copy()``` and much faster than creating another loop to assign _A_[_i_] = _B_[_i_]  
+    * Slice assignment is more optimized than ```list.copy()``` and much faster than creating another loop to assign  
+    _A_[_i_] = _B_[_i_]  
