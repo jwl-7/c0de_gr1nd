@@ -10,6 +10,9 @@ Output: [1, 2, 0, 3]
 
  Input: [3, 2, 1, 0]
 Output: []
+
+ Input: [4, 2, 3, 0, 3, 1, 8, 4]
+Output: [4, 2, 3, 0, 3, 4, 1, 8]
 ```
   
 ## Solution
@@ -77,3 +80,9 @@ The general algorithm for computing the next permutation:
     ```
   
 ## Step-by-Step Example
+* Let perm = [4, 2, 3, 0, 3, 1, 8, 4]  
+  
+1. asdf
+|   |   |   |   |   |_i_|   |   |
+|---|---|---|---|---|---|---|---|
+| 4 | 2 | 3 | 0 | 3 | 1 | 8 | 4 |
