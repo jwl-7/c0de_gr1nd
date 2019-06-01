@@ -1,20 +1,18 @@
-# [FILL IN]
-[FILL IN]
+# BLANK
+BLANK  
   
 ## Examples
 ```
-[FILL IN]
+BLANK
 ```
   
 ## Solution
 ```python
-def rearrange(A):
-    # TODO - you fill in here.
-    return
+BLANK
 ```
   
 ## Explanation
-* [FILL IN]
+* BLANK  
   
 ## Code Dissection
-1. [FILL IN]
+1. BLANK  
