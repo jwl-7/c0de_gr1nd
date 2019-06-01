@@ -21,7 +21,7 @@ def next_permutation(perm):
   
 ## Explanation
 The general algorithm for computing the next permutation:  
-1. Find _i_ such that _p_[_i_] _p_[_i_ + 1] and entries after index _i_ appear in decreasing order  
+1. Find _i_ such that _p_[_i_] < _p_[_i_ + 1] and entries after index _i_ appear in decreasing order  
 2. Find the smallest _p_[_j_] such that _p_[_j_] > _p_[_i_]  
 3. Swap _p_[_j_] and _p_[_i_]  
 4. Reverse the sequence after position _i_  
