@@ -6,8 +6,10 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def rearrange(A):
-    # TODO - you fill in here.
-    return
+    for i in range(len(A) - 1):
+        if (i % 2 == 0 and A[i] > A[i + 1] or
+            i % 2 == 1 and A[i] < A[i + 1]):
+            A[i], A[i + 1] = A[i + 1], A[i]
 
 
 @enable_executor_hook
@@ -43,9 +45,5 @@ def rearrange_wrapper(executor, A):
     executor.run(functools.partial(rearrange, A))
     check_answer(A)
 
-
 if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("alternating_array.py",
-                                       'alternating_array.tsv',
-                                       rearrange_wrapper))
+    exit(generic_test.generic_test_main("alternating_array.py", 'alternating_array.tsv', rearrange_wrapper))
