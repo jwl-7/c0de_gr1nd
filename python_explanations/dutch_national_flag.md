@@ -82,9 +82,9 @@ def dutch_flag_partition(pivot_index, A):
 ## Step-by-Step Example
 * Let _A_ = [1, 1, 0, 2] and pivot_index = 1  
 
-|low, mid|   |   |high|
-|-------:|---|---|----|
-|      1 | 1 | 0 | 2  |
+|low </br> mid|   |   |high|
+|------------:|---|---|----|
+|           1 | 1 | 0 | 2  |
 
 | low| mid |   |high|
 |---:|:---:|---|----|
@@ -94,9 +94,9 @@ def dutch_flag_partition(pivot_index, A):
 |---:|---|:---:|----|
 |  1 | 1 |  0  | 2  |
 
-|   | low |   |mid, high|
-|---|:---:|---|---------|
-| 0 |  1  | 1 | 2       |
+|   | low |   |mid </br> high|
+|---|:---:|---|--------------|
+| 0 |  1  | 1 | 2            |
 
 |   | low | high |   |mid|
 |---|:---:|:----:|---|---|
