@@ -83,6 +83,7 @@ The general algorithm for computing the next permutation:
 * Let perm = [4, 2, 3, 0, 3, 1, 8, 4]  
   
 1. asdf
+
 |   |   |   |   |   |_i_|   |   |
 |---|---|---|---|---|---|---|---|
 | 4 | 2 | 3 | 0 | 3 | 1 | 8 | 4 |
