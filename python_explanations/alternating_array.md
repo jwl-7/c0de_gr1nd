@@ -21,7 +21,23 @@ def rearrange(A):
 ```
   
 ## Explanation
-* [FILL IN]
+* The solution follows a simple algorithm, which is to iterate through the array and swapping _A_[_i_] and _A_[_i_ + 1] for two cases  
+    1. _i_ is even and _A_[_i_] > _A_[_i_ + 1]  
+    2. _i_ is odd and _A_[_i_] < _A_[_i_ + 1]  
   
 ## Code Dissection
-1. [FILL IN]
+1. Create a loop that iterates through _A_ - 1, since we will be using _A_[_i_ + 1] and dont want to get an index range error  
+    ```python
+    for i in range(len(A) - 1):
+    ```
+2. Check for the two cases for which the swap will occur  
+    ```python
+    if (i % 2 == 0 and A[i] > A[i + 1] or
+        i % 2 == 1 and A[i] < A[i + 1]):
+    ```
+    * True for even: ```i % 2 == 0```  
+    * True for odd: ```i % 2 == 1```  
+3. Swap _A_[_i_] and _A_[_i_ + 1]  
+    ```python
+    A[i], A[i + 1] = A[i + 1], A[i]
+    ```
