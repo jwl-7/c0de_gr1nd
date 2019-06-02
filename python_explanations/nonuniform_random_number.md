@@ -43,4 +43,17 @@ probabilities = [0.05, 0.15, 0.3, 0.4, 0.6]
 * Thus, the nonuniform random number returned would be 2  
   
 ## Code Dissection
-1. BLANK  
+1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will our list of intervals  
+    ```python
+    intervals = list(itertools.accumulate(probabilities))
+    ```
+2. Generate a random number in the interval [0, 1)  
+    ```python
+    r_num = random.random()
+    ```
+3. Loop over the intervals array, find what interval the random number generated corresponds to, and then return the value that the interval corresponds to  
+    ```python
+    for i in range(len(intervals)):
+        if r_num <= intervals[i]:
+            return values[i]
+    ```
