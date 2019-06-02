@@ -52,7 +52,7 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
 4. 123 &plus; 2460 &plus; 36900 = 39483  
   
 ## Code Dissection - remove_leading_zeroes
-1. Define the two variables _i_ for iterating through the number and length to hold the size of the number  
+1. Define variables to iterate through the number and to hold the size of the number  
     ```python
     i = 0
     length = len(num) - 1
@@ -61,7 +61,7 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
     ```python
     while i < length and num[0] == 0:
     ```
-3. Remove the zero from the number, which will be at the start of the array, and increment _i_
+3. Remove the zero from the number, which will be at the start of the array  
     ```python
     num.remove(0)
     i += 1
