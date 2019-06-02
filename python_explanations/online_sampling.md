@@ -5,7 +5,29 @@ Design a program that takes as input a size _k_, and reads packets, continuously
   
 ## Examples
 ```
-BLANK
+stream = [1, 2, 3, 4]
+k = 1
+
+[1]
+[3]
+[1]
+[3]
+[3]
+[4]
+[3]
+[2]
+[2]
+[2]
+[1]
+[4]
+[2]
+[1]
+[2]
+[4]
+[4]
+[3]
+[3]
+[4]
 ```
   
 ## Solution
