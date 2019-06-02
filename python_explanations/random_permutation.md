@@ -27,7 +27,7 @@ def compute_random_permutation(n):
 * The solution is relatively simple -- create a list from [0, ... , _n_-1], and then create a permutation of that list  
   
 ## Code Dissection
-1. Create a list filled with the numbers from [0, ... , _n_-1]  
+1. Create a list filled with the numbers [0, ... , _n_-1]  
     ```python
     perm = list(range(n))
     ```
