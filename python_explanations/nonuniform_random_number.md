@@ -43,7 +43,7 @@ probabilities = [0.05, 0.15, 0.3, 0.4, 0.6]
 * Thus, the nonuniform random number returned would be 2  
   
 ## Code Dissection
-1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will our list of intervals  
+1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will be our list of intervals  
     ```python
     intervals = list(itertools.accumulate(probabilities))
     ```
