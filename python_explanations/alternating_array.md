@@ -22,7 +22,7 @@ def rearrange(A):
   
 ## Explanation
 * The solution follows a simple algorithm, which is to iterate through the array and swapping _A_[_i_] and _A_[_i_ + 1]  
-for two cases  
+for two cases:  
     * _i_ is even and _A_[_i_] > _A_[_i_ + 1]  
     * _i_ is odd and _A_[_i_] < _A_[_i_ + 1]  
   

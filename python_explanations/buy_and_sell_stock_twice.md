@@ -36,7 +36,7 @@ def buy_and_sell_stock_twice(prices):
 ```
   
 ## Explanation
-* The solution relies on two phases, the forward and backwards phases  
+* The solution relies on two phases: the forward and backward phases  
 * The forward phase is used to calculate the max total profit from a single transaction (buy and sell) for each day, and the results are recorded to an array  
 * The backward phase is used to calculate the max total profit from a second transaction for each day, using the array built from the forward phase  
   
