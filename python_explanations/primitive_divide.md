@@ -25,7 +25,7 @@ def divide(x, y):
 ```
   
 ## Explanation
-* The brute-force algorithm is to iteratively subtract _y_ from _x_ until _x_ < _y_, the quotient is the number of subtractions  
+* The brute-force algorithm is to iteratively subtract _y_ from _x_ until _x_ < _y_; the quotient is the number of subtractions  
   
 ## Code Dissection
 1. Initialize the quotient to zero  

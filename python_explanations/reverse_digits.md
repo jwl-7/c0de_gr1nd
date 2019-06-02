@@ -22,7 +22,7 @@ def reverse(x):
 ```
   
 ## Explanation
-* The solution uses the brute-force algorithm, which is to convert the input to a string, reverse the string, and convert back to an integer  
+* The solution uses the brute-force algorithm, which is to convert the input to a string, reverse the string, and convert it back to an integer  
 * Python slicing notation follows the syntax: ```a[start:stop:step]```  
 * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a  
   

@@ -24,7 +24,7 @@ def is_palindrome_number(x):
 ```
   
 ## Explanation
-* The solution uses a simple approach of comparing the integer _x_ to a copy of it in reverse order, if the two numbers are the same, then _x_ is a palindrome   
+* The solution uses a simple approach of comparing the integer _x_ to a copy of it in reverse order; if the two numbers are the same, then _x_ is a palindrome   
 * Python slicing notation follows the syntax: ```a[start:stop:step]```  
 * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a  
   

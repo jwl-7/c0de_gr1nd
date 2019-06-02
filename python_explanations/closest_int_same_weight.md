@@ -25,7 +25,9 @@ def closest_int_same_bit_count(x):
 ```
   
 ## Explanation
-* The brute-force algorithm is to loop through all the bits starting at the least significant bit, stopping when the _i_-th bit and the bit to its left (_j_-th bit) differ, and then swap the _i_-th and _j_-th bit, which preserves the weight  
+The brute-force algorithm is this:
+1. Loop through all the bits starting at the least significant bit, stopping when the _i_-th bit and the bit to its left (_j_-th bit) differ  
+2. Swap the _i_-th and _j_-th bit, which preserves the weight  
   
 ## Code Dissection
 1. Create a loop to iterate through all 64 bits  
