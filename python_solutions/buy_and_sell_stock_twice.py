@@ -19,4 +19,7 @@ def buy_and_sell_stock_twice(prices):
 
 
 if __name__ == '__main__':
-    exit(generic_test.generic_test_main("buy_and_sell_stock_twice.py", "buy_and_sell_stock_twice.tsv", buy_and_sell_stock_twice))
+    exit(
+        generic_test.generic_test_main("buy_and_sell_stock_twice.py",
+                                       "buy_and_sell_stock_twice.tsv",
+                                       buy_and_sell_stock_twice))

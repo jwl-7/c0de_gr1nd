@@ -19,4 +19,6 @@ def multiply(x, y):
 
 
 if __name__ == '__main__':
-    exit(generic_test.generic_test_main("primitive_multiply.py", 'primitive_multiply.tsv', multiply))
+    exit(
+        generic_test.generic_test_main("primitive_multiply.py",
+                                       'primitive_multiply.tsv', multiply))
