@@ -52,4 +52,26 @@ The algorithm works like this:
 * The induction hypothesis is that all _k_-sized subsets are equally likely after _n_ >= _k_ packets have been read  
   
 ## Code Dissection
-1. BLANK  
+1. Read in the first _n_ packets of the specified size _k_, store those packets into a list, and set a variable to keep track of the number of packets read so far  
+    ```python
+    sample = list(itertools.islice(stream, k))
+    num_read = k
+    ```
+2. Create a loop that runs through the packets in the stream, and make sure to increment the number of packets read so far  
+    ```python
+    for packet in stream:
+        num_read += 1
+    ```
+3. Generate a uniform random number ranging from 0 to (_n_ + 1) -- this will be used to select which packet to replace in the sample list  
+    ```python
+    r_num = random.randrange(num_read)
+    ```
+4. Check to make sure that the generated random number is less than _k_, because we want to make sure we replace a number within the index range of the sample list  
+    ```python
+    if r_num < k:
+        sample[r_num] = packet
+    ```
+5. Return the sample list  
+    ```python
+    return sample
+    ```
