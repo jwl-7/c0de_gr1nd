@@ -23,7 +23,19 @@ def compute_random_permutation(n):
 ```
   
 ## Explanation
-* BLANK  
+* Despite what the problem description states, you are not given a random number generator; it is referring to the solution from [Sample Offline Data](offline_sampling.md)  
+* The solution is pretty simple -- you create a list from [0, ... , _n_-1], and then create a permutation of that list  
   
 ## Code Dissection
-1. BLANK  
+1. Create a list filled with the numbers from [0, ... , _n_-1]  
+    ```python
+    perm = list(range(n))
+    ```
+2. Use ```random.sample(population, k)``` to create a permutation of perm  
+    ```python
+    perm[:] = random.sample(perm, n)
+    ```
+3. Return the uniformly random permutation  
+    ```python
+    return perm
+    ```
