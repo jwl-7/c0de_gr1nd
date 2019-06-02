@@ -25,11 +25,11 @@ def random_sampling(k, A):
 ```
   
 ## Explanation
-* Rather than looping over _A_ and swapping at random indexes, where the random module is also needed, the solution uses a built-in function that performs exactly what we need  
+* Rather than looping over _A_ and swapping at random indexes, the solution uses a built-in function from the random module that performs exactly what we need  
 * The solution given is considered Pythonic   
   
 ## Code Dissection
-1. Import the random module, and use ```random.sample(population, k)``` to change _A_ to a random subset of size _k_  
+1. Use ```random.sample(population, k)``` to change _A_ to a random subset of size _k_  
     ```python
     A[:] = random.sample(A, k)
     ```
