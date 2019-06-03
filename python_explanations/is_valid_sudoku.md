@@ -52,17 +52,17 @@ def is_valid_sudoku(grid):
 ## Explanation
 Let's look at the layout of a sudoku board:  
 ```
-1 1 1 | 4 4 4 | 7 7 7
-1 1 1 | 4 4 4 | 7 7 7
-1 1 1 | 4 4 4 | 7 7 7 
+1 1 1 | 2 2 2 | 3 3 3
+1 1 1 | 2 2 2 | 3 3 3
+1 1 1 | 2 2 2 | 3 3 3 
 ---------------------
-2 2 2 | 5 5 5 | 8 8 8
-2 2 2 | 5 5 5 | 8 8 8
-2 2 2 | 5 5 5 | 8 8 8
+4 4 4 | 5 5 5 | 6 6 6
+4 4 4 | 5 5 5 | 6 6 6
+4 4 4 | 5 5 5 | 6 6 6
 ---------------------
-3 3 3 | 6 6 6 | 9 9 9
-3 3 3 | 6 6 6 | 9 9 9
-3 3 3 | 6 6 6 | 9 9 9
+7 7 7 | 8 8 8 | 9 9 9
+7 7 7 | 8 8 8 | 9 9 9
+7 7 7 | 8 8 8 | 9 9 9
 ```
 * The board has been filled with numbers that represent their sub-grid number  
 * The main challenge of the problem is finding out how to grab each column, row, and sub-grid  
@@ -88,23 +88,23 @@ Let's look at the layout of a sudoku board:
     col8 = [col[7] for col in grid]
     col9 = [col[8] for col in grid]
 
-    subgrid1 = [[grid[a][b] for b in range(0, 3)] for a in range(0, 3)]
-    subgrid2 = [[grid[a][b] for b in range(0, 3)] for a in range(3, 6)]
-    subgrid3 = [[grid[a][b] for b in range(0, 3)] for a in range(6, 9)]
-    subgrid4 = [[grid[a][b] for b in range(3, 6)] for a in range(0, 3)]
-    subgrid5 = [[grid[a][b] for b in range(3, 6)] for a in range(3, 6)]
-    subgrid6 = [[grid[a][b] for b in range(3, 6)] for a in range(6, 9)]
-    subgrid7 = [[grid[a][b] for b in range(6, 9)] for a in range(0, 3)]
-    subgrid8 = [[grid[a][b] for b in range(6, 9)] for a in range(3, 6)]
-    subgrid9 = [[grid[a][b] for b in range(6, 9)] for a in range(6, 9)]
+    subgrid1 = [grid[a][b] for a in range(0, 3) for b in range(0, 3)]
+    subgrid2 = [grid[a][b] for a in range(0, 3) for b in range(3, 6)]
+    subgrid3 = [grid[a][b] for a in range(0, 3) for b in range(6, 9)]
+    subgrid4 = [grid[a][b] for a in range(3, 6) for b in range(0, 3)]
+    subgrid5 = [grid[a][b] for a in range(3, 6) for b in range(3, 6)]
+    subgrid6 = [grid[a][b] for a in range(3, 6) for b in range(6, 9)]
+    subgrid7 = [grid[a][b] for a in range(6, 9) for b in range(0, 3)]
+    subgrid8 = [grid[a][b] for a in range(6, 9) for b in range(3, 6)]
+    subgrid9 = [grid[a][b] for a in range(6, 9) for b in range(6, 9)]
     ```
 * When everything is written out, it is a lot easier to derive a statement that can grab each and understand the code in the solution:  
 ```python
 rows = [grid[i] for i in range(9)]
 cols = [[col[i] for col in grid] for i in range(9)]
-subgrids = ([grid[a][b] 
-             for b in range(i * 3, 3 * (i + 1)) 
+subgrids = ([grid[a][b]
              for a in range(j * 3, 3 * (j + 1))
+             for b in range(i * 3, 3 * (i + 1))
         ]    for i in range(3) for j in range(3)) 
 ```
   
