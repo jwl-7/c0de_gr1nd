@@ -6,7 +6,7 @@ Write a program which takes an _n_ &times; _n_ 2D array and returns the spiral o
   
 ##### 3 &times; 3 array
 |   |_C_<sub>0</sub>|_C_<sub>1</sub>|_C_<sub>2</sub>|
-|---|---|---|---|
+|---|:---:|:---:|:---:|
 |**_R_<sub>0</sub>**| 1 | 2 | 3 |
 |**_R_<sub>1</sub>**| 4 | 5 | 6 |
 |**_R_<sub>2</sub>**| 7 | 8 | 9 |
