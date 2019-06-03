@@ -15,7 +15,7 @@ a. The spiral ordering for this array is [1, 2, 3, 6, 9, 8, 7, 4, 5]
   
 ##### 4 &times; 4 array
 |   |_C_<sub>0</sub>|_C_<sub>1</sub>|_C_<sub>2</sub>|_C_<sub>3</sub>|
-|---|---|---|---|
+|---|---|---|---|---|
 |**_R_<sub>0</sub>**|  1 |  2 |  3 |  4 |
 |**_R_<sub>1</sub>**|  5 |  6 |  7 |  8 |
 |**_R_<sub>2</sub>**|  9 | 10 | 11 | 12 |
