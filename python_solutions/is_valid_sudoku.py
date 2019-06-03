@@ -1,25 +1,21 @@
 from test_framework import generic_test
-from collections import Counter
 
 
-def is_valid_sudoku(partial_assignment):
+def is_valid_list(section):
+    section = [x for x in section if x != 0]
+    return len(section) == len(set(section))
+
+def is_valid_sudoku(grid):
     for i in range(9):
-        for num, count in Counter(partial_assignment[i]).items():
-            if num != 0 and count > 1:
+        if (not is_valid_list(grid[i]) or 
+            not is_valid_list([col[i] for col in grid])):
                 return False
-    for i in range(9):
-        for num, count in Counter([k[i] for k in partial_assignment]).items():
-            if num != 0 and count > 1:
-                return False
-    for i in range(3): 
+    for i in range(3):
         for j in range(3):
-            for num, count in Counter([
-                    partial_assignment[a][b] 
-                    for b in range(i * 3, 3 * (i + 1)) 
-                    for a in range(j * 3, 3 * (j + 1))
-                ]).items():
-                if num != 0 and count > 1:
-                    return False
+            if not is_valid_list(grid[a][b]
+                                 for b in range(i * 3, 3 * (i + 1)) 
+                                 for a in range(j * 3, 3 * (j + 1))):
+                return False
     return True
 
 
