@@ -3,18 +3,24 @@ from collections import Counter
 
 
 def is_valid_sudoku(partial_assignment):
-    # CHECK COLUMNS
-    for i in range(len(partial_assignment)):
-        for num, count in Counter([k[i] for k in partial_assignment]).items():
-            if num != 0 and count > 1:
-                return False
-
-    # CHECK ROWS
-    for i in range(len(partial_assignment)):
+    for i in range(9):
         for num, count in Counter(partial_assignment[i]).items():
             if num != 0 and count > 1:
                 return False
-    
+    for i in range(9):
+        for num, count in Counter([k[i] for k in partial_assignment]).items():
+            if num != 0 and count > 1:
+                return False
+    for i in range(3): 
+        for j in range(3):
+            for num, count in Counter([
+                    partial_assignment[a][b] 
+                    for b in range(i * 3, 3 * (i + 1)) 
+                    for a in range(j * 3, 3 * (j + 1))
+                ]).items():
+                if num != 0 and count > 1:
+                    return False
+
     return True
 
 
