@@ -42,7 +42,7 @@ the pursuit of ameloriation as a programmer
 |5.14|Compute a Random Permutation|[Python](./python_solutions/random_permutation.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/random_permutation.md)|
 |5.15|Compute a Random Subset|[Python](./python_solutions/random_subset.py)|_O(k)_|_O(k)_|[INFO](./python_explanations/random_subset.md)|
 |5.16|Generate Nonuniform Random Numbers|[Python](./python_solutions/nonuniform_random_number.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/nonuniform_random_number.md)|
-|5.17|The Sudoku Checker Problem|[Python](./python_solutions/is_valid_sudoku.py)|_O(n <sup>2</sup>)_|_O(n)_|[INFO](./python_explanations/is_valid_sudoku.md)|
+|5.17|The Sudoku Checker Problem|[Python](./python_solutions/is_valid_sudoku.py)|_O(n<sup>2</sup>)_|_O(n)_|[INFO](./python_explanations/is_valid_sudoku.md)|
 
 <!---
 |5.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
