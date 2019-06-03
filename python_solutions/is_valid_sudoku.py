@@ -20,7 +20,6 @@ def is_valid_sudoku(partial_assignment):
                 ]).items():
                 if num != 0 and count > 1:
                     return False
-
     return True
 
 
