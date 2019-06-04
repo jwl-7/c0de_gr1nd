@@ -49,7 +49,12 @@ def matrix_in_spiral_order(square_matrix):
 ```
   
 ## Explanation
-* BLANK  
+The solution uses the following steps in a loop:  
+1. Extract the first _n_ - 1 elements of the first row  
+2. Extract the first _n_ - 1 elements of the last column  
+3. Extract the last _n_ - 1 elements of the last row in reverse order  
+4. Extract the last _n_ - 1 elements of the first column in reverse order  
+5. Loop for remaining rows and columns  
   
 ## Code Dissection
 1. BLANK  
