@@ -57,4 +57,49 @@ The solution uses the following steps in a loop:
 5. Loop for remaining rows and columns  
   
 ## Code Dissection
-1. BLANK  
+1. Create an array to hold the spiral ordering and return the empty array if the input is empty  
+    ```python
+    spiral = []
+    if square_matrix == []:
+        return spiral
+    ```
+2. Define 4 variables that represent the start and end positions of rows and columns  
+    ```python
+    row_start = 0
+    col_start = 0
+    row_end = len(square_matrix) - 1
+    col_end = len(square_matrix[0]) - 1
+    ```
+3. Create a loop that runs until we reach the end of the spiral  
+    ```python
+    while row_start <= row_end and col_start <= col_end:
+    ```
+4. Extract the first _n_ - 1 elements of the first row  
+    ```python
+    spiral.extend([square_matrix[row_start][i] for i in range(col_start, col_end + 1)])
+    ```
+5. Extract the first _n_ - 1 elements of the last column  
+    ```python
+    spiral.extend([square_matrix[i][col_end] for i in range(row_start + 1, row_end + 1)])
+    ```
+6. Extract the last _n_ - 1 elements of the last row in reverse order  
+    ```python
+    if row_start < row_end:
+        spiral.extend([square_matrix[row_end][i] for i in reversed(range(col_start, col_end))])
+    ```
+7. Extract the last _n_ - 1 elements of the first column in reverse order  
+    ```python
+    if col_start < col_end:
+        spiral.extend([square_matrix[i][col_start] for i in reversed(range(row_start + 1, row_end))])
+    ```
+8. Increment and decrement the start and end positions of the row and column variables -- eventually these variables will meet each other at the same value  
+    ```python
+    row_start += 1
+    col_start += 1
+    row_end -= 1
+    col_end -= 1
+    ```
+9. Return the spiral ordering of the input array  
+    ```python
+    return spiral
+    ```
