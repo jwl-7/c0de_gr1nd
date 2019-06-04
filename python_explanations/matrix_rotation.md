@@ -28,7 +28,7 @@ def rotate_matrix(square_matrix):
 ```
   
 ## Explanation
-* BLANK  
+* The _i_-th row of the input matrix is the _i_-th column of the rotated matrix  
   
 ## Code Dissection
 1. BLANK  
