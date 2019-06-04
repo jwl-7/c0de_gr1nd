@@ -2,8 +2,7 @@ from test_framework import generic_test
 
 
 def rotate_matrix(square_matrix):
-    # TODO - you fill in here.
-    return
+    square_matrix[:] = [[row[i] for row in square_matrix[::-1]] for i in range(len(square_matrix))]
 
 
 def rotate_matrix_wrapper(square_matrix):
