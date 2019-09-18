@@ -2,8 +2,11 @@ from test_framework import generic_test
 
 
 def generate_pascal_triangle(n):
-    # TODO - you fill in here.
-    return []
+    triangle = [[1] * (i + 1) for i in range(n)]
+    for i in range(n):
+        for j in range(1, i):
+            triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    return triangle
 
 
 if __name__ == '__main__':
