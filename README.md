@@ -45,6 +45,7 @@ the pursuit of ameloriation as a programmer
 |5.17|The Sudoku Checker Problem|[Python](./python_solutions/is_valid_sudoku.py)|_O(n<sup>2</sup>)_|_O(n)_|[INFO](./python_explanations/is_valid_sudoku.md)|
 |5.18|Compute the Spiral Ordering of a 2D Array|[Python](./python_solutions/spiral_ordering_segments.py)|_O(n<sup>2</sup>)_|_O(n)_|[INFO](./python_explanations/spiral_ordering_segments.md)|
 |5.19|Rotate a 2D Array|[Python](./python_solutions/matrix_rotation.py)|_O(n<sup>2</sup>)_|_O(1)_|[INFO](./python_explanations/matrix_rotation.md)|
+|5.20|Compute Rows in Pascal's Triangle|[Python](./python_solutions/pascal_triangle.py)|_O(n<sup>2</sup>)_|_O(n<sup>2</sup>)_|[INFO](./python_explanations/pascal_triangle.md)|
 
 <!---
 |5.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
