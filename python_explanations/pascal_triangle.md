@@ -21,12 +21,31 @@ Each row contains one more entry than the previous one. Except for entries in th
 ## Solution
 ```python
 def generate_pascal_triangle(n):
-    # TODO - you fill in here.
-    return []
+    triangle = [[1] * (i + 1) for i in range(n)]
+    for i in range(n):
+        for j in range(1, i):
+            triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    return triangle
 ```
   
 ## Explanation
-* BLANK  
+* Since every entry is the sum of the two values above it, we can use a 2D array and nested loops to calculate those sums.  
   
 ## Code Dissection
-1. BLANK  
+1. Create a 2D array filled with 1's that represents the triangle  
+    ```python
+    triangle = [[1] * (i + 1) for i in range(n)]
+    ```
+2. Loop over each entry in the triangle that has two values above it  
+    ```python
+    for i in range(n):
+        for j in range(1, i):
+    ```
+    a. Set the entry to the sum of the numbers in the adjacent entries above it
+    ```python
+    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    ```
+3. Return the generated Pascal's triangle
+    ```python
+    return triangle
+    ```
