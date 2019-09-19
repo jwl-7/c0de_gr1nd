@@ -77,7 +77,7 @@ def string_to_int(s):
     * ```chr(i)``` returns a string of one character whose ASCII code is the integer _i_
     * ```ord('a')``` returns an integer representing the ASCII code of the character
     * ```chr(i)``` and ```ord('a')``` are the inverse of each other
-3. Return the list contained the computed digits in reverse with the correct sign
+3. Return the list with the computed digits in a reversed string with the correct sign
     ```python
     return ('-' if is_negative else '') + ''.join(s[::-1])
     ```
