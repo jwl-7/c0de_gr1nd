@@ -15,9 +15,10 @@ def int_to_string(x):
         if x == 0:
             break
 
+    result = ''.join(s[::-1])
     if is_negative:
-        return '-' + ''.join(s[::-1])
-    return ''.join(s[::-1])
+        result = '-' + ''.join(s[::-1])
+    return result
 
 
 def string_to_int(s):
