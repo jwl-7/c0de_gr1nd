@@ -64,19 +64,20 @@ the pursuit of ameloriation as a programmer
 |FizzBuzz|[Python](./random_code/fizz_buzz/fizzbuzz.py) </br> [C++](./random_code/fizz_buzz/fizzbuzz.cpp) </br> [ASM](./random_code/fizz_buzz/fizzbuzz.asm)|_O(n)_|_O(1)_|[INFO](./random_code/fizz_buzz/README.md)|
   
 ## Useful References
-* [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)  
-* [Open Data Structures](https://opendatastructures.org/)  
-* [Python Tutorial](https://www.tutorialspoint.com/python/)  
-* [Big-O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)  
-* [Complexity of Python Operations](https://www.ics.uci.edu/~brgallar/week8_2.html)  
+* [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)
+* [Open Data Structures](https://opendatastructures.org/)
+* [Python Tutorial](https://www.tutorialspoint.com/python/)
+* [Big-O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)
+* [Python Wiki - Time Complexity](https://wiki.python.org/moin/TimeComplexity)
+* [Complexity of Python Operations](https://www.ics.uci.edu/~brgallar/week8_2.html)
   
 ## Acknowledgements
-* [Adnan Aziz](https://github.com/adnanaziz) - Author of EPI  
-* [Tsung-Hsien Lee](https://github.com/tsunghsienlee) - Author of EPI  
-* Amit Prakash - Author of EPI  
-* All contributers to the [EPI Judge](https://github.com/adnanaziz/EPIJudge)  
-* [Brandon Hough](https://github.com/insomniac94) - Listens to my late night coding rants  
-* [Cory Walker](https://github.com/corywalker) - Motivates me to become better  
+* [Adnan Aziz](https://github.com/adnanaziz) - Author of EPI
+* [Tsung-Hsien Lee](https://github.com/tsunghsienlee) - Author of EPI
+* Amit Prakash - Author of EPI
+* All contributers to the [EPI Judge](https://github.com/adnanaziz/EPIJudge)
+* [Brandon Hough](https://github.com/insomniac94) - Listens to my late night coding rants
+* [Cory Walker](https://github.com/corywalker) - Motivates me to become better
   
 ## License
 This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
