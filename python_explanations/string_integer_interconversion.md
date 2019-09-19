@@ -35,10 +35,7 @@ def int_to_string(x):
         if x == 0:
             break
 
-    result = ''.join(s[::-1])
-    if is_negative:
-        result = '-' + ''.join(s[::-1])
-    return result
+    return ('-' if is_negative else '') + ''.join(s[::-1])
 
 def string_to_int(s):
     is_negative = False
@@ -50,9 +47,7 @@ def string_to_int(s):
     for i in range(len(s)):
         result = result * 10 + (ord(s[i]) - ord('0'))
         
-    if is_negative:
-        result = -result
-    return result
+    return -result if is_negative else result
 ```
   
 ## Explanation
@@ -71,7 +66,7 @@ def string_to_int(s):
         x = -x
         is_negative = True
     ```
-2. Iterate through the number, and add each digit to a list in reverse
+2. Iterate through the number, and add each digit to the end of a list
     ```python
     while True:
         s.append((chr(ord('0') + x % 10)))
@@ -84,9 +79,7 @@ def string_to_int(s):
     * ```chr(i)``` and ```ord('a')``` are the inverse of each other
 3. Reverse the list containing the computed digits and add it to a string, with the negative sign if needed
     ```python
-    result = ''.join(s[::-1])
-    if is_negative:
-        result = '-' + ''.join(s[::-1])
+    return ('-' if is_negative else '') + ''.join(s[::-1])
     ```
     * Python slicing notation follows the syntax: ```a[start:stop:step]```
     * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a
@@ -111,7 +104,5 @@ def string_to_int(s):
     ```
 3. Add the negative sign back as needed, and return the integer
     ```python
-    if is_negative:
-        result = -result
-    return result
+    return -result if is_negative else result
     ```
