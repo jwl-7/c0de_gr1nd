@@ -15,10 +15,7 @@ def int_to_string(x):
         if x == 0:
             break
 
-    result = ''.join(s[::-1])
-    if is_negative:
-        result = '-' + ''.join(s[::-1])
-    return result
+    return ('-' if is_negative else '') + ''.join(s[::-1])
 
 
 def string_to_int(s):
@@ -31,10 +28,7 @@ def string_to_int(s):
     for i in range(len(s)):
         result = result * 10 + (ord(s[i]) - ord('0'))
         
-    if is_negative:
-        result = -result
-    return result
-
+    return -result if is_negative else result
 
 def wrapper(x, s):
     if int_to_string(x) != s:
