@@ -25,14 +25,13 @@ def string_to_int(s):
     if s[0] == '-':
         s = s[1:]
         is_negative = True
-    
+
     result = 0
     for i in range(len(s)):
         result = result * 10 + (ord(s[i]) - ord('0'))
-
+        
     if is_negative:
         result = -result
-    
     return result
 
 
