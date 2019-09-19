@@ -5,7 +5,19 @@ Implement an integer to string conversion function, and a string to integer conv
   
 ## Examples
 ```
-BLANK
+String to Integer Function:
+    Input: "724"
+   Output: 724
+
+    Input: "-341"
+   Output: -341
+
+Integer to String Function:
+    Input: 245
+   Output: "245"
+
+    Input: -132
+   Output: "-132"
 ```
   
 ## Solution
