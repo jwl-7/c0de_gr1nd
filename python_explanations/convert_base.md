@@ -3,8 +3,14 @@ Write a program that performs base conversion. The input is a string, an integer
   
 ## Examples
 ```
- Input: "615", 7, 13
-Output: "1A7"
+ Input: '615', 7, 13
+Output: '1A7'
+
+ Input: '-4AC', 12, 16
+Output: '-2C4'
+
+ Input: '-0', 4, 8
+Output: '-0'
 ```
   
 ## Solution
