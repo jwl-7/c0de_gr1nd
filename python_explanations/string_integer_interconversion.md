@@ -35,9 +35,10 @@ def int_to_string(x):
         if x == 0:
             break
 
+    result = ''.join(s[::-1])
     if is_negative:
-        return '-' + ''.join(s[::-1])
-    return ''.join(s[::-1])
+        result = '-' + ''.join(s[::-1])
+    return result
 
 def string_to_int(s):
     is_negative = False
@@ -55,7 +56,62 @@ def string_to_int(s):
 ```
   
 ## Explanation
-* BLANK  
+* Both functions rely on building each digit one at a time
+* Converting integer to string:
+    * For any positive integer _x_, the least significant digit in the decimal representation of _x_ is _x_ mod 10, and the remaining digits are _x_ &#8725; 10
+    * This method computes the digits in reverse order
+* Converting string to integer:
+    * The solution is to begin from the leftmost digit and with each succeeding digit, multiply the partial result by 10 and add that digit
   
-## Code Dissection
-1. BLANK  
+## Code Dissection - int_to_string
+1. Check if the integer is negative, set a boolean accordingly, and set the integer to positive if needed
+    ```python
+    is_negative = False
+    if x < 0:
+        x = -x
+        is_negative = True
+    ```
+2. Iterate through the number, and add each digit to a list in reverse
+    ```python
+    while True:
+        s.append((chr(ord('0') + x % 10)))
+        x //= 10
+        if x == 0:
+            break
+    ```
+    * ```chr(i)``` returns a string of one character whose ASCII code is the integer _i_
+    * ```ord('a')``` returns an integer representing the ASCII code of the character
+    * ```chr(i)``` and ```ord('a')``` are the inverse of each other
+3. Reverse the list containing the computed digits and add it to a string, with the negative sign if needed
+    ```python
+    result = ''.join(s[::-1])
+    if is_negative:
+        result = '-' + ''.join(s[::-1])
+    ```
+    * Python slicing notation follows the syntax: ```a[start:stop:step]```
+    * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a
+4. Return the string
+    ```python
+    return result
+    ```
+
+## Code Dissection - string_to_int
+1. Check if the number is negative, set a boolean accordingly, and remove the sign character from the string if needed
+    ```python
+    is_negative = False
+    if s[0] == '-':
+        s = s[1:]
+        is_negative = True
+    ```
+2. Iterate through all the characters of the string and update the result
+    ```python
+    result = 0
+    for i in range(len(s)):
+        result = result * 10 + (ord(s[i]) - ord('0'))
+    ```
+3. Add the negative sign back as needed, and return the integer
+    ```python
+    if is_negative:
+        result = -result
+    return result
+    ```
