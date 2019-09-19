@@ -1,5 +1,5 @@
 # BLANK
-BLANK  
+BLANK
   
 ## Examples
 ```
@@ -12,7 +12,7 @@ BLANK
 ```
   
 ## Explanation
-* BLANK  
+* BLANK
   
 ## Code Dissection
-1. BLANK  
+1. BLANK
