@@ -17,11 +17,19 @@ Output:  702
   
 ## Solution
 ```python
-BLANK
+def ss_decode_col_id(col):
+    col_id = 0
+    m = 1
+    for char in col[::-1]:
+        num = ord(char) - 64
+        col_id += num * m
+        m *= 26
+    return col_id
 ```
   
 ## Explanation
-* BLANK
+* The problem is similar to converting a string representing a base-26 number to an integer, except that 'A' corresponds to 1 instead of 0
+* The solution uses the function ```ord('a')``` to help return the desired integer for uppercase letters
   
 ## Code Dissection
 1. BLANK
