@@ -77,16 +77,12 @@ def string_to_int(s):
     * ```chr(i)``` returns a string of one character whose ASCII code is the integer _i_
     * ```ord('a')``` returns an integer representing the ASCII code of the character
     * ```chr(i)``` and ```ord('a')``` are the inverse of each other
-3. Reverse the list containing the computed digits and add it to a string, with the negative sign if needed
+3. Return the list contained the computed digits in reverse with the correct sign
     ```python
     return ('-' if is_negative else '') + ''.join(s[::-1])
     ```
     * Python slicing notation follows the syntax: ```a[start:stop:step]```
     * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a
-4. Return the string
-    ```python
-    return result
-    ```
 
 ## Code Dissection - string_to_int
 1. Check if the number is negative, set a boolean accordingly, and remove the sign character from the string if needed
@@ -102,7 +98,7 @@ def string_to_int(s):
     for i in range(len(s)):
         result = result * 10 + (ord(s[i]) - ord('0'))
     ```
-3. Add the negative sign back as needed, and return the integer
+3. Return the integer with the correct sign
     ```python
     return -result if is_negative else result
     ```
