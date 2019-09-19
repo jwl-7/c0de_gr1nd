@@ -32,4 +32,19 @@ def ss_decode_col_id(col):
 * The solution uses the function ```ord('a')``` to help return the desired integer for uppercase letters
   
 ## Code Dissection
-1. BLANK
+1. Initialize a column id variable to store the result and a multiplier variable to help compute the id
+    ```python
+    col_id = 0
+    m = 1
+    ```
+2. Loop through the input string backwards, and add the corresponding digit &times; multiplier to the result
+    ```python
+    for char in col[::-1]:
+        num = ord(char) - 64
+        col_id += num * m
+        m *= 26
+    ```
+3. Return the computed column id
+    ```python
+    return col_id
+    ```
