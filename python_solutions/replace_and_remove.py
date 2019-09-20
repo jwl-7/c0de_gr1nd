@@ -5,8 +5,8 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def replace_and_remove(size, s):
-    # TODO - you fill in here.
-    return 0
+    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
+    s[:] = [x for x in s if x not in ['b', '']]
 
 
 @enable_executor_hook
