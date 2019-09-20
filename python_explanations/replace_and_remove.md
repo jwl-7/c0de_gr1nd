@@ -10,15 +10,44 @@ Before: ['a', 'b', 'c', 'a', '', '', '', '']
  After: ['d', 'd', 'c', 'd', 'd']
 ```
   
-## Solution
+## Pythonic Solution
 ```python
 def replace_and_remove(size, s):
-    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
-    s[:] = [x for x in s if x not in ['b', '']]
+    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y]) if x not in ['b', '']]
 ```
   
 ## Explanation
-* BLANK
+* The solution uses list comprehension to remove and replace items in the list
+* ```s[:]``` creates a shallow copy of _s_, equivalent to ```s.copy()```
   
 ## Code Dissection
-1. BLANK
+1. Use list comprehension to replace each 'a' with two 'd's and remove each 'b' and empty entry ''
+    ```python
+    def replace_and_remove(size, s):
+        s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y]) if x not in ['b', '']]
+    ```
+    a. To understand this somewhat overly complicated one-line statement, let's separate it into two equivalent statements
+    ```python
+    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
+    s[:] = [x for x in s if x not in ['b', '']]
+    ```
+    b. Now we can clearly see the two statements for removing and replacing characters, but let's separate them into multiple lines for arguably more readability
+    ```python
+    s[:] = [x 
+            for y in s 
+                for x in (['d', 'd'] 
+                    if y == 'a' 
+                    else [y])]
+    s[:] = [x 
+            for x in s 
+                if x not in ['b', '']]
+    ```
+    c. And here are some equivalent, inefficient statements that are easy to understand
+    ```python
+    for index, char in enumerate(s):
+        if char == 'a':
+            s[index:index + 1] = 'dd'
+    for char in s[:]:
+        if char in ['b', '']:
+            s.remove(char)
+    ```
