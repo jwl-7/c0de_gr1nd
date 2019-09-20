@@ -3,14 +3,18 @@ Write a program which takes as input an array of characters, and removes each 'b
   
 ## Examples
 ```
-BLANK
+Before: ['d', 'b', 'c', '', '', '']
+ After: ['d', 'c']
+
+Before: ['a', 'b', 'c', 'a', '', '', '', '']
+ After: ['d', 'd', 'c', 'd', 'd']
 ```
   
 ## Solution
 ```python
 def replace_and_remove(size, s):
-    # TODO - you fill in here.
-    return 0
+    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
+    s[:] = [x for x in s if x not in ['b', '']]
 ```
   
 ## Explanation
