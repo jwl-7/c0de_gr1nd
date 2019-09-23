@@ -36,22 +36,21 @@ While the solution is little bit of code golf, it relies on 2 basic steps:
     ```python
     square_matrix[:] = [[row[i] for row in square_matrix[::-1]] for i in range(len(square_matrix))]
     ```
-  
-Let's break down some of the list comprehension involved here:  
-* This statement would create a matrix _x_ that is the exact same as the original matrix  
-    ```python
-    x = [square_matrix[i] for i in range(len(square_matrix))]
-    ```
-* This statement would also create a matrix _x_ that is the exact same as the original matrix  
-    ```python
-    x = [row for row in square_matrix]
-    ``` 
-* So this statement sets each row _i_ to each column _i_  
-    ```python
-    [[row[i] for row in square_matrix] for i in range(len(square_matrix))]
-    ```
-* ```[::-1]``` reverses a list  
-* Thus, the solution sets each row _i_ to the reverse of each column _i_  
+    Let's break down some of the list comprehension involved here:  
+    * This statement would create a matrix _x_ that is the exact same as the original matrix  
+        ```python
+        x = [square_matrix[i] for i in range(len(square_matrix))]
+        ```
+    * This statement would also create a matrix _x_ that is the exact same as the original matrix  
+        ```python
+        x = [row for row in square_matrix]
+        ``` 
+    * So this statement sets each row _i_ to each column _i_  
+        ```python
+        [[row[i] for row in square_matrix] for i in range(len(square_matrix))]
+        ```
+    * ```[::-1]``` reverses a list  
+    * Thus, the solution sets each row _i_ to the reverse of each column _i_  
   
 ## Step-by-Step Example
 * Let _C_ and _R_ represent column and row ids  
