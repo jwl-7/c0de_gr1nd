@@ -33,4 +33,4 @@ def random_sampling(k, A):
     ```python
     A[:] = random.sample(A, k)
     ```
-    * ```A[:]``` simply means the entirety of _A_  
+    * ```A[:]``` uses slice notation to replace the elements of the original _A_ without creating a new object
