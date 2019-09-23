@@ -2,10 +2,7 @@ from test_framework import generic_test
 
 
 def reverse(x):
-    if x < 0:
-        return -int(str(abs(x))[::-1])
-    else:
-        return int(str(x)[::-1])
+    return -int(str(abs(x))[::-1]) if x < 0 else int(str(x)[::-1])
 
 
 if __name__ == '__main__':
