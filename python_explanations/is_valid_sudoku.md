@@ -98,7 +98,7 @@ Let's look at the layout of a sudoku board:
     subgrid8 = [grid[a][b] for a in range(6, 9) for b in range(3, 6)]
     subgrid9 = [grid[a][b] for a in range(6, 9) for b in range(6, 9)]
     ```
-* When everything is written out, it is a lot easier to derive a statement that can grab each and understand the code in the solution:  
+* When everything is written out by hand, it is a lot easier to compose a generator expression and understand the code in the solution:  
 ```python
 rows = [grid[i] for i in range(9)]
 cols = [[col[i] for col in grid] for i in range(9)]
@@ -109,7 +109,7 @@ subgrids = ([grid[a][b]
 ```
   
 ## Code Dissection - is_valid_list
-1. Filter out the zeroes from the list, since for this problem, they represent blank entries  
+1. Filter out the zeroes from the list, since for this problem, they represent blank entries
     ```python
     section = [x for x in section if x != 0]
     ```
@@ -122,14 +122,13 @@ subgrids = ([grid[a][b]
     * This statement is comparing the size of the filtered list to the size of unique elements, and if they are not equal, then the list contains duplicates  
   
 ## Code Dissection - is_valid_sudoku
-1. Loop over each column and grid to check for duplicates  
+1. Loop over each column and grid to check for duplicates
     ```python
     for i in range(9):
         if (not is_valid_list(grid[i]) or 
             not is_valid_list([col[i] for col in grid])):
                 return False
-    ```
-    * ```if not x``` in Python is the Pythonic way of saying ```if x == False```  
+    ```  
 2. Loop over each sub-grid and check for duplicates  
     ```python
     for i in range(3):

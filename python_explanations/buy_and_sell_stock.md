@@ -39,7 +39,7 @@ def buy_and_sell_stock_once(prices):
     max_profit = float('-inf')
     ```
     * The initial values are set to inf and -inf, so that they will undoubtedly be higher or lower when performing the initial comparison  
-2. Loop through all the prices -- take note of the syntax used, it is considered more pythonic  
+2. Loop through all the prices
     ```python
     for price in prices:
     ```
