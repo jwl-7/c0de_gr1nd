@@ -66,6 +66,18 @@ def reverse_bits(x):
     return x
     ```
   
+## Pythonic Code Dissection
+1. Use list comprehension to reverse the bits, pad the bits to the right with zeroes to bring the total amount of bits to 64, and return the integer with the reversed bits
+    ```python
+    return int(bin(x)[2:].zfill(64)[::-1], 2)
+    ```
+    Let's break down this cool line of code:
+    * ```bin(x)``` converts the integer to a binary number, which looks like ```0b0101010```
+    * ```[2:]``` slices the binary number so that the first 2 characters are cut off, so that the number does not contain '0b'
+    * ```[::-1]``` uses slice notation to reverse the bits of the binary number
+    * ```zfill(64)``` pads the bits to the right of our reversed binary number with zeroes up to a total of 64 bits
+    * ```int(x, 2)``` returns an integer constructed from _x_ with the base of the input number defined as 2
+  
 ## Useful References
 * [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
 * [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
