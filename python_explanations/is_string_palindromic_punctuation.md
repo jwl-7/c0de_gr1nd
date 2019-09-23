@@ -18,8 +18,25 @@ Output: false
 ## Solution
 ```python
 def is_palindrome(s):
-    # TODO - you fill in here.
+    start = 0
+    end = len(s) - 1
+    while start < end:
+        while start < end and not s[start].isalnum():
+            start += 1
+        while start < end and not s[end].isalnum():
+            end -= 1
+        if s[start].lower() != s[end].lower():
+            return False
+        start += 1
+        end -= 1
     return True
+```
+  
+## Pythonic Solution
+```python
+def is_palindrome_pythonic(s):
+    s = [x.lower() for x in s if x.isalnum()]
+    return s == s[::-1]
 ```
   
 ## Explanation
