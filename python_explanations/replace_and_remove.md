@@ -20,7 +20,7 @@ def replace_and_remove(size, s):
 * The solution uses list comprehension to remove and replace items in the list
 * Note that when using lists, the difference between ```s[:] = b``` and ```s = b``` is that the latter will not replace elements in the original list _s_
   
-## Code Dissection
+## Pythonic Code Dissection
 1. Use list comprehension to replace each 'a' with two 'd's and remove each 'b' and empty entry ''
     ```python
     def replace_and_remove(size, s):

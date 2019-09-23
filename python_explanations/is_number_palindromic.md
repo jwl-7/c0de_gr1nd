@@ -11,7 +11,7 @@ Write a program which determines if the decimal representation of an integer is 
 777  -> True
 ```
   
-## Solution
+## Pythonic Solution
 ```python
 def is_palindrome_number(x):
     if x < 0:
@@ -24,7 +24,7 @@ def is_palindrome_number(x):
 * Generating the reversed string representation of _x_ and then converting it back to an integer does create a new object that adds additional space complexity, however, it still outperforms an in-place solution that involves using several arithmetic operations in a loop
 * While not using bitwise operators is against the goal of the problem, 3 lines of readable explicit code that performs faster than a math-heavy algorithm is, in my opinion, a better solution
   
-## Code Dissection
+## Pythonic Code Dissection
 1. If _x_ is negative, its decimal representation cannot be palindromic  
     ```python
     if x < 0:
