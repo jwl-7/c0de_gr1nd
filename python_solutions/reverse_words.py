@@ -12,7 +12,7 @@ def reverse_words(s):
         end = s.find(b' ', start)
         if end < 0:
             if start == 0:
-                s[start:] = s[::-1]
+                s[:] = s[::-1]
             else:
                 s[start:] = s[end:start-1:-1]
             break
