@@ -16,11 +16,7 @@ Write a program which determines if the decimal representation of an integer is 
 def is_palindrome_number(x):
     if x < 0:
         return False
-    reverse = str(x)[::-1]
-    if x == int(reverse):
-        return True
-    else:
-        return False
+    return x == int(str(x)[::-1])
 ```
   
 ## Explanation
