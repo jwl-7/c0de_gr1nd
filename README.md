@@ -53,7 +53,7 @@ the pursuit of ameloriation as a programmer
 |6.1|Interconvert Strings and Integers|[Python](./python_solutions/string_integer_interconversion.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/string_integer_interconversion.md)|
 |6.2|Base Conversion|[Python](./python_solutions/convert_base.py)|_O(nlogn)_|_O(n)_|[INFO](./python_explanations/convert_base.md)|
 |6.3|Compute the Spreadsheet Column Encoding|[Python](./python_solutions/spreadsheet_encoding.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/spreadsheet_encoding.md)|
-|6.4|Replace and Remove|[Python](./python_solutions/replace_and_remove.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/replace_and_remove.md)|
+|6.4|Replace and Remove|[Python](./python_solutions/replace_and_remove.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/replace_and_remove.md)|
 
 <!---
 |6.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
