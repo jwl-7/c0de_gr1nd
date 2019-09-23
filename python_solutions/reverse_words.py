@@ -11,10 +11,10 @@ def reverse_words(s):
     while True:
         end = s.find(b' ', start)
         if end < 0:
-            if start > 0:
-                s[start:] = s[end:start-1:-1]
-            else:
+            if start == 0:
                 s[start:] = s[::-1]
+            else:
+                s[start:] = s[end:start-1:-1]
             break
         if start < end:
             if start == 0:
