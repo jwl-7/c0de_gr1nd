@@ -3,12 +3,9 @@ from test_framework import generic_test
 
 def reverse(x):
     if x < 0:
-        x = str(abs(x))[::-1]
-        x = -int(x)
-        return x
+        return -int(str(abs(x))[::-1])
     else:
-        x = str(x)[::-1]
-        return int(x)
+        return int(str(x)[::-1])
 
 
 if __name__ == '__main__':
