@@ -15,8 +15,28 @@ Output: 'Bob likes Alice'
 ## Solution
 ```python
 def reverse_words(s):
-    # TODO - you fill in here.
-    return
+    s[:] = s[::-1]
+    start = 0
+    while True:
+        end = s.find(b' ', start)
+        if end < 0:
+            if start > 0:
+                s[start:] = s[end:start-1:-1]
+            else:
+                s[start:] = s[::-1]
+            break
+        if start < end:
+            if start == 0:
+                s[start:end] = s[end-1::-1]
+            else:
+                s[start:end] = s[end-1:start-1:-1]
+        start = end + 1
+```
+  
+## Pythonic Solution
+```python
+def reverse_words_pythonic(s):
+    s[:] = b' '.join(word[::-1] for word in s[::-1].split(b' '))
 ```
   
 ## Explanation
