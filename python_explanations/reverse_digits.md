@@ -9,16 +9,13 @@ Write a program which takes an integer and returns the integer corresponding to 
 2117 -> 7112
 ```
   
-## Solution
+## Pythonic Solution
 ```python
 def reverse(x):
     if x < 0:
-        x = str(abs(x))[::-1]
-        x = -int(x)
-        return x
+        return -int(str(abs(x))[::-1])
     else:
-        x = str(x)[::-1]
-        return int(x)
+        return int(str(x)[::-1])
 ```
   
 ## Explanation
@@ -26,7 +23,7 @@ def reverse(x):
 * Python slicing notation follows the syntax: ```a[start:stop:step]```  
 * ```a[::-1]``` steps backwards through the entirety of a, thus reversing a  
   
-## Code Dissection
+## Pythonic Code Dissection
 1. If _x_ is negative, compute the absolute value of _x_, convert _x_ to a string, reverse the string, convert _x_ back into a negative integer, and return the input written in reverse order  
     ```python
     if x < 0:
