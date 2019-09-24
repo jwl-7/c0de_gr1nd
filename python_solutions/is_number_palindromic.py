@@ -2,6 +2,17 @@ from test_framework import generic_test
 
 
 def is_palindrome_number(x):
+    if x < 0:
+        return False
+    reverse = 0
+    temp = x
+    while temp:
+        reverse = reverse * 10 + temp % 10
+        temp //= 10
+    return x == reverse
+
+
+def is_palindrome_number_pythonic(x):
     return False if x < 0 else x == int(str(x)[::-1])
 
 
