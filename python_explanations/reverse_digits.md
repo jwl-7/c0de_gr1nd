@@ -70,7 +70,7 @@ def reverse(x):
     else:
         return int(str(x)[::-1])
     ```
-    * Now we can see that there are clearly two cases: 1 for negative numbers and 1 for positive numbers
+    * Now we can clearly see there are two cases: 1 for negative numbers and 1 for positive numbers
     * ```abs(x)``` returns the absolute value of _x_
     * ```str(x)[::-1]``` converts _x_ into a string and reverses it using slice notation
     * ```int(str(x))``` converts the reversed string back into an integer
