@@ -99,14 +99,14 @@ Let's look at the layout of a sudoku board:
     subgrid9 = [grid[a][b] for a in range(6, 9) for b in range(6, 9)]
     ```
 * When everything is written out by hand, it is a lot easier to compose a generator expression and understand the code in the solution:  
-```python
-rows = [grid[i] for i in range(9)]
-cols = [[col[i] for col in grid] for i in range(9)]
-subgrids = ([grid[a][b]
-             for a in range(j * 3, 3 * (j + 1))
-             for b in range(i * 3, 3 * (i + 1))
-        ]    for i in range(3) for j in range(3)) 
-```
+    ```python
+    rows = [grid[i] for i in range(9)]
+    cols = [[col[i] for col in grid] for i in range(9)]
+    subgrids = ([grid[a][b]
+                for a in range(j * 3, 3 * (j + 1))
+                for b in range(i * 3, 3 * (i + 1))
+            ]    for i in range(3) for j in range(3)) 
+    ```
   
 ## Code Dissection - is_valid_list
 1. Filter out the zeroes from the list, since for this problem, they represent blank entries
