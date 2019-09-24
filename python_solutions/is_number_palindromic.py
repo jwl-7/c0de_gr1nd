@@ -2,9 +2,7 @@ from test_framework import generic_test
 
 
 def is_palindrome_number(x):
-    if x < 0:
-        return False
-    return x == int(str(x)[::-1])
+    return False if x < 0 else x == int(str(x)[::-1])
 
 
 if __name__ == '__main__':
