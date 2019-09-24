@@ -55,6 +55,7 @@ the pursuit of ameloriation as a programmer
 |6.3|Compute the Spreadsheet Column Encoding|[Python](./python_solutions/spreadsheet_encoding.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/spreadsheet_encoding.md)|
 |6.4|Replace and Remove|[Python](./python_solutions/replace_and_remove.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/replace_and_remove.md)|
 |6.5|Test Palindromicity|[Python](./python_solutions/is_string_palindromic_punctuation.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/is_string_palindromic_punctuation.md)|
+|6.6|Reverse All the Words in a Sentence|[Python](./python_solutions/reverse_words.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/reverse_words.md)|
 
 <!---
 |6.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
