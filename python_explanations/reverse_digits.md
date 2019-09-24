@@ -32,7 +32,7 @@ def reverse(x):
     2. Append the extracted digit to the reversed number
     3. Remove the last digit from the number
 * The pythonic solution uses slice notation to reverse a string representation of the number and then convert it back to an integer
-* The pythonic solution runs a little bit faster than the math-based solution
+* Both solutions have similar performance, but the pythonic solution has a more consistent runtime
   
 ## Code Dissection
 1. Create a variable to hold the reversed number and a temporary variable to hold the absolute value of the number
