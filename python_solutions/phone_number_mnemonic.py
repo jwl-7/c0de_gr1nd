@@ -31,17 +31,17 @@ def phone_mnemonic_recursive(phone_number):
         '9': 'WXYZ',
     }
     
-    def build_mnemonic(num):
-        if num == len(phone_number):
-            mnemonics.append(''.join(curr))
+    def build_mnemonic(i):
+        if i == len(phone_number):
+            mnemonics.append(''.join(current))
         else:
-            letters = keypad.get(phone_number[num], phone_number[num])
+            letters = keypad.get(phone_number[i], phone_number[i])
             for letter in letters:
-                curr[num] = letter
-                build_mnemonic(num + 1)
+                current[i] = letter
+                build_mnemonic(i + 1)
 
     mnemonics = []
-    curr = [0] * len(phone_number)
+    current = [0] * len(phone_number)
     build_mnemonic(0)
     return mnemonics
 
