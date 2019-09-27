@@ -23,7 +23,7 @@ Write a program which takes as input a phone number, specified as a string of di
 Output: ['GP', 'GQ', 'GR', 'GS', 'HP', 'HQ', 'HR', 'HS', 'IP', 'IQ', 'IR', 'IS']
 ```
   
-## Solution
+## Iterative Solution
 ```python
 def phone_mnemonic(phone_number):
     keypad = {
@@ -43,8 +43,40 @@ def phone_mnemonic(phone_number):
     return mnemonics
 ```
   
+## Recursive Solution
+```python
+def phone_mnemonic_recursive(phone_number):
+    keypad = {
+        '2': 'ABC',
+        '3': 'DEF',
+        '4': 'GHI',
+        '5': 'JKL',
+        '6': 'MNO',
+        '7': 'PQRS',
+        '8': 'TUV',
+        '9': 'WXYZ',
+    }
+    
+    def build_mnemonic(num):
+        if num == len(phone_number):
+            mnemonics.append(''.join(curr))
+        else:
+            letters = keypad.get(phone_number[num], phone_number[num])
+            for letter in letters:
+                curr[num] = letter
+                build_mnemonic(num + 1)
+
+    mnemonics = []
+    curr = [0] * len(phone_number)
+    build_mnemonic(0)
+    return mnemonics
+```
+  
 ## Explanation
 * BLANK
   
-## Code Dissection
+## Iterative Code Dissection
+1. BLANK
+  
+## Recursive Code Dissection
 1. BLANK
