@@ -51,5 +51,5 @@ if __name__ == '__main__':
         generic_test.generic_test_main(
             "phone_number_mnemonic.py",
             'phone_number_mnemonic.tsv',
-            phone_mnemonic_recursive,
+            phone_mnemonic,
             comparator=test_utils.unordered_compare))
