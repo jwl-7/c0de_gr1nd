@@ -1,25 +1,5 @@
 # Compute All Mnemonics for a Phone Number
 Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or four letters of the alphabet, as show in the figure below. Since words are easier to remember than numbers, it is natural to ask if a 7 or 10-digit phone number can be represented by a word. For example, "2276696" corresponds to "ACRONYM" as well as "ABPOMZN".
-```
--------------------
-|     | ABC | DEF |
-|  1  |  2  |  3  |
--------------------
-| GHI | JKL | MNO |
-|  4  |  5  |  6  |
--------------------
-|PQRS | TUV |WXYZ |
-|  7  |  8  |  9  |
--------------------
-|     |     |     |
-|  *  |  0  |  #  |
--------------------
-```
-|<span style='font-weight:normal'></br>1</span>|<span style='font-weight:normal'>ABC</br>2</span>|<span style='font-weight:normal'>DEF</br>3</span>|
-|:--------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------:|
-|                  GHI</br>4                   |                    JKL</br>5                    |                    MNO</br>6                    |
-|                 PQRS</br>7                   |                    TUV</br>8                    |                   WXYZ</br>9                    |
-|                     </br>*                   |     &emsp;&emsp;&emsp;</br>0                    |                       </br>#                    |
 
 <table align='center'>
     <tr>
@@ -39,7 +19,7 @@ Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or
     </tr>
     <tr>
         <td align='center'></br>*</td>
-        <td align='center'>&emsp;&emsp;&emsp;</br>0</td>
+        <td align='center'>&emsp;&emsp;</br>0</td>
         <td align='center'></br>#</td>
     </tr>
 </table>
