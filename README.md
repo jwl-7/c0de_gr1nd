@@ -76,6 +76,7 @@ the pursuit of ameloriation as a programmer
 * [Big-O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)
 * [Python Wiki - Time Complexity](https://wiki.python.org/moin/TimeComplexity)
 * [Complexity of Python Operations](https://www.ics.uci.edu/~brgallar/week8_2.html)
+* [Python Code Visualizer](http://pythontutor.com/visualize.html#mode=display)
   
 ## Acknowledgements
 * [Adnan Aziz](https://github.com/adnanaziz) - Author of EPI
