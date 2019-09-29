@@ -20,6 +20,7 @@ Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or
 |                  GHI</br>4                   |                    JKL</br>5                    |                    MNO</br>6                    |
 |                 PQRS</br>7                   |                    TUV</br>8                    |                   WXYZ</br>9                    |
 |                     </br>*                   |     &emsp;&emsp;&emsp;</br>0                    |                       </br>#                    |
+
 Write a program which takes as input a phone number, specified as a string of digits, and returns all possible character sequences that correspond to the phone number. The cell phone keypad is specified by a mapping that takes a digit and returns the corresponding set of characters. The character sequences do not have to be legal words or phrases.
   
 ## Example
