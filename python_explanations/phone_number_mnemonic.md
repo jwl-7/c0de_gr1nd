@@ -19,7 +19,7 @@ Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or
     </tr>
     <tr>
         <td align='center'></br>*</td>
-        <td align='center'>&emsp;&emsp;</br>0</td>
+        <td align='center'>&emsp;&emsp;&emsp;</br>0</td>
         <td align='center'></br>#</td>
     </tr>
 </table>
