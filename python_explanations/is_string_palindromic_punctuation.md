@@ -79,3 +79,13 @@ def is_palindrome_pythonic(s):
     ```python
     return True
     ```
+  
+## Pythonic Code Dissection
+1. Use slice notation to generate a copy of the string without non-alphanumeric characters
+    ```python
+    s = [x.lower() for x in s if x.isalnum()]
+    ```
+2. Return the comparison of the new _s_ to the reverse of _s_
+    ```python
+    return s == s[::-1]
+    ```
