@@ -18,8 +18,8 @@ the pursuit of ameloriation as a programmer
 |4.5|Compute _x_ &times; _y_ Without Arithmetical Operators|[Python](./python_solutions/primitive_multiply.py)|_O(n)_|_O(n<sup>2</sup>)_|[INFO](./python_explanations/primitive_multiply.md)|
 |4.6|Compute _x_ &#8725; _y_|[Python](./python_solutions/primitive_divide.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/primitive_divide.md)|
 |4.7|Compute _x <sup>y</sup>_|[Python](./python_solutions/power_x_y.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/power_x_y.md)|
-|4.8|Reverse Digits|[Python](./python_solutions/reverse_digits.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/reverse_digits.md)|
-|4.9|Check if a Decimal Integer is a Palindrome|[Python](./python_solutions/is_number_palindromic.py)|_O(n)_|_O(n)_|[INFO](./python_explanations/is_number_palindromic.md)|
+|4.8|Reverse Digits|[Python](./python_solutions/reverse_digits.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/reverse_digits.md)|
+|4.9|Check if a Decimal Integer is a Palindrome|[Python](./python_solutions/is_number_palindromic.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/is_number_palindromic.md)|
 |4.10|Generate Uniform Random Numbers|[Python](./python_solutions/uniform_random_number.py)|_O(logn)_|_O(1)_|[INFO](./python_explanations/uniform_random_number.md)|
 |4.11|Rectangle Intersection|[Python](./python_solutions/rectangle_intersection.py)|_O(1)_|_O(1)_|[INFO](./python_explanations/rectangle_intersection.md)|
   
