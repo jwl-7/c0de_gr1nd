@@ -26,28 +26,28 @@ def replace_and_remove(size, s):
     def replace_and_remove(size, s):
         s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y]) if x not in ['b', '']]
     ```
-    a. To understand this somewhat overly complicated one-line statement, let's separate it into two equivalent statements
-    ```python
-    s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
-    s[:] = [x for x in s if x not in ['b', '']]
-    ```
-    b. Now we can clearly see the two statements for removing and replacing characters, but let's separate them into multiple lines for arguably more readability
-    ```python
-    s[:] = [x 
-            for y in s 
-                for x in (['d', 'd'] 
-                    if y == 'a' 
-                    else [y])]
-    s[:] = [x 
-            for x in s 
-                if x not in ['b', '']]
-    ```
-    c. And here are some equivalent, inefficient statements that are easy to understand
-    ```python
-    for index, char in enumerate(s):
-        if char == 'a':
-            s[index:index + 1] = 'dd'
-    for char in s[:]:
-        if char in ['b', '']:
-            s.remove(char)
-    ```
+    1. To understand this somewhat overly complicated one-line statement, let's separate it into two equivalent statements
+        ```python
+        s[:] = [x for y in s for x in (['d', 'd'] if y == 'a' else [y])]
+        s[:] = [x for x in s if x not in ['b', '']]
+        ```
+    2. Now we can clearly see the two statements for removing and replacing characters, but let's separate them into multiple lines for arguably more readability
+        ```python
+        s[:] = [x 
+                for y in s 
+                    for x in (['d', 'd'] 
+                        if y == 'a' 
+                        else [y])]
+        s[:] = [x 
+                for x in s 
+                    if x not in ['b', '']]
+        ```
+    3. And here are some equivalent, inefficient statements that are easy to understand
+        ```python
+        for index, char in enumerate(s):
+            if char == 'a':
+                s[index:index + 1] = 'dd'
+        for char in s[:]:
+            if char in ['b', '']:
+                s.remove(char)
+        ```
