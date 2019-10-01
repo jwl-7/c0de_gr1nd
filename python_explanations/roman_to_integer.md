@@ -52,7 +52,47 @@ def roman_to_integer(s):
 ```
   
 ## Explanation
-* BLANK
+* The solution iterates over the Roman numerals from right -> left and follows 2 simple rules:
+    1. When a symbol appears after a larger symbol, it is subtracted
+    2. When a symbol appears before a larger symbol, it is added
   
 ## Code Dissection
-1. BLANK
+1. Create a dictionary that maps the Roman numerals to their corresponding decimal values
+    ```python
+    roman = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    ```
+2. Create variables to hold the result and the previous symbol's value
+    ```python
+    result = 0
+    prev = 0
+    ```
+3. Loop over each symbol in the string from right -> left
+    ```python
+    for char in s[::-1]:
+    ```
+    a. Implement Rule #1 - When a symbol appears after a larger symbol, it is subtracted
+    ```python
+    if roman[char] < prev:
+        result -= roman[char]
+    ```
+    b. Implement Rule #2 - When a symbol appears before a larger symbol, it is added
+    ```python
+    else:
+        result += roman[char]
+    ```
+    c. Set the previous symbol to the current symbol for the next loop iteration
+    ```python
+    prev = roman[char]
+    ```
+4. Return the computed integer
+    ```python
+    return result
+    ```
