@@ -5,12 +5,31 @@ Write a program that takes as input an integer _n_ and returns the _n_th integer
   
 ## Examples
 ```
-BLANK
+ Input: 4
+Output: '1211'
+
+ Input: 7
+Output: '13112221'
 ```
   
 ## Solution
 ```python
-BLANK
+def look_and_say(n):
+    s = '1'
+    for _ in range(1, n):
+        temp = ''
+        curr = s[0]
+        count = 0
+        for char in s:
+            if curr == char:
+                count += 1
+            else:
+                temp += str(count) + curr
+                curr = char
+                count = 1     
+        temp += str(count) + char
+        s = temp
+    return s
 ```
   
 ## Explanation
