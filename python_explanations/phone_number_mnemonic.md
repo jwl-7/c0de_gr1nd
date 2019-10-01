@@ -138,21 +138,21 @@ keypad = {
     ```
     * ```i``` represents the current index of the number
 
-    a. Add the computed mnemonic to the list when we reach the end of the phone number
-    ```python
-    if i == len(phone_number):
-        mnemonics.append(''.join(current))
-    ```
-    b. Build the mnemonic recursively using the keypad dictionary
-    ```python
-    else:
-        letters = keypad.get(phone_number[i], phone_number[i])
-        for letter in letters:
-            current[i] = letter
-            build_mnemonic(i + 1)
-    ```
-    * ```keypad.get(phone_number[i], phone_number[i])``` grabs the letters corresponding to the current number
-    * If the number is not in the keypad dictionary, the number is the value returned
+    1. Add the computed mnemonic to the list when we reach the end of the phone number
+        ```python
+        if i == len(phone_number):
+            mnemonics.append(''.join(current))
+        ```
+    2. Build the mnemonic recursively using the keypad dictionary
+        ```python
+        else:
+            letters = keypad.get(phone_number[i], phone_number[i])
+            for letter in letters:
+                current[i] = letter
+                build_mnemonic(i + 1)
+        ```
+        * ```keypad.get(phone_number[i], phone_number[i])``` grabs the letters corresponding to the current number
+        * If the number is not in the keypad dictionary, the number is the value returned
 3. Declare the lists to hold the mnemonics and the current mnemonic
     ```python
     mnemonics = []

@@ -66,16 +66,16 @@ def reverse_words_pythonic(s):
     ```
     * ```s.find(b' ', start)``` will return -1 if no whitespace character is found
 
-    a. When we reach the end of the string, be sure to reverse the last word before breaking out of the loop
-    ```python
-    if start == 0:
-        s[:] = s[::-1]
-    else:
-        s[start:] = s[end:start-1:-1]
-    break
-    ```
-    * ```if start == 0``` is the case that the string is one word without any whitespace characters, so we simply reverse the entire string again
-    * ```else``` we need to reverse the last word in the string that occurs after a whitespace character
+    1. When we reach the end of the string, be sure to reverse the last word before breaking out of the loop
+        ```python
+        if start == 0:
+            s[:] = s[::-1]
+        else:
+            s[start:] = s[end:start-1:-1]
+        break
+        ```
+        * ```if start == 0``` is the case that the string is one word without any whitespace characters, so we simply reverse the entire string again
+        * ```else``` we need to reverse the last word in the string that occurs after a whitespace character
 4. Reverse each word in the string during the loop
     ```python
     if start < end:
