@@ -78,20 +78,20 @@ def roman_to_integer(s):
     ```python
     for char in s[::-1]:
     ```
-    a. Implement Rule #1 - When a symbol appears after a larger symbol, it is subtracted
-    ```python
-    if roman[char] < prev:
-        result -= roman[char]
-    ```
-    b. Implement Rule #2 - When a symbol appears before a larger symbol, it is added
-    ```python
-    else:
-        result += roman[char]
-    ```
-    c. Set the previous symbol to the current symbol for the next loop iteration
-    ```python
-    prev = roman[char]
-    ```
+    1. Implement Rule #1 - When a symbol appears after a larger symbol, it is subtracted
+        ```python
+        if roman[char] < prev:
+            result -= roman[char]
+        ```
+    2. Implement Rule #2 - When a symbol appears before a larger symbol, it is added
+        ```python
+        else:
+            result += roman[char]
+        ```
+    3. Set the previous symbol to the current symbol for the next loop iteration
+        ```python
+        prev = roman[char]
+        ```
 4. Return the computed integer
     ```python
     return result
