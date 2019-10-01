@@ -59,6 +59,7 @@ the pursuit of ameloriation as a programmer
 |6.7|Compute All Mnemonics for a Phone Number|[Python](./python_solutions/phone_number_mnemonic.py)|_O(4<sup>n</sup>n)_|_O(n)_|[INFO](./python_explanations/phone_number_mnemonic.md)|
 |6.8|The Look-and-Say Problem|[Python](./python_solutions/look_and_say.py)|_O(n2<sup>n</sup>)_|_O(2<sup>n</sup>)_|[INFO](./python_explanations/look_and_say.md)|
 |6.9|Convert from Roman to Decimal|[Python](./python_solutions/roman_to_integer.py)|_O(n)_|_O(1)_|[INFO](./python_explanations/roman_to_integer.md)|
+|6.10|Compute All Valid IP Addresses|[Python](./python_solutions/valid_ip_addresses.py)|_O(1)_|_O(1)_|[INFO](./python_explanations/valid_ip_addresses.md)|
 
 <!---
 |6.BLANK|BLANK|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|[INFO](./python_explanations/BLANK.md)|
