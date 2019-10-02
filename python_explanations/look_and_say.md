@@ -58,25 +58,24 @@ def look_and_say(n):
     for char in s:
     ```
     * This loop is used to process the previous entry in the sequence
-
-    1. Increment the counter if _char_ matches _prev_
-        ```python
-        if prev == char:
-            count += 1
-        ```
-    2. Otherwise, add the match count and digit we just processed to _tmp_ and then set _prev_ to the current digit
-        ```python
-        else:
-            tmp += str(count) + prev
-            prev = char
-            count = 1 
-        ```
-4. Add to _tmp_ one last time when breaking out of the inner loop, and then set _s_ to _tmp_ so that the outer loop can process the entry
+4. Increment the counter if _char_ matches _prev_
+    ```python
+    if prev == char:
+        count += 1
+    ```
+5. Otherwise, add the match count and digit we just processed to _tmp_ and then set _prev_ to the current digit
+    ```python
+    else:
+        tmp += str(count) + prev
+        prev = char
+        count = 1 
+    ```
+6. Add to _tmp_ one last time when breaking out of the inner loop, and then set _s_ to _tmp_ so that the outer loop can process the entry
     ```python
     tmp += str(count) + char
     s = tmp
     ```
-5. Return the *n*th entry in the sequence
+7. Return the *n*th entry in the sequence
     ```python
     return s
     ```

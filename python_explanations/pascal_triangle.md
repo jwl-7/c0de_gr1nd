@@ -41,11 +41,11 @@ def generate_pascal_triangle(n):
     for i in range(n):
         for j in range(1, i):
     ```
-    1. Set the entry to the sum of the numbers in the adjacent entries above it
-        ```python
-        triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
-        ```
-3. Return the generated Pascal's triangle
+3. Set the entry to the sum of the numbers in the adjacent entries above it
+    ```python
+    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    ```
+4. Return the generated Pascal's triangle
     ```python
     return triangle
     ```

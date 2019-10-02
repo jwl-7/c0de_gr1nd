@@ -52,12 +52,12 @@ def buy_and_sell_stock_twice(prices):
     ```python
     for price in prices:
     ```
-    * Calculate the minimum price so far and the max daily profit  
+    1. Calculate the minimum price so far and the max daily profit  
         ```python
         min_price = min(min_price, price)
         profit = price - min_price
         ```
-    * Calculate the max total profit by the _i_-th day and record it in profits[] -- first transaction  
+    2. Calculate the max total profit by the _i_-th day and record it in profits[] -- first transaction  
         ```python
         max_profit = max(max_profit, profit)
         profits.append(max_profit)
@@ -68,15 +68,15 @@ def buy_and_sell_stock_twice(prices):
     ```
     * The reason that this statement uses ```reversed(list(enumerate))``` rather than ```enumerate(reversed())``` is because the former generates the indexes in reversed order as well as prices[]  
   
-    * Calculate the maximum price so far  
+    1. Calculate the maximum price so far  
         ```python
         max_price = max(max_price, price)
         ```
-    * Calculate the max daily profit after the _i_-th day -- second transaction, and combine the result with the previous day in profits[] -- first transaction  
+    2. Calculate the max daily profit after the _i_-th day -- second transaction, and combine the result with the previous day in profits[] -- first transaction  
         ```python
         profit = max_price - price + profits[i]
         ```
-    * Calculate the max total profit of two transactions  
+    3. Calculate the max total profit of two transactions  
         ```python
         max_profit = max(max_profit, profit)
         ```

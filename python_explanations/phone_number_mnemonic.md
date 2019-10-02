@@ -87,18 +87,18 @@ def phone_mnemonic_recursive(phone_number):
   
 ## Iterative Code Dissection
 1. Create a dictionary of a phone keypad with the numbers as the keys and the letters as the values
-```python
-keypad = {
-        '2': 'ABC',
-        '3': 'DEF',
-        '4': 'GHI',
-        '5': 'JKL',
-        '6': 'MNO',
-        '7': 'PQRS',
-        '8': 'TUV',
-        '9': 'WXYZ',
-    }
-```
+    ```python
+    keypad = {
+            '2': 'ABC',
+            '3': 'DEF',
+            '4': 'GHI',
+            '5': 'JKL',
+            '6': 'MNO',
+            '7': 'PQRS',
+            '8': 'TUV',
+            '9': 'WXYZ',
+        }
+    ```
 2. Create the mnemonics list with a single empty string
     ```python
     mnemonics = ['']
@@ -120,18 +120,18 @@ keypad = {
   
 ## Recursive Code Dissection
 1. Create a dictionary of a phone keypad with the numbers as the keys and the letters as the values
-```python
-keypad = {
-        '2': 'ABC',
-        '3': 'DEF',
-        '4': 'GHI',
-        '5': 'JKL',
-        '6': 'MNO',
-        '7': 'PQRS',
-        '8': 'TUV',
-        '9': 'WXYZ',
-    }
-```
+    ```python
+    keypad = {
+            '2': 'ABC',
+            '3': 'DEF',
+            '4': 'GHI',
+            '5': 'JKL',
+            '6': 'MNO',
+            '7': 'PQRS',
+            '8': 'TUV',
+            '9': 'WXYZ',
+        }
+    ```
 2. Create a function that builds a mnemonic -- this will be called recursively
     ```python
     def build_mnemonic(i):
