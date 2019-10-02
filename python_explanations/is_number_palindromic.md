@@ -17,10 +17,10 @@ def is_palindrome_number(x):
     if x < 0:
         return False
     reverse = 0
-    temp = x
-    while temp:
-        reverse = reverse * 10 + temp % 10
-        temp //= 10
+    tmp = x
+    while tmp:
+        reverse = reverse * 10 + tmp % 10
+        tmp //= 10
     return x == reverse
 ```
   
@@ -49,20 +49,20 @@ def is_palindrome_number_pythonic(x):
 2. Create a variable to hold the reversed number and a temporary variable to hold a copy of the original number
     ```python
     reverse = 0
-    temp = x
+    tmp = x
     ```
 3. Loop until the temporary variable is empty, which will be the case when we have computed the reversed number
     ```python
-    while temp:
+    while tmp:
     ```
-    * ```while temp``` is equivalent to ```while temp == 0``` in this case, because temp will always equal zero by the end of this operation
-4. Extract the last digit from _temp_ and append it to the reversed number
+    * ```while tmp``` is equivalent to ```while tmp == 0``` in this case, because _tmp_ will always equal zero by the end of this operation
+4. Extract the last digit from _tmp_ and append it to the reversed number
     ```python
-    reverse = reverse * 10 + temp % 10
+    reverse = reverse * 10 + tmp % 10
     ```
-5. Remove the last digit from _temp_
+5. Remove the last digit from _tmp_
     ```python
-    temp //= 10
+    tmp //= 10
     ```
 6. Check for palindromicity by comparing the reversed number to the original number
     ```python

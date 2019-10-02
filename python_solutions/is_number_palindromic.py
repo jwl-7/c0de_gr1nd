@@ -5,10 +5,10 @@ def is_palindrome_number(x):
     if x < 0:
         return False
     reverse = 0
-    temp = x
-    while temp:
-        reverse = reverse * 10 + temp % 10
-        temp //= 10
+    tmp = x
+    while tmp:
+        reverse = reverse * 10 + tmp % 10
+        tmp //= 10
     return x == reverse
 
 
