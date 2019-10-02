@@ -43,7 +43,64 @@ def encoding(s):
 ```
   
 ## Explanation
-* BLANK
+* Decoding - Iterate through the string, keep _count_ of the numeric characters, and when encountering an alphabetical character, add it _count_ times to the decoded string
+* Encoding - Iterate through the string, keep _count_ of the number of consecutive character occurences, and when encountering a different character, add the _count_ and the character to the encoded string
+* Both solutions share similar concepts, but decoding is much simpler
+* The solution for encoding is similar to the solution for the look-and-say problem
   
-## Code Dissection
-1. BLANK
+## Code Dissection - decoding
+1. Create two string variables to hold the _decoded_ string and the numeric characters
+    ```python
+    decoded = ''
+    count = ''
+    ```
+2. Loop over each character in the encoded string
+    ```python
+    for char in s:
+    ```
+3. If the character is numeric, add it to _count_
+    ```python
+    if char.isdigit():
+        count += char
+    ```
+    * Keeping _count_ a string saves us from doing more math in the case of multiple numeric characters in a row
+4. If the character is alphabetical, add it _count_ times to the _decoded_ string and reset _count_
+    ```python
+    else:
+        decoded += int(count) * char
+        count = ''
+    ```
+    * Multiplying a character (or string) by an integer _n_ returns the character _n_ times
+5. Return the decoded string
+    ```python
+    return decoded
+    ```
+  
+## Code Dissection - encoding
+1. Create variables to hold the _encoded_ string, the previous character, and keep track of consecutive occurrances of a character
+    ```python
+    encoded = ''
+    prev = s[0]
+    count = 0
+    ```
+2. Loop over each character in the string
+    ```python
+    for char in s:
+    ```
+3. If the current character is the same as the previous, increment _count_
+    ```python
+    if char == prev:
+        count += 1
+    ```
+4. If the current and previous character are not the same, add the _count_ and previous character to the _encoded_ string
+    ```python
+    else:
+        encoded += str(count) + prev
+        prev = char
+        count = 1
+    ```
+5. After breaking out of the loop, make sure to add the last _count_ and character to the _encoded_ string before returning it
+    ```python
+    encoded += str(count) + char
+    return encoded
+    ```
