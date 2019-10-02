@@ -17,18 +17,18 @@ Output: '13112221'
 def look_and_say(n):
     s = '1'
     for _ in range(1, n):
-        temp = ''
-        curr = s[0]
+        tmp = ''
+        prev = s[0]
         count = 0
         for char in s:
-            if curr == char:
+            if prev == char:
                 count += 1
             else:
-                temp += str(count) + curr
-                curr = char
+                tmp += str(count) + prev
+                prev = char
                 count = 1     
-        temp += str(count) + char
-        s = temp
+        tmp += str(count) + char
+        s = tmp
     return s
 ```
   
