@@ -60,6 +60,7 @@ the pursuit of ameloriation as a programmer
 |6.8|[The Look-and-Say Problem](./python_explanations/look_and_say.md)|[Python](./python_solutions/look_and_say.py)|_O(n2<sup>n</sup>)_|_O(2<sup>n</sup>)_|
 |6.9|[Convert from Roman to Decimal](./python_explanations/roman_to_integer.md)|[Python](./python_solutions/roman_to_integer.py)|_O(n)_|_O(1)_|
 |6.10|[Compute All Valid IP Addresses](./python_explanations/valid_ip_addresses.md)|[Python](./python_solutions/valid_ip_addresses.py)|_O(1)_|_O(1)_|
+|6.11|[Write a String Sinusoidally](./python_explanations/snake_string.md)|[Python](./python_solutions/snake_string.py)|_O(n)_|_O(1)_|
 
 <!---
 |6.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
