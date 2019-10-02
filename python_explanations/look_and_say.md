@@ -44,37 +44,37 @@ def look_and_say(n):
 2. Create an outer loop that runs from 1 to _n_, rather than just to _n_, since the first entry is already defined
     ```python
     for _ in range(1, n):
-        temp = ''
-        curr = s[0]
+        tmp = ''
+        prev = s[0]
         count = 0
     ```
     * This loop is used to generate each entry up to _n_
     * We use ```for _```, since the loop iteration variable is not used
-    * ```temp``` is to process each entry
-    * ```curr``` is used to define what digit to process
-    * ```count``` is used to store the consecutive matches of _curr_
+    * ```tmp``` is used to hold each entry
+    * ```prev``` is used to compare characters
+    * ```count``` is used to store the consecutive matches between _prev_ and _char_
 3. Create an inner loop that iterates through each character in _s_
     ```python
     for char in s:
     ```
     * This loop is used to process the previous entry in the sequence
 
-    1. Increment the counter if _char_ matches _curr_
+    1. Increment the counter if _char_ matches _prev_
         ```python
-        if curr == char:
+        if prev == char:
             count += 1
         ```
-    2. Otherwise, add the match count and digit we just processed to _temp_ and then set _curr_ to the next digit to process
+    2. Otherwise, add the match count and digit we just processed to _tmp_ and then set _prev_ to the current digit
         ```python
         else:
-            temp += str(count) + curr
-            curr = char
-            count = 1
+            tmp += str(count) + prev
+            prev = char
+            count = 1 
         ```
-4. Add to _temp_ one last time when breaking out of the inner loop, and then set _s_ to _temp_ so that the outer loop can process the entry
+4. Add to _tmp_ one last time when breaking out of the inner loop, and then set _s_ to _tmp_ so that the outer loop can process the entry
     ```python
-    temp += str(count) + char
-    s = temp
+    tmp += str(count) + char
+    s = tmp
     ```
 5. Return the *n*th entry in the sequence
     ```python
