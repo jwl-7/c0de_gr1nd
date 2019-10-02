@@ -13,10 +13,10 @@ Write a program which takes an integer and returns the integer corresponding to 
 ```python
 def reverse(x):
     r = 0
-    temp = abs(x)
-    while temp:
-        r = r * 10 + temp % 10
-        temp //= 10
+    tmp = abs(x)
+    while tmp:
+        r = r * 10 + tmp % 10
+        tmp //= 10
     return -r if x < 0 else r
 ```
   
@@ -38,20 +38,20 @@ def reverse(x):
 1. Create a variable to hold the reversed number and a temporary variable to hold the absolute value of the number
     ```python
     r = 0
-    temp = abs(x)
+    tmp = abs(x)
     ```
 2. Loop until the temporary variable is empty, which will be the case when we have computed the reversed number
     ```python
-    while temp:
+    while tmp:
     ```
-    * ```while temp``` is equivalent to ```while temp == 0``` in this case, because temp will always equal zero by the end of this operation
-3. Extract the last digit from _temp_ and append it to the reversed number
+    * ```while tmp``` is equivalent to ```while tmp == 0``` in this case, because _tmp_ will always equal zero by the end of this operation
+3. Extract the last digit from _tmp_ and append it to the reversed number
     ```python
-    r = r * 10 + temp % 10
+    r = r * 10 + tmp % 10
     ```
-4. Remove the last digit from _temp_
+4. Remove the last digit from _tmp_
     ```python
-    temp //= 10
+    tmp //= 10
     ```
 5. Return the reversed number with the correct sign
     ```python

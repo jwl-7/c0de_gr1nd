@@ -3,10 +3,10 @@ from test_framework import generic_test
 
 def reverse(x):
     r = 0
-    temp = abs(x)
-    while temp:
-        r = r * 10 + temp % 10
-        temp //= 10
+    tmp = abs(x)
+    while tmp:
+        r = r * 10 + tmp % 10
+        tmp //= 10
     return -r if x < 0 else r
 
 
