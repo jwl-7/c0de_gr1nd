@@ -5,8 +5,9 @@ the pursuit of ameloriation as a programmer
 
 ## Introduction
 * This repository features my solutions and explanations to the problems presented in  
-  [Elements of Programming Interviews in Python](http://bit.ly/epipython)  
-* The book solutions and test framework included are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)  
+  [Elements of Programming Interviews in Python](http://bit.ly/epipython)
+* The book solutions and test framework are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)
+* The descriptions of the problems are excerpts from the EPI book.
   
 ## Primitive Types
 | # | Title | Solution | Time | Space |
@@ -87,8 +88,8 @@ the pursuit of ameloriation as a programmer
 * [Tsung-Hsien Lee](https://github.com/tsunghsienlee) - Author of EPI
 * Amit Prakash - Author of EPI
 * All contributers to the [EPI Judge](https://github.com/adnanaziz/EPIJudge)
-* [Brandon Hough](https://github.com/insomniac94) - Listens to my late night coding rants
-* [Cory Walker](https://github.com/corywalker) - Motivates me to become better
+* [Brandon Hough](https://github.com/insomniac94) - Incubate distributed infomediaries
+* [Cory Walker](https://github.com/corywalker) - Mesh distributed mindshare
   
 ## License
 This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
