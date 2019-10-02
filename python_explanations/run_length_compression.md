@@ -5,12 +5,41 @@ Implement run-length encoding and decoding functions. Assume the string to be en
   
 ## Examples
 ```
-BLANK
+Decoding:
+    Input: '5a12z6n21y3d3p'
+   Output: 'aaaaazzzzzzzzzzzznnnnnnyyyyyyyyyyyyyyyyyyyyydddppp'
+
+Encoding:
+    Input: 'vvvkkkkkkkkwwwwwwwwwwwwwwwwwffffffffffmmmmmmm'
+   Output: '3v8k17w10f7m'
 ```
   
 ## Solution
 ```python
-BLANK
+def decoding(s):
+    decoded = ''
+    count = ''
+    for char in s:
+        if char.isdigit():
+            count += char
+        else:
+            decoded += int(count) * char
+            count = ''
+    return decoded
+
+def encoding(s):
+    encoded = ''
+    prev = s[0]
+    count = 0
+    for char in s:
+        if char == prev:
+            count += 1
+        else:
+            encoded += str(count) + prev
+            prev = char
+            count = 1    
+    encoded += str(count) + char
+    return encoded
 ```
   
 ## Explanation
