@@ -74,12 +74,12 @@ the pursuit of ameloriation as a programmer
   
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)
-* [Open Data Structures](https://opendatastructures.org/)
-* [Python Tutorial](https://www.tutorialspoint.com/python/)
-* [Python Code Visualizer](http://pythontutor.com/visualize.html#mode=display)
 * [Python Wiki - Time Complexity](https://wiki.python.org/moin/TimeComplexity)
-* [Complexity of Python Operations](https://www.ics.uci.edu/~brgallar/week8_2.html)
-* [Big-O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)
+* [Python Code Visualizer](http://www.pythontutor.com/visualize.html#mode=edit)
+* [Python Tutorial](https://www.tutorialspoint.com/python/)
+* [Open Data Structures](https://opendatastructures.org/)
+* [Problem Solving with Algorithms and Data Structures using Python](http://www.openbookproject.net/books/pythonds/index.html)
+* [Big O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)
   
 ## Acknowledgements
 * [Adnan Aziz](https://github.com/adnanaziz) - Author of EPI
