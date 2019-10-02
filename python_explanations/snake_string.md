@@ -27,7 +27,18 @@ def snake_string(s):
 ```
   
 ## Explanation
-* BLANK
+* The pythonic solution uses slice notation which follows the syntax: ```s[start:stop:step]```
   
-## Code Dissection
-1. BLANK
+Let's assume the input string _s_ is 'Hello_World!' and make sense of these slices:
+
+|     |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  11 |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|**0**|     |  e  |     |     |     |  _  |     |     |     |  l  |     |  !  |
+|**1**|  H  |     |  l  |     |  o  |     |  W  |     |  r  |     |  d  |     |
+|**2**|     |     |     |  l  |     |     |     |  o  |     |     |     |     |
+  
+## Pythonic Code Dissection
+1. Return the snake string using the slices of the sinusoidal string
+    ```python
+    return s[1::4] + s[::2] + s[3::4]
+    ```
