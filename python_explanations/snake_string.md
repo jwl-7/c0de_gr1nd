@@ -13,12 +13,17 @@ Write a program which takes as input a string _s_ and returns the snakestring of
   
 ## Examples
 ```
-BLANK
+ Input: 'Python_is_fun!'
+Output: 'yn_!Pto_sfnhiu'
+
+ Input: 'White_Board'
+Output: 'h_rWieBadto'
 ```
   
-## Solution
+## Pythonic Solution
 ```python
-BLANK
+def snake_string(s):
+    return s[1::4] + s[::2] + s[3::4]
 ```
   
 ## Explanation
