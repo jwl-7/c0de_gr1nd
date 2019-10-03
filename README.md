@@ -63,9 +63,13 @@ the pursuit of ameloriation as a programmer
 |6.10|[Compute All Valid IP Addresses](./python_explanations/valid_ip_addresses.md)|[Python](./python_solutions/valid_ip_addresses.py)|_O(1)_|_O(1)_|
 |6.11|[Write a String Sinusoidally](./python_explanations/snake_string.md)|[Python](./python_solutions/snake_string.py)|_O(n)_|_O(1)_|
 |6.12|[Implement Run-Length Encoding](./python_explanations/run_length_compression.md)|[Python](./python_solutions/run_length_compression.py)|_O(n)_|_O(n)_|
-
+|6.13|[Find the First Occurrence of a Substring](./python_explanations/substring_match.md)|[Python](./python_solutions/substring_match.py)|_O(n+m)_|_O(1)_|
+  
 <!---
-|6.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+## Linked Lists
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
   
 ## Random Code -- Not from EPI
