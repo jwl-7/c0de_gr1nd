@@ -46,7 +46,7 @@ def dutch_flag_partition(pivot_index, A):
 ```
   
 ## Explanation
-* The solution uses an efficient [quicksort](https://opendatastructures.org/ods-python/11_1_Comparison_Based_Sorti.html#49745) algorithm  
+* The solution uses an efficient [quicksort](http://www.openbookproject.net/books/pythonds/SortSearch/TheQuickSort.html) algorithm
   
 ## Code Dissection
 1. Define variables for the pivot point and 3 pointers used to iterate through the array and swap elements  

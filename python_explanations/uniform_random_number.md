@@ -80,5 +80,5 @@ def uniform_random(lower_bound, upper_bound):
     ```
   
 ## Useful References
-* [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
+* [Python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)
 * [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)

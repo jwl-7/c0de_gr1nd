@@ -79,5 +79,5 @@ def reverse_bits(x):
     * ```int(x, 2)``` returns an integer constructed from _x_ with the base of the input number defined as 2
   
 ## Useful References
-* [python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
+* [Python Wiki - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)  
 * [tutorialspoint - Bitwise Operators Example](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)

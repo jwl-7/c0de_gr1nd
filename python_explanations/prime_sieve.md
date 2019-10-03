@@ -23,8 +23,8 @@ def generate_primes(n):
 ```
   
 ## Explanation
-* The brute-force algorithm is to use [Trial Division](https://www.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/a/trial-division)  
-* The solution uses the algorithm [Sieve of Eratosthenes](https://www.smartickmethod.com/blog/math/operations-and-algebraic-thinking/divisibility/prime-numbers-sieve-eratosthenes/)  
+* The brute-force algorithm is to use [Trial Division](https://en.wikipedia.org/wiki/Trial_division)
+* The solution uses the algorithm [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 * The basic idea of the Sieve of Eratosthenes is to use a table of numbers 1 to _n_; for every prime number we find, we eliminate the multiples of that number since they must be composite  
   
 ## Code Dissection
@@ -54,3 +54,7 @@ def generate_primes(n):
     ```python
     return primes
     ```
+  
+## Useful References
+* [Khan Academy - Trial Division](https://www.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/a/trial-division)
+* [Smartick - Sieve of Eratosthenes](https://www.smartickmethod.com/blog/math/operations-and-algebraic-thinking/divisibility/prime-numbers-sieve-eratosthenes/)
