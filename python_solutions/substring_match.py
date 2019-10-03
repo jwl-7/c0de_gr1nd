@@ -27,10 +27,12 @@ def rabin_karp(t, s):
 
 
 def rabin_karp_simple(t, s):
+    m = len(s)
+    n = len(t)
     s_hash = hash(s)
-    for i in range(len(t) - len(s) + 1):
-        t_hash = hash(t[i:i+len(s)])
-        if t_hash == s_hash and t[i:i+len(s)] == s:
+    for i in range(n - m + 1):
+        t_hash = hash(t[i:i+m])
+        if t_hash == s_hash and t[i:i+m] == s:
             return i
     return -1
 
