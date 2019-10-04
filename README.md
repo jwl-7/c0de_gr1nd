@@ -65,10 +65,12 @@ the pursuit of ameloriation as a programmer
 |6.12|[Implement Run-Length Encoding](./python_explanations/run_length_compression.md)|[Python](./python_solutions/run_length_compression.py)|_O(n)_|_O(n)_|
 |6.13|[Find the First Occurrence of a Substring](./python_explanations/substring_match.md)|[Python](./python_solutions/substring_match.py)|_O(n+m)_|_O(1)_|
   
-<!---
 ## Linked Lists
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
+|7.1|[Merge Two Sorted Lists](./python_explanations/sorted_lists_merge.md)|[Python](./python_solutions/sorted_lists_merge.py)|_O(n+m)_|_O(1)_|
+  
+<!---
 |7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
   
