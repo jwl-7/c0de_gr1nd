@@ -3,7 +3,7 @@ from list_node import ListNode
 
 
 def reverse_sublist(L, start, finish):
-    subhead = dummy = ListNode()
+    dummy = subhead = ListNode()
     dummy.next = L
 
     for _ in range(1, start):

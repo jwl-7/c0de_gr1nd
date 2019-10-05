@@ -15,7 +15,7 @@ Output: [L] -> [1] -> [4] -> [3] -> [2] -> [7] -> None
 ## Solution
 ```python
 def reverse_sublist(L, start, finish):
-    subhead = dummy = ListNode()
+    dummy = subhead = ListNode()
     dummy.next = L
 
     for _ in range(1, start):
