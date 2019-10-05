@@ -64,3 +64,6 @@ def merge_two_sorted_lists(L1, L2):
     ```python
     return dummy.next
     ```
+  
+## Step-by-Step Example
+<img src='drawio_diagrams/sorted_lists_merge.svg'>
