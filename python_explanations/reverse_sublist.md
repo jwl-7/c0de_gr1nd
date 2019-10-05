@@ -24,5 +24,3 @@ def reverse_sublist(L, start, finish):
   
 ## Code Dissection
 1. BLANK
-
-<img src='mermaid-diagram-20191004204412.svg' width='100%'>
