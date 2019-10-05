@@ -5,9 +5,9 @@ Write a program that takes two lists, assumed to be sorted, and returns their me
   
 ## Example
 ```
- Input: [L1] -> [1] -> [3]
-        [L2] -> [2] -> [5] -> [7]
-Output:  [R] -> [1] -> [2] -> [3] -> [5] -> [7]
+ Input: [L1] -> [1] -> [3] -> None
+        [L2] -> [2] -> [5] -> [7] -> None
+Output:  [R] -> [1] -> [2] -> [3] -> [5] -> [7] -> None
 ```
   
 ## Solution
