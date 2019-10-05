@@ -3,7 +3,7 @@ from list_node import ListNode
 
 
 def merge_two_sorted_lists(L1, L2):
-    tail = head = ListNode()
+    dummy = tail = ListNode()
     while L1 and L2:
         if L1.data < L2.data:
             tail.next = L1
@@ -13,7 +13,7 @@ def merge_two_sorted_lists(L1, L2):
             L2 = L2.next
         tail = tail.next
     tail.next = L1 or L2
-    return head.next
+    return dummy.next
 
 
 if __name__ == '__main__':
