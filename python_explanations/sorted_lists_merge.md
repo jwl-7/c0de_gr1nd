@@ -66,4 +66,4 @@ def merge_two_sorted_lists(L1, L2):
     ```
   
 ## Step-by-Step Example
-<img src='drawio_diagrams/sorted_lists_merge.svg'>
+<img src='drawio_diagrams/sorted_lists_merge.svg' width='100%'>
