@@ -20,7 +20,7 @@ the pursuit of ameloriation as a programmer
 |4.6|[Compute _x_ &#8725; _y_](./python_explanations/primitive_divide.md)|[Python](./python_solutions/primitive_divide.py)|_O(n)_|_O(1)_|
 |4.7|[Compute _x <sup>y</sup>_](./python_explanations/power_x_y.md)|[Python](./python_solutions/power_x_y.py)|_O(n)_|_O(1)_|
 |4.8|[Reverse Digits](./python_explanations/reverse_digits.md)|[Python](./python_solutions/reverse_digits.py)|_O(n)_|_O(1)_|
-|4.9|[Check if a Decimal Integer is a Palindrome](./python_explanations/is_number_palindromic.md)|[Python](./python_solutions/is_number_palindromic.py)|_O(n)_|_O(1)_|
+|4.9|[Check If a Decimal Integer Is a Palindrome](./python_explanations/is_number_palindromic.md)|[Python](./python_solutions/is_number_palindromic.py)|_O(n)_|_O(1)_|
 |4.10|[Generate Uniform Random Numbers](./python_explanations/uniform_random_number.md)|[Python](./python_solutions/uniform_random_number.py)|_O(logn)_|_O(1)_|
 |4.11|[Rectangle Intersection](./python_explanations/rectangle_intersection.md)|[Python](./python_solutions/rectangle_intersection.py)|_O(1)_|_O(1)_|
   
