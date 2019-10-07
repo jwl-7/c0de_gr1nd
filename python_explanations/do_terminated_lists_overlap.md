@@ -2,7 +2,7 @@
 Write a program that takes two cycle-free singly linked lists, and determines if there exists a node that is common to both lists.
   
 ## Example
-<img src='drawio_diagrams/do_terminated_lists_overlap.svg' width='60%'>
+<img src='drawio_diagrams/do_terminated_lists_overlap.svg' width='80%'>
 
 ```
  Input: L0 = [2, 4, 7, 11]
