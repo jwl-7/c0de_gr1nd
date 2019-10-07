@@ -1,9 +1,13 @@
 # Test for Overlapping Lists&mdash;Lists Are Cycle-Free
 Write a program that takes two cycle-free singly linked lists, and determines if there exists a node that is common to both lists.
   
-## Examples
+## Example
+<img src='drawio_diagrams/do_terminated_lists_overlap.svg' width='60%'>
+
 ```
-BLANK
+ Input: L0 = [2, 4, 7, 11]
+        L1 = [1, 5, 3, 7, 11]
+Output: 7
 ```
   
 ## Solution
