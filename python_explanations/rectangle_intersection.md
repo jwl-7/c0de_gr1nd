@@ -99,7 +99,10 @@ To test for the 4 cases above, we need to understand how to grab the 4 edges of 
     ```
 5. Return False if any of these cases are True  
     ```python
-    return not
+    return not (R1.x + R1.width < R2.x or
+                R1.x > R2.x + R2.width or
+                R1.y > R2.y + R2.height or
+                R1.y + R1.height < R2.y)
     ```
   
 ## Code Dissection - intersect_rectangle
@@ -121,7 +124,9 @@ To test for the 4 cases above, we need to understand how to grab the 4 edges of 
     ```
 4. Return the rectangle formed by the intersection  
     ```python
-    return (Rectangle
+    return (Rectangle(max(R1.x, R2.x), max(R1.y, R2.y),
+                      min(R1.x + R1.width, R2.x + R2.width) - max(R1.x, R2.x),
+                      min(R1.y + R1.height, R2.y + R2.height) - max(R1.y, R2.y)))
     ```
 5. If R1 and R2 do not intersect, return an empty rectangle  
     ```python
