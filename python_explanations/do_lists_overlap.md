@@ -79,12 +79,12 @@ The solution involves testing for various cases:
     c0 = has_cycle(l0)
     c1 = has_cycle(l1)
     ```
-2. Check if neither list contains a cycle
+2. If neither list contains a cycle, use ```overlapping_no_cycle_lists(l0, l1)```
     ```python
     if not c0 and not c1:
         return overlapping_no_cycle_lists(l0, l1)
     ```
-3. Check if only one list contains a cycle
+3. If only one list contains a cycle, they cannot overlap 
     ```python
     if (c0 and not c1) or (not c0 and c1):
         return None
