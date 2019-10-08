@@ -5,9 +5,49 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
-def overlapping_lists(l0, l1):
-    # TODO - you fill in here.
+def has_cycle(head):
+    slow = fast = head
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+        if fast is slow:
+            fast = head
+            while fast is not slow:
+                fast = fast.next
+                slow = slow.next
+            return fast
     return None
+
+
+def overlapping_no_cycle_lists(l0, l1):
+    a = l0
+    b = l1
+    while a is not b:
+        a = a.next if a else l1
+        b = b.next if b else l0
+    return a
+
+
+def overlapping_lists(l0, l1):
+    c0 = has_cycle(l0)
+    c1 = has_cycle(l1)
+    if not c0 and not c1:
+        return overlapping_no_cycle_lists(l0, l1)
+    if (c0 and not c1) or (not c0 and c1):
+        return None
+
+    tmp = c1
+    while True:
+        tmp = tmp.next
+        if tmp is c0 or tmp is c1:
+            break
+    if tmp is not c0:
+        return None
+
+    while l0 is not l1 and l0 is not c0 and l1 is not c1:
+        l0 = l0.next
+        l1 = l1.next
+    return l0 if l0 is l1 else c0
 
 
 @enable_executor_hook
