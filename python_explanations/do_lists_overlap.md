@@ -3,6 +3,12 @@ Write a program that takes two singly linked lists, and determines if there exis
   
 ## Example
 <img src='drawio_diagrams/do_lists_overlap.svg' width='80%'>
+
+```
+ Input: L0 = [2, 4, 5, 3, 7]
+        L1 = [1, 5, 3, 7]
+Output: Both 1 and 5 are acceptable answers
+```
   
 ## Solution
 ```python
