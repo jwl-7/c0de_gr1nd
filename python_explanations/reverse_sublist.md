@@ -8,8 +8,8 @@ Write a program which takes a singly linked list _L_ and two integers _s_ and _f
 s = 2
 f = 4
 
- Input: [L] -> [1] -> [2] -> [3] -> [4] -> [5] -> None
-Output: [L] -> [1] -> [4] -> [3] -> [2] -> [7] -> None
+ Input: L -> [1] -> [2] -> [3] -> [4] -> [5] -> None
+Output: L -> [1] -> [4] -> [3] -> [2] -> [7] -> None
 ```
   
 ## Solution

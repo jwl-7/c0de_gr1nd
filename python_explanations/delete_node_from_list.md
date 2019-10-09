@@ -5,8 +5,8 @@ Write a program which deletes a node in a singly linked list. The input node is 
 ```
 node_to_delete = 2
 
- Input: [L] -> [1] -> [2] -> [3] -> [4] -> [5] -> None
-Output: [L] -> [1] -> [3] -> [4] -> [5] -> None
+ Input: L -> [1] -> [2] -> [3] -> [4] -> [5] -> None
+Output: L -> [1] -> [3] -> [4] -> [5] -> None
 ```
   
 ## Solution
