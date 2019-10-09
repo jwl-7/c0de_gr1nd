@@ -76,6 +76,7 @@ the pursuit of ameloriation as a programmer
 |7.6|[Delete a Node from a Singly Linked List](./python_explanations/delete_node_from_list.md)|[Python](./python_solutions/delete_node_from_list.py)|_O(1)_|_O(1)_|
 |7.7|[Remove the *k*th Last Element from a List](./python_explanations/delete_kth_last_from_list.md)|[Python](./python_solutions/delete_kth_last_from_list.py)|_O(n)_|_O(1)_|
 |7.8|[Remove Duplicates from a Sorted List](./python_explanations/remove_duplicates_from_sorted_list.md)|[Python](./python_solutions/remove_duplicates_from_sorted_list.py)|_O(n)_|_O(1)_|
+|7.9|[Implement Cyclic Right Shift for Singly Linked Lists](./python_explanations/list_cyclic_right_shift.md)|[Python](./python_solutions/list_cyclic_right_shift.py)|_O(n)_|_O(1)_|
   
 <!---
 |7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
