@@ -9,8 +9,16 @@ BLANK
 ## Solution
 ```python
 def remove_kth_last(L, k):
-    # TODO - you fill in here.
-    return None
+    slow = fast = L
+    for _ in range(k):
+        fast = fast.next
+    if not fast:
+        return L.next
+    while fast.next:
+        fast = fast.next
+        slow = slow.next
+    slow.next = slow.next.next
+    return L
 ```
   
 ## Explanation
