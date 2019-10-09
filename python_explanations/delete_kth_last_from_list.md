@@ -3,9 +3,9 @@ Given a singly linked list and an integer _k_, write a program to remove the *k*
   
 ## Example
 ```
- Input: L = [1] -> [2] -> [3] -> [4] -> [5] -> None
-        k = 2
-Output: [1] -> [2] -> [3] -> [5] -> None
+ Input: k = 2
+        L = [1] -> [2] -> [3] -> [4] -> [5] -> None
+Output: L = [1] -> [2] -> [3] -> [5] -> None
 ```
   
 ## Solution

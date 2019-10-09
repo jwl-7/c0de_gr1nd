@@ -3,8 +3,9 @@ Write a program which deletes a node in a singly linked list. The input node is 
   
 ## Example
 ```
+node_to_delete = 2
+
  Input: [L] -> [1] -> [2] -> [3] -> [4] -> [5] -> None
-        node_to_delete = 2
 Output: [L] -> [1] -> [3] -> [4] -> [5] -> None
 ```
   
