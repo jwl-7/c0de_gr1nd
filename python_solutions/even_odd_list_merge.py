@@ -1,5 +1,4 @@
 from test_framework import generic_test
-from list_node import ListNode
 
 
 def even_odd_merge(L):
