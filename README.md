@@ -73,6 +73,7 @@ the pursuit of ameloriation as a programmer
 |7.3|[Test for Cyclicity](./python_explanations/is_list_cyclic.md)|[Python](./python_solutions/is_list_cyclic.py)|_O(n)_|_O(1)_|
 |7.4|[Test for Overlapping Lists&mdash;Lists Are Cycle-Free](./python_explanations/do_terminated_lists_overlap.md)|[Python](./python_solutions/do_terminated_lists_overlap.py)|_O(n)_|_O(1)_|
 |7.5|[Test for Overlapping Lists&mdash;Lists May Have Cycles](./python_explanations/do_lists_overlap.md)|[Python](./python_solutions/do_lists_overlap.py)|_O(n)_|_O(1)_|
+|7.6|[Delete a Node from a Singly Linked List](./python_explanations/delete_node_from_list.md)|[Python](./python_solutions/delete_node_from_list.py)|_O(1)_|_O(1)_|
   
 <!---
 |7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
