@@ -3,22 +3,17 @@ from list_node import ListNode
 
 
 def even_odd_merge(L):
-    even = teven = ListNode()
-    odd = todd = ListNode()
-    i = 0
-    while L:
-        if i & 1:
-            todd.next = L
-            L = L.next
-            todd = todd.next
-        else:
-            teven.next = L
-            L = L.next
-            teven = teven.next
-        i += 1
-    todd.next = None
-    teven.next = odd.next
-    return even.next
+    if not L:
+        return L
+    even = L
+    odd = odd_head = even.next
+    while odd and odd.next:
+        even.next = even.next.next
+        odd.next = odd.next.next
+        even = even.next
+        odd = odd.next
+    even.next = odd_head
+    return L
 
 
 if __name__ == '__main__':
