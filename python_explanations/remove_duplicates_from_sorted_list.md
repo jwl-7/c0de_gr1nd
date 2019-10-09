@@ -20,7 +20,28 @@ def remove_duplicates(L):
 ```
   
 ## Explanation
-* BLANK
+* While traversing the list, all successive nodes with the same value as the current node are removed
   
 ## Code Dissection
-1. BLANK
+1. Initialize a pointer to the head of the list
+    ```python
+    curr = L
+    ```
+2. Iterate the pointer until the end of the list
+    ```python
+    while curr and curr.next:
+    ```
+3. If the current node contains the same value as the next node, remove it
+    ```python
+    if curr.data == curr.next.data:
+        curr.next = curr.next.next
+    ```
+4. If the next node is not a duplicate, move the pointer to the next node
+    ```python
+    else:
+        curr = curr.next
+    ```
+5. Return the list with the duplicates removed
+    ```python
+    return L
+    ```
