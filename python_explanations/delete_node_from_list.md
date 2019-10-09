@@ -19,11 +19,11 @@ def deletion_from_list(node_to_delete):
 * The data in the next node is copied into the node to delete, and then the next node is deleted, which effectively deletes the current node
   
 ## Code Dissection
-1. Copy the data in next node into the current node
+1. Copy the data in the next node into the current node
     ```python
     node_to_delete.data = node_to_delete.next.data
     ```
-2. Set current node to point to the node after the next node
+2. Set the current node to point to the node after the next node
     ```python
     node_to_delete.next = node_to_delete.next.next
     ```
