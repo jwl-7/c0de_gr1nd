@@ -78,6 +78,7 @@ the pursuit of ameloriation as a programmer
 |7.8|[Remove Duplicates from a Sorted List](./python_explanations/remove_duplicates_from_sorted_list.md)|[Python](./python_solutions/remove_duplicates_from_sorted_list.py)|_O(n)_|_O(1)_|
 |7.9|[Implement Cyclic Right Shift for Singly Linked Lists](./python_explanations/list_cyclic_right_shift.md)|[Python](./python_solutions/list_cyclic_right_shift.py)|_O(n)_|_O(1)_|
 |7.10|[Implement Even-Odd Merge](./python_explanations/even_odd_list_merge.md)|[Python](./python_solutions/even_odd_list_merge.py)|_O(n)_|_O(1)_|
+|7.11|[Test Whether a Singly Linked List Is Palindromic](./python_explanations/is_list_palindromic.md)|[Python](./python_solutions/is_list_palindromic.py)|_O(n)_|_O(1)_|
   
 <!---
 |7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
