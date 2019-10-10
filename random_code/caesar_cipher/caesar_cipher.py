@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
 """Caesar Cipher
 
 This program allows you to encrypt / decrypt ciphertexts using the Caesar cipher.
