@@ -35,6 +35,7 @@ def is_valid_list(section):
     section = [x for x in section if x != 0]
     return len(section) == len(set(section))
 
+
 def is_valid_sudoku(grid):
     for i in range(9):
         if (not is_valid_list(grid[i]) or 

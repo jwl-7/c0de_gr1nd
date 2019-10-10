@@ -30,6 +30,7 @@ def string_to_int(s):
         
     return -result if is_negative else result
 
+
 def wrapper(x, s):
     if int_to_string(x) != s:
         raise TestFailure("Int to string conversion failed")

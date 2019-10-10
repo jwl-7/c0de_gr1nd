@@ -22,6 +22,7 @@ def add(x, y):
         y = carry << 1
     return x
 
+
 def multiply(x, y):
     product = 0
     while y != 0:

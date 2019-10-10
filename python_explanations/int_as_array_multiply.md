@@ -20,6 +20,7 @@ def remove_leading_zeroes(num):
         i += 1
     return num
 
+
 def multiply(num1, num2):
     negative = False
     if num1[0] < 0 or num2[0] < 0:

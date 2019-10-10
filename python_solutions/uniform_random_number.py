@@ -9,6 +9,7 @@ from test_framework.test_utils import enable_executor_hook
 def zero_one_random():
     return random.randrange(2)
 
+
 def uniform_random(lower_bound, upper_bound):
     p = upper_bound - lower_bound + 1
     while True:

@@ -37,6 +37,7 @@ def int_to_string(x):
 
     return ('-' if is_negative else '') + ''.join(s[::-1])
 
+
 def string_to_int(s):
     is_negative = False
     if s[0] == '-':

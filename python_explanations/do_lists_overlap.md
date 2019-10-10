@@ -25,6 +25,7 @@ def has_cycle(head):
             return fast
     return None
 
+
 def overlapping_no_cycle_lists(l0, l1):
     a = l0
     b = l1
@@ -32,6 +33,7 @@ def overlapping_no_cycle_lists(l0, l1):
         a = a.next if a else l1
         b = b.next if b else l0
     return a
+
 
 def overlapping_lists(l0, l1):
     c0 = has_cycle(l0)

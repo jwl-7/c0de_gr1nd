@@ -27,6 +27,7 @@ def decoding(s):
             count = ''
     return decoded
 
+
 def encoding(s):
     encoded = ''
     prev = s[0]

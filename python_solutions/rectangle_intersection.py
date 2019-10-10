@@ -12,6 +12,7 @@ def is_intersect(R1, R2):
                 R1.y > R2.y + R2.height or
                 R1.y + R1.height < R2.y)
 
+
 def intersect_rectangle(R1, R2):
     if is_intersect(R1, R2):
         return (Rectangle(max(R1.x, R2.x), max(R1.y, R2.y),
