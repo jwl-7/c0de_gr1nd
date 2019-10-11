@@ -5,26 +5,26 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
-def list_pivoting(l, x):
+def list_pivoting(L, x):
     # TODO - you fill in here.
     return None
 
 
-def linked_to_list(l):
+def linked_to_list(L):
     v = list()
-    while l is not None:
-        v.append(l.data)
-        l = l.next
+    while L is not None:
+        v.append(L.data)
+        L = L.next
     return v
 
 
 @enable_executor_hook
-def list_pivoting_wrapper(executor, l, x):
-    original = linked_to_list(l)
+def list_pivoting_wrapper(executor, L, x):
+    original = linked_to_list(L)
 
-    l = executor.run(functools.partial(list_pivoting, l, x))
+    L = executor.run(functools.partial(list_pivoting, L, x))
 
-    pivoted = linked_to_list(l)
+    pivoted = linked_to_list(L)
     mode = -1
     for i in pivoted:
         if mode == -1:

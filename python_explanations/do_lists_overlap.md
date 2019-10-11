@@ -26,20 +26,20 @@ def has_cycle(head):
     return None
 
 
-def overlapping_no_cycle_lists(l0, l1):
-    a = l0
-    b = l1
+def overlapping_no_cycle_lists(L0, L1):
+    a = L0
+    b = L1
     while a is not b:
-        a = a.next if a else l1
-        b = b.next if b else l0
+        a = a.next if a else L1
+        b = b.next if b else L0
     return a
 
 
-def overlapping_lists(l0, l1):
-    c0 = has_cycle(l0)
-    c1 = has_cycle(l1)
+def overlapping_lists(L0, L1):
+    c0 = has_cycle(L0)
+    c1 = has_cycle(L1)
     if not c0 and not c1:
-        return overlapping_no_cycle_lists(l0, l1)
+        return overlapping_no_cycle_lists(L0, L1)
     if (c0 and not c1) or (not c0 and c1):
         return None
 
@@ -51,10 +51,10 @@ def overlapping_lists(l0, l1):
     if tmp is not c0:
         return None
 
-    while l0 is not l1 and l0 is not c0 and l1 is not c1:
-        l0 = l0.next
-        l1 = l1.next
-    return l0 if l0 is l1 else c0
+    while L0 is not L1 and L0 is not c0 and L1 is not c1:
+        L0 = L0.next
+        L1 = L1.next
+    return L0 if L0 is L1 else c0
 ```
   
 ## Explanation
@@ -64,7 +64,7 @@ def overlapping_lists(l0, l1):
   
 The solution involves testing for various cases:
 1. Neither list contains a cycle
-    * Return the result from ```overlapping_no_cycle_lists(l0, l1)```
+    * Return the result from ```overlapping_no_cycle_lists(L0, L1)```
 2. Only one list contains a cycle
     * The lists cannot overlap, so return ```None```
 3. Both lists contain a cycle
@@ -78,13 +78,13 @@ The solution involves testing for various cases:
 ## Code Dissection
 1. Check both lists to see if they contain cycles
     ```python
-    c0 = has_cycle(l0)
-    c1 = has_cycle(l1)
+    c0 = has_cycle(L0)
+    c1 = has_cycle(L1)
     ```
-2. If neither list contains a cycle, use ```overlapping_no_cycle_lists(l0, l1)```
+2. If neither list contains a cycle, use ```overlapping_no_cycle_lists(L0, L1)```
     ```python
     if not c0 and not c1:
-        return overlapping_no_cycle_lists(l0, l1)
+        return overlapping_no_cycle_lists(L0, L1)
     ```
 3. If only one list contains a cycle, they cannot overlap 
     ```python
@@ -103,11 +103,11 @@ The solution involves testing for various cases:
     ```
 5. If the cycles are identical, check where the lists intersect
     ```python
-    while (l0 is not l1) and (l0 is not c0) and (l1 is not c1):
-        l0 = l0.next
-        l1 = l1.next
+    while (L0 is not L1) and (L0 is not c0) and (L1 is not c1):
+        L0 = L0.next
+        L1 = L1.next
     ```
 6. If the lists intersect before the cycle, return the start of the cycle, else, return any node on the cycle
     ```python
-    return l0 if l0 is l1 else c0
+    return L0 if L0 is L1 else c0
     ```

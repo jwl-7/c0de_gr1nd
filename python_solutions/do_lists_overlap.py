@@ -19,20 +19,20 @@ def has_cycle(head):
     return None
 
 
-def overlapping_no_cycle_lists(l0, l1):
-    a = l0
-    b = l1
+def overlapping_no_cycle_lists(L0, L1):
+    a = L0
+    b = L1
     while a is not b:
-        a = a.next if a else l1
-        b = b.next if b else l0
+        a = a.next if a else L1
+        b = b.next if b else L0
     return a
 
 
-def overlapping_lists(l0, l1):
-    c0 = has_cycle(l0)
-    c1 = has_cycle(l1)
+def overlapping_lists(L0, L1):
+    c0 = has_cycle(L0)
+    c1 = has_cycle(L1)
     if not c0 and not c1:
-        return overlapping_no_cycle_lists(l0, l1)
+        return overlapping_no_cycle_lists(L0, L1)
     if (c0 and not c1) or (not c0 and c1):
         return None
 
@@ -44,47 +44,47 @@ def overlapping_lists(l0, l1):
     if tmp is not c0:
         return None
 
-    while l0 is not l1 and l0 is not c0 and l1 is not c1:
-        l0 = l0.next
-        l1 = l1.next
-    return l0 if l0 is l1 else c0
+    while L0 is not L1 and L0 is not c0 and L1 is not c1:
+        L0 = L0.next
+        L1 = L1.next
+    return L0 if L0 is L1 else c0
 
 
 @enable_executor_hook
-def overlapping_lists_wrapper(executor, l0, l1, common, cycle0, cycle1):
+def overlapping_lists_wrapper(executor, L0, L1, common, cycle0, cycle1):
     if common:
-        if not l0:
-            l0 = common
+        if not L0:
+            L0 = common
         else:
-            it = l0
+            it = L0
             while it.next:
                 it = it.next
             it.next = common
 
-        if not l1:
-            l1 = common
+        if not L1:
+            L1 = common
         else:
-            it = l1
+            it = L1
             while it.next:
                 it = it.next
             it.next = common
 
-    if cycle0 != -1 and l0:
-        last = l0
+    if cycle0 != -1 and L0:
+        last = L0
         while last.next:
             last = last.next
-        it = l0
+        it = L0
         for _ in range(cycle0):
             if not it:
                 raise RuntimeError('Invalid input data')
             it = it.next
         last.next = it
 
-    if cycle1 != -1 and l1:
-        last = l1
+    if cycle1 != -1 and L1:
+        last = L1
         while last.next:
             last = last.next
-        it = l1
+        it = L1
         for _ in range(cycle1):
             if not it:
                 raise RuntimeError('Invalid input data')
@@ -97,7 +97,7 @@ def overlapping_lists_wrapper(executor, l0, l1, common, cycle0, cycle1):
         common_nodes.add(id(it))
         it = it.next
 
-    result = executor.run(functools.partial(overlapping_lists, l0, l1))
+    result = executor.run(functools.partial(overlapping_lists, L0, L1))
 
     if not (id(result) in common_nodes or (not common_nodes and not result)):
         raise TestFailure('Invalid result')

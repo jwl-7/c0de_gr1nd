@@ -5,36 +5,36 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
-def overlapping_no_cycle_lists(l0, l1):
-    a = l0
-    b = l1
+def overlapping_no_cycle_lists(L0, L1):
+    a = L0
+    b = L1
     while a is not b:
-        a = a.next if a else l1
-        b = b.next if b else l0
+        a = a.next if a else L1
+        b = b.next if b else L0
     return a
 
 
 @enable_executor_hook
-def overlapping_no_cycle_lists_wrapper(executor, l0, l1, common):
+def overlapping_no_cycle_lists_wrapper(executor, L0, L1, common):
     if common:
-        if l0:
-            i = l0
+        if L0:
+            i = L0
             while i.next:
                 i = i.next
             i.next = common
         else:
-            l0 = common
+            L0 = common
 
-        if l1:
-            i = l1
+        if L1:
+            i = L1
             while i.next:
                 i = i.next
             i.next = common
         else:
-            l1 = common
+            L1 = common
 
     result = executor.run(
-        functools.partial(overlapping_no_cycle_lists, l0, l1))
+        functools.partial(overlapping_no_cycle_lists, L0, L1))
 
     if result != common:
         raise TestFailure('Invalid result')
