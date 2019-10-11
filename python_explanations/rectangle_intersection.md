@@ -21,6 +21,9 @@ Conclusion: Nonempty Intersection
   
 ## Solution
 ```python
+Rectangle = collections.namedtuple('Rectangle', ('x', 'y', 'width', 'height'))
+
+
 def is_intersect(R1, R2):
     return not (R1.x + R1.width < R2.x or
                 R1.x > R2.x + R2.width or
