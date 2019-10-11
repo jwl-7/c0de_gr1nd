@@ -1,16 +1,16 @@
-"""Caesar Cipher
+'''Caesar Cipher
 
 This program allows you to encrypt / decrypt ciphertexts using the Caesar cipher.
 Plaintext is encrypted using shifts to the right.
 Ciphertext is decrypted using either basic frequency analysis or brute force.
-"""
+'''
 
 
 class Cipher:
-    """Contains functions to encrypt / decrypt ciphertexts."""
+    '''Contains functions to encrypt / decrypt ciphertexts.'''
 
     def prompt(self):
-        """Displays information about program and asks user to pick mode."""
+        '''Displays information about program and asks user to pick mode.'''
         print('Caesar Cipher')
         print('---------------------------------------------------------------')
         print('1 - Encrypt plaintext -> ciphertext')
@@ -28,7 +28,7 @@ class Cipher:
         return mode
 
     def transcipher(self, mode, msg, key):
-        """Shifts each letter in the ciphertext n positions to the right."""
+        '''Shifts each letter in the ciphertext n positions to the right.'''
         translation = ''
         if mode == 2 or mode == 3:
             key = -key
@@ -46,7 +46,7 @@ class Cipher:
         return translation
 
     def get_key(self):
-        "Prompts user for shift key for encryption."
+        'Prompts user for shift key for encryption.'
         while True:
             try:
                 u_key = int(input('Enter shift key [1-26]: '))
@@ -59,7 +59,7 @@ class Cipher:
         return u_key
 
     def find_frequency(self, msg):
-        """Finds the top four most frequently used letters in the ciphertext."""
+        '''Finds the top four most frequently used letters in the ciphertext.'''
         char_freq = {}
         for char in msg:
             freq = char_freq.keys()
@@ -72,7 +72,7 @@ class Cipher:
         return char_freq[:4]
 
     def find_key(self, msg, top_char):
-        """Finds top four most likely cipher keys using 'E' as a reference."""
+        '''Finds top four most likely cipher keys using 'E' as a reference.'''
         p_keys = []
         for char in top_char:
             num = ord(char[0]) - 65
@@ -83,7 +83,7 @@ class Cipher:
         return p_keys
 
     def cipher_run(self):
-        """Runs the Caesar cipher encryption / decryption."""
+        '''Runs the Caesar cipher encryption / decryption.'''
         cipher_mode = self.prompt()
         if cipher_mode == 1:
             plaintext = str.upper(input('Enter plaintext: '))
@@ -120,5 +120,5 @@ def main():
     c.cipher_run()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
