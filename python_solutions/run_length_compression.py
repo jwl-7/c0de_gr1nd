@@ -24,7 +24,7 @@ def encoding(s):
         else:
             encoded += str(count) + prev
             prev = char
-            count = 1    
+            count = 1
     encoded += str(count) + char
     return encoded
 

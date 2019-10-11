@@ -23,7 +23,7 @@ def nonuniform_random_number_generation_wrapper(executor, values,
     def nonuniform_random_number_generation_runner(executor, values,
                                                    probabilities):
         N = 10**6
-        result = executor.run(lambda : [nonuniform_random_number_generation(values, probabilities) for _ in range(N)])
+        result = executor.run(lambda: [nonuniform_random_number_generation(values, probabilities) for _ in range(N)])
 
         counts = collections.Counter(result)
         for v, p in zip(values, probabilities):

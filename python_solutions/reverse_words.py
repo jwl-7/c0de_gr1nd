@@ -26,7 +26,7 @@ def reverse_words(s):
 
 def reverse_words_pythonic(s):
     s[:] = b' '.join(word[::-1] for word in s[::-1].split(b' '))
-        
+
 
 @enable_executor_hook
 def reverse_words_wrapper(executor, s):

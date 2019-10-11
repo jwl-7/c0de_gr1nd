@@ -18,7 +18,7 @@ def cyclically_right_shift_list(L, k):
     tail.next = L
     for _ in range(n - k):
         tail = tail.next
-        
+
     L = tail.next
     tail.next = None
     return L

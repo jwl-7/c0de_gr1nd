@@ -30,7 +30,7 @@ def phone_mnemonic_recursive(phone_number):
         '8': 'TUV',
         '9': 'WXYZ',
     }
-    
+
     def build_mnemonic(i):
         if i == len(phone_number):
             mnemonics.append(''.join(current))

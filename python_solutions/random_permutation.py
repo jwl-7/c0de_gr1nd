@@ -41,6 +41,7 @@ def compute_random_permutation_wrapper(executor, n):
     run_func_with_retries(
         functools.partial(compute_random_permutation_runner, executor, n))
 
+
 if __name__ == '__main__':
     exit(generic_test.generic_test_main("random_permutation.py",
                                         'random_permutation.tsv',

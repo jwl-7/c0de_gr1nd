@@ -4,7 +4,6 @@ from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
 
 
-
 def delete_duplicates(A):
     valid = 0
     for i in range(1, len(A)):

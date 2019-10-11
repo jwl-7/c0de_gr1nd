@@ -13,7 +13,7 @@ def look_and_say(n):
             else:
                 tmp += str(count) + prev
                 prev = char
-                count = 1     
+                count = 1
         tmp += str(count) + char
         s = tmp
     return s
