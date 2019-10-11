@@ -13,12 +13,11 @@ def convert_base(num_as_string, b1, b2):
     num = 0
     for digit in num_as_string:
         num = num * b1 + int(digit, 16)
-    
+
     digits = []
     while num > 0:
         digits.append(f'{int(num % b2):X}')
         num //= b2
-
     return ('-' if is_negative else '') + ''.join(digits[::-1])
 
 
