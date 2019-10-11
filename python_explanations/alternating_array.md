@@ -15,8 +15,10 @@ Before: [4, 2, 1, 1, 7, 9]
 ```python
 def rearrange(A):
     for i in range(len(A) - 1):
-        if (i % 2 == 0 and A[i] > A[i + 1] or
-            i % 2 == 1 and A[i] < A[i + 1]):
+        if (
+            i % 2 == 0 and A[i] > A[i + 1] or
+            i % 2 == 1 and A[i] < A[i + 1]
+        ):
             A[i], A[i + 1] = A[i + 1], A[i]
 ```
   
@@ -33,8 +35,10 @@ for two cases:
     ```
 2. Check for the two cases for which the swap will occur  
     ```python
-    if (i % 2 == 0 and A[i] > A[i + 1] or
-        i % 2 == 1 and A[i] < A[i + 1]):
+    if (
+        i % 2 == 0 and A[i] > A[i + 1] or
+        i % 2 == 1 and A[i] < A[i + 1]
+    ):
     ```
     * True for even: ```i % 2 == 0```  
     * True for odd: ```i % 2 == 1```  
