@@ -27,14 +27,13 @@ def int_to_string(x):
     if x < 0:
         x = -x
         is_negative = True
-    
+
     s = []
     while True:
         s.append((chr(ord('0') + x % 10)))
         x //= 10
         if x == 0:
             break
-
     return ('-' if is_negative else '') + ''.join(s[::-1])
 
 
@@ -47,7 +46,6 @@ def string_to_int(s):
     result = 0
     for i in range(len(s)):
         result = result * 10 + (ord(s[i]) - ord('0'))
-        
     return -result if is_negative else result
 ```
   
