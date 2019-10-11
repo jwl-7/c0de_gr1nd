@@ -2,12 +2,12 @@ from test_framework import generic_test
 
 
 def reverse(x):
-    r = 0
+    rev = 0
     tmp = abs(x)
     while tmp:
-        r = r * 10 + tmp % 10
+        rev = rev * 10 + tmp % 10
         tmp //= 10
-    return -r if x < 0 else r
+    return -rev if x < 0 else rev
 
 
 def reverse_pythonic(x):
