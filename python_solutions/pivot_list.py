@@ -7,23 +7,23 @@ from list_node import ListNode
 
 
 def list_pivoting(L, x):
-    less_head = less_tail = ListNode()
-    equal_head = equal_tail = ListNode()
-    greater_head = greater_tail = ListNode()
+    less_head = less = ListNode()
+    equal_head = equal = ListNode()
+    greater_head = greater = ListNode()
     while L:
         if L.data < x:
-            less_tail.next = L
-            less_tail = less_tail.next
+            less.next = L
+            less = less.next
         elif L.data == x:
-            equal_tail.next = L
-            equal_tail = equal_tail.next
+            equal.next = L
+            equal = equal.next
         elif L.data > x:
-            greater_tail.next = L
-            greater_tail = greater_tail.next
+            greater.next = L
+            greater = greater.next
         L = L.next
-    greater_tail.next = None
-    equal_tail.next = greater_head.next
-    less_tail.next = equal_head.next
+    greater.next = None
+    equal.next = greater_head.next
+    less.next = equal_head.next
     return less_head.next
 
 
