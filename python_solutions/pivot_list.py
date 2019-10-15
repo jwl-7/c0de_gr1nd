@@ -3,11 +3,28 @@ import functools
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
+from list_node import ListNode
 
 
 def list_pivoting(L, x):
-    # TODO - you fill in here.
-    return None
+    less_head = less_tail = ListNode()
+    equal_head = equal_tail = ListNode()
+    greater_head = greater_tail = ListNode()
+    while L:
+        if L.data < x:
+            less_tail.next = L
+            less_tail = less_tail.next
+        elif L.data == x:
+            equal_tail.next = L
+            equal_tail = equal_tail.next
+        elif L.data > x:
+            greater_tail.next = L
+            greater_tail = greater_tail.next
+        L = L.next
+    greater_tail.next = None
+    equal_tail.next = greater_head.next
+    less_tail.next = equal_head.next
+    return less_head.next
 
 
 def linked_to_list(L):
