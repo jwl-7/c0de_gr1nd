@@ -27,7 +27,38 @@ def add_two_numbers(L1, L2):
 ```
   
 ## Explanation
-* BLANK
+* Since the least significant digit comes first, that means the digits are in reverse order
+* The solution is based off the grade-school algorithm for addition, which is to compute the sum of the digits in the corresponding nodes in the two lists while handling the carry-out
   
 ## Code Dissection
-1. BLANK
+1. Create a dummy node that will point to the sum list and a variable for use with the addition
+    ```python
+    dummy = tail = ListNode()
+    num = 0
+    ```
+2. Loop while there is still a value in _L1_ or _L2_ or _num_
+    ```python
+    while L1 or L2 or num:
+    ```
+3. Add the data in the two corresponding nodes in the two lists to _num_
+    ```python
+    if L1:
+        num += L1.data
+        L1 = L1.next
+    if L2:
+        num += L2.data
+        L2 = L2.next
+    ```
+4. Append a node to the sum list with the carry-in digit of _num_
+    ```python
+    tail.next = ListNode(num % 10)
+    ```
+5. Move _tail_ to the next node and set _num_ to the carry-out digit
+    ```python
+    tail = tail.next
+    num //= 10
+    ```
+6. Return the sum list
+    ```python
+    return dummy.next
+    ```
