@@ -82,6 +82,11 @@ the pursuit of ameloriation as a programmer
 |7.12|[Implement List Pivoting](./python_explanations/pivot_list.md)|[Python](./python_solutions/pivot_list.py)|_O(n)_|_O(1)_|
 |7.13|[Add List-Based Integers](./python_explanations/int_as_list_add.md)|[Python](./python_solutions/int_as_list_add.py)|_O(n+m)_|_O(max(n,m))_|
   
+## Stacks and Queues
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|8.1|[Implement a Stack with Max API](./python_explanations/stack_with_max.md)|[Python](./python_solutions/stack_with_max.py)|_O(1)_|_O(n)_|
+  
 <!---
 |8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
