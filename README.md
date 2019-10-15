@@ -80,9 +80,10 @@ the pursuit of ameloriation as a programmer
 |7.10|[Implement Even-Odd Merge](./python_explanations/even_odd_list_merge.md)|[Python](./python_solutions/even_odd_list_merge.py)|_O(n)_|_O(1)_|
 |7.11|[Test Whether a Singly Linked List Is Palindromic](./python_explanations/is_list_palindromic.md)|[Python](./python_solutions/is_list_palindromic.py)|_O(n)_|_O(1)_|
 |7.12|[Implement List Pivoting](./python_explanations/pivot_list.md)|[Python](./python_solutions/pivot_list.py)|_O(n)_|_O(1)_|
+|7.13|[Add List-Based Integers](./python_explanations/int_as_list_add.md)|[Python](./python_solutions/int_as_list_add.py)|_O(n+m)_|_O(max(n,m))_|
   
 <!---
-|7.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
   
 ## Random Code -- Not from EPI
