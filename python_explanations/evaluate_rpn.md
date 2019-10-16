@@ -42,7 +42,56 @@ def evaluate(expression):
 ```
   
 ## Explanation
-* BLANK
+* The solution uses the [Postfix evaluation algorithm](https://en.wikipedia.org/wiki/Reverse_Polish_notation#Explanation)
+  
+The pseudocode for the algorithm is as follows:
+```python
+for each token in the postfix expression:
+    if token is an operator:
+        operand_2 <- pop from the stack
+        operand_2 <- pop from the stack
+        result <- evaluate token with operand_1 and operand_2
+        push result back onto the stack
+    else if token is an operand:
+        push token onto the stack
+result <- pop from the stack
+```
   
 ## Code Dissection
-1. BLANK
+1. Create an empty _stack_ and a string that contains the _operators_
+    ```python
+    stack = []
+    operators = '+-*/'
+    ```
+2. Loop over each _token_ in the _expression_, which are separated by commas
+    ```python
+    for token in expression.split(','):
+    ```
+3. If the _token_ is a number, push it to the stack
+    ```python
+    if token not in operators:
+        stack.append(int(token))
+    ```
+4. If the _token_ is an operator, then pop two operands off the stack
+    ```python
+    y = stack.pop()
+    x = stack.pop()
+    ```
+5. Depending on the operator, use the appropriate computation for the result, and push the result to the stack
+    ```python
+    if token == '+':
+        result = x + y
+    elif token == '-':
+        result = x - y
+    elif token == '*':
+        result = x * y
+    elif token == '/':
+        result = int(x / y)
+    stack.append(result)
+    ```
+    * ```int(x / y)``` is used, because the problem only wants integers as answers
+6. Return the final result in the stack
+    ```python
+    return stack[0]
+    ```
+    * We could also pop this result from the stack, but there is no need to
