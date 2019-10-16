@@ -2,8 +2,16 @@ from test_framework import generic_test
 
 
 def shortest_equivalent_path(path):
-    # TODO - you fill in here.
-    return ''
+    stack = []
+    for p in path.split('/'):
+        if p == '..':
+            if not stack or stack[-1] == '..':
+                stack.append(p)
+            else:
+                stack.pop()
+        elif p and p != '.':
+            stack.append(p)
+    return ('/' if path[0] == '/' else '') + '/'.join(stack)
 
 
 if __name__ == '__main__':

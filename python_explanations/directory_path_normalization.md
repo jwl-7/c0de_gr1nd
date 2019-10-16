@@ -19,7 +19,17 @@ Output: /
 
 ## Solution
 ```python
-BLANK
+def shortest_equivalent_path(path):
+    stack = []
+    for p in path.split('/'):
+        if p == '..':
+            if not stack or stack[-1] == '..':
+                stack.append(p)
+            else:
+                stack.pop()
+        elif p and p != '.':
+            stack.append(p)
+    return ('/' if path[0] == '/' else '') + '/'.join(stack)
 ```
 
 ## Explanation
