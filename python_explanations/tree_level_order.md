@@ -40,9 +40,36 @@ def binary_tree_depth_order(tree):
 * To put it another way, the solution iterates over each node in the binary tree from left to right level by level, and appends each level as a list in the result list
 
 ## Code Dissection
-1. Create an empty list to hold the BFS traversal and the level (which starts at the root of tree)
+1. Create an empty list to hold the level order traversal and a queue to hold to hold the nodes at each level (starts at the root of the tree)
     ```python
     result = []
     level = [tree]
     ```
 2. Loop while _tree_ and _level_ contain data
+    ```python
+    while tree and level:
+    ```
+3. Append the nodes in the current level as a list in _result_
+    ```python
+    result.append([node.data for node in level])
+    ```
+4. Dequeue all the elements from *next_level*
+    ```python
+    next_level = []
+    ```
+5. For each node in the current level, enqueue its child nodes to *next_level*
+    ```python
+    for node in level:
+        if node.left:
+            next_level.append(node.left)
+        if node.right:
+            next_level.append(node.right)
+    ```
+6. After processing the current level, set _level_ to the *next_level*
+    ```python
+    level = next_level
+    ```
+7. Return the level order traversal
+    ```python
+    return result
+    ```
