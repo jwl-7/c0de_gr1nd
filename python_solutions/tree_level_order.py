@@ -5,15 +5,13 @@ def binary_tree_depth_order(tree):
     result = []
     level = [tree]
     while tree and level:
-        curr_nodes = []
+        result.append([node.data for node in level])
         next_level = []
         for node in level:
-            curr_nodes.append(node.data)
             if node.left:
                 next_level.append(node.left)
             if node.right:
                 next_level.append(node.right)
-        result.append(curr_nodes)
         level = next_level
     return result
 
