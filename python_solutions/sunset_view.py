@@ -2,8 +2,13 @@ from test_framework import generic_test
 
 
 def examine_buildings_with_sunset(sequence):
-    # TODO - you fill in here.
-    return []
+    sunset = []
+    curr_max = 0
+    for i in reversed(range(len(sequence))):
+        if sequence[i] > curr_max:
+            curr_max = sequence[i]
+            sunset.append(i)
+    return sunset
 
 
 def examine_buildings_with_sunset_wrapper(sequence):

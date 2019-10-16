@@ -14,7 +14,14 @@ Output: [7, 5]
 
 ## Solution
 ```python
-BLANK
+def examine_buildings_with_sunset(sequence):
+    sunset = []
+    curr_max = 0
+    for i in reversed(range(len(sequence))):
+        if sequence[i] > curr_max:
+            curr_max = sequence[i]
+            sunset.append(i)
+    return sunset
 ```
 
 ## Explanation
