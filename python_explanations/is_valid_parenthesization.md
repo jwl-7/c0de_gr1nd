@@ -14,7 +14,19 @@ Output: False
   
 ## Solution
 ```python
-BLANK
+def is_well_formed(s):
+    stack = []
+    brackets = {
+        '[': ']',
+        '(': ')',
+        '{': '}'
+    }
+    for char in s:
+        if char in brackets:
+            stack.append(char)
+        elif not stack or char != brackets[stack.pop()]:
+            return False
+    return not stack
 ```
   
 ## Explanation
