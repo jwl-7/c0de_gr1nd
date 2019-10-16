@@ -34,16 +34,16 @@ probabilities = [0.05, 0.15, 0.3, 0.4, 0.6]
 ```
 * The intervals from the probabilites are created using _p_<sub>0</sub>, _p_<sub>0</sub> + _p_<sub>1</sub>, _p_<sub>0</sub> + _p_<sub>1</sub> + _p_<sub>2</sub>, ... , _p_<sub>_n_ - 1</sub>
 * Given these probabilities, they create the intervals:
-    ```[0.05, 0.2), [0.2, 0.5), [0.5, 0.9), [0.9, 1.5)```
+    `[0.05, 0.2), [0.2, 0.5), [0.5, 0.9), [0.9, 1.5)`
 * In the solution, the intervals are represented as an array of the same length as the values and probabilities:
-    ```[0.05, 0.2, 0.5, 0.9, 1.5]```
+    `[0.05, 0.2, 0.5, 0.9, 1.5]`
 * Using a random number generator, we create a floating point number in [0, 1)
 * For example, let's say the random number generated is 0.377877; it would fit in the interval [0.2, 0.5)
 * The number 0.377877 corresponds to 0.5 (intervals[2]), which corresponds to 2 (values[2])
 * Thus, the nonuniform random number returned would be 2
 
 ## Code Dissection
-1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will be our list of intervals
+1. Use `itertools.accumulate(iterable[, func])` to return a list of accumulated sums of the probabilities array -- this will be our list of intervals
     ```python
     intervals = list(itertools.accumulate(probabilities))
     ```

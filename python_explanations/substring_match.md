@@ -64,8 +64,8 @@ def boyer_moore_horspool(t, s):
 
 ## Explanation
 * The solution uses the [Rabin-Karp algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm) that uses hashing to find patterns in strings
-* The simple solution uses an interpretation of the Rabin-Karp algorithm with the help of the built-in ```hash()``` function
-* The Pythonic solution simply uses the built-in ```find()``` function, which is documented to use the [Boyer-Moore-Horspool algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm)
+* The simple solution uses an interpretation of the Rabin-Karp algorithm with the help of the built-in `hash()` function
+* The Pythonic solution simply uses the built-in `find()` function, which is documented to use the [Boyer-Moore-Horspool algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm)
 
 Simple overview of the Rabin-Karp string-searching algorithm:
 1. A hash value is calculated for the substring to search for
@@ -123,16 +123,16 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     if s_hash == t_hash and t[i:i+m] == s:
         return i
     ```
-    * ```t[i:i+m] == s``` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
+    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
 7. If the two hash values do not match, calculate the hash values for the next window
     ```python
     if i < n - m:
         t_hash = (d * (t_hash - ord(t[i]) * h) + ord(t[i+m])) % q
     ```
-    * ```d *``` shifts left by 1 digit
-    * ```t_hash - ord(t[i]) * h``` removes the leading (high-order) digit
-    * ```+ ord(t[i+m])``` adds the trailing (low-order) digit
-    * ```% q``` completes the formula, also helps prevent negative hash values
+    * `d *` shifts left by 1 digit
+    * `t_hash - ord(t[i]) * h` removes the leading (high-order) digit
+    * `+ ord(t[i+m])` adds the trailing (low-order) digit
+    * `% q` completes the formula, also helps prevent negative hash values
 8. Implement the base case of the substring not being found
     ```python
     return -1
@@ -161,14 +161,14 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     if s_hash == t_hash and t[i:i+m] == s:
         return i
     ```
-    * ```t[i:i+m] == s``` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
+    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
 5. Implement the base case of the substring not being found
     ```python
     return -1
     ```
 
 ## Pythonic Code Dissection
-1. Completely disregard trying to figure out complicated mathematical algorithms for finding substrings and just use the built-in function ```find()``` like a normal person
+1. Completely disregard trying to figure out complicated mathematical algorithms for finding substrings and just use the built-in function `find()` like a normal person
     ```python
     return t.find(s)
     ```

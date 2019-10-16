@@ -58,12 +58,12 @@ Now let's look at the strategy the solution uses:
             for c in range(b + 1, b + 4):
     ```
     * _a_, _b_, and _c_ will represent the indexes to place each dot
-    * Take note of the ```range(start, stop)``` arguments for the two inner loops
+    * Take note of the `range(start, stop)` arguments for the two inner loops
 3. Now that we can enumerate the dot placements, let's make sure to skip over invalid dot placements
     ```python
     if 1 <= len(s) - c <= 3:
     ```
-    * ```len(s) - c``` represents how many characters follow the third dot
+    * `len(s) - c` represents how many characters follow the third dot
     * Remember each substring in a valid IP address is 1-3 characters
 4. If the dot placements seem valid, create a tuple with the 4 substrings
     ```python
@@ -74,10 +74,10 @@ Now let's look at the strategy the solution uses:
     if all(int(x) <= 255 and str(int(x)) == x for x in tmp):
         ips.append('.'.join(tmp)
     ```
-    * ```all(iterable)``` returns True if all the elements fit the condition
-    * ```int(x) <= 255``` checks if any substring is too high of number
-    * ```str(int(x)) == x``` checks for any leading zeroes
-        * For example, ```str(int('00'))``` returns '0'
+    * `all(iterable)` returns True if all the elements fit the condition
+    * `int(x) <= 255` checks if any substring is too high of number
+    * `str(int(x)) == x` checks for any leading zeroes
+        * For example, `str(int('00'))` returns '0'
 6. Return the list of valid IP addresses
     ```python
     return ips

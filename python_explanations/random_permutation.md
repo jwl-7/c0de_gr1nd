@@ -31,7 +31,7 @@ def compute_random_permutation(n):
     ```python
     perm = list(range(n))
     ```
-2. Use ```random.sample(population, k)``` to create a permutation of perm
+2. Use `random.sample(population, k)` to create a permutation of perm
     ```python
     perm[:] = random.sample(perm, n)
     ```

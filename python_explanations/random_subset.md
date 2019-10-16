@@ -27,7 +27,7 @@ def random_subset(n, k):
 * The solution is relatively simple -- create a size-_k_ subset of the sequence [0, ... , _n_-1]
 
 ## Code Dissection
-1. Use ```random.sample(population, k)``` to create a size-_k_ subset of the sequence [0, ... , _n_-1]
+1. Use `random.sample(population, k)` to create a size-_k_ subset of the sequence [0, ... , _n_-1]
     ```python
     subset = random.sample(range(n), k)
     ```

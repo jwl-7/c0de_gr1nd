@@ -68,7 +68,7 @@ def has_cycle(head):
     ```
     * When finding the start of the cycle, the _fast_ and _slow_ pointer both move 1 step at a time
     * The start of the cycle is found when the two pointers meet
-    * The ```is``` operator compares if two objects are the same, not if they contain the same value
+    * The `is` operator compares if two objects are the same, not if they contain the same value
 4. If the list is not cyclic, return None
     ```python
     return None

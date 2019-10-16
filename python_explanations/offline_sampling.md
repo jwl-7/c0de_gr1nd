@@ -28,8 +28,8 @@ def random_sampling(k, A):
 * Rather than looping over _A_ and swapping at random indexes, the solution uses a built-in function from the random module that performs exactly what we need
 
 ## Pythonic Code Dissection
-1. Use ```random.sample(population, k)``` to change _A_ to a random subset of size _k_
+1. Use `random.sample(population, k)` to change _A_ to a random subset of size _k_
     ```python
     A[:] = random.sample(A, k)
     ```
-    * ```A[:]``` uses slice notation to replace the elements of the original _A_ without creating a new object
+    * `A[:]` uses slice notation to replace the elements of the original _A_ without creating a new object

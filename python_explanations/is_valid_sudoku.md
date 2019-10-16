@@ -119,7 +119,7 @@ Let's look at the layout of a sudoku board:
     ```python
     return len(section) == len(set(section))
     ```
-    * ```len(set(x))``` tells us the size of unique elements in x
+    * `len(set(x))` tells us the size of unique elements in x
     * This statement is comparing the size of the filtered list to the size of unique elements, and if they are not equal, then the list contains duplicates
 
 ## Code Dissection - is_valid_sudoku

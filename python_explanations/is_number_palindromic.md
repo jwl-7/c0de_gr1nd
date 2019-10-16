@@ -55,7 +55,7 @@ def is_palindrome_number_pythonic(x):
     ```python
     while tmp:
     ```
-    * ```while tmp``` is equivalent to ```while tmp == 0``` in this case, because _tmp_ will always equal zero by the end of this operation
+    * `while tmp` is equivalent to `while tmp == 0` in this case, because _tmp_ will always equal zero by the end of this operation
 4. Extract the last digit from _tmp_ and append it to the reversed number
     ```python
     reverse = reverse * 10 + tmp % 10
@@ -83,6 +83,6 @@ def is_palindrome_number_pythonic(x):
     ```
     * Now we can clearly see there are two cases: 1 for negative numbers and 1 for positive numbers
     * Negative numbers cannot be palindromic, so we return False
-    * ```abs(x)``` returns the absolute value of _x_
-    * ```str(x)[::-1]``` converts _x_ into a string and reverses it using slice notation
-    * ```int(str(x))``` converts the reversed string back into an integer
+    * `abs(x)` returns the absolute value of _x_
+    * `str(x)[::-1]` converts _x_ into a string and reverses it using slice notation
+    * `int(str(x))` converts the reversed string back into an integer

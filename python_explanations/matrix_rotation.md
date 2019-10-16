@@ -49,7 +49,7 @@ While the solution is little bit of code golf, it relies on 2 basic steps:
         ```python
         [[row[i] for row in square_matrix] for i in range(len(square_matrix))]
         ```
-    * ```[::-1]``` reverses a list
+    * `[::-1]` reverses a list
     * Thus, the solution sets each row _i_ to the reverse of each column _i_
 
 ## Step-by-Step Example

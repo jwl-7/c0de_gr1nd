@@ -89,7 +89,7 @@ result <- pop from the stack
         result = int(x / y)
     stack.append(result)
     ```
-    * ```int(x / y)``` is used, because the problem only wants integers as answers
+    * `int(x / y)` is used, because the problem only wants integers as answers
 6. Return the final result in the stack
     ```python
     return stack[0]

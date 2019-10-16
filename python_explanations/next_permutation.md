@@ -52,8 +52,8 @@ The general algorithm for computing the next permutation:
     while i >= 0 and perm[i] >= perm[i + 1]:
         i -= 1
     ```
-    * ```_i_ >= 0``` ensures that the loop does not run past the beginning of the array
-    * ```perm[_i_] >= perm[_i_ + 1]``` is the case that all entries after index _i_ appear in decreasing order
+    * `i >= 0` ensures that the loop does not run past the beginning of the array
+    * `perm[i] >= perm[i + 1]` is the case that all entries after index _i_ appear in decreasing order
 3. If _i_ == -1, then perm is the last permutation, and we return an empty array
     ```python
     if i == -1:
@@ -70,13 +70,13 @@ The general algorithm for computing the next permutation:
         perm[i], perm[j] = perm[j], perm[i]
         break
     ```
-    * ```break``` is added to stop the loop when _j_ has been found
+    * `break` is added to stop the loop when _j_ has been found
 6. Reverse the sequence of elements that occur after position _i_
     ```python
     perm[i + 1:len(perm) + 1] = perm[i + 1:len(perm) + 1][::-1]
     ```
-    * ```perm[i + 1:len(perm) + 1]``` defines the range of elements after position _i_
-    * ```[::-1]``` reverses the elements
+    * `perm[i + 1:len(perm) + 1]` defines the range of elements after position _i_
+    * `[::-1]` reverses the elements
 7. Return the next permutation
     ```python
     return perm

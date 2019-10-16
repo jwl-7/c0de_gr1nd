@@ -40,8 +40,8 @@ for two cases:
         i % 2 == 1 and A[i] < A[i + 1]
     ):
     ```
-    * True for even: ```i % 2 == 0```
-    * True for odd: ```i % 2 == 1```
+    * True for even: `i % 2 == 0`
+    * True for odd: `i % 2 == 1`
 3. Swap _A_[_i_] and _A_[_i_ + 1]
     ```python
     A[i], A[i + 1] = A[i + 1], A[i]

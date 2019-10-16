@@ -42,8 +42,8 @@ def is_palindrome_pythonic(s):
 ## Explanation
 * The solution uses a start and end pointer to check if the string is palindromic in-place
 * The pythonic solution converts the string to a list of alphanumeric-only characters and uses list slicing to check if the list is palindromic
-* ```str.isalnum()``` returns true if all characters in _str_ are alphanumeric
-* ```str.lower()``` returns a copy of _str_ with lowercase characters
+* `str.isalnum()` returns true if all characters in _str_ are alphanumeric
+* `str.lower()` returns a copy of _str_ with lowercase characters
 
 ## Code Dissection
 1. Create a start and end pointer that correlate to the start and end index of the string
@@ -69,13 +69,13 @@ def is_palindrome_pythonic(s):
         return False
     ```
     * If the two characters are not the same, then we know the string is not a palindrome
-    * ```lower()``` is used, because the uppercase and lowercase of a letter do not have equal values
+    * `lower()` is used, because the uppercase and lowercase of a letter do not have equal values
 5. If the characters at the two pointers are equal, continue checking the string
     ```python
     start += 1
     end -= 1
     ```
-6. Return ```True``` if the two pointers meet and the function breaks out of the while loop, because that means the string is palindromic
+6. Return `True` if the two pointers meet and the function breaks out of the while loop, because that means the string is palindromic
     ```python
     return True
     ```

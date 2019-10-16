@@ -40,4 +40,4 @@ def apply_permutation(perm, A):
     ```python
     A[:] = B
     ```
-    * The difference between ```A[:] = B``` and ```A = B``` is that the latter will not replace elements in the original list _A_
+    * The difference between `A[:] = B` and `A = B` is that the latter will not replace elements in the original list _A_

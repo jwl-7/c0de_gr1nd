@@ -49,10 +49,10 @@ def look_and_say(n):
         count = 0
     ```
     * This loop is used to generate each entry up to _n_
-    * We use ```for _```, since the loop iteration variable is not used
-    * ```tmp``` is used to hold each entry
-    * ```prev``` is used to compare characters
-    * ```count``` is used to store the consecutive matches between _prev_ and _char_
+    * We use `for _`, since the loop iteration variable is not used
+    * `tmp` is used to hold each entry
+    * `prev` is used to compare characters
+    * `count` is used to store the consecutive matches between _prev_ and _char_
 3. Create an inner loop that iterates through each character in _s_
     ```python
     for char in s:

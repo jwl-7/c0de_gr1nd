@@ -44,7 +44,7 @@ def reverse(x):
     ```python
     while tmp:
     ```
-    * ```while tmp``` is equivalent to ```while tmp == 0``` in this case, because _tmp_ will always equal zero by the end of this operation
+    * `while tmp` is equivalent to `while tmp == 0` in this case, because _tmp_ will always equal zero by the end of this operation
 3. Extract the last digit from _tmp_ and append it to the reversed number
     ```python
     rev = rev * 10 + tmp % 10
@@ -71,6 +71,6 @@ def reverse(x):
         return int(str(x)[::-1])
     ```
     * Now we can clearly see there are two cases: 1 for negative numbers and 1 for positive numbers
-    * ```abs(x)``` returns the absolute value of _x_
-    * ```str(x)[::-1]``` converts _x_ into a string and reverses it using slice notation
-    * ```int(str(x))``` converts the reversed string back into an integer
+    * `abs(x)` returns the absolute value of _x_
+    * `str(x)[::-1]` converts _x_ into a string and reverses it using slice notation
+    * `int(str(x))` converts the reversed string back into an integer

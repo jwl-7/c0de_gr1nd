@@ -103,16 +103,16 @@ def phone_mnemonic_recursive(phone_number):
     ```python
     mnemonics = ['']
     ```
-    * The empty string will help us when building each mnemonic to avoid having to use the operation ```''.join()```
+    * The empty string will help us when building each mnemonic to avoid having to use the operation `''.join()`
 3. Loop over each number in the phone number and use the keypad dictionary and list comprehension to build the mnemonics
     ```python
     for num in phone_number:
         letters = keypad.get(num, num)
         mnemonics = [x+letter for x in mnemonics for letter in letters]
     ```
-    * ```keypad.get(num, num)``` grabs the letters corresponding to the current number
+    * `keypad.get(num, num)` grabs the letters corresponding to the current number
     * If the number is not in the keypad dictionary, the number is the value returned
-    * ```x+letter``` is a string concatenation operation
+    * `x+letter` is a string concatenation operation
 4. Return the mnemonics list
     ```python
     return mnemonics
@@ -136,7 +136,7 @@ def phone_mnemonic_recursive(phone_number):
     ```python
     def build_mnemonic(i):
     ```
-    * ```i``` represents the current index of the number
+    * `i` represents the current index of the number
 
     1. Add the computed mnemonic to the list when we reach the end of the phone number
         ```python
@@ -151,7 +151,7 @@ def phone_mnemonic_recursive(phone_number):
                 current[i] = letter
                 build_mnemonic(i + 1)
         ```
-        * ```keypad.get(phone_number[i], phone_number[i])``` grabs the letters corresponding to the current number
+        * `keypad.get(phone_number[i], phone_number[i])` grabs the letters corresponding to the current number
         * If the number is not in the keypad dictionary, the number is the value returned
 3. Declare the lists to hold the mnemonics and the current mnemonic
     ```python

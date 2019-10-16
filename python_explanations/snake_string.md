@@ -27,7 +27,7 @@ def snake_string(s):
 ```
 
 ## Explanation
-* The pythonic solution uses slice notation which follows the syntax: ```s[start:stop:step]```
+* The pythonic solution uses slice notation which follows the syntax: `s[start:stop:step]`
 
 Let's assume the input string _s_ is 'Hello_World!' and make sense of these slices:
 

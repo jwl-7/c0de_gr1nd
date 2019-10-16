@@ -68,7 +68,7 @@ def buy_and_sell_stock_twice(prices):
     ```python
     for i, price in reversed(list(enumerate(prices[1:]))):
     ```
-    * The reason that this statement uses ```reversed(list(enumerate))``` rather than ```enumerate(reversed())``` is because the former generates the indexes in reversed order as well as prices[]
+    * The reason that this statement uses `reversed(list(enumerate))` rather than `enumerate(reversed())` is because the former generates the indexes in reversed order as well as prices[]
 
     1. Calculate the maximum price so far
         ```python

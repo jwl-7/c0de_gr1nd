@@ -57,7 +57,7 @@ def convert_base(num_as_string, b1, b2):
     for digit in num_as_string:
         num = num * b1 + int(digit, 16)
     ```
-    * ```int(digit, 16)``` converts a hex character such as 'A' to 10
+    * `int(digit, 16)` converts a hex character such as 'A' to 10
 4. Convert the computed decimal integer into an integer in base _b<sub>2</sub>_
     ```python
     digits = []
@@ -65,8 +65,8 @@ def convert_base(num_as_string, b1, b2):
         digits.append(f'{int(num % b2):X}')
         num //= b2
     ```
-    * ```num % b2``` computes a digit in the base _b<sub>2</sub>_
-    * ```:X``` converts any numbers such as 10 to 'A'
+    * `num % b2` computes a digit in the base _b<sub>2</sub>_
+    * `:X` converts any numbers such as 10 to 'A'
 5. Return the list with the computed digits in a reversed string with the correct sign
     ```python
     return ('-' if is_negative else '') + ''.join(digits[::-1])

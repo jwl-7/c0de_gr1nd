@@ -47,9 +47,9 @@ def generate_primes(n):
     for i in range(i * i, n + 1, i):
         sieve[i] = False
     ```
-    * ```i * i``` finds the multiples of _i_
-    * ```n +  1``` simply defines the limit of the loop
-    * ```i``` defines the steps to take in the loop, which is the multiples of _i_
+    * `i * i` finds the multiples of _i_
+    * `n +  1` simply defines the limit of the loop
+    * `i` defines the steps to take in the loop, which is the multiples of _i_
 5. Return the list of prime numbers
     ```python
     return primes

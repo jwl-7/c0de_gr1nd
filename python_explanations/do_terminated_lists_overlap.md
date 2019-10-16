@@ -49,5 +49,5 @@ def overlapping_no_cycle_lists(L0, L1):
     ```
     * If the two lists intersect, the intersection node will be returned
     * If the two lists do not intersect:
-        1. Assuming each list is the same length, _a_ will reach the end of _L0_ at the same time _b_ reaches the end of _L1_, and ```None``` will be returned
-        2. Assuming one list is longer than the other, on the second pass, _a_ will reach the end of _L1_ at the same time _b_ reaches the end of _L0_, and ```None``` will be returned
+        1. Assuming each list is the same length, _a_ will reach the end of _L0_ at the same time _b_ reaches the end of _L1_, and `None` will be returned
+        2. Assuming one list is longer than the other, on the second pass, _a_ will reach the end of _L1_ at the same time _b_ reaches the end of _L0_, and `None` will be returned
