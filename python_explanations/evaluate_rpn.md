@@ -1,7 +1,7 @@
 # Evaluate RPN Expressions
 A string is said to be an arithmetical expression in Reverse Polish notation (RPN) if:
 1. It is a single digit or a sequence of digits, prefixed with an option &ndash;, e.g., "6", "123", "-42".
-2. It is of the form "_A_, _B_, &#9900;", where _A_ and _B_ are RPN expressions and 	&#9675; is one of &plus;, &minus;, &times;, &#8725;.
+2. It is of the form "_A_, _B_, &#9900;", where _A_ and _B_ are RPN expressions and &#9900; is one of &plus;, &minus;, &times;, &#8725;.
   
 For example, the following strings satisfy these rules: "1729", "3, 4, &plus;, 2, &times;, 1, &plus;", "1, 1, &plus;, -2, &times;", "-641, 6, &#8725;, 28, &#8725;".
   
@@ -11,12 +11,34 @@ Write a program that takes an arithmetical expression in RPN and returns the num
   
 ## Examples
 ```
-BLANK
+ Input: '10,7,*'
+Output: 70
+
+ Input: '999,120,/,111,1007,/,+'
+Output: 8
 ```
   
 ## Solution
 ```python
-BLANK
+def evaluate(expression):
+    stack = []
+    operators = '+-*/'
+    for token in expression.split(','):
+        if token not in operators:
+            stack.append(int(token))
+        else:
+            y = stack.pop()
+            x = stack.pop()
+            if token == '+':
+                result = x + y
+            elif token == '-':
+                result = x - y
+            elif token == '*':
+                result = x * y
+            elif token == '/':
+                result = int(x / y)
+            stack.append(result)
+    return stack[0]
 ```
   
 ## Explanation
