@@ -25,7 +25,26 @@ def examine_buildings_with_sunset(sequence):
 ```
 
 ## Explanation
-* BLANK
+* Since the sun sets in the West, and the buildings are ordered from East -> West, it is easier to process the input sequence from Right -> Left
+* The solution iterates over the sequence in reverse, keeps track of the tallest building so far, and if the current building is taller, the index of the current building is pushed to the sunset list
 
 ## Code Dissection
-1. BLANK
+1. Create a list to store the indexes of the buildings that can see the sunset and a variable to store the tallest building so far
+    ```python
+    sunset = []
+    curr_max = 0
+    ```
+2. Loop over the _sequence_ in reverse
+    ```python
+    for i in reversed(range(len(sequence))):
+    ```
+3. If the current building is taller than the tallest building so far, set its height as *curr_max* and push the index of the current building to the _sunset_ list
+    ```python
+    if sequence[i] > curr_max:
+        curr_max = sequence[i]
+        sunset.append(i)
+    ```
+4. Return the list of indexes of buildings that can see the sunset
+    ```python
+    return sunset
+    ```
