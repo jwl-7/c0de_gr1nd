@@ -4,11 +4,11 @@ the pursuit of ameloriation as a programmer
 <img src="https://i.imgur.com/2GJnHcq.gif" width="420" height="302">
 
 ## Introduction
-* This repository features my solutions and explanations to the problems presented in  
+* This repository features my solutions and explanations to the problems presented in
   [Elements of Programming Interviews in Python](http://bit.ly/epipython)
 * The book solutions and test framework are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)
 * The descriptions of the problems are excerpts from the EPI book.
-  
+
 ## Primitive Types
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
@@ -23,7 +23,7 @@ the pursuit of ameloriation as a programmer
 |4.9|[Check If a Decimal Integer Is a Palindrome](./python_explanations/is_number_palindromic.md)|[Python](./python_solutions/is_number_palindromic.py)|_O(n)_|_O(1)_|
 |4.10|[Generate Uniform Random Numbers](./python_explanations/uniform_random_number.md)|[Python](./python_solutions/uniform_random_number.py)|_O(logn)_|_O(1)_|
 |4.11|[Rectangle Intersection](./python_explanations/rectangle_intersection.md)|[Python](./python_solutions/rectangle_intersection.py)|_O(1)_|_O(1)_|
-  
+
 ## Arrays
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
@@ -47,7 +47,7 @@ the pursuit of ameloriation as a programmer
 |5.18|[Compute the Spiral Ordering of a 2D Array](./python_explanations/spiral_ordering_segments.md)|[Python](./python_solutions/spiral_ordering_segments.py)|_O(n<sup>2</sup>)_|_O(n)_|
 |5.19|[Rotate a 2D Array](./python_explanations/matrix_rotation.md)|[Python](./python_solutions/matrix_rotation.py)|_O(n<sup>2</sup>)_|_O(1)_|
 |5.20|[Compute Rows in Pascal's Triangle](./python_explanations/pascal_triangle.md)|[Python](./python_solutions/pascal_triangle.py)|_O(n<sup>2</sup>)_|_O(n<sup>2</sup>)_|
-  
+
 ## Strings
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
@@ -64,7 +64,7 @@ the pursuit of ameloriation as a programmer
 |6.11|[Write a String Sinusoidally](./python_explanations/snake_string.md)|[Python](./python_solutions/snake_string.py)|_O(n)_|_O(1)_|
 |6.12|[Implement Run-Length Encoding](./python_explanations/run_length_compression.md)|[Python](./python_solutions/run_length_compression.py)|_O(n)_|_O(n)_|
 |6.13|[Find the First Occurrence of a Substring](./python_explanations/substring_match.md)|[Python](./python_solutions/substring_match.py)|_O(n+m)_|_O(1)_|
-  
+
 ## Linked Lists
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
@@ -81,25 +81,25 @@ the pursuit of ameloriation as a programmer
 |7.11|[Test Whether a Singly Linked List Is Palindromic](./python_explanations/is_list_palindromic.md)|[Python](./python_solutions/is_list_palindromic.py)|_O(n)_|_O(1)_|
 |7.12|[Implement List Pivoting](./python_explanations/pivot_list.md)|[Python](./python_solutions/pivot_list.py)|_O(n)_|_O(1)_|
 |7.13|[Add List-Based Integers](./python_explanations/int_as_list_add.md)|[Python](./python_solutions/int_as_list_add.py)|_O(n+m)_|_O(max(n,m))_|
-  
+
 ## Stacks and Queues
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
 |8.1|[Implement a Stack with Max API](./python_explanations/stack_with_max.md)|[Python](./python_solutions/stack_with_max.py)|_O(1)_|_O(n)_|
 |8.2|[Evaluate RPN Expressions](./python_explanations/evaluate_rpn.md)|[Python](./python_solutions/evaluate_rpn.py)|_O(n)_|_O(n)_|
 |8.3|[Test a String over "{,},(,),[,]" for Well-Formedness](./python_explanations/is_valid_parenthesization.md)|[Python](./python_solutions/is_valid_parenthesization.py)|_O(n)_|_O(n)_|
-  
+
 <!---
 |8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
-  
+
 ## Random Code &mdash; Not from EPI
 | Title | Solution | Time | Space |
 |-------|----------|------|-------|
 |[Shiba](./random_code/shiba/README.md)|[ASM](./random_code/shiba/shiba.asm)|_O(w0w)_|_O(such)_|
 |[Caesar Cipher](./random_code/caesar_cipher/README.md)|[Python](./random_code/caesar_cipher/caesar_cipher.py)|_N/A_|_N/A_|
 |[FizzBuzz](./random_code/fizz_buzz/README.md)|[Python](./random_code/fizz_buzz/fizzbuzz.py) </br> [C++](./random_code/fizz_buzz/fizzbuzz.cpp) </br> [ASM](./random_code/fizz_buzz/fizzbuzz.asm)|_O(n)_|_O(1)_|
-  
+
 ## Useful References
 * [Big-O Cheat Sheet](http://www.bigocheatsheet.com/)
 * [Python Wiki - Time Complexity](https://wiki.python.org/moin/TimeComplexity)
@@ -108,7 +108,7 @@ the pursuit of ameloriation as a programmer
 * [Open Data Structures](https://opendatastructures.org/)
 * [Problem Solving with Algorithms and Data Structures using Python](http://www.openbookproject.net/books/pythonds/index.html)
 * [Big O Notation and Algorithm Analysis with Python Examples](https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/)
-  
+
 ## Acknowledgements
 * [Adnan Aziz](https://github.com/adnanaziz) - Author of EPI
 * [Tsung-Hsien Lee](https://github.com/tsunghsienlee) - Author of EPI
@@ -116,6 +116,6 @@ the pursuit of ameloriation as a programmer
 * All contributers to the [EPI Judge](https://github.com/adnanaziz/EPIJudge)
 * [Brandon Hough](https://github.com/insomniac94) - Incubate distributed infomediaries
 * [Cory Walker](https://github.com/corywalker) - Mesh distributed mindshare
-  
+
 ## License
 This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
