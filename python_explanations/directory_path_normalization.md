@@ -33,7 +33,46 @@ def shortest_equivalent_path(path):
 ```
 
 ## Explanation
-* BLANK
+* Note that the problem is referring to pathnames in a UNIX-style file system
+* Keep in mind what the special characters in the pathnames mean:
+    * `.` = current directory
+    * `..` = parent directory (one directory up)
+    * If pathname starts with `/`, then we cannot go up from it
+
+The solutions uses the following algorithm:
+1. The path is split on the delimeter '/'
+2. The special characters that may be in the path are '.', '..', or ''
+3. '' occurs when the path contains '//'
+4. '.' and '' are ignored
+5. For '..':
+    1. If the stack is not empty, pop from the stack
+    2. If the stack is empty or the top of the stack is '..', push to the stack
+6. For other parts of the path, push to the stack
+7. Return each part of the stack separated by '/', and if the path started with '/', then make sure to add that to the front of the result
 
 ## Code Dissection
-1. BLANK
+1. Create an empty stack to help build the pathname
+    ```python
+    stack = []
+    ```
+2. Loop over each part of the _path_ separated by '/'
+    ```python
+    for p in path.split('/'):
+    ```
+3. If the part is '..', push the part to the stack if its empty or the top of the stack is '..', else pop from the stack
+    ```python
+    if p == '..':
+        if not stack or stack[-1] == '..':
+            stack.append(p)
+        else:
+            stack.pop()
+    ```
+4. If the part is not '' and not '.', push the part to the stack
+    ```python
+    elif p and p != '.':
+        stack.append(p)
+    ```
+5. Return each part of the stack joined by '/' and add '/' to the front if the original _path_ started like that
+    ```python
+    return ('/' if path[0] == '/' else '') + '/'.join(stack)
+    ```
