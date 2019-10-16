@@ -88,6 +88,7 @@ the pursuit of ameloriation as a programmer
 |8.1|[Implement a Stack with Max API](./python_explanations/stack_with_max.md)|[Python](./python_solutions/stack_with_max.py)|_O(1)_|_O(n)_|
 |8.2|[Evaluate RPN Expressions](./python_explanations/evaluate_rpn.md)|[Python](./python_solutions/evaluate_rpn.py)|_O(n)_|_O(n)_|
 |8.3|[Test a String over "{,},(,),[,]" for Well-Formedness](./python_explanations/is_valid_parenthesization.md)|[Python](./python_solutions/is_valid_parenthesization.py)|_O(n)_|_O(n)_|
+|8.4|[Normalize Pathnames](./python_explanations/directory_path_normalization.md)|[Python](./python_solutions/directory_path_normalization.py)|_O(n)_|_O(n)_|
 
 <!---
 |8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
