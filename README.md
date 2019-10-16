@@ -4,7 +4,7 @@ the pursuit of ameloriation as a programmer
 <img src="https://i.imgur.com/2GJnHcq.gif" width="420" height="302">
 
 ## Introduction
-* This repository features my solutions and explanations to the problems presented in
+* This repository features my solutions and explanations to the problems presented in </br>
   [Elements of Programming Interviews in Python](http://bit.ly/epipython)
 * The book solutions and test framework are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)
 * The descriptions of the problems are excerpts from the EPI book.
