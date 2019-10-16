@@ -1,8 +1,8 @@
 # Reverse All the Words in a Sentence
-Given a string containing a set of words separated by whitespace, we would like to transform it to a string in which the words appear in reverse order. We do not need to keep the original string.  
-  
-Implement a function for reversing the words in a string _s_. Assume _s_ is a string encoded as a bytearray.  
-  
+Given a string containing a set of words separated by whitespace, we would like to transform it to a string in which the words appear in reverse order. We do not need to keep the original string.
+
+Implement a function for reversing the words in a string _s_. Assume _s_ is a string encoded as a bytearray.
+
 ## Examples
 ```
  Input: 'Silence is peaceful'
@@ -11,7 +11,7 @@ Output: 'peaceful is Silence'
  Input: 'Alice likes Bob'
 Output: 'Bob likes Alice'
 ```
-  
+
 ## Solution
 ```python
 def reverse_words(s):
@@ -32,20 +32,20 @@ def reverse_words(s):
                 s[start:end] = s[end-1:start-1:-1]
         start = end + 1
 ```
-  
+
 ## Pythonic Solution
 ```python
 def reverse_words_pythonic(s):
     s[:] = b' '.join(word[::-1] for word in s[::-1].split(b' '))
 ```
-  
+
 ## Explanation
 * The solution reverses the string and then uses two pointers to reverse each word in the reversed string, whose indices are determined by finding the index of each whitespace character
     * This solution performs each operation in-place
 * The pythonic solution uses list comprehension to generate a string with each word reversed in the reversed representation of the string
     * This solution is technically not in-place, as using built-in functions like ```str.split()``` create a new object, though they are usually temporary objects with references to the original that do not take up much space
     * Despite the fact that the pythonic solution theoretically has a higher time/space complexity, it performs significantly faster than the in-place solution
-  
+
 ## Code Dissection
 1. Reverse the string
     ```python
@@ -89,7 +89,7 @@ def reverse_words_pythonic(s):
     * ```else``` we are at a word between the first and last word in the string
     * ```start = end + 1``` moves the start pointer to the next character so that the loop can find the next whitespace character
     * Note that while Python slicing notation follows the syntax ```a[start:stop:step]```, when using -1 to step backwards, it reverses the stop and start positions so that it follows the syntax ```a[stop:start:-1]```
-  
+
 ## Pythonic Code Dissection
 1. Use list comprehension and slice notation to reverse each word in the reversal of the string
     ```python

@@ -1,15 +1,15 @@
 # Merge Two Sorted Lists
-Consider two singly linked lists in which each node holds a number. Assume the lists are sorted, i.e., numbers in the lists appear in ascending order within each list. The _merge_ of the two lists is a list consisting of the nodes of the two lists in which numbers appear in ascending order.  
-  
+Consider two singly linked lists in which each node holds a number. Assume the lists are sorted, i.e., numbers in the lists appear in ascending order within each list. The _merge_ of the two lists is a list consisting of the nodes of the two lists in which numbers appear in ascending order.
+
 Write a program that takes two lists, assumed to be sorted, and returns their merge. The only field your program can change in a node is its next field.
-  
+
 ## Example
 ```
  Input: L1 -> [1] -> [3] -> None
         L2 -> [2] -> [5] -> [7] -> None
 Output:  R -> [1] -> [2] -> [3] -> [5] -> [7] -> None
 ```
-  
+
 ## Solution
 ```python
 def merge_two_sorted_lists(L1, L2):
@@ -25,14 +25,14 @@ def merge_two_sorted_lists(L1, L2):
     tail.next = L1 or L2
     return dummy.next
 ```
-  
+
 ## Explanation
 * A 'dummy' head node is used to store the merge list
 * The tail is used to traverse and append nodes
 * The solution traverses the two lists, appending the node containing the smaller value to the merge list
 * When traversing, if one list becomes empty before the other, the rest of the remaining nodes are appended to the merge list
 * Note that the merge list is being built using existing nodes and is not copying them
-  
+
 ## Code Dissection
 1. Create a dummy node to store the merge list and a tail
     ```python
@@ -64,6 +64,6 @@ def merge_two_sorted_lists(L1, L2):
     ```python
     return dummy.next
     ```
-  
+
 ## Step-by-Step Example
 <img src='drawio_diagrams/sorted_lists_merge.svg' width='100%'>

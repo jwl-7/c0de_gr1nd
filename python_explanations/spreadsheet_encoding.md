@@ -1,8 +1,8 @@
 # Compute the Spreadsheet Column Encoding
 Spreadsheets often use an alphabetical encoding of the successive columns. Specifically, columns are identified by "A", "B", "C",..., "X", "Y", "Z", "AA", "AB",..., "ZZ", "AAA", "AAB",....
-  
+
 Implement a function that converts a spreadsheet column id to the corresponding integer, with "A" corresponding to 1.
-  
+
 ## Examples
 ```
  Input: 'D'
@@ -14,7 +14,7 @@ Output:  27
  Input: 'ZZ'
 Output:  702
 ```
-  
+
 ## Solution
 ```python
 def ss_decode_col_id(col):
@@ -26,11 +26,11 @@ def ss_decode_col_id(col):
         m *= 26
     return col_id
 ```
-  
+
 ## Explanation
 * The problem is similar to converting a string representing a base-26 number to an integer, except that 'A' corresponds to 1 instead of 0
 * The solution uses the function ```ord('a')``` to help return the desired integer for uppercase letters
-  
+
 ## Code Dissection
 1. Initialize a column id variable to store the result and a multiplier variable to help compute the id
     ```python

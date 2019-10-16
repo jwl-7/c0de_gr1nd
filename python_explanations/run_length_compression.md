@@ -1,8 +1,8 @@
 # Implement Run-Length Encoding
-Run-length encoding (RLE) compression offers a fast way to do efficient on-the-fly compression and decompression of strings. The idea is simple --- encode successive repeated characters by the repetition count and the character. For example, the RLE of "aaaabcccaa" is "4a1b3c2a". The decoding of "3e4f2e" returns "eeeffffee".  
-  
+Run-length encoding (RLE) compression offers a fast way to do efficient on-the-fly compression and decompression of strings. The idea is simple --- encode successive repeated characters by the repetition count and the character. For example, the RLE of "aaaabcccaa" is "4a1b3c2a". The decoding of "3e4f2e" returns "eeeffffee".
+
 Implement run-length encoding and decoding functions. Assume the string to be encoded consists of letters of the alphabet, with no digits, and the string to be decoded is valid encoding.
-  
+
 ## Examples
 ```
 Decoding:
@@ -13,7 +13,7 @@ Encoding:
     Input: 'vvvkkkkkkkkwwwwwwwwwwwwwwwwwffffffffffmmmmmmm'
    Output: '3v8k17w10f7m'
 ```
-  
+
 ## Solution
 ```python
 def decoding(s):
@@ -42,13 +42,13 @@ def encoding(s):
     encoded += str(count) + char
     return encoded
 ```
-  
+
 ## Explanation
 * Decoding - Iterate through the string, keep _count_ of the numeric characters, and when encountering an alphabetical character, add it _count_ times to the decoded string
 * Encoding - Iterate through the string, keep _count_ of the number of consecutive character occurences, and when encountering a different character, add the _count_ and the character to the encoded string
 * Both solutions share similar concepts, but decoding is much simpler
 * The solution for encoding is similar to the solution for the look-and-say problem
-  
+
 ## Code Dissection - decoding
 1. Create two string variables to hold the _decoded_ string and the numeric characters
     ```python
@@ -76,7 +76,7 @@ def encoding(s):
     ```python
     return decoded
     ```
-  
+
 ## Code Dissection - encoding
 1. Create variables to hold the _encoded_ string, the previous character, and keep track of consecutive occurrances of a character
     ```python

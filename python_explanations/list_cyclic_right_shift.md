@@ -1,6 +1,6 @@
 # Implement Cyclic Right Shift for Singly Linked Lists
 Write a program that takes as input a singly linked list and a nonnegative integer _k_, and returns the list cyclically shifted to the right by _k_.
-  
+
 ## Example
 ```
 k = 3
@@ -8,7 +8,7 @@ k = 3
  Input: L -> [1] -> [2] -> [3] -> [4] -> [5] -> None
 Output: L -> [3] -> [4] -> [5] -> [1] -> [2] -> None
 ```
-  
+
 ## Solution
 ```python
 def cyclically_right_shift_list(L, k):
@@ -33,14 +33,14 @@ def cyclically_right_shift_list(L, k):
     tail.next = None
     return L
 ```
-  
+
 ## Explanation
 1. Find the tail and the length of the list
 2. Make the list circular
 3. Rotate the list so that the head becomes the (_n_ - _k_)th node
 4. Disconnect the circular link
 * If _k_ is larger than _n_(the number of nodes in the list), it is equivalent to shift the list by _k_ mod _n_
-  
+
 ## Code Dissection
 1. Initializer a pointer to the head of the list and a variable for counting the nodes
     ```python

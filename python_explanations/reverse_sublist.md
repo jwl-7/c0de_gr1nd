@@ -1,8 +1,8 @@
 # Reverse a Single Sublist
-This problem is concerned with reversing a sublist within a list.  
-  
+This problem is concerned with reversing a sublist within a list.
+
 Write a program which takes a singly linked list _L_ and two integers _s_ and _f_ as arguments, and reverses the order of the nodes from the *s*th node to *f*th node, inclusive. The numbering begins at 1, i.e., the head node is the first node. Do not allocate additional nodes.
-  
+
 ## Example
 ```
 s = 2
@@ -11,7 +11,7 @@ f = 4
  Input: L -> [1] -> [2] -> [3] -> [4] -> [5] -> None
 Output: L -> [1] -> [4] -> [3] -> [2] -> [7] -> None
 ```
-  
+
 ## Solution
 ```python
 def reverse_sublist(L, start, finish):
@@ -29,7 +29,7 @@ def reverse_sublist(L, start, finish):
         subhead.next.next = tmp
     return dummy.next
 ```
-  
+
 ## Explanation
 * The strategy is to iterate to the start of the sublist (*s*th node) and then reverse the nodes until we reach the end of the sublist (*f*th node)
 * Since we do not want to allocate additional nodes and ideally perform the reversal process in one pass, the best approach to this problem is to switch the pointers around rather than the data in the nodes
@@ -38,7 +38,7 @@ def reverse_sublist(L, start, finish):
     2. _subhead_ points to the start of the sublist
     3. _subtail_ points at the end of the sublist
     4. _tmp_ points at the node after the start of the sublist
-  
+
 ## Code Dissection
 1. Initialize a dummy head that points at the start of the list with a pointer to iterate through the list
     ```python
@@ -86,6 +86,6 @@ def reverse_sublist(L, start, finish):
     ```python
     return dummy.next
     ```
-  
+
 ## Step-by-Step Example
 <img src='drawio_diagrams/reverse_sublist.svg' width='100%'>

@@ -1,8 +1,8 @@
 # Implement Even-Odd Merge
-Consider a singly linked list whose nodes are numbered starting at 0. Define the even-odd merge of the list to be the list of the even-numbered nodes followed by the odd-numbered nodes.  
-  
+Consider a singly linked list whose nodes are numbered starting at 0. Define the even-odd merge of the list to be the list of the even-numbered nodes followed by the odd-numbered nodes.
+
 Write a program that computes the even-odd merge.
-  
+
 ## Examples
 ```
  Input: L -> [0] -> [1] -> [2] -> [3] -> [4] -> None
@@ -11,7 +11,7 @@ Output: L -> [0] -> [2] -> [4] -> [1] -> [3] -> None
  Input: L -> [3] -> [7] -> [6] -> [4] -> [9] -> [2] -> None
 Output: L -> [3] -> [6] -> [9] -> [7] -> [4] -> [2] -> None
 ```
-  
+
 ## Solution
 ```python
 def even_odd_merge(L):
@@ -27,7 +27,7 @@ def even_odd_merge(L):
     even.next = odd_head
     return L
 ```
-  
+
 ## Explanation
 * The solution uses two pointers to traverse the list:
     1. The _even_ pointer, which starts at the head of the list
@@ -35,7 +35,7 @@ def even_odd_merge(L):
 * As we traverse through the list, the _even_ and _odd_ next pointers are used to connect nodes to an even and odd list respectively
 * The two lists are merged by connecting the tail of the even list to the head of the odd list
 * The original list head is not touched and will be the head of the even-odd list
-  
+
 ## Code Dissection
 1. Check if the list is empty
     ```python

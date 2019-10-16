@@ -1,6 +1,6 @@
 # Reverse Digits
-Write a program which takes an integer and returns the integer corresponding to the digits of the input written in reverse order.  
-  
+Write a program which takes an integer and returns the integer corresponding to the digits of the input written in reverse order.
+
 ## Examples
 ```
 42 -> 24
@@ -8,7 +8,7 @@ Write a program which takes an integer and returns the integer corresponding to 
 -314 -> -413
 2117 -> 7112
 ```
-  
+
 ## Solution
 ```python
 def reverse(x):
@@ -19,13 +19,13 @@ def reverse(x):
         tmp //= 10
     return -rev if x < 0 else rev
 ```
-  
+
 ## Pythonic Solution
 ```python
 def reverse(x):
     return -int(str(abs(x))[::-1]) if x < 0 else int(str(x)[::-1])
 ```
-  
+
 ## Explanation
 * The solution uses some relatively simple arithmetic to perform 3 key steps to build the reversed number:
     1. Extract the last digit in the number
@@ -33,7 +33,7 @@ def reverse(x):
     3. Remove the last digit from the number
 * The pythonic solution uses slice notation to reverse a string representation of the number and then convert it back to an integer
 * Both solutions have similar performance, but the pythonic solution has a more consistent runtime
-  
+
 ## Code Dissection
 1. Create a variable to hold the reversed number and a temporary variable to hold the absolute value of the number
     ```python
@@ -57,7 +57,7 @@ def reverse(x):
     ```python
     return -rev if x < 0 else rev
     ```
-  
+
 ## Pythonic Code Dissection
 1. Use built-in functions to convert the number to a string, use slice notation to reverse the number string, convert the reversed number string back to an integer, and then return the reversed number
     ```python

@@ -1,8 +1,8 @@
 # Implement List Pivoting
-For any integer _k_, the pivot of a list of integers with respect to _k_ is that list with its nodes reordered so that all nodes containing keys less than _k_ appear before nodes containing _k_, and all nodes containing keys greater than _k_ appear after the nodes containing _k_.  
-  
+For any integer _k_, the pivot of a list of integers with respect to _k_ is that list with its nodes reordered so that all nodes containing keys less than _k_ appear before nodes containing _k_, and all nodes containing keys greater than _k_ appear after the nodes containing _k_.
+
 Implement a function which takes as input a singly linked list and an integer _k_ and performs a pivot of the list with respect to _k_. The relative ordering of nodes that appear before _k_, and after _k_, must remain unchanged; the same must hold for nodes holding keys equal to _k_.
-  
+
 ## Example
 ```
 x = 7
@@ -10,7 +10,7 @@ x = 7
  Input: L -> [3] -> [2] -> [2] -> [11] -> [7] -> [5] -> [11] -> None
 Output: L -> [3] -> [2] -> [2] -> [5] -> [7] -> [11] -> [11] -> None
 ```
-  
+
 ## Solution
 ```python
 def list_pivoting(L, x):
@@ -33,14 +33,14 @@ def list_pivoting(L, x):
     less.next = equal_head.next
     return less_head.next
 ```
-  
+
 ## Explanation
 * The solution appends nodes from the original lists to 3 separate lists:
     1. The less list - nodes with values less than _x_
     2. The equal list - nodes with values equal to _x_
     3. The greater list - nodes with values greater than _x_
 * After the 3 lists are built, they are connected together to perform the pivoted list
-  
+
 ## Code Dissection
 1. Create the 3 lists with tail pointers
     ```python

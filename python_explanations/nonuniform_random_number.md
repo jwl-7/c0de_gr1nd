@@ -1,6 +1,6 @@
 # Generate Nonuniform Random Numbers
-You are given _n_ numbers as well as probabilities _p_<sub>0</sub>, _p_<sub>1</sub>, ... , _p_ <sub>_n_-1</sub>, which sum up to 1. Given a random number generator that produces values in [0, 1) uniformly, how would you generate one of the _n_ numbers according to the specified probabilities?  
-  
+You are given _n_ numbers as well as probabilities _p_<sub>0</sub>, _p_<sub>1</sub>, ... , _p_ <sub>_n_-1</sub>, which sum up to 1. Given a random number generator that produces values in [0, 1) uniformly, how would you generate one of the _n_ numbers according to the specified probabilities?
+
 ## Example
 ```
 values = [0, 1, 2, 3, 4]
@@ -15,7 +15,7 @@ Output7: 3
 Output8: 3
 Output9: 4
 ```
-  
+
 ## Solution
 ```python
 def nonuniform_random_number_generation(values, probabilities):
@@ -25,33 +25,33 @@ def nonuniform_random_number_generation(values, probabilities):
         if r_num <= intervals[i]:
             return values[i]
 ```
-  
+
 ## Explanation
-Let's use the example above to make sense of this problem:  
+Let's use the example above to make sense of this problem:
 ```
 values = [0, 1, 2, 3, 4]
 probabilities = [0.05, 0.15, 0.3, 0.4, 0.6]
 ```
-* The intervals from the probabilites are created using _p_<sub>0</sub>, _p_<sub>0</sub> + _p_<sub>1</sub>, _p_<sub>0</sub> + _p_<sub>1</sub> + _p_<sub>2</sub>, ... , _p_<sub>_n_ - 1</sub>  
-* Given these probabilities, they create the intervals:  
+* The intervals from the probabilites are created using _p_<sub>0</sub>, _p_<sub>0</sub> + _p_<sub>1</sub>, _p_<sub>0</sub> + _p_<sub>1</sub> + _p_<sub>2</sub>, ... , _p_<sub>_n_ - 1</sub>
+* Given these probabilities, they create the intervals:
     ```[0.05, 0.2), [0.2, 0.5), [0.5, 0.9), [0.9, 1.5)```
-* In the solution, the intervals are represented as an array of the same length as the values and probabilities:  
+* In the solution, the intervals are represented as an array of the same length as the values and probabilities:
     ```[0.05, 0.2, 0.5, 0.9, 1.5]```
-* Using a random number generator, we create a floating point number in [0, 1)  
-* For example, let's say the random number generated is 0.377877; it would fit in the interval [0.2, 0.5)  
-* The number 0.377877 corresponds to 0.5 (intervals[2]), which corresponds to 2 (values[2])  
-* Thus, the nonuniform random number returned would be 2  
-  
+* Using a random number generator, we create a floating point number in [0, 1)
+* For example, let's say the random number generated is 0.377877; it would fit in the interval [0.2, 0.5)
+* The number 0.377877 corresponds to 0.5 (intervals[2]), which corresponds to 2 (values[2])
+* Thus, the nonuniform random number returned would be 2
+
 ## Code Dissection
-1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will be our list of intervals  
+1. Use ```itertools.accumulate(iterable[, func])``` to return a list of accumulated sums of the probabilities array -- this will be our list of intervals
     ```python
     intervals = list(itertools.accumulate(probabilities))
     ```
-2. Generate a random number in the interval [0, 1)  
+2. Generate a random number in the interval [0, 1)
     ```python
     r_num = random.random()
     ```
-3. Loop over the intervals array, find what interval the random number generated corresponds to, and then return the value that the interval corresponds to  
+3. Loop over the intervals array, find what interval the random number generated corresponds to, and then return the value that the interval corresponds to
     ```python
     for i in range(len(intervals)):
         if r_num <= intervals[i]:

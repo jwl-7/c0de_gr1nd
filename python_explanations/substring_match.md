@@ -1,6 +1,6 @@
 # Find the First Occurrence of a Substring
 Given two strings _s_ (the "search string") and _t_ (the "text"), find the first occurrence of _s_ in _t_.
-  
+
 ## Examples
 ```
 Substring: 'zz'
@@ -15,7 +15,7 @@ Substring: 'asdfwqwe'
      Text: 'qwerty'
    Output: -1
 ```
-  
+
 ## Solution
 ```python
 def rabin_karp(t, s):
@@ -42,7 +42,7 @@ def rabin_karp(t, s):
             t_hash = (d * (t_hash - ord(t[i]) * h) + ord(t[i+m])) % q
     return -1
 ```
-  
+
 ## Simple Solution
 ```python
 def rabin_karp_simple(t, s):
@@ -55,18 +55,18 @@ def rabin_karp_simple(t, s):
             return i
     return -1
 ```
-  
+
 ## Pythonic Solution
 ```python
 def boyer_moore_horspool(t, s):
     return t.find(s)
 ```
-  
+
 ## Explanation
 * The solution uses the [Rabin-Karp algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm) that uses hashing to find patterns in strings
 * The simple solution uses an interpretation of the Rabin-Karp algorithm with the help of the built-in ```hash()``` function
 * The Pythonic solution simply uses the built-in ```find()``` function, which is documented to use the [Boyer-Moore-Horspool algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm)
-  
+
 Simple overview of the Rabin-Karp string-searching algorithm:
 1. A hash value is calculated for the substring to search for
 2. A hash value is calculated for a 'window' of the text to search in
@@ -77,7 +77,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
 5. If there is no match, we slide the 'window' over by one character and recalculate the 'window' hash using the previous hash value
     * This is referred to as the rolling hash technique
     * Using a rolling hash allows us to avoid having to rehash the entire string
-  
+
 ## Code Dissection
 1. Create all the necessary variables to implement the Rabin-Karp algorithm:
     ```python
@@ -137,7 +137,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     ```python
     return -1
     ```
-  
+
 ## Simple Code Dissection
 1. Create all the necessary variables to implement the Rabin-Karp algorithm:
     ```python
@@ -166,13 +166,13 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     ```python
     return -1
     ```
-  
+
 ## Pythonic Code Dissection
 1. Completely disregard trying to figure out complicated mathematical algorithms for finding substrings and just use the built-in function ```find()``` like a normal person
     ```python
     return t.find(s)
     ```
-  
+
 ## Useful References
 * [Rip Tutorial - Introduction to Rabin-Karp Algorithm](https://riptutorial.com/algorithm/example/24653/introduction-to-rabin-karp-algorithm)
 * [Brilliant - Rabin-Karp Algorithm](https://brilliant.org/wiki/rabin-karp-algorithm/)

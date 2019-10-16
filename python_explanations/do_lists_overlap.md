@@ -1,6 +1,6 @@
 # Test for Overlapping Lists&mdash;Lists May Have Cycles
 Write a program that takes two singly linked lists, and determines if there exists a node that is common to both lists. The lists may each or both have a cycle. If such a node exists, return a node that appears first when traversing the lists. This node may not be unique&mdash;if one node ends in a cycle, the first cycle node encountered when traversing it may be different from the first cycle node encountered when traversing the second list, even though the cycle is the same. In such cases, you may return either of the two nodes.
-  
+
 ## Example
 <img src='drawio_diagrams/do_lists_overlap.svg' width='80%'>
 
@@ -9,7 +9,7 @@ Write a program that takes two singly linked lists, and determines if there exis
         L1 = [1, 5, 3, 7]
 Output: Both 1 and 5 are acceptable answers
 ```
-  
+
 ## Solution
 ```python
 def has_cycle(head):
@@ -56,12 +56,12 @@ def overlapping_lists(L0, L1):
         L1 = L1.next
     return L0 if L0 is L1 else c0
 ```
-  
+
 ## Explanation
 * For explanations on the two helper functions:
     1. [Test for Cyclicity](is_list_cyclic.md)
     2. [Test for Overlapping Lists—Lists Are Cycle-Free](do_terminated_lists_overlap.md)
-  
+
 The solution involves testing for various cases:
 1. Neither list contains a cycle
     * Return the result from ```overlapping_no_cycle_lists(L0, L1)```
@@ -74,7 +74,7 @@ The solution involves testing for various cases:
             * Return the start of the cycle
         2. The lists reach the cycle at different nodes on the cycle
             * The first overlapping node is not unique, so return any node on the cycle
-  
+
 ## Code Dissection
 1. Check both lists to see if they contain cycles
     ```python
@@ -86,7 +86,7 @@ The solution involves testing for various cases:
     if not c0 and not c1:
         return overlapping_no_cycle_lists(L0, L1)
     ```
-3. If only one list contains a cycle, they cannot overlap 
+3. If only one list contains a cycle, they cannot overlap
     ```python
     if (c0 and not c1) or (not c0 and c1):
         return None

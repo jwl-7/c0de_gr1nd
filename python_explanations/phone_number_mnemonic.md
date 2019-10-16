@@ -25,13 +25,13 @@ Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or
 </table>
 
 Write a program which takes as input a phone number, specified as a string of digits, and returns all possible character sequences that correspond to the phone number. The cell phone keypad is specified by a mapping that takes a digit and returns the corresponding set of characters. The character sequences do not have to be legal words or phrases.
-  
+
 ## Example
 ```
  Input: '47'
 Output: ['GP', 'GQ', 'GR', 'GS', 'HP', 'HQ', 'HR', 'HS', 'IP', 'IQ', 'IR', 'IS']
 ```
-  
+
 ## Iterative Solution
 ```python
 def phone_mnemonic(phone_number):
@@ -51,7 +51,7 @@ def phone_mnemonic(phone_number):
         mnemonics = [x+letter for x in mnemonics for letter in letters]
     return mnemonics
 ```
-  
+
 ## Recursive Solution
 ```python
 def phone_mnemonic_recursive(phone_number):
@@ -80,11 +80,11 @@ def phone_mnemonic_recursive(phone_number):
     build_mnemonic(0)
     return mnemonics
 ```
-  
+
 ## Explanation
 * Both solutions enumerate all possible mnemonics for a number and will build the same mnemonics list
 * The iterative solution is significantly faster by almost ~4x
-  
+
 ## Iterative Code Dissection
 1. Create a dictionary of a phone keypad with the numbers as the keys and the letters as the values
     ```python
@@ -117,7 +117,7 @@ def phone_mnemonic_recursive(phone_number):
     ```python
     return mnemonics
     ```
-  
+
 ## Recursive Code Dissection
 1. Create a dictionary of a phone keypad with the numbers as the keys and the letters as the values
     ```python
@@ -163,7 +163,7 @@ def phone_mnemonic_recursive(phone_number):
     build_mnemonic(0)
     return mnemonics
     ```
-  
+
 ## Step-by-Step Example
 Let's look at how the mnemonics list is logically built to further clarify how each solution works:
 ```

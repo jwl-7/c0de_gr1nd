@@ -1,8 +1,8 @@
 # Interconvert Strings and Integers
-A string is a sequence of characters. A string may encode an integer, e.g., "123" encodes 123. In this problem, you are to implement methods that take a string representing an integer and return the corresponding integer, and vice versa. Your code should handle negative integers. You cannot use library functions like int in Python.  
-  
-Implement an integer to string conversion function, and a string to integer conversion function. For example, if the input to the first function is the integer 314, it should return the string "314" and if the input to the second function is the string "314" it should return the integer 314.  
-  
+A string is a sequence of characters. A string may encode an integer, e.g., "123" encodes 123. In this problem, you are to implement methods that take a string representing an integer and return the corresponding integer, and vice versa. Your code should handle negative integers. You cannot use library functions like int in Python.
+
+Implement an integer to string conversion function, and a string to integer conversion function. For example, if the input to the first function is the integer 314, it should return the string "314" and if the input to the second function is the string "314" it should return the integer 314.
+
 ## Examples
 ```
 String to Integer Function:
@@ -19,7 +19,7 @@ Integer to String Function:
     Input: -132
    Output: "-132"
 ```
-  
+
 ## Solution
 ```python
 def int_to_string(x):
@@ -48,7 +48,7 @@ def string_to_int(s):
         result = result * 10 + (ord(s[i]) - ord('0'))
     return -result if is_negative else result
 ```
-  
+
 ## Explanation
 * Both functions rely on building each digit one at a time
 * Converting integer to string:
@@ -56,7 +56,7 @@ def string_to_int(s):
     * This method computes the digits in reverse order
 * Converting string to integer:
     * The solution is to begin from the leftmost digit and with each succeeding digit, multiply the partial result by 10 and add that digit
-  
+
 ## Code Dissection - int_to_string
 1. Check if the integer is negative, set a boolean accordingly, and set the integer to positive if needed
     ```python

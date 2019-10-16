@@ -1,8 +1,8 @@
 # Test Palindromicity
-For the purpose of this problem, define a palindromic string to be a string which when all the nonalphanumeric are removed it reads the same front to back ignoring case.  
-  
-Implement a function which takes as input a string _s_ and returns true if _s_ is a palindromic string.  
-  
+For the purpose of this problem, define a palindromic string to be a string which when all the nonalphanumeric are removed it reads the same front to back ignoring case.
+
+Implement a function which takes as input a string _s_ and returns true if _s_ is a palindromic string.
+
 ## Examples
 ```
  Input: 'A man, a plan, a canal, Panama.'
@@ -14,7 +14,7 @@ Output: true
  Input: '~Z!@QE8Y'
 Output: false
 ```
-  
+
 ## Solution
 ```python
 def is_palindrome(s):
@@ -31,20 +31,20 @@ def is_palindrome(s):
         end -= 1
     return True
 ```
-  
+
 ## Pythonic Solution
 ```python
 def is_palindrome_pythonic(s):
     s = [x.lower() for x in s if x.isalnum()]
     return s == s[::-1]
 ```
-  
+
 ## Explanation
 * The solution uses a start and end pointer to check if the string is palindromic in-place
 * The pythonic solution converts the string to a list of alphanumeric-only characters and uses list slicing to check if the list is palindromic
 * ```str.isalnum()``` returns true if all characters in _str_ are alphanumeric
 * ```str.lower()``` returns a copy of _str_ with lowercase characters
-  
+
 ## Code Dissection
 1. Create a start and end pointer that correlate to the start and end index of the string
     ```python
@@ -79,7 +79,7 @@ def is_palindrome_pythonic(s):
     ```python
     return True
     ```
-  
+
 ## Pythonic Code Dissection
 1. Use slice notation to generate a copy of the string without non-alphanumeric characters
     ```python

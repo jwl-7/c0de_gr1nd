@@ -1,12 +1,12 @@
 # Remove Duplicates from a Sorted List
 Write a program that takes as input a singly linked list of integers in sorted order, and removes duplicates from it. The list should be sorted.
-  
+
 ## Example
 ```
  Input: L -> [1] -> [2] -> [2] -> [3] -> [5] -> [7] -> [11] -> [11] -> None
 Output: L -> [1] -> [2] -> [3] -> [5] -> [7] -> [11] -> None
 ```
-  
+
 ## Solution
 ```python
 def remove_duplicates(L):
@@ -18,10 +18,10 @@ def remove_duplicates(L):
             curr = curr.next
     return L
 ```
-  
+
 ## Explanation
 * While traversing the list, all successive nodes with the same value as the current node are removed
-  
+
 ## Code Dissection
 1. Initialize a pointer to the head of the list
     ```python

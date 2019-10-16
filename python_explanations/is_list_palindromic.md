@@ -1,6 +1,6 @@
 # Test Whether a Singly Linked List Is Palindromic
 Write a program that tests whether a singly linked list is palindromic.
-  
+
 ## Examples
 ```
  Input: L -> [7] -> [3] -> [1] -> [3] -> [7] -> None
@@ -9,7 +9,7 @@ Output: True
  Input: L -> [1] -> [2] -> [3] -> [4] -> None
 Output: False
 ```
-  
+
 ## Solution
 ```python
 def reverse_linked_list(head):
@@ -39,14 +39,14 @@ def is_linked_list_a_palindrome(L):
         b = b.next
     return True
 ```
-  
+
 ## Explanation
 1. Find the second half of the list using a _slow_ and a _fast_ pointer
 2. Reverse the second half of the list
 3. Compare the nodes in the first half to the nodes in the second half
 * If the data in each node in the first half matches the data in each node in the second half, then the list is a palindrome
 * When the _fast_ pointer hits the end of the list, the _slow_ pointer will be the head of the second half
-  
+
 ## Code Dissection - reverse_linked_list
 1. Initialize a previous and current pointer
     ```python

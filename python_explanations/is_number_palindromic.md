@@ -1,7 +1,7 @@
 # Check if a Decimal Integer is a Palindrome
-A palindromic string is one which reads the same forwards and backwards, such as the string 'racecar'.  
-Write a program which determines if the decimal representation of an integer is a palindromic string.  
-  
+A palindromic string is one which reads the same forwards and backwards, such as the string 'racecar'.
+Write a program which determines if the decimal representation of an integer is a palindromic string.
+
 ## Examples
 ```
 0    -> True
@@ -10,7 +10,7 @@ Write a program which determines if the decimal representation of an integer is 
 -1   -> False
 777  -> True
 ```
-  
+
 ## Solution
 ```python
 def is_palindrome_number(x):
@@ -23,13 +23,13 @@ def is_palindrome_number(x):
         tmp //= 10
     return x == reverse
 ```
-  
+
 ## Pythonic Solution
 ```python
 def is_palindrome_number_pythonic(x):
     return False if x < 0 else x == int(str(x)[::-1])
 ```
-  
+
 ## Explanation
 * The solution uses some relatively simple arithmetic to perform 3 key steps to build the reversed number:
     1. Extract the last digit in the number
@@ -39,7 +39,7 @@ def is_palindrome_number_pythonic(x):
 * After the reversed number is computed, it is compared to the original number to check if it is palindromic
     * If the reversed number is equal to the original number, then the number is a palindrome
 * Both solutions have similar performance, but the pythonic solution has a more consistent runtime
-  
+
 ## Code Dissection
 1. Check the sign of the number, because negative numbers cannot be palindromic
     ```python
@@ -68,7 +68,7 @@ def is_palindrome_number_pythonic(x):
     ```python
     return x == reverse
     ```
-  
+
 ## Pythonic Code Dissection
 1. Use built-in functions to convert the number to a string, use slice notation to reverse the number string, convert the reversed number string back to an integer, and then compare the reversed number to the original number to test for palindromicity
     ```python

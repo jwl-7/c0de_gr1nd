@@ -1,6 +1,6 @@
 # Implement a Stack with Max API
 Design a stack that includes a max operation, in addition to push and pop. The max method should return the maximum value stored in the stack.
-  
+
 ## Solution
 ```python
 class Stack:
@@ -23,10 +23,10 @@ class Stack:
         curr_max = max(x, self.stack[-1][1] if self.stack else x)
         self.stack.append((x, curr_max))
 ```
-  
+
 ## Explanation
 * The solution uses a stack where each element in the stack is a tuple in which the first element is the value pushed and the second element is the current max value
-  
+
 ## Code Dissection
 1. constructor
     ```python

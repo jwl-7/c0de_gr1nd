@@ -1,8 +1,8 @@
 # Test for Cyclicity
-Although a linked list is supposed to be a sequence of nodes ending in null, it is possible to create a cycle in a linked list by making the next field of an element reference to one of the earlier nodes.  
-  
+Although a linked list is supposed to be a sequence of nodes ending in null, it is possible to create a cycle in a linked list by making the next field of an element reference to one of the earlier nodes.
+
 Write a program that takes the head of a singly linked list and returns null if there does not exist a cycle, and the node at the start of the cycle, if a cycle is present. (You do not know the length of the list in advance.)
-  
+
 ## Examples
 <img src='drawio_diagrams/is_list_cyclic1.svg' width='40%'>
 
@@ -17,7 +17,7 @@ Output: None
  Input: [1, 2, 3, 4]
 Output: 2
 ```
-  
+
 ## Solution
 ```python
 def has_cycle(head):
@@ -33,16 +33,16 @@ def has_cycle(head):
             return fast
     return None
 ```
-  
+
 ## Explanation
 * The solution uses [Floyd's cycle-finding algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_Tortoise_and_Hare)
 * Imagine a slow and fast runner racing around a circular track -- the fast runner will eventually meet the slow runner
 * For checking if the list is cyclic, we use two pointers and if they meet, the list contains a cycle
     1. The _slow_ pointer moves 1 step at a time
     2. The _fast_ pointer moves 2 steps at a time
-* If there is a cycle, after the two pointers meet, the start of the cycle can be found by setting a pointer at the head and iterating both slow pointers at the same time until they meet 
+* If there is a cycle, after the two pointers meet, the start of the cycle can be found by setting a pointer at the head and iterating both slow pointers at the same time until they meet
 * If there is not a cycle in the list, the fast pointer will eventually reach the end of the list
-  
+
 ## Code Dissection
 1. Initialize a _slow_ and _fast_ pointer to the head of the list
     ```python

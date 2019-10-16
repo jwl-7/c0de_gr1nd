@@ -1,25 +1,25 @@
 # Compute All Valid IP Addresses
 Write a program that determines where to add periods to a decimal string so that the resulting string is a valid IP address. There may be more than one valid IP address corresponding to a string, in which case you should print all possibilities.
-  
+
 ## Examples
 ```
  Input: '19216811'
 Output: [
-        '1.92.168.11', 
-        '19.2.168.11', 
-        '19.21.68.11', 
-        '19.216.8.11', 
-        '19.216.81.1', 
-        '192.1.68.11', 
-        '192.16.8.11', 
-        '192.16.81.1', 
+        '1.92.168.11',
+        '19.2.168.11',
+        '19.21.68.11',
+        '19.216.8.11',
+        '19.216.81.1',
+        '192.1.68.11',
+        '192.16.8.11',
+        '192.16.81.1',
         '192.168.1.1'
     ]
 
  Input: '11000'
 Output: ['1.10.0.0', '11.0.0.0']
 ```
-  
+
 ## Solution
 ```python
 def get_valid_ip_address(s):
@@ -33,19 +33,19 @@ def get_valid_ip_address(s):
                         ips.append('.'.join(tmp))
     return ips
 ```
-  
+
 ## Explanation
 Let's look at the elements of a valid IP address:
 
 1. Constructed of 4 decimal strings separated by 3 dots
 2. All 4 substrings are between 0-255
 3. All 3 dots are spaced 1-3 characters apart
-4. Any substring longer than 1 character cannot start with a 0 
+4. Any substring longer than 1 character cannot start with a 0
 
 Now let's look at the strategy the solution uses:
 * All possible IP addresses can be found by enumerating all possible placements of the 3 dots
 * Check each enumeration for validity by using the 4 rules stated above
-  
+
 ## Code Dissection
 1. Create an empty list to store the valid IP addresses
     ```python
