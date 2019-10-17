@@ -27,38 +27,39 @@ class Stack:
 ## Explanation
 * The solution uses a stack where each element in the stack is a tuple in which the first element is the value pushed and the second element is the current max value
 
-## Code Dissection
-1. constructor
+## Code Dissection - __init__
+1. Initialize an empty stack
     ```python
-    def __init__(self):
-        self.stack = []
+    self.stack = []
     ```
-    * This initializes the _Stack_ object with as an empty list
-2. empty()
+
+## Code Dissection - empty
+1. Return whether or not the stack is empty
     ```python
-    def empty(self):
-        return self.stack == []
+    return self.stack == []
     ```
-    * This returns whether or not the stack is empty
-3. max()
+
+## Code Dissection - max
+1. Return the last element (tuple) on the stack, second element in the tuple
     ```python
-    def max(self):
-        if self.stack:
-            return self.stack[-1][1]
+    if self.stack:
+        return self.stack[-1][1]
     ```
-    * This returns the last element (tuple) on the stack, second element in the tuple
-4. pop()
+
+## Code Dissection - pop
+1. Remove the last element (tuple) on the stack, and return the first element in the tuple
     ```python
-    def pop(self):
-        if self.stack:
-            return self.stack.pop()[0]
+    if self.stack:
+        return self.stack.pop()[0]
     ```
-    * This removes the last element (tuple) on the stack and returns the first element in the popped tuple
-5. push(_x_)
+
+## Code Dissection - push
+1. Set the current max by getting the max of _x_ and the last element (tuple) on the stack, second element in the tuple
     ```python
-    def push(self, x):
-        curr_max = max(x, self.stack[-1][1] if self.stack else x)
-        self.stack.append((x, curr_max))
+    curr_max = max(x, self.stack[-1][1] if self.stack else x)
     ```
-    * *curr_max* is set to the max of _x_ and the last element (tuple) on the stack, second element in the tuple
-    * Each element on the stack is a tuple in the form of (value, current max value)
+    * If the stack is empty, then the second argument in `max()` is _x_
+2. Push _x_ and the current max as a tuple to the stack
+    ```python
+    self.stack.append((x, curr_max))
+    ```
