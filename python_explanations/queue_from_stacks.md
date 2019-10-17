@@ -3,11 +3,6 @@ Queue insertion and deletion follows first-in, first-out semantics; stack insert
 
 How would you implement a queue given a library implementing stacks?
 
-## Examples
-```
-BLANK
-```
-
 ## Solution
 ```python
 class Queue:
