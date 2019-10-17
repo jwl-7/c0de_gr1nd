@@ -91,6 +91,7 @@ the pursuit of ameloriation as a programmer
 |8.4|[Normalize Pathnames](./python_explanations/directory_path_normalization.md)|[Python](./python_solutions/directory_path_normalization.py)|_O(n)_|_O(n)_|
 |8.5|[Compute Buildings with a Sunset View](./python_explanations/sunset_view.md)|[Python](./python_solutions/sunset_view.py)|_O(n)_|_O(n)_|
 |8.6|[Compute Binary Tree Nodes in Order of Increasing Depth](./python_explanations/tree_level_order.md)|[Python](./python_solutions/tree_level_order.py)|_O(n)_|_O(n)_|
+|8.7|[Implement a Circular Queue](./python_explanations/circular_queue.md)|[Python](./python_solutions/circular_queue.py)|_O(1)_|_O(n)_|
 
 <!---
 |8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
