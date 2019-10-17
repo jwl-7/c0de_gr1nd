@@ -13,7 +13,7 @@ class Queue:
     def enqueue(self, x):
         if self.num == len(self.queue):
             self.queue = (self.queue[self.head:] + self.queue[:self.head])
-            self.queue += [None] * (len(self.queue) * 2 - len(self.queue))
+            self.queue += [None] * len(self.queue)
             self.head = 0
             self.tail = self.num
         self.queue[self.tail] = x
