@@ -93,6 +93,7 @@ the pursuit of ameloriation as a programmer
 |8.6|[Compute Binary Tree Nodes in Order of Increasing Depth](./python_explanations/tree_level_order.md)|[Python](./python_solutions/tree_level_order.py)|_O(n)_|_O(n)_|
 |8.7|[Implement a Circular Queue](./python_explanations/circular_queue.md)|[Python](./python_solutions/circular_queue.py)|_O(1)_|_O(n)_|
 |8.8|[Implement a Queue Using Stacks](./python_explanations/queue_from_stacks.md)|[Python](./python_solutions/queue_from_stacks.py)|_O(1)_|_O(n)_|
+|8.9|[Implement a Queue with Max API](./python_explanations/queue_with_max.md)|[Python](./python_solutions/queue_with_max.py)|_O(1)_|_O(n)_|
 
 <!---
 |8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
