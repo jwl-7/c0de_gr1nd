@@ -29,7 +29,23 @@ Output: False
 
 ## Solution
 ```python
-BLANK
+def height(tree):
+    if not tree:
+        return 0
+
+    left = height(tree.left)
+    if left == -1:
+        return -1
+
+    right = height(tree.right)
+    if right == -1 or abs(left - right) > 1:
+        return -1
+
+    return max(left, right) + 1
+
+
+def is_balanced_binary_tree(tree):
+    return height(tree) != -1
 ```
 
 ## Explanation
