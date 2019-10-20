@@ -3,9 +3,28 @@ A binary tree is said to be height-balanced if for each node in the tree, the di
 
 Write a program that takes as input the root of a binary tree and checks whether the tree is height-balanced.
 
-## Example
+## Examples
 ```
-BLANK
+    3
+   / \
+  7  12
+    /  \
+   11   9
+
+ Input: [3, 7, 12, null, null, 11, 9]
+Output: True
+
+
+       1
+      / \
+     2   3
+    / \
+   7   5
+  / \
+ 6   11
+
+ Input: [1, 2, 3, 7, 5, null, null, 6, 11]
+Output: False
 ```
 
 ## Solution
