@@ -50,7 +50,7 @@ def is_balanced_binary_tree(tree):
 
 ## Explanation
 * Given the definition of a balanced tree, a tree _T_ is not balanced if and only if there is some node _p_ in _T_ such that |height(_p.left_) - height(_p.right_)| > 1
-* The solution recursively traverses the tree from the top -> down to see if any subtrees do not fit the definition of a balanced tree
+* The solution uses a postorder traversal (bottum-up recursion) to check if the child subtrees are balanced before comparing their heights
 * For this specific problem, the book treats an empty tree as a balanced tree
 * The height for an empty tree = 0
 * The height for an empty subtree = -1
