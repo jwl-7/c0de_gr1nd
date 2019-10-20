@@ -6,9 +6,29 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
+def depth(node):
+    depth = 0
+    while node:
+        node = node.parent
+        depth += 1
+    return depth
+
+
 def lca(node0, node1):
-    # TODO - you fill in here.
-    return None
+    depth0 = depth(node0)
+    depth1 = depth(node1)
+    if depth1 > depth0:
+        node0, node1 = node1, node0
+
+    diff = abs(depth0 - depth1)
+    while diff:
+        node0 = node0.parent
+        diff -= 1
+
+    while node0 is not node1:
+        node0 = node0.parent
+        node1 = node1.parent
+    return node0
 
 
 @enable_executor_hook
