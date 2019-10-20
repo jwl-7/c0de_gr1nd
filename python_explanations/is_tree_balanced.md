@@ -80,7 +80,7 @@ def is_balanced_binary_tree(tree):
     ```
 
 ## Code Dissection - is_balanced_binary_tree
-1. Return whether or not the tree is height-balanced
+1. Return whether or not the _tree_ is height-balanced
     ```python
     return height(tree) != -1
     ```
