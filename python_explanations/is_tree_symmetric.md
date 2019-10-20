@@ -27,11 +27,11 @@ Output: False
 
 ## Solution
 ```python
-def is_mirror(n1, n2):
-    if not n1 and not n2:
+def is_mirror(L, R):
+    if not L and not R:
         return True
-    elif n1 and n2 and n1.data == n2.data:
-        return is_mirror(n1.right, n2.left) and is_mirror(n1.left, n2.right)
+    elif L and R and L.data == R.data:
+        return is_mirror(L.right, R.left) and is_mirror(L.left, R.right)
     return False
 
 
@@ -40,7 +40,30 @@ def is_symmetric(tree):
 ```
 
 ## Explanation
-* BLANK
+Two trees are a mirror reflection of each other if:
+1. Their two roots have the same value
+2. The left subtree of the left tree and the right subtree of the right tree are mirror images
+3. The right subtree of the left tree and the left subtree of the right tree are mirror images
 
-## Code Dissection
-1. BLANK
+## Code Dissection - is_mirror
+1. If the left and right subtree are empty, then they are mirror images
+    ```python
+    if not L and not R:
+        return True
+    ```
+    * This will also perform the initial check for an empty tree
+2. If the left and right subtree are not empty and the two subtree root nodes have the same data, then check the left subtree and right subtree
+    ```python
+    elif L and R and L.data == R.data:
+        return is_mirror(L.right, R.left) and is_mirror(L.left, R.right)
+    ```
+3. If the two subtree root nodes do not have the same data, then they are not mirror images
+    ```python
+    return False
+    ```
+
+## Code Dissection - is_symmetric
+1. Return whether or not the _tree_ is symmetric
+    ```python
+    return is_mirror(tree, tree)
+    ```
