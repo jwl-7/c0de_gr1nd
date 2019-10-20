@@ -26,7 +26,12 @@ Output: 5
 
 ## Solution
 ```python
-BLANK
+def lca(tree, node0, node1):
+    if not tree or tree == node0 or tree == node1:
+        return tree
+    left = lca(tree.left, node0, node1)
+    right = lca(tree.right, node0, node1)
+    return tree if left and right else left or right
 ```
 
 ## Explanation
