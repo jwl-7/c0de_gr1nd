@@ -101,6 +101,7 @@ the pursuit of ameloriation as a programmer
 |9.1|[Test If a Binary Tree Is Height-Balanced](./python_explanations/is_tree_balanced.md)|[Python](./python_solutions/is_tree_balanced.py)|_O(n)_|_O(h)_|
 |9.2|[Test If a Binary Tree Is Symmetric](./python_explanations/is_tree_symmetric.md)|[Python](./python_solutions/is_tree_symmetric.py)|_O(n)_|_O(h)_|
 |9.3|[Compute the Lowest Common Ancestor in a Binary Tree](./python_explanations/lowest_common_ancestor.md)|[Python](./python_solutions/lowest_common_ancestor.py)|_O(n)_|_O(h)_|
+|9.4|[Compute the LCA When Nodes Have Parent Pointers](./python_explanations/lowest_common_ancestor_with_parent.md)|[Python](./python_solutions/lowest_common_ancestor_with_parent.py)|_O(h)_|_O(1)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
