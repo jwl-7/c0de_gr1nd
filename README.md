@@ -95,8 +95,13 @@ the pursuit of ameloriation as a programmer
 |8.8|[Implement a Queue Using Stacks](./python_explanations/queue_from_stacks.md)|[Python](./python_solutions/queue_from_stacks.py)|_O(1)_|_O(n)_|
 |8.9|[Implement a Queue with Max API](./python_explanations/queue_with_max.md)|[Python](./python_solutions/queue_with_max.py)|_O(1)_|_O(n)_|
 
+## Binary Trees
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|9.1|[Test If a Binary Tree Is Height-Balanced](./python_explanations/is_tree_balanced.md)|[Python](./python_solutions/is_tree_balanced.py)|_O(n)_|_O(h)_|
+
 <!---
-|8.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
