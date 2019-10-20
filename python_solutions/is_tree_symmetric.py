@@ -1,11 +1,11 @@
 from test_framework import generic_test
 
 
-def is_mirror(n1, n2):
-    if not n1 and not n2:
+def is_mirror(L, R):
+    if not L and not R:
         return True
-    elif n1 and n2 and n1.data == n2.data:
-        return is_mirror(n1.right, n2.left) and is_mirror(n1.left, n2.right)
+    elif L and R and L.data == R.data:
+        return is_mirror(L.right, R.left) and is_mirror(L.left, R.right)
     return False
 
 
