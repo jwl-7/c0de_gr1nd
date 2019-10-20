@@ -99,6 +99,7 @@ the pursuit of ameloriation as a programmer
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
 |9.1|[Test If a Binary Tree Is Height-Balanced](./python_explanations/is_tree_balanced.md)|[Python](./python_solutions/is_tree_balanced.py)|_O(n)_|_O(h)_|
+|9.2|[Test If a Binary Tree Is Symmetric](./python_explanations/is_tree_symmetric.md)|[Python](./python_solutions/is_tree_symmetric.py)|_O(n)_|_O(h)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
