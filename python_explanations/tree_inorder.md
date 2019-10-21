@@ -15,7 +15,18 @@ Output: [7, 2, 5, 1, 3]
 
 ## Solution
 ```python
-BLANK
+def inorder_traversal(tree):
+    stack = []
+    result = []
+    while stack or tree:
+        if tree:
+            stack.append(tree)
+            tree = tree.left
+        else:
+            tree = stack.pop()
+            result.append(tree.data)
+            tree = tree.right
+    return result
 ```
 
 ## Explanation
