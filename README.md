@@ -105,6 +105,7 @@ the pursuit of ameloriation as a programmer
 |9.5|[Sum the Root-To-Leaf Paths in a Binary Tree](./python_explanations/sum_root_to_leaf.md)|[Python](./python_solutions/sum_root_to_leaf.py)|_O(n)_|_O(h)_|
 |9.6|[Find a Root to Leaf Path with Specified Sum](./python_explanations/path_sum.md)|[Python](./python_solutions/path_sum.py)|_O(n)_|_O(h)_|
 |9.7|[Implement an Inorder Traversal Without Recursion](./python_explanations/tree_inorder.md)|[Python](./python_solutions/tree_inorder.py)|_O(n)_|_O(h)_|
+|9.8|[Implement a Preorder Traversal Without Recursion](./python_explanations/tree_preorder.md)|[Python](./python_solutions/tree_preorder.py)|_O(n)_|_O(h)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
