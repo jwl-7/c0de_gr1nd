@@ -104,6 +104,7 @@ the pursuit of ameloriation as a programmer
 |9.4|[Compute the LCA When Nodes Have Parent Pointers](./python_explanations/lowest_common_ancestor_with_parent.md)|[Python](./python_solutions/lowest_common_ancestor_with_parent.py)|_O(h)_|_O(1)_|
 |9.5|[Sum the Root-To-Leaf Paths in a Binary Tree](./python_explanations/sum_root_to_leaf.md)|[Python](./python_solutions/sum_root_to_leaf.py)|_O(n)_|_O(h)_|
 |9.6|[Find a Root to Leaf Path with Specified Sum](./python_explanations/path_sum.md)|[Python](./python_solutions/path_sum.py)|_O(n)_|_O(h)_|
+|9.7|[Implement an Inorder Traversal Without Recursion](./python_explanations/tree_inorder.md)|[Python](./python_solutions/tree_inorder.py)|_O(n)_|_O(h)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
