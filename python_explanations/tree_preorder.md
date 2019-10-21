@@ -15,7 +15,18 @@ Output: [1, 2, 7, 5, 3]
 
 ## Solution
 ```python
-BLANK
+def preorder_traversal(tree):
+    stack = []
+    result = []
+    while stack or tree:
+        if tree:
+            stack.append(tree)
+            result.append(tree.data)
+            tree = tree.left
+        else:
+            tree = stack.pop()
+            tree = tree.right
+    return result
 ```
 
 ## Explanation
