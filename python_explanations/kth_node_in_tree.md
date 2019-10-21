@@ -32,7 +32,15 @@ def find_kth_node_binary_tree(tree, k):
 ```
 
 ## Explanation
-* BLANK
+Let _L_ be the number of nodes in the left subtree:
+    * If _k_ > _L_, then the *k*th node lies in the right subtree
+    * If _k_ <= _L_, then the *k*th node lies in the left subtree
+    * The *k*th node in the original tree is the (_k_ - _L_)th node when skipping the left subtree
+* If the left subtree has _L_ nodes, then the *k*th node in the original tree is the (_k_ - _L_)th node
+
+Now that we understand where the *k*th node is, the algorithm for the solution is as follows:
+* Skip the left or right subtree depending on the number of nodes in that subtree
+* When skipping the left subtree, subtract _L_ + 1 from _k_
 
 ## Code Dissection
 1. BLANK
