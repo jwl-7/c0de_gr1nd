@@ -31,10 +31,8 @@ Output: False
 def has_path_sum(tree, remaining_weight):
     if not tree:
         return False
-
     if not tree.left and not tree.right:
         return remaining_weight == tree.data
-
     return (
         has_path_sum(tree.left, remaining_weight - tree.data) or
         has_path_sum(tree.right, remaining_weight - tree.data)
@@ -42,7 +40,23 @@ def has_path_sum(tree, remaining_weight):
 ```
 
 ## Explanation
-* BLANK
+* The solution traverses each root-to-leaf path, subtracting each node's weight in the path from the given weight, and checking if the remaining weight is equal to the leaf's weight
 
 ## Code Dissection
-1. BLANK
+1. Check if the tree is empty
+    ```python
+    if not tree:
+        return False
+    ```
+2. If the node is a leaf, check if the remaining weight is the same as the leaf's weight
+    ```python
+    if not tree.left and not tree.right:
+        return remaining_weight == tree.data
+    ```
+3. If the node is not a leaf, keep processing the root-to-leaf path and subtracting from the remaining weight
+    ```python
+    return (
+        has_path_sum(tree.left, remaining_weight - tree.data) or
+        has_path_sum(tree.right, remaining_weight - tree.data)
+    )
+    ```
