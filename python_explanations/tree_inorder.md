@@ -66,7 +66,7 @@ The algorithm is as follows:
         result.append(tree.data)
         tree = tree.right
     ```
-5. Return the inorder traversal list
+5. Return the inorder traversal
     ```python
     return result
     ```
