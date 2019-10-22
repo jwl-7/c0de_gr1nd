@@ -18,7 +18,7 @@ def find_kth_node_binary_tree(tree, k):
         left_size = tree.left.size if tree.left else 0
         if k == left_size + 1:
             return tree
-        elif k > left_size + 1:
+        elif k > left_size:
             tree = tree.right
             k -= left_size + 1
         else:
