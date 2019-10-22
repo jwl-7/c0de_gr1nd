@@ -33,14 +33,19 @@ def replace_and_remove(size, s):
         ```
     2. Now we can clearly see the two statements for removing and replacing characters, but let's separate them into multiple lines for arguably more readability
         ```python
-        s[:] = [x
-                for y in s
-                    for x in (['d', 'd']
-                        if y == 'a'
-                        else [y])]
-        s[:] = [x
-                for x in s
-                    if x not in ['b', '']]
+        s[:] = [
+            x
+            for y in s
+            for x in (['d', 'd']
+                if y == 'a'
+                else [y])
+        ]
+
+        s[:] = [
+            x
+            for x in s
+            if x not in ['b', '']
+        ]
         ```
     3. And here are some equivalent, inefficient statements that are easy to understand
         ```python
