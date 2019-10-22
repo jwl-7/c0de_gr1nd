@@ -23,7 +23,7 @@ def find_kth_node_binary_tree(tree, k):
         left_size = tree.left.size if tree.left else 0
         if k == left_size + 1:
             return tree
-        elif k > left_size + 1:
+        elif k > left_size:
             tree = tree.right
             k -= left_size + 1
         else:
@@ -43,4 +43,27 @@ Now that we understand where the *k*th node is, the algorithm for the solution i
 * When skipping the left subtree, subtract _L_ + 1 from _k_
 
 ## Code Dissection
-1. BLANK
+1. Loop while the (sub)tree is not null
+    ```python
+    while tree:
+    ```
+2. Set a variable to store the size (number of nodes) in the left subtree
+    ```python
+    left_size = tree.left.size if tree.left else 0
+    ```
+3. If _k_ = *left_size* + 1, then the current node is the *k*th node
+    ```python
+    if k == left_size + 1:
+        return tree
+    ```
+4. If _k_ > *left_size*, then the *k*th node is in the right subtree
+    ```python
+    elif k > left_size:
+        tree = tree.right
+        k -= left_size + 1
+    ```
+5. If _k_ <= *left_size*, then the *k*th node is in the left subtree
+    ```python
+    else:
+        tree = tree.left
+    ```
