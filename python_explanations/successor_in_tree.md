@@ -13,8 +13,8 @@ Design an algorithm that computes the successor of a node in a binary tree. Assu
 
 Inorder Traversal: [7, 2, 5, 1, 3]
 
- Input: 5
-Output: 2
+ Input: node = 2
+Output: 5
 ```
 
 ## Solution
