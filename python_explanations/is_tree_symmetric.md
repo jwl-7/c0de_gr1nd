@@ -15,11 +15,11 @@ Write a program that checks whether a binary tree is symmetric.
 Output: True
 
 
-    1
-   / \
-  2   2
-   \   \
-   3    3
+      1
+     / \
+    2   2
+     \   \
+      3   3
 
  Input: [1, 2, 2, null, 3, null, 3]
 Output: False

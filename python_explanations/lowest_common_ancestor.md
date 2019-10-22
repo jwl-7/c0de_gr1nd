@@ -5,13 +5,13 @@ Design an algorithm for computing the LCA of two nodes in a binary tree in which
 
 ## Examples
 ```
-    3
-   / \
-  5   1
- / \ / \
-6  2 0  8
-  / \
- 7   4
+        3
+       / \
+      5   1
+     / \ / \
+    6  2 0  8
+       / \
+      7   4
 
  Input: [3, 5, 1, 6, 2, 0, 8, null, null, 7, 4]
         node0 = 5

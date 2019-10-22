@@ -15,13 +15,13 @@ Write a program that takes as input the root of a binary tree and checks whether
 Output: True
 
 
-       1
-      / \
-     2   3
-    / \
-   7   5
-  / \
- 6   11
+          1
+         / \
+        2   3
+       / \
+      7   5
+     / \
+    6   11
 
  Input: [1, 2, 3, 7, 5, null, null, 6, 11]
 Output: False
