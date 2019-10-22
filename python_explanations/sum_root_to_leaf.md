@@ -5,11 +5,11 @@ Design an algorithm to compute the sum of the binary numbers represented by the 
 
 ## Examples
 ```
-    1
-   / \
-  0   1
- / \ / \
-0  1 1  0
+        1
+       / \
+      0   1
+     / \ / \
+    0  1 1  0
 
  Input: [1, 0, 1, 0, 1, 1, 0]
 Output: 22

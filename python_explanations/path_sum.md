@@ -5,11 +5,11 @@ Write a program which takes as input an integer and a binary tree with integer n
 
 ## Examples
 ```
-       1
-      / \
-     2   3
-    / \
-   7   5
+        1
+       / \
+      2   3
+     / \
+    7   5
 
  Input: [1, 2, 3, 7, 5, null, null]
         weight = 10

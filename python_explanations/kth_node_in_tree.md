@@ -3,11 +3,11 @@ Write a program that efficiently computes the *k*th node appearing in an inorder
 
 ## Example
 ```
-       1
-      / \
-     2   3
-    / \
-   7   5
+        1
+       / \
+      2   3
+     / \
+    7   5
 
 Inorder Traversal: [7, 2, 5, 1, 3]
 

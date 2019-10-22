@@ -5,11 +5,11 @@ Design an algorithm that computes the successor of a node in a binary tree. Assu
 
 ## Example
 ```
-       1
-      / \
-     2   3
-    / \
-   7   5
+        1
+       / \
+      2   3
+     / \
+    7   5
 
 Inorder Traversal: [7, 2, 5, 1, 3]
 

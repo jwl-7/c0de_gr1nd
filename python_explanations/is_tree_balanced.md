@@ -5,11 +5,11 @@ Write a program that takes as input the root of a binary tree and checks whether
 
 ## Examples
 ```
-    3
-   / \
-  7  12
-    /  \
-   11   9
+      3
+     / \
+    7  12
+       / \
+     11   9
 
  Input: [3, 7, 12, null, null, 11, 9]
 Output: True

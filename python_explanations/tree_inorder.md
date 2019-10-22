@@ -3,11 +3,11 @@ Write a program which takes as input a binary tree and performs an inorder trave
 
 ## Example
 ```
-       1
-      / \
-     2   3
-    / \
-   7   5
+        1
+       / \
+      2   3
+     / \
+    7   5
 
  Input: [1, 2, 3, 7, 5, null, null]
 Output: [7, 2, 5, 1, 3]

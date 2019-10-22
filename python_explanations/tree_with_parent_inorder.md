@@ -5,11 +5,11 @@ Write a nonrecursive program for computing the inorder traversal sequence for a 
 
 ## Example
 ```
-       1
-      / \
-     2   3
-    / \
-   7   5
+        1
+       / \
+      2   3
+     / \
+    7   5
 
  Input: [1, 2, 3, 7, 5, null, null]
 Output: [7, 2, 5, 1, 3]

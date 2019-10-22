@@ -3,13 +3,13 @@ Given two nodes in a binary tree, design an algorithm that computes their LCA. A
 
 ## Examples
 ```
-    3
-   / \
-  5   1
- / \ / \
-6  2 0  8
-  / \
- 7   4
+        3
+       / \
+      5   1
+     / \ / \
+    6  2 0  8
+       / \
+      7   4
 
  Input: node0 = 5
         node1 = 1
