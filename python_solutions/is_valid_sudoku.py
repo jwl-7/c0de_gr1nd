@@ -8,7 +8,7 @@ def is_valid_list(section):
 
 def is_valid_sudoku(grid):
     for i in range(9):
-        if (not is_valid_list(grid[i]) or not is_valid_list([col[i] for col in grid])):
+        if not is_valid_list(grid[i]) or not is_valid_list([col[i] for col in grid]):
             return False
     for i in range(3):
         for j in range(3):
