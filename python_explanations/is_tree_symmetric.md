@@ -5,11 +5,11 @@ Write a program that checks whether a binary tree is symmetric.
 
 ## Examples
 ```
-    1
-   / \
-  2   2
- / \ / \
-3  4 4  3
+        1
+       / \
+      2   2
+     / \ / \
+    3  4 4  3
 
  Input: [1, 2, 2, 3, 4, 4, 3]
 Output: True
