@@ -15,7 +15,15 @@ Input:            Output:
 
 ## Solution
 ```python
-BLANK
+def construct_right_sibling(tree):
+    if not tree:
+        return
+    if tree.left:
+        tree.left.next = tree.right
+    if tree.right and tree.next:
+        tree.right.next = tree.next.left
+    construct_right_sibling(tree.left)
+    construct_right_sibling(tree.right)
 ```
 
 ## Explanation
