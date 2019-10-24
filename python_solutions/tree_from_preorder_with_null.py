@@ -2,11 +2,17 @@ import functools
 
 from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
+from binary_tree_node import BinaryTreeNode
 
 
 def reconstruct_preorder(preorder):
-    # TODO - you fill in here.
-    return None
+    def helper(preorder_iter):
+        root = next(preorder_iter)
+        if root is not None:
+            left = helper(preorder_iter)
+            right = helper(preorder_iter)
+            return BinaryTreeNode(root, left, right)
+    return helper(iter(preorder))
 
 
 @enable_executor_hook

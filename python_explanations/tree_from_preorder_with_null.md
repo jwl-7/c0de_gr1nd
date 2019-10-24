@@ -18,7 +18,14 @@ Output:
 
 ## Solution
 ```python
-BLANK
+def reconstruct_preorder(preorder):
+    def helper(preorder_iter):
+        root = next(preorder_iter)
+        if root is not None:
+            left = helper(preorder_iter)
+            right = helper(preorder_iter)
+            return BinaryTreeNode(root, left, right)
+    return helper(iter(preorder))
 ```
 
 ## Explanation
