@@ -53,7 +53,7 @@ def binary_tree_from_preorder_inorder(preorder, inorder):
     ```python
     root.right = binary_tree_from_preorder_inorder(preorder, inorder[idx+1:])
     ```
-6. Return the _root_
+6. Return the (sub)tree
     ```python
     return root
     ```
