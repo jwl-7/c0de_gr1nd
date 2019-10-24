@@ -60,7 +60,92 @@ def exterior_binary_tree(tree):
 ```
 
 ## Explanation
-* BLANK
+1. Traverse the nodes in the left boundary top -> down
+2. Traverse the leaf nodes in the left subtree left -> right
+3. Traverse the leaf nodes in the right subtree left -> right
+4. Traverse the nodes in the right boundary bottom -> up
 
-## Code Dissection
-1. BLANK
+## Code Dissection - exterior_binary_tree
+1. Check for an empty _tree_
+    ```python
+    if not tree:
+        return []
+    ```
+2. Create a list to hold the traversal with the root as its first element
+    ```python
+    exterior = [tree]
+    ```
+3. Traverse the nodes in the left boundary top -> down
+    ```python
+    left_boundary(tree.left)
+    ```
+4. Traverse the leaf nodes in the left subtree left -> right
+    ```python
+    leaves(tree.left)
+    ```
+5. Traverse the leaf nodes in the right subtree left -> right
+    ```python
+    leaves(tree.right)
+    ```
+6. Traverse the nodes in the right boundary bottom -> up
+    ```python
+    right_boundary(tree.right)
+    ```
+7. Return the _exterior_ traversal
+    ```python
+    return exterior
+    ```
+
+## Code Dissection - left_boundary
+1. Check for null and skip leaf nodes
+    ```python
+    if not tree or (not tree.left and not tree.right):
+        return
+    ```
+2. Append the current node to the _exterior_ list
+    ```python
+    exterior.append(tree)
+    ```
+3. Traverse left if the left subtree is not empty, otherwise, go right
+    ```python
+    if tree.left:
+        left_boundary(tree.left)
+    else:
+        left_boundary(tree.right)
+    ```
+
+## Code Dissection - right_boundary
+1. Check for null and skip leaf nodes
+    ```python
+    if not tree or (not tree.left and not tree.right):
+        return
+    ```
+2. Traverse right if the right subtree is not empty, otherwise, go left
+    ```python
+    if tree.left:
+        left_boundary(tree.left)
+    else:
+        left_boundary(tree.right)
+    ```
+3. Append the current node to the _exterior_ list
+    ```python
+    exterior.append(tree)
+    ```
+
+## Code Dissection - leaves
+1. Check for null
+    ```python
+    if not tree:
+        return
+    ```
+2. If the node is a leaf node, append it to the _exterior_ list and return to prevent unnecessary recursive calls
+    ```python
+    if not tree.left and not tree.right:
+        exterior.append(tree)
+        return
+    ```
+3. Process the left and right subtree
+    ```python
+    leaves(tree.left)
+    leaves(tree.right)
+    ```
