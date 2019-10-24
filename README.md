@@ -111,6 +111,7 @@ the pursuit of ameloriation as a programmer
 |9.11|[Implement an Inorder Traversal with _O(1)_ Space](./python_explanations/tree_with_parent_inorder.md)|[Python](./python_solutions/tree_with_parent_inorder.py)|_O(n)_|_O(1)_|
 |9.12|[Reconstruct a Binary Tree from Traversal Data](./python_explanations/tree_from_preorder_inorder.md)|[Python](./python_solutions/tree_from_preorder_inorder.py)|_O(n)_|_O(n)_|
 |9.13|[Reconstruct a Binary Tree from a Preorder Traversal with Markers](./python_explanations/tree_from_preorder_with_null.md)|[Python](./python_solutions/tree_from_preorder_with_null.py)|_O(n)_|_O(h)_|
+|9.14|[Form a Linked List from the Leaves of a Binary Tree](./python_explanations/tree_connect_leaves.md)|[Python](./python_solutions/tree_connect_leaves.py)|_O(n)_|_O(n)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
