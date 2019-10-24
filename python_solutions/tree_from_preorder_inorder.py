@@ -1,9 +1,14 @@
 from test_framework import generic_test
+from binary_tree_node import BinaryTreeNode
 
 
 def binary_tree_from_preorder_inorder(preorder, inorder):
-    # TODO - you fill in here.
-    return None
+    if inorder:
+        idx = inorder.index(preorder.pop(0))
+        root = BinaryTreeNode(inorder[idx])
+        root.left = binary_tree_from_preorder_inorder(preorder, inorder[:idx])
+        root.right = binary_tree_from_preorder_inorder(preorder, inorder[idx+1:])
+        return root
 
 
 if __name__ == '__main__':
