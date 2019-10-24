@@ -7,7 +7,7 @@ Design an algorithm for reconstructing a binary tree from a preorder traversal v
 
 ## Example
 ```
- Input: preorder = [1, 2, 7, None, None, 5, None, None, 3, None, None]
+ Input: preorder = [1, 2, 7, null, null, 5, null, null, 3, null, null]
 Output:
             1
            / \
