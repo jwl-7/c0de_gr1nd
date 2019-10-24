@@ -10,7 +10,7 @@ Given a binary tree, compute a linked list from the leaves of the binary tree. T
     3  4 4  3
 
  Input: [1, 2, 2, 3, 4, 4, 3]
-Output: L -> [3] -> [4] -> [4] -> [3] -> None
+Output: [3, 4, 4, 3]
 ```
 
 ## Solution
