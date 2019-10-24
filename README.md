@@ -109,6 +109,7 @@ the pursuit of ameloriation as a programmer
 |9.9|[Compute the *k*th Node in an Inorder Traversal](./python_explanations/kth_node_in_tree.md)|[Python](./python_solutions/kth_node_in_tree.py)|_O(h)_|_O(1)_|
 |9.10|[Compute the Successor](./python_explanations/successor_in_tree.md)|[Python](./python_solutions/successor_in_tree.py)|_O(h)_|_O(1)_|
 |9.11|[Implement an Inorder Traversal with _O(1)_ Space](./python_explanations/tree_with_parent_inorder.md)|[Python](./python_solutions/tree_with_parent_inorder.py)|_O(n)_|_O(1)_|
+|9.12|[Reconstruct a Binary Tree from Traversal Data](./python_explanations/tree_from_preorder_inorder.md)|[Python](./python_solutions/tree_from_preorder_inorder.py)|_O(n)_|_O(n)_|
 
 <!---
 |9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
