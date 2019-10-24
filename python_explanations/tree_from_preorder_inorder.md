@@ -27,7 +27,33 @@ def binary_tree_from_preorder_inorder(preorder, inorder):
 ```
 
 ## Explanation
-* BLANK
+1. The preorder sequence is used to figure out the root element at each recursive step
+2. Using the root element from the preorder sequence, the inorder sequence is split into nodes that lie in the left and right subtree respectively
+3. The solution recurses until the tree is finished processing
 
 ## Code Dissection
-1. BLANK
+1. Check if the _inorder_ sequence is empty, in which case `None` is returned
+    ```python
+    if inorder:
+    ```
+    * This will be the case when a node does not have a left or right subtree
+2. Get the first element in the _preorder_ sequence and find the index of that element in the _inorder_ sequence
+    ```python
+    idx = inorder.index(preorder.pop(0))
+    ```
+3. Create a _root_ node from the first element in the _preorder_ sequence
+    ```python
+    root = BinaryTreeNode(inorder[idx])
+    ```
+4. Create the left subtree
+    ```python
+    root.left = binary_tree_from_preorder_inorder(preorder, inorder[:idx])
+    ```
+5. Create the right subtree
+    ```python
+    root.right = binary_tree_from_preorder_inorder(preorder, inorder[idx+1:])
+    ```
+6. Return the _root_
+    ```python
+    return root
+    ```
