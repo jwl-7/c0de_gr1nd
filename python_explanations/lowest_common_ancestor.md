@@ -36,7 +36,7 @@ def lca(tree, node0, node1):
 ```
 
 ## Explanation
-1. Start traversing the tree starting from the root
+1. Start traversing the tree from the root
 2. If any of the given keys (node0 and node1) matches with the root, then the root is the LCA
 3. If the root doesn't match with any of the keys, we recur for the left and right subtree
 4. The node which has one key present in its left subtree and the other key present in its right subtree is the LCA
