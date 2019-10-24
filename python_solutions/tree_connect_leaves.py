@@ -6,8 +6,11 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def create_list_of_leaves(tree):
-    # TODO - you fill in here.
-    return []
+    if not tree:
+        return []
+    elif not tree.left and not tree.right:
+        return [tree]
+    return create_list_of_leaves(tree.left) + create_list_of_leaves(tree.right)
 
 
 @enable_executor_hook
