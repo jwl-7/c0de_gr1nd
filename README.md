@@ -113,9 +113,10 @@ the pursuit of ameloriation as a programmer
 |9.13|[Reconstruct a Binary Tree from a Preorder Traversal with Markers](./python_explanations/tree_from_preorder_with_null.md)|[Python](./python_solutions/tree_from_preorder_with_null.py)|_O(n)_|_O(h)_|
 |9.14|[Form a Linked List from the Leaves of a Binary Tree](./python_explanations/tree_connect_leaves.md)|[Python](./python_solutions/tree_connect_leaves.py)|_O(n)_|_O(n)_|
 |9.15|[Compute the Exterior of a Binary Tree](./python_explanations/tree_exterior.md)|[Python](./python_solutions/tree_exterior.py)|_O(n)_|_O(h)_|
+|9.16|[Compute the Right Sibling Tree](./python_explanations/tree_right_sibling.md)|[Python](./python_solutions/tree_right_sibling.py)|_O(n)_|_O(1)_|
 
 <!---
-|9.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|10.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
