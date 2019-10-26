@@ -115,6 +115,11 @@ the pursuit of ameloriation as a programmer
 |9.15|[Compute the Exterior of a Binary Tree](./python_explanations/tree_exterior.md)|[Python](./python_solutions/tree_exterior.py)|_O(n)_|_O(h)_|
 |9.16|[Compute the Right Sibling Tree](./python_explanations/tree_right_sibling.md)|[Python](./python_solutions/tree_right_sibling.py)|_O(n)_|_O(1)_|
 
+## Heaps
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|10.1|[Merge Sorted Files](./python_explanations/sorted_arrays_merge.md)|[Python](./python_solutions/sorted_arrays_merge.py)|_O(nlogk)_|_O(k)_|
+
 <!---
 |10.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
