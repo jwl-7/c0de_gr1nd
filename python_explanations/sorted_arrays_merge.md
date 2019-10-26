@@ -27,7 +27,7 @@ def merge_sorted_arrays(sorted_arrays):
     return result
 ```
 
-# Pythonic Solution
+## Pythonic Solution
 ```python
 def merge_sorted_arrays_pythonic(sorted_arrays):
     return list(heapq.merge(*sorted_arrays))
