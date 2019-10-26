@@ -17,6 +17,10 @@ def merge_sorted_arrays(sorted_arrays):
     return result
 
 
+def merge_sorted_arrays_pythonic(sorted_arrays):
+    return list(heapq.merge(*sorted_arrays))
+
+
 if __name__ == '__main__':
     exit(
         generic_test.generic_test_main("sorted_arrays_merge.py",

@@ -27,6 +27,12 @@ def merge_sorted_arrays(sorted_arrays):
     return result
 ```
 
+# Pythonic Solution
+```python
+def merge_sorted_arrays_pythonic(sorted_arrays):
+    return list(heapq.merge(*sorted_arrays))
+```
+
 ## Explanation
 1. Use a min-heap to store the first element from each array
 2. Extract the minimum element in the heap and store it in the result
