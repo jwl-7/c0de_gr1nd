@@ -72,3 +72,9 @@ def merge_sorted_arrays_pythonic(sorted_arrays):
     ```python
     return result
     ```
+
+## Pythonic Code Dissection
+1. Use `heapq.merge()` to return the merged list
+    ```python
+    return list(heapq.merge(*sorted_arrays))
+    ```
