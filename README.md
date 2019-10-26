@@ -7,7 +7,21 @@ the pursuit of ameloriation as a programmer
 * This repository features my solutions and explanations to the problems presented in </br>
   [Elements of Programming Interviews in Python](http://bit.ly/epipython)
 * The book solutions and test framework are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)
-* The descriptions of the problems are excerpts from the EPI book.
+* The descriptions of the problems are excerpts from the EPI book
+
+## Usage
+* Click the *Title* of the problem to view the problem description, example, solution, explanation, and code dissection
+* Click the *Solution* of the problem to view the program that runs against the test cases in the EPI Judge
+
+## Sections
+* [Primitive Types](#primitive-types)
+* [Arrays](#arrays)
+* [Strings](#strings)
+* [Linked Lists](#linked-lists)
+* [Stacks and Queues](#stacks-and-queues)
+* [Binary Trees](#binary-trees)
+* [Heaps](#heaps)
+* [Useful References](#useful-references)
 
 ## Primitive Types
 | # | Title | Solution | Time | Space |
