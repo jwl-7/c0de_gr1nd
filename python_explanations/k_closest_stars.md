@@ -31,7 +31,27 @@ def find_closest_k_stars(stars, k):
 ```
 
 ## Explanation
-* BLANK
+1. Add the first _k_ stars to the max-heap
+2. Add each new star to the max-heap and extract the maximum
+3. Extract the _k_ largest stars from the max-heap
+* Make sure the max-heap is sorted by the star's distance
 
 ## Code Dissection
-1. BLANK
+1. Create a max-heap
+    ```python
+    max_heap = []
+    ```
+2. Iterate through every star and process them through the *max_heap*
+    ```python
+    for star in stars:
+        heapq.heappush(max_heap, (-star.distance, star))
+        if len(max_heap) > k:
+            heapq.heappop(max_heap)
+    ```
+    1. Add the first _k_ stars to the max-heap
+    2. Add each new star to the max-heap and extract the maximum
+    * `-star.distance` is used, because `heapq` does not implement a max-heap
+3. Extract the _k_ largest stars from the max-heap
+    ```python
+    return [star[1] for star in heapq.nlargest(k, max_heap)]
+    ```
