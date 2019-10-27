@@ -134,6 +134,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |10.1|[Merge Sorted Files](./python_explanations/sorted_arrays_merge.md)|[Python](./python_solutions/sorted_arrays_merge.py)|_O(nlogk)_|_O(k)_|
 |10.2|[Sort an Increasing-Decreasing Array](./python_explanations/sort_increasing_decreasing_array.md)|[Python](./python_solutions/sort_increasing_decreasing_array.py)|_O(nlogk)_|_O(k)_|
+|10.3|[Sort an Almost-Sorted Array](./python_explanations/sort_almost_sorted_array.md)|[Python](./python_solutions/sort_almost_sorted_array.py)|_O(nlogk)_|_O(k)_|
 
 <!---
 |10.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
