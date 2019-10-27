@@ -21,7 +21,13 @@ Output: [5322.396451194523, 5693.995998392733]
 
 ## Solution
 ```python
-BLANK
+def find_closest_k_stars(stars, k):
+    max_heap = []
+    for star in stars:
+        heapq.heappush(max_heap, (-star.distance, star))
+        if len(max_heap) > k:
+            heapq.heappop(max_heap)
+    return [star[1] for star in heapq.nlargest(k, max_heap)]
 ```
 
 ## Explanation
