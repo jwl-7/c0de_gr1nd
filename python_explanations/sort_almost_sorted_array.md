@@ -14,7 +14,16 @@ Output: [-5, -5, -3, -2, 3]
 
 ## Solution
 ```python
-BLANK
+def sort_approximately_sorted_array(sequence, k):
+    min_heap = []
+    result = []
+    for i in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, i)
+    for i in sequence:
+        result.append(heapq.heappushpop(min_heap, i))
+    while min_heap:
+        result.append(heapq.heappop(min_heap))
+    return result
 ```
 
 ## Explanation
