@@ -22,9 +22,9 @@ def multiply(num1, num2):
     product = [0] * len(num1 + num2)
     for i in reversed(range(len(num1))):
         for j in reversed(range(len(num2))):
-            product[i + j + 1] += num1[i] * num2[j]
-            product[i + j] += product[i + j + 1] // 10
-            product[i + j + 1] %= 10
+            product[i+j+1] += num1[i] * num2[j]
+            product[i+j] += product[i+j+1] // 10
+            product[i+j+1] %= 10
 
     product = remove_leading_zeroes(product)
     if negative:

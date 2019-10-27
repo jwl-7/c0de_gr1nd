@@ -33,9 +33,9 @@ def multiply(num1, num2):
     product = [0] * len(num1 + num2)
     for i in reversed(range(len(num1))):
         for j in reversed(range(len(num2))):
-            product[i + j + 1] += num1[i] * num2[j]
-            product[i + j] += product[i + j + 1] // 10
-            product[i + j + 1] %= 10
+            product[i+j+1] += num1[i] * num2[j]
+            product[i+j] += product[i+j+1] // 10
+            product[i+j+1] %= 10
 
     product = remove_leading_zeroes(product)
     if negative:
@@ -94,15 +94,15 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
     ```
 4. Multiply num1[_i_] &times; num2[_j_] and add the result to the current number in the product array
     ```python
-    product[i + j + 1] += num1[i] * num2[j]
+    product[i+j+1] += num1[i] * num2[j]
     ```
 5. Compute the carry for the next iteration and add it to the left of the current number
     ```python
-    product[i + j] += product[i + j + 1] // 10
+    product[i+j] += product[i+j+1] // 10
     ```
 6. Remove the carry from the current number and store the result
     ```python
-    product[i + j + 1] %= 10
+    product[i+j+1] %= 10
     ```
 7. Use the remove_leading_zeroes function to remove the leading zeroes from the product array
     ```python

@@ -36,8 +36,8 @@ for two cases:
 2. Check for the two cases for which the swap will occur
     ```python
     if (
-        i % 2 == 0 and A[i] > A[i + 1] or
-        i % 2 == 1 and A[i] < A[i + 1]
+        i % 2 == 0 and A[i] > A[i+1] or
+        i % 2 == 1 and A[i] < A[i+1]
     ):
     ```
     * True for even: `i % 2 == 0`

@@ -19,24 +19,24 @@ Output: [4, 2, 3, 0, 3, 4, 1, 8]
 ```python
 def next_permutation(perm):
     i = len(perm) - 2
-    while i >= 0 and perm[i] >= perm[i + 1]:
+    while i >= 0 and perm[i] >= perm[i+1]:
         i -= 1
 
     if i == -1:
         return []
 
-    for j in reversed(range(i + 1, len(perm))):
+    for j in reversed(range(i+1, len(perm))):
         if perm[j] > perm[i]:
             perm[i], perm[j] = perm[j], perm[i]
             break
 
-    perm[i + 1:len(perm) + 1] = perm[i + 1:len(perm) + 1][::-1]
+    perm[i+1 : len(perm)+1] = perm[i+1 : len(perm)+1][::-1]
     return perm
 ```
 
 ## Explanation
 The general algorithm for computing the next permutation:
-1. Find _i_ such that _p_[_i_] < _p_[_i_ + 1] and entries after index _i_ appear in decreasing order
+1. Find _i_ such that _p_[_i_] < _p_[_i_+1] and entries after index _i_ appear in decreasing order
 2. Find the smallest _p_[_j_] such that _p_[_j_] > _p_[_i_]  (note that _p_[_j_] occurs after _p_[_i_])
 3. Swap _p_[_j_] and _p_[_i_]
 4. Reverse the sequence after position _i_
@@ -46,14 +46,14 @@ The general algorithm for computing the next permutation:
     ```python
     i = len(perm) - 2
     ```
-    * _i_ is defined as it is, because perm[_i_] must be less than perm[_i_ + 1], and there must exist a perm[_j_] after perm[_i_ + 1]
-2. Create a loop that finds _i_ such that p[_i_] < p[_i_ + 1] -- iterate from [left <- right]
+    * _i_ is defined as it is, because perm[_i_] must be less than perm[_i_+1], and there must exist a perm[_j_] after perm[_i_+1]
+2. Create a loop that finds _i_ such that p[_i_] < p[_i_+1] -- iterate from [left <- right]
     ```python
-    while i >= 0 and perm[i] >= perm[i + 1]:
+    while i >= 0 and perm[i] >= perm[i+1]:
         i -= 1
     ```
     * `i >= 0` ensures that the loop does not run past the beginning of the array
-    * `perm[i] >= perm[i + 1]` is the case that all entries after index _i_ appear in decreasing order
+    * `perm[i] >= perm[i+1]` is the case that all entries after index _i_ appear in decreasing order
 3. If _i_ == -1, then perm is the last permutation, and we return an empty array
     ```python
     if i == -1:
@@ -73,9 +73,9 @@ The general algorithm for computing the next permutation:
     * `break` is added to stop the loop when _j_ has been found
 6. Reverse the sequence of elements that occur after position _i_
     ```python
-    perm[i + 1:len(perm) + 1] = perm[i + 1:len(perm) + 1][::-1]
+    perm[i+1 : len(perm)+1] = perm[i+1 : len(perm)+1][::-1]
     ```
-    * `perm[i + 1:len(perm) + 1]` defines the range of elements after position _i_
+    * `perm[i+1 : len(perm)+1]` defines the range of elements after position _i_
     * `[::-1]` reverses the elements
 7. Return the next permutation
     ```python
