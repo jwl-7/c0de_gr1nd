@@ -33,7 +33,7 @@ def find_closest_k_stars(stars, k):
         heapq.heappush(max_heap, (-star.distance, star))
         if len(max_heap) > k:
             heapq.heappop(max_heap)
-    return [heapq.heappop(max_heap)[1] for _ in range(len(max_heap))]
+    return [star[1] for star in heapq.nlargest(k, max_heap)]
 
 
 def comp(expected_output, output):
