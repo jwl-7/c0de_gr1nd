@@ -27,7 +27,33 @@ def sort_approximately_sorted_array(sequence, k):
 ```
 
 ## Explanation
-* BLANK
+* Note that the input is an iterator object and not a list
+1. Add the first _k_ elements to the min-heap (stop if fewer than _k_)
+2. Add each new element in the sequence to the min-heap and extract the smallest
+3. After the sequence is exhausted, extract the remaining elements from the min-heap
 
 ## Code Dissection
-1. BLANK
+1. Create a min-heap and a list to store the result
+    ```python
+    min_heap = []
+    result = []
+    ```
+2. Add the first _k_ elements to the min-*min_heap*, stopping if there are less than _k_ elements in the _sequence_
+    ```python
+    for i in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, i)
+    ```
+3. Add each new element in the _sequence_ to the *min_heap* and extract the smallest element
+    ```python
+    for i in sequence:
+        result.append(heapq.heappushpop(min_heap, i))
+    ```
+4. After the sequence is exhausted, extract the remaining elements from the *min_heap* and append them to _result_
+    ```python
+    while min_heap:
+        result.append(heapq.heappop(min_heap))
+    ```
+5. Return the sorted list
+    ```python
+    return result
+    ```
