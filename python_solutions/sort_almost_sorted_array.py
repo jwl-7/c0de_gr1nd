@@ -7,10 +7,10 @@ from test_framework import generic_test
 def sort_approximately_sorted_array(sequence, k):
     min_heap = []
     result = []
-    for i in itertools.islice(sequence, k):
-        heapq.heappush(min_heap, i)
-    for i in sequence:
-        result.append(heapq.heappushpop(min_heap, i))
+    for x in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, x)
+    for x in sequence:
+        result.append(heapq.heappushpop(min_heap, x))
     while min_heap:
         result.append(heapq.heappop(min_heap))
     return result

@@ -17,10 +17,10 @@ Output: [-5, -5, -3, -2, 3]
 def sort_approximately_sorted_array(sequence, k):
     min_heap = []
     result = []
-    for i in itertools.islice(sequence, k):
-        heapq.heappush(min_heap, i)
-    for i in sequence:
-        result.append(heapq.heappushpop(min_heap, i))
+    for x in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, x)
+    for x in sequence:
+        result.append(heapq.heappushpop(min_heap, x))
     while min_heap:
         result.append(heapq.heappop(min_heap))
     return result
@@ -40,13 +40,13 @@ def sort_approximately_sorted_array(sequence, k):
     ```
 2. Add the first _k_ elements to the min-*min_heap*, stopping if there are less than _k_ elements in the _sequence_
     ```python
-    for i in itertools.islice(sequence, k):
-        heapq.heappush(min_heap, i)
+    for x in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, x)
     ```
 3. Add each new element in the _sequence_ to the *min_heap* and extract the smallest element
     ```python
-    for i in sequence:
-        result.append(heapq.heappushpop(min_heap, i))
+    for x in sequence:
+        result.append(heapq.heappushpop(min_heap, x))
     ```
 4. After the sequence is exhausted, extract the remaining elements from the *min_heap* and append them to _result_
     ```python
