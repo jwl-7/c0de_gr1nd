@@ -30,7 +30,38 @@ def online_median(sequence):
 ```
 
 ## Explanation
-* BLANK
+* A combination of a min-heap and max-heap is used to keep track of the middle two elements and compute the median
+* The min-heap stores the smaller half and the max-heap stores the larger half
+* The heaps are kept balanced in size
 
 ## Code Dissection
-1. BLANK
+1. Create a min-heap, max-heap, and a result list
+    ```python
+    min_heap = []
+    max_heap = []
+    result = []
+    ```
+2. Loop over the sequence, pushing each new element to the *min_heap* and extracting the smallest element to the *max_heap*
+    ```python
+    for x in sequence:
+        heapq.heappush(max_heap, -heapq.heappushpop(min_heap, x))
+    ```
+3. Balance the heaps
+    ```python
+    if len(min_heap) < len(max_heap):
+        heapq.heappush(min_heap, -heapq.heappop(max_heap))
+    ```
+4. If the *min_heap* and *max_heap* are the same size, then extract the top elements from the both heaps and compute the median
+    ```python
+    if len(min_heap) == len(max_heap):
+        result.append((min_heap[0] - max_heap[0]) / 2)
+    ```
+5. If the heaps are still not balanced, set the top of the *min_heap* as the median
+    ```python
+    else:
+        result.append(min_heap[0])
+    ```
+6. Return the running median
+    ```python
+    return result
+    ```
