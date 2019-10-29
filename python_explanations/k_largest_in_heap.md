@@ -34,7 +34,46 @@ def k_largest_in_binary_heap(A, k):
 ```
 
 ## Explanation
-* BLANK
+* Since we are not supposed to modify the heap, the solution is to create another max-heap and extract the _k_ largest elements from the original heap
+* The index of a left child node = 2_i_ + 1
+* The index of a right child node = 2_i_ + 2
 
 ## Code Dissection
-1. BLANK
+1. Create a new max-heap and a list to store the result
+    ```python
+    max_heap = []
+    result = []
+    ```
+2. Add the largest element from _A_ to our new *max_heap*
+    ```python
+    max_heap.append((-A[0], 0))
+    ```
+    * The element is a tuple in the form of (value, index)
+3. Loop through *k* elements
+    ```python
+    for _ in range(k):
+    ```
+4. Find the index of the largest element in *max_heap*
+    ```python
+    largest_idx = max_heap[0][1]
+    ```
+5. Add the largest element in *max_heap* to _result_
+    ```python
+    result.append(-heapq.heappop(max_heap)[0])
+    ```
+6. Get the left child's index of the largest element in *max_heap*, and if it exists, push it to *max_heap*
+    ```python
+    left = 2 * largest_idx + 1
+    if left < len(A):
+        heapq.heappush(max_heap, (-A[left], left))
+    ```
+7. Get the right child's index of the largest element in *max_heap*, and if it exists, push it to *max_heap*
+    ```python
+    right = 2 * largest_idx + 2
+    if right < len(A):
+        heapq.heappush(max_heap, (-A[right], right))
+    ```
+8. Return the _k_ largest elements
+    ```python
+    return result
+    ```
