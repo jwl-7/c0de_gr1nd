@@ -137,6 +137,7 @@ the pursuit of ameloriation as a programmer
 |10.3|[Sort an Almost-Sorted Array](./python_explanations/sort_almost_sorted_array.md)|[Python](./python_solutions/sort_almost_sorted_array.py)|_O(nlogk)_|_O(k)_|
 |10.4|[Compute the _k_ Closest Stars](./python_explanations/k_closest_stars.md)|[Python](./python_solutions/k_closest_stars.py)|_O(nlogk)_|_O(k)_|
 |10.5|[Compute the Median of Online Data](./python_explanations/online_median.md)|[Python](./python_solutions/online_median.py)|_O(logn)_|_O(n)_|
+|10.6|[Compute the _k_ Largest Elements in a Max-Heap](./python_explanations/k_largest_in_heap.md)|[Python](./python_solutions/k_largest_in_heap.py)|_O(klogk)_|_O(k)_|
 
 <!---
 |10.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
