@@ -3,12 +3,12 @@ Write a program which takes as input a very long sequence of numbers and prints 
 
 ## Examples
 ```
- Input: [1, 2, 0, 3]
-        k = 4
+ Input: k = 4
+        [1, 2, 0, 3]
 Output: [0, 1, 2, 3]
 
- Input: [-5, -3, -2, -5, 3]
-        k = 5
+ Input: k = 5
+        [-5, -3, -2, -5, 3]
 Output: [-5, -5, -3, -2, 3]
 ```
 
