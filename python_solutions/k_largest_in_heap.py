@@ -4,7 +4,7 @@ from test_framework import generic_test, test_utils
 
 
 def k_largest_in_binary_heap(A, k):
-    if k <= 0:
+    if not k:
         return []
 
     max_heap = []

@@ -15,7 +15,7 @@ Output: [8, 7]
 ## Solution
 ```python
 def k_largest_in_binary_heap(A, k):
-    if k <= 0:
+    if not k:
         return []
 
     max_heap = []
