@@ -4,9 +4,6 @@ from test_framework import generic_test, test_utils
 
 
 def k_largest_in_binary_heap(A, k):
-    if not k:
-        return []
-
     max_heap = []
     result = []
     max_heap.append((-A[0], 0))
