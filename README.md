@@ -22,6 +22,7 @@ the pursuit of ameloriation as a programmer
 * [Binary Trees](#binary-trees)
 * [Heaps](#heaps)
 * [Useful References](#useful-references)
+* [Searching](#searching)
 
 ## Primitive Types
 | # | Title | Solution | Time | Space |
@@ -139,8 +140,13 @@ the pursuit of ameloriation as a programmer
 |10.5|[Compute the Median of Online Data](./python_explanations/online_median.md)|[Python](./python_solutions/online_median.py)|_O(logn)_|_O(n)_|
 |10.6|[Compute the _k_ Largest Elements in a Max-Heap](./python_explanations/k_largest_in_heap.md)|[Python](./python_solutions/k_largest_in_heap.py)|_O(klogk)_|_O(k)_|
 
+## Searching
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|11.1|[Search a Sorted Array for First Occurrence of _k_](./python_explanations/search_first_key.md)|[Python](./python_solutions/search_first_key.py)|_O(logn)_|_O(1)_|
+
 <!---
-|10.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
