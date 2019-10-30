@@ -43,7 +43,7 @@ def search_first_of_k(A, k):
     ```python
     result = -1
     ```
-3. Loop until the left and right pointer meet each other
+3. Loop until the left and right pointer pass each other
     ```python
     while left <= right:
     ```

@@ -35,7 +35,7 @@ def search_entry_equal_to_its_index(A):
     left = 0
     right = len(A) - 1
     ```
-2. Loop until the left and right pointer meet each other
+2. Loop until the left and right pointer pass each other
     ```python
     while left <= right:
     ```
