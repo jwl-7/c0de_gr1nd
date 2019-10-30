@@ -39,7 +39,7 @@ def search_first_of_k(A, k):
     left = 0
     right = len(A) - 1
     ```
-2. Initialize a variable to store teh result at -1, because -1 is the base case that _k_ is not in _A_
+2. Initialize a variable to store the result at -1, because -1 is the default case that _k_ is not in _A_
     ```python
     result = -1
     ```
