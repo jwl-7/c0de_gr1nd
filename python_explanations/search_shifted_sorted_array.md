@@ -45,7 +45,7 @@ def search_smallest(A):
     ```python
     mid = (left + right) // 2
     ```
-4. Search for the minimum value until _left_ = _right_
+4. Search for the minimum value
     ```python
     if A[mid] > A[right]:
         left = mid + 1
