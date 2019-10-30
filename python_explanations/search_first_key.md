@@ -20,12 +20,12 @@ def search_first_of_k(A, k):
     result = -1
     while left <= right:
         mid = (left + right) // 2
-        if A[mid] == k:
-            result = mid
-            right = mid - 1
-        elif A[mid] < k:
+        if A[mid] < k:
             left = mid + 1
         elif A[mid] > k:
+            right = mid - 1
+        else:
+            result = mid
             right = mid - 1
     return result
 ```
@@ -51,14 +51,14 @@ def search_first_of_k(A, k):
     ```python
     mid = (left + right) // 2
     ```
-5. Check if the mid pointer is the key we're looking for
+5. Check if _k_ is at _mid_
     ```python
-    if A[mid] == k:
-        result = mid
-        right = mid - 1
-    elif A[mid] < k:
+    if A[mid] < k:
         left = mid + 1
     elif A[mid] > k:
+        right = mid - 1
+    else:
+        result = mid
         right = mid - 1
     ```
     * Keep in mind that even if _k_ is found, that does not mean it is the first occurrence of _k_
