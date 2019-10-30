@@ -16,7 +16,7 @@ The only operators you are allowed to use are:
 ## Solution
 ```python
 def add(x, y):
-    while y != 0:
+    while y:
         carry = x & y
         x ^= y
         y = carry << 1
@@ -25,7 +25,7 @@ def add(x, y):
 
 def multiply(x, y):
     product = 0
-    while y != 0:
+    while y:
         if y & 1:
             product = add(product, x)
         x <<= 1
@@ -62,7 +62,7 @@ Result of 1101 &times; 1011 = 10001101
 ## Code Dissection - add
 1. Create a loop that runs while _y_ != 0, which stops when the sum has been computed
     ```python
-    while y != 0:
+    while y:
     ```
 2. Set the carry to the common set bits of _x_ and _y_
     ```python
@@ -88,7 +88,7 @@ Result of 1101 &times; 1011 = 10001101
     ```
 2. Create a loop that runs while _y_ != 0, which stops when the product has been computed
     ```python
-    while y != 0:
+    while y:
     ```
 3. If _y_ is odd, add _x_ to the product
     ```python

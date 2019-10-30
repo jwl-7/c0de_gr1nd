@@ -2,7 +2,7 @@ from test_framework import generic_test
 
 
 def add(x, y):
-    while y != 0:
+    while y:
         carry = x & y
         x ^= y
         y = carry << 1
@@ -11,7 +11,7 @@ def add(x, y):
 
 def multiply(x, y):
     product = 0
-    while y != 0:
+    while y:
         if y & 1:
             product = add(product, x)
         x <<= 1
