@@ -62,7 +62,7 @@ def search_first_of_k(A, k):
         right = mid - 1
     ```
     * Keep in mind that even if _k_ is found, that does not mean it is the first occurrence of _k_
-6. Return the _result_
+6. Return the first occurrence of _k_
     ```python
     return result
     ```
