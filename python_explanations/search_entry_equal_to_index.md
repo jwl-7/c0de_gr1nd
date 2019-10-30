@@ -12,7 +12,18 @@ Output: 4 or 5
 
 ## Solution
 ```python
-BLANK
+def search_entry_equal_to_its_index(A):
+    left = 0
+    right = len(A) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if A[mid] < mid:
+            left = mid + 1
+        elif A[mid] > mid:
+            right = mid - 1
+        else:
+            return mid
+    return -1
 ```
 
 ## Explanation
