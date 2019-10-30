@@ -146,6 +146,7 @@ the pursuit of ameloriation as a programmer
 |11.1|[Search a Sorted Array for First Occurrence of _k_](./python_explanations/search_first_key.md)|[Python](./python_solutions/search_first_key.py)|_O(logn)_|_O(1)_|
 |11.2|[Search a Sorted Array for Entry Equal to Its Index](./python_explanations/search_entry_equal_to_index.md)|[Python](./python_solutions/search_entry_equal_to_index.py)|_O(logn)_|_O(1)_|
 |11.3|[Search a Cyclically Sorted Array](./python_explanations/search_shifted_sorted_array.md)|[Python](./python_solutions/search_shifted_sorted_array.py)|_O(logn)_|_O(1)_|
+|11.4|[Compute the Integer Square Root](./python_explanations/int_square_root.md)|[Python](./python_solutions/int_square_root.py)|_O(logk)_|_O(1)_|
 
 <!---
 |11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
