@@ -47,7 +47,7 @@ def search_first_of_k(A, k):
     ```python
     while left <= right:
     ```
-4. Keep recalculating the mid pointer
+4. Compute the mid pointer
     ```python
     mid = (left + right) // 2
     ```
