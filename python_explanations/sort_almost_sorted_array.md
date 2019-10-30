@@ -38,12 +38,12 @@ def sort_approximately_sorted_array(sequence, k):
     min_heap = []
     result = []
     ```
-2. Add the first _k_ elements to the min-*min_heap*, stopping if there are less than _k_ elements in the _sequence_
+2. Add the first _k_ elements to the min-heap, stopping if there are less than _k_ elements in _sequence_
     ```python
     for x in itertools.islice(sequence, k):
         heapq.heappush(min_heap, x)
     ```
-3. Add each new element in the _sequence_ to the *min_heap* and extract the smallest element
+3. Add each new element in _sequence_ to the min-heap and extract the smallest element
     ```python
     for x in sequence:
         result.append(heapq.heappushpop(min_heap, x))

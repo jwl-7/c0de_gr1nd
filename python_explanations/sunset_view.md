@@ -25,7 +25,7 @@ def examine_buildings_with_sunset(sequence):
 ```
 
 ## Explanation
-* Since the sun sets in the West, and the buildings are ordered from East -> West, it is easier to process the input sequence from Right -> Left
+* Since the sun sets in the West, and the buildings are ordered from [East -> West], it is easier to process the input sequence from [right -> left]
 * The solution iterates over the sequence in reverse, keeps track of the tallest building so far, and if the current building is taller, the index of the current building is pushed to the sunset list
 
 ## Code Dissection

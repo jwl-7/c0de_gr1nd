@@ -82,7 +82,7 @@ Result of 1101 &times; 1011 = 10001101
     ```
 
 ## Code Dissection - multiply
-1. Initialize the product to zero
+1. Initialize the product to 0
     ```python
     product = 0
     ```

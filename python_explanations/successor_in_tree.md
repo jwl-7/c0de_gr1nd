@@ -45,7 +45,7 @@ def find_successor(node):
             node = node.left
         return node
     ```
-2. If the right subtree does not exist, find the parent whose left subtree contains the given _node_ and return that as the sucessor
+2. If the right subtree does not exist, find the parent whose left subtree contains the given node and return that as the sucessor
     ```python
     while node.parent and node.parent.right is node:
         node = node.parent

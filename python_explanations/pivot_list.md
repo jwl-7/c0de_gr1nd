@@ -36,9 +36,9 @@ def list_pivoting(L, x):
 
 ## Explanation
 * The solution appends nodes from the original lists to 3 separate lists:
-    1. The less list - nodes with values less than _x_
-    2. The equal list - nodes with values equal to _x_
-    3. The greater list - nodes with values greater than _x_
+    1. The less list &mdash; nodes with values less than _x_
+    2. The equal list &mdash; nodes with values equal to _x_
+    3. The greater list &mdash; nodes with values greater than _x_
 * After the 3 lists are built, they are connected together to perform the pivoted list
 
 ## Code Dissection

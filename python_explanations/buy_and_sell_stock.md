@@ -30,15 +30,15 @@ def buy_and_sell_stock_once(prices):
 
 ## Explanation
 * The maximum profit that can be made by selling on a specific day is determined by the minimum of the stock prices over the previous days
-* The solution's algorithm is to iterate over all the stock prices, keeping track of the minimum stock price, and comparing the max daily profit to the max total profit recorded so far
+* The algorithm is to iterate over all the stock prices, keeping track of the minimum stock price, and comparing the max daily profit to the max total profit recorded so far
 
 ## Code Dissection
-1. Create 2 variables that will keep track of the minimum stock price and max total profit
+1. Initialize 2 variables to track of the minimum stock price and max total profit
     ```python
     min_price = float('inf')
     max_profit = float('-inf')
     ```
-    * The initial values are set to inf and -inf, so that they will undoubtedly be higher or lower when performing the initial comparison
+    * The initial values are set to `inf` and `-inf`, so that they will undoubtedly be higher or lower when performing the initial comparison
 2. Loop through all the prices
     ```python
     for price in prices:

@@ -24,7 +24,7 @@ def compute_random_permutation(n):
 
 ## Explanation
 * Despite what the problem description states, you are not given a random number generator; it is referring to the solution from [Sample Offline Data](offline_sampling.md)
-* The solution is relatively simple -- create a list from [0, ... , _n_-1], and then create a permutation of that list
+* Create a list from [0, ... , _n_-1], then create a permutation of that list
 
 ## Code Dissection
 1. Create a list filled with the numbers [0, ... , _n_-1]

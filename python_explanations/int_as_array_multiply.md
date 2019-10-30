@@ -44,7 +44,7 @@ def multiply(num1, num2):
 ```
 
 ## Explanation
-* The solution is based off the grade-school algorithm for multiplication, which is to multiply the first number by each digit of the second, and then add up all the resulting terms
+* The solution is based off the grade-school algorithm for multiplication, which is to multiply the first number by each digit of the second, then add up all the resulting terms
 
 For instance, let's compute 123 &times; 321 using grade-school multiplication
 1. 123 &times; 1 = 123
@@ -53,12 +53,12 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
 4. 123 &plus; 2460 &plus; 36900 = 39483
 
 ## Code Dissection - remove_leading_zeroes
-1. Define variables to iterate through the number and to hold the size of the number
+1. Initialize variables to iterate through and to hold the size of the number
     ```python
     i = 0
     length = len(num) - 1
     ```
-2. Create a loop that runs while _i_ is still iterating over the number and the current digit is zero
+2. Loop over the number while the digit is zero
     ```python
     while i < length and num[0] == 0:
     ```
@@ -67,13 +67,13 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
     num.remove(0)
     i += 1
     ```
-4. Return the number represented by an array with the leading zeroes removed
+4. Return the number with the leading zeroes removed
     ```python
     return num
     ```
 
 ## Code Dissection - multiply
-1. Check if the numbers at num1[0] and num2[0] are negative, set a boolean accordingly, and set both numbers to their absolute values
+1. Check if the numbers at _num1_[0] and _num2_[0] are negative; if so, compute their absolute values
     ```python
     negative = False
     if num1[0] < 0 or num2[0] < 0:
@@ -83,16 +83,16 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
         num1[0] = abs(num1[0])
         num2[0] = abs(num2[0])
     ```
-2. Create an array for the product, which will be at most _n_ + _m_ digits
+2. Create an array to store the product, which will be at most _n_ + _m_ digits
     ```python
     product = [0] * len(num1 + num2)
     ```
-3. Create two loops to iterate over both num1 and num2, keep in mind how grade-school multiplication works
+3. Loop over both _num1_ and _num2_
     ```python
     for i in reversed(range(len(num1))):
         for j in reversed(range(len(num2))):
     ```
-4. Multiply num1[_i_] &times; num2[_j_] and add the result to the current number in the product array
+4. Multiply _num1_[_i_] &times; _num2_[_j_], then add the result to _product_
     ```python
     product[i+j+1] += num1[i] * num2[j]
     ```
@@ -107,12 +107,12 @@ For instance, let's compute 123 &times; 321 using grade-school multiplication
 7. Use the remove_leading_zeroes function to remove the leading zeroes from the product array
     ```python
     product = remove_leading_zeroes(product)
-8. If the product is supposed to be negative, add the negative sign to the digit in product[0]
+8. If the product is supposed to be negative, add the negative sign to the digit in _product_[0]
     ```python
     if negative:
         product[0] = -product[0]
     ```
-9. Return the product of num1 &times; num2
+9. Return the product of _num1_ &times; _num2_
     ```python
     return product
     ```

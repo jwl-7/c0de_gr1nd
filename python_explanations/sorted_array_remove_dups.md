@@ -1,5 +1,5 @@
 # Delete Duplicates from a Sorted Array
-Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the remaining elements have been shifted left to fill the emptied indices. Return the number of valid elements. Many languages have library functions for performing this operation -- you cannot use these functions.
+Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the remaining elements have been shifted left to fill the emptied indices. Return the number of valid elements. Many languages have library functions for performing this operation&mdash;you cannot use these functions.
 
 ## Examples
 ```

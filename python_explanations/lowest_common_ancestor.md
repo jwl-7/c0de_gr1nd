@@ -57,7 +57,7 @@ def lca(tree, node0, node1):
 3. For the return statement, there are 3 cases:
     1. If the current subtree contains both node0 and node1, then return that subtree as the LCA
     2. If only one of the keys is in the subtree, then return that key
-    3. If neither of the keys are in the subtree, then return `None`
+    3. If neither of the keys are in the subtree, then return None
     ```python
     return tree if left and right else left or right
     ```

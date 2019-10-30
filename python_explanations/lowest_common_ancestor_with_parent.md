@@ -58,13 +58,13 @@ def lca(node0, node1):
     ```python
     depth = 0
     ```
-2. Ascend towards the root of the tree using the parent pointers and increment the _depth_
+2. Ascend towards the root of the tree using the parent pointers, then increment _depth_
     ```python
     while node:
         node = node.parent
         depth += 1
     ```
-3. Return the _depth_ of the _node_
+3. Return the depth of the node
     ```python
     return depth
     ```

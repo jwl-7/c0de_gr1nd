@@ -25,11 +25,11 @@ def create_list_of_leaves(tree):
 
 ## Explanation
 * Unfortunately the problem title and description are highly misleading as the book expects the output to be a regular Python list
-* The solution processes the tree from left -> right and adds each leaf to the list
+* The solution processes the tree from [left -> right] and adds each leaf to the list
 * The list object returned from the solution can easily be converted into a real linked list with an additional function that converts each list element into a node
 
 ## Code Dissection
-1. If the _tree_ is empty, return an empty list
+1. If the tree is empty, return an empty list
     ```python
     if not tree:
         return []

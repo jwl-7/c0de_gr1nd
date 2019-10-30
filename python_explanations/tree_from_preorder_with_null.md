@@ -33,17 +33,17 @@ def reconstruct_preorder(preorder):
 * To put it another way, the null markers tell us when a right subtree begins, which provides a good base case for the solution's algorithm
 
 ## Code Dissection - reconstruct_preorder
-1. Send an iterator made from the _preorder_ sequence to the helper function and return the reconstructed binary tree
+1. Send an iterator made from the preorder sequence to the helper function and return the reconstructed binary tree
     ```python
     return helper(iter(preorder))
     ```
 
 ## Code Dissection - helper
-1. Set the _root_ value of the subtree as the next element in the preorder sequence
+1. Set the root value of the subtree as the next element in the preorder sequence
     ```python
     root = next(preorder_iter)
     ```
-2. If the next element in the preorder sequence is not null, then process the _left_ and _right_ subtrees for _root_
+2. If the next element in the preorder sequence is not null, then process the left and right subtrees for _root_
     ```python
     if root:
         left = helper(preorder_iter)

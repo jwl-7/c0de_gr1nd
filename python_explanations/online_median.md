@@ -41,7 +41,7 @@ def online_median(sequence):
     max_heap = []
     result = []
     ```
-2. Loop over the sequence, pushing each new element to the *min_heap* and extracting the smallest element to the *max_heap*
+2. Loop over the sequence, pushing each new element to the min-heap and extracting the smallest element to the max-heap
     ```python
     for x in sequence:
         heapq.heappush(max_heap, -heapq.heappushpop(min_heap, x))
@@ -51,12 +51,12 @@ def online_median(sequence):
     if len(min_heap) < len(max_heap):
         heapq.heappush(min_heap, -heapq.heappop(max_heap))
     ```
-4. If the *min_heap* and *max_heap* are the same size, then extract the top elements from the both heaps and compute the median
+4. If the min-heap and max-heap are the same size, then extract the top elements from the both heaps and compute the median
     ```python
     if len(min_heap) == len(max_heap):
         result.append((min_heap[0] - max_heap[0]) / 2)
     ```
-5. If the heaps are still not balanced, set the top of the *min_heap* as the median
+5. If the heaps are still not balanced, set the top of the min-heap as the median
     ```python
     else:
         result.append(min_heap[0])

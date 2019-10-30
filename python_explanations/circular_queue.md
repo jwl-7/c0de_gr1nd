@@ -35,14 +35,14 @@ class Queue:
 ```
 
 ## Explanation
-* The solution uses a dynamically resized array with a head and tail pointer to implement the circular queue
+* The solution uses a resizable array with a head and tail pointer to implement the circular queue
 
 ## Code Dissection - __init__
-1. Initialize a queue in the form of a list filled with _capacity_ number of `None` elements
+1. Initialize a list as the queue
     ```python
     self.queue = [None] * capacity
     ```
-2. Initialize a head and tail pointer that will represent the start and end indices of the queue
+2. Initialize a head pointer and tail pointer that represent the start and end indices of the queue respectively
     ```python
     self.head = 0
     self.tail = 0

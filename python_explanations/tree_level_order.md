@@ -65,7 +65,7 @@ def binary_tree_depth_order(tree):
         if node.right:
             next_level.append(node.right)
     ```
-6. After processing the current level, set _level_ to the *next_level*
+6. After processing the current level, go to the next level
     ```python
     level = next_level
     ```

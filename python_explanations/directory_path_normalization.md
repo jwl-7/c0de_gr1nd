@@ -39,7 +39,7 @@ def shortest_equivalent_path(path):
     * `..` = parent directory (one directory up)
     * If pathname starts with `/`, then we cannot go up from it
 
-The solutions uses the following algorithm:
+The solution uses the following algorithm:
 1. The path is split on the delimeter '/'
 2. The special characters that may be in the path are '.', '..', or ''
 3. '' occurs when the path contains '//'
@@ -55,11 +55,11 @@ The solutions uses the following algorithm:
     ```python
     stack = []
     ```
-2. Loop over each part of the _path_ separated by '/'
+2. Loop over each part of the path separated by '/'
     ```python
     for p in path.split('/'):
     ```
-3. If the part is '..', push the part to the stack if its empty or the top of the stack is '..', else pop from the stack
+3. If the part is '..', push it to the stack if the stack is empty or the top is '..', else pop from the stack
     ```python
     if p == '..':
         if not stack or stack[-1] == '..':
@@ -67,12 +67,12 @@ The solutions uses the following algorithm:
         else:
             stack.pop()
     ```
-4. If the part is not '' and not '.', push the part to the stack
+4. If the part is not '' and not '.', push it to the stack
     ```python
     elif p and p != '.':
         stack.append(p)
     ```
-5. Return each part of the stack joined by '/' and add '/' to the front if the original _path_ started like that
+5. Return each part of the stack joined by '/', and add '/' to the front if the original path started like that
     ```python
     return ('/' if path[0] == '/' else '') + '/'.join(stack)
     ```

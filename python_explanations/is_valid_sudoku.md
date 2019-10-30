@@ -113,17 +113,16 @@ Let's look at the layout of a sudoku board:
     ```
 
 ## Code Dissection - is_valid_list
-1. Filter out the zeroes from the list, since for this problem, they represent blank entries
+1. Filter out the zeroes from the list &mdash; they represent blank entries
     ```python
     section = [x for x in section if x != 0]
     ```
-    * This type of expression is referred to as list comprehension
-2. Return a boolean of whether or not the filtered list contains any duplicates
+2. Return whether or not the filtered list contains any duplicates
     ```python
     return len(section) == len(set(section))
     ```
     * `len(set(x))` tells us the size of unique elements in x
-    * This statement is comparing the size of the filtered list to the size of unique elements, and if they are not equal, then the list contains duplicates
+    * This statement is comparing the size of the filtered list to the size of unique elements &mdash; if they are not equal, then the list contains duplicates
 
 ## Code Dissection - is_valid_sudoku
 1. Loop over each column and grid to check for duplicates

@@ -66,9 +66,9 @@ The solution involves testing for various cases:
 1. Neither list contains a cycle
     * Return the result from `overlapping_no_cycle_lists(L0, L1)`
 2. Only one list contains a cycle
-    * The lists cannot overlap, so return `None`
+    * The lists cannot overlap, so return None
 3. Both lists contain a cycle
-    1. If the cycles are not identical, return `None`
+    1. If the cycles are not identical, return None
     2. If the cycles are identical, there are two subcases:
         1. The lists intersect before the start of the cycle
             * Return the start of the cycle
@@ -76,7 +76,7 @@ The solution involves testing for various cases:
             * The first overlapping node is not unique, so return any node on the cycle
 
 ## Code Dissection
-1. Check both lists to see if they contain cycles
+1. Check the two lists to see if they contain cycles
     ```python
     c0 = has_cycle(L0)
     c1 = has_cycle(L1)

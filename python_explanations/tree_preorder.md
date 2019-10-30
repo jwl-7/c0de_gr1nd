@@ -49,18 +49,18 @@ The algorithm is as follows:
     stack = []
     result = []
     ```
-2. Loop while the _stack_ isn't empty or the current node is not null
+2. Loop while the stack isn't empty or the current node is not null
     ```python
     while stack or tree:
     ```
-3. If the current node is not null, push it to the stack, push its data to the _result_ list, and go left
+3. If the current node is not null, push it to the stack, push its data to the result list, and go left
     ```python
     if tree:
         stack.append(tree)
         result.append(tree.data)
         tree = tree.left
     ```
-4. If the current node is null, set the current node to the top of the _stack_ to go up, and then go right
+4. If the current node is null, set the current node to the top of the stack to go up, then go right
     ```python
     else:
         tree = stack.pop()

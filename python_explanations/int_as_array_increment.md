@@ -24,33 +24,32 @@ def plus_one(A):
 ```
 
 ## Explanation
-* One brute-force approach might be to convert the array of digits to an integer, increment the integer, and then convert it back to an array of digits, however, this approach might lead to overflow issues
 * The solution uses the grade-school algorithm for adding integers, which is to add the digits from right to left, and carry when necessary
 
 ## Code Dissection
-1. Create a loop that iterates through _A_ from right to left
+1. Iterate through _A_ from [right -> left]
     ```python
     for i in reversed(range(len(A))):
     ```
-2. Increment _A_[_i_], if the result is less than 10, there is no carry, and we should stop the loop
+2. Increment _A_[_i_]; if the result is less than 10, there is no carry, so break out of the loop
     ```python
     A[i] += 1
     if A[i] < 10:
         break
     ```
-3. If _A_[_i_] is the first index of _A_, carry in a 1, and add a zero to the end of _A_
+3. If _A_[_i_] is the first index of _A_, carry in 1, and add 0 to the end of _A_
     ```python
     elif A[i] == A[0]:
         A[0] = 1
         A.append(0)
     ```
-4. If _A_[_i_] is greater than 10, and it is not the first index of _A_, set _A_[_i_] to zero
+4. If _A_[_i_] is greater than 10 and not the first index of _A_, set _A_[_i_] to 0
     ```python
     else:
         A[i] = 0
     ```
-    * The carry-out of 1 will be added on the next loop iteration
-5. Return the incremented number represented as an array of digits
+    * The carry-out will be added in the next loop iteration
+5. Return the incremented arbitrary-precision integer
     ```python
     return A
     ```

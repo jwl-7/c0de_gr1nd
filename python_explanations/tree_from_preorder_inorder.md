@@ -32,16 +32,16 @@ def binary_tree_from_preorder_inorder(preorder, inorder):
 3. The solution recurses until the tree is finished processing
 
 ## Code Dissection
-1. Check if the _inorder_ sequence is empty, in which case `None` is returned
+1. Check if the inorder sequence is empty, in which case None is returned
     ```python
     if inorder:
     ```
     * This will be the case when a node does not have a left or right subtree
-2. Get the first element in the _preorder_ sequence and find the index of that element in the _inorder_ sequence
+2. Get the first element in the preorder sequence and find the index of that element in the inorder sequence
     ```python
     idx = inorder.index(preorder.pop(0))
     ```
-3. Create a _root_ node from the first element in the _preorder_ sequence
+3. Create a root node from the first element in the preorder sequence
     ```python
     root = BinaryTreeNode(inorder[idx])
     ```

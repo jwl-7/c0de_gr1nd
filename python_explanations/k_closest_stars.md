@@ -41,7 +41,7 @@ def find_closest_k_stars(stars, k):
     ```python
     max_heap = []
     ```
-2. Iterate through every star and process them through the *max_heap*
+2. Iterate through every star and process them through the max-heap
     ```python
     for star in stars:
         heapq.heappush(max_heap, (-star.distance, star))

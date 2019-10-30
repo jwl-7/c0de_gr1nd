@@ -63,7 +63,7 @@ Two trees are a mirror reflection of each other if:
     ```
 
 ## Code Dissection - is_symmetric
-1. Return whether or not the _tree_ is symmetric
+1. Return whether or not the tree is symmetric
     ```python
     return is_mirror(tree, tree)
     ```

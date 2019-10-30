@@ -52,7 +52,7 @@ def roman_to_integer(s):
 ```
 
 ## Explanation
-* The solution iterates over the Roman numerals from right -> left and follows 2 simple rules:
+* The solution iterates over the Roman numerals from [right -> left] and follows 2 simple rules:
     1. When a symbol appears after a larger symbol, it is subtracted
     2. When a symbol appears before a larger symbol, it is added
 
@@ -74,16 +74,16 @@ def roman_to_integer(s):
     result = 0
     prev = 0
     ```
-3. Loop over each symbol in the string from right -> left
+3. Loop over each symbol in the string from [right -> left]
     ```python
     for char in s[::-1]:
     ```
-4. Implement Rule #1 - When a symbol appears after a larger symbol, it is subtracted
+4. Rule #1 &mdash; When a symbol appears after a larger symbol, it is subtracted
     ```python
     if roman[char] < prev:
         result -= roman[char]
     ```
-5. Implement Rule #2 - When a symbol appears before a larger symbol, it is added
+5. Implement Rule #2 &mdash; When a symbol appears before a larger symbol, it is added
     ```python
     else:
         result += roman[char]

@@ -40,7 +40,7 @@ def reverse_words_pythonic(s):
 ```
 
 ## Explanation
-* The solution reverses the string and then uses two pointers to reverse each word in the reversed string, whose indices are determined by finding the index of each whitespace character
+* The solution reverses the string, then uses two pointers to reverse each word in the reversed string, whose indices are determined by finding the index of each whitespace character
     * This solution performs each operation in-place
 * The pythonic solution uses list comprehension to generate a string with each word reversed in the reversed representation of the string
     * This solution is technically not in-place, as using built-in functions like `str.split()` create a new object, though they are usually temporary objects with references to the original that do not take up much space
@@ -57,8 +57,8 @@ def reverse_words_pythonic(s):
     while True:
         end = s.find(b' ', start)
     ```
-    * `start` will represent the start index of a word
-    * `end` will represent the end index of a word
+    * `start` represents the start index of a word
+    * `end` represents the end index of a word
     * `s.find(b' ', start)` returns the index of the first whitespace character after _start_
 3. Loop until we have reached the end of the string
     ```python

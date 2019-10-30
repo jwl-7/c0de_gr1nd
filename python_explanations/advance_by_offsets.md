@@ -22,23 +22,23 @@ def can_reach_end(A):
 ```
 
 ## Explanation
-* The solution takes the approach of trying to advance as far as possible in each step, while iterating through all the entries in _A_, so that all possible steps are considered
+* The approach is to advance as far as possible in each step, while iterating through all the entries in _A_, so that all possible steps are considered
 
 ## Code Dissection
-1. Define 3 variables that will be used to advance through _A_
+1. Initialize variables to help advance through _A_
     ```python
     furthest = 0
     end = len(A) - 1
     i = 0
     ```
-    * furthest is used to store the furthest index reached so far
-    * end represents the last index of _A_
-    * _i_ is used to iterate through _A_
-2. Create a loop that runs while the current index is before the furthest reached and the furthest index reached is before the end
+    * `furthest` is used to store the furthest index reached so far
+    * `end` represents the last index of _A_
+    * `i` is used to iterate through _A_
+2. Loop while the current index is before the furthest reached, and the furthest index reached is before the end
     ```python
     while i <= furthest and furthest < end:
     ```
-3. Iterate through each entry in _A_ and track the furthest index that can be reached
+3. Iterate through each entry in _A_, and track the furthest index that can be reached
     ```python
     furthest = max(furthest, A[i] + i)
     i += 1

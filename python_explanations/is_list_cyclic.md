@@ -36,27 +36,27 @@ def has_cycle(head):
 
 ## Explanation
 * The solution uses [Floyd's cycle-finding algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_Tortoise_and_Hare)
-* Imagine a slow and fast runner racing around a circular track -- the fast runner will eventually meet the slow runner
+* Imagine a slow and fast runner racing around a circular track &mdash; the fast runner will eventually meet the slow runner
 * For checking if the list is cyclic, we use two pointers and if they meet, the list contains a cycle
-    1. The _slow_ pointer moves 1 step at a time
-    2. The _fast_ pointer moves 2 steps at a time
-* If there is a cycle, after the two pointers meet, the start of the cycle can be found by setting a pointer at the head and iterating both slow pointers at the same time until they meet
+    1. The slow pointer &mdash; moves 1 step at a time
+    2. The fast pointer &mdash; moves 2 steps at a time
+* If there is a cycle: after the two pointers meet, the start of the cycle can be found by setting a pointer at the head and iterating both slow pointers at the same time until they meet
 * If there is not a cycle in the list, the fast pointer will eventually reach the end of the list
 
 ## Code Dissection
-1. Initialize a _slow_ and _fast_ pointer to the head of the list
+1. Initialize a slow and fast pointer to the head
     ```python
     slow = fast = head
     ```
-2. Iterate both pointers through the list until the _fast_ pointer reaches the end of the list
+2. Iterate both pointers through the list until the fast pointer reaches the end of the list
     ```python
     while fast and fast.next:
         fast = fast.next.next
         slow = slow.next
     ```
-    * The _fast_ pointer moves 2 steps at a time
-    * The _slow_ pointer moves 1 step at a time
-    * The _fast_ pointer will reach the end of the list if there is no cycle
+    * The fast pointer moves 2 steps at a time
+    * The slow pointer moves 1 step at a time
+    * The fast pointer will reach the end of the list if there is no cycle
 3. If the two pointers meet and the list is cyclic, find the start of the cycle and return it
     ```python
     if fast is slow:
@@ -66,9 +66,8 @@ def has_cycle(head):
             slow = slow.next
         return fast
     ```
-    * When finding the start of the cycle, the _fast_ and _slow_ pointer both move 1 step at a time
+    * When finding the start of the cycle, the fast pointer and slow pointer both move 1 step at a time
     * The start of the cycle is found when the two pointers meet
-    * The `is` operator compares if two objects are the same, not if they contain the same value
 4. If the list is not cyclic, return None
     ```python
     return None

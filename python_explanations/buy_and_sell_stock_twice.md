@@ -38,47 +38,47 @@ def buy_and_sell_stock_twice(prices):
 ```
 
 ## Explanation
-* The solution relies on two phases: the forward and backward phases
-* The forward phase is used to calculate the max total profit from a single transaction (buy and sell) for each day, and the results are recorded to an array
-* The backward phase is used to calculate the max total profit from a second transaction for each day, using the array built from the forward phase
+The solution relies on two phases:
+1. The forward phase &mdash; used to calculate the max total profit from a single transaction (buy and sell) for each day, and the results are recorded to an array
+2. The backward phase &mdash; used to calculate the max total profit from a second transaction for each day, using the array built from the forward phase
 
 ## Code Dissection
-1. Create an array to hold the first transaction profits and variables to keep track of the minimum stock price, maximum stock price, and max total profit
+1. Create an array to hold the first transaction profits, and initialize variables to keep track of the minimum stock price, maximum stock price, and max total profit
     ```python
     profits = []
     min_price = float('inf')
     max_price = float('-inf')
     max_profit = 0.0
     ```
-2. Forward phase [left -> right] -- loop over each price
+2. Forward phase [left -> right] &mdash; loop over each price
     ```python
     for price in prices:
     ```
-    1. Calculate the minimum price so far and the max daily profit
+    1. Compute the minimum price so far, and the max daily profit
         ```python
         min_price = min(min_price, price)
         profit = price - min_price
         ```
-    2. Calculate the max total profit by the _i_-th day and record it in profits[] -- first transaction
+    2. Compute the max total profit by the _i_-th day, and record it in _profits_ &mdash; first transaction
         ```python
         max_profit = max(max_profit, profit)
         profits.append(max_profit)
         ```
-3. Backward phase [Left <- Right] -- loop over each price
+3. Backward phase [right -> left] &mdash; loop over each price
     ```python
     for i, price in reversed(list(enumerate(prices[1:]))):
     ```
-    * The reason that this statement uses `reversed(list(enumerate))` rather than `enumerate(reversed())` is because the former generates the indexes in reversed order as well as prices[]
+    * The reason that this statement uses `reversed(list(enumerate))` rather than `enumerate(reversed())` is because the former generates the indexes in reversed order as well as _prices_
 
-    1. Calculate the maximum price so far
+    1. Compute the maximum price so far
         ```python
         max_price = max(max_price, price)
         ```
-    2. Calculate the max daily profit after the _i_-th day -- second transaction, and combine the result with the previous day in profits[] -- first transaction
+    2. Compute the max daily profit after the _i_-th day &mdash; second transaction, and combine the result with the previous day in _profits_ &mdash; first transaction
         ```python
         profit = max_price - price + profits[i]
         ```
-    3. Calculate the max total profit of two transactions
+    3. Compute the max total profit of two transactions
         ```python
         max_profit = max(max_profit, profit)
         ```

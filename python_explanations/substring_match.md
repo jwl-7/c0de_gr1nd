@@ -123,7 +123,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     if s_hash == t_hash and t[i:i+m] == s:
         return i
     ```
-    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
+    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring &mdash; this is to make sure that the match is not a hash collision
 7. If the two hash values do not match, calculate the hash values for the next window
     ```python
     if i < n - m:
@@ -161,7 +161,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     if s_hash == t_hash and t[i:i+m] == s:
         return i
     ```
-    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
+    * `t[i:i+m] == s` is a brute-force comparison of the match to the substring &mdash; this is to make sure that the match is not a hash collision
 5. Set a return for if the substring can't be found
     ```python
     return -1

@@ -42,12 +42,12 @@ def cyclically_right_shift_list(L, k):
 * If _k_ is larger than _n_(the number of nodes in the list), it is equivalent to shift the list by _k_ mod _n_
 
 ## Code Dissection
-1. Initializer a pointer to the head of the list and a variable for counting the nodes
+1. Initialize a pointer to the head and a variable for counting nodes
     ```python
     tail = L
     n = 1
     ```
-2. Traverse the list to find the tail and count the number of nodes to get the length
+2. Traverse the list to find the tail, and count the number of nodes to get the length
     ```python
     while tail.next:
         tail = tail.next

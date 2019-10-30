@@ -23,13 +23,13 @@ def overlapping_no_cycle_lists(L0, L1):
 
 ## Explanation
 * We use two pointers, _a_ and _b_, to traverse through _L0_ and _L1_ in such a manner that the two pointers will meet at the intersection node
-* _a_ starts at the head of _L0_ and traverses the list one node at a time until the end of the list, then it is redirected to the head of _L1_
-* _b_ starts at the head of _L1_ and traverses the list one node at a time until the end of the list, then it is redirected to the head of _L0_
+* _a_ starts at the head of _L0_, and traverses the list one node at a time until the tail, then it is redirected to the head of _L1_
+* _b_ starts at the head of _L1_, and traverses the list one node at a time until the tail, then it is redirected to the head of _L0_
 * _a_ and _b_ will meet each other by the second pass, meaning _a_ and _b_ will both traverse _L0_ and _L1_ once
 * The idea behind switching where _a_ and _b_ point at when reaching the end of a list is to counter any difference in length
 
 ## Code Dissection
-1. Initialize two pointers at the head of _L0_ and _L1_ respectively
+1. Initialize a pointer at the head of _L0_ and a pointer at the head of _L1_
     ```python
     a = L0
     b = L1
@@ -49,5 +49,5 @@ def overlapping_no_cycle_lists(L0, L1):
     ```
     * If the two lists intersect, the intersection node will be returned
     * If the two lists do not intersect:
-        1. Assuming each list is the same length, _a_ will reach the end of _L0_ at the same time _b_ reaches the end of _L1_, and `None` will be returned
-        2. Assuming one list is longer than the other, on the second pass, _a_ will reach the end of _L1_ at the same time _b_ reaches the end of _L0_, and `None` will be returned
+        1. Assuming each list is the same length, _a_ will reach the end of _L0_ at the same time _b_ reaches the end of _L1_, and None will be returned
+        2. Assuming one list is longer than the other, on the second pass, _a_ will reach the end of _L1_ at the same time _b_ reaches the end of _L0_, and None will be returned

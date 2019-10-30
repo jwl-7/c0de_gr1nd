@@ -37,7 +37,7 @@ def sort_k_increasing_decreasing_array(A):
 
 ## Explanation
 * For an explanation on merging sorted arrays using a min-heap: [Merge Sorted Files](sorted_arrays_merge.md)
-* The solution splits the array into a set of increasing arrays and then merges them using a min-heap
+* The solution splits the array into a set of increasing arrays, then merges them using a min-heap
 * The subarrays are determined by the indexes where the sequence switches from increasing to decreasing or vice versa
 * The decreasing sequences are reversed to convert them to increasing ones when putting them into the set of increasing arrays
 

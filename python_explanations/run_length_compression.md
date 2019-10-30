@@ -50,7 +50,7 @@ def encoding(s):
 * The solution for encoding is similar to the solution for the look-and-say problem
 
 ## Code Dissection - decoding
-1. Create two string variables to hold the _decoded_ string and the numeric characters
+1. Create two string variables to hold the decoded string and the numeric characters
     ```python
     decoded = ''
     count = ''
@@ -65,7 +65,7 @@ def encoding(s):
         count += char
     ```
     * Keeping _count_ a string saves us from doing more math in the case of multiple numeric characters in a row
-4. If the character is alphabetical, add it _count_ times to the _decoded_ string and reset _count_
+4. If the character is alphabetical, add it _count_ times to the decoded string, then reset _count_
     ```python
     else:
         decoded += int(count) * char
@@ -78,7 +78,7 @@ def encoding(s):
     ```
 
 ## Code Dissection - encoding
-1. Create variables to hold the _encoded_ string, the previous character, and keep track of consecutive occurrances of a character
+1. Create variables to hold the encoded string, the previous character, and keep track of consecutive occurrances of a character
     ```python
     encoded = ''
     prev = s[0]
@@ -93,14 +93,14 @@ def encoding(s):
     if char == prev:
         count += 1
     ```
-4. If the current and previous character are not the same, add the _count_ and previous character to the _encoded_ string
+4. If the current and previous character are not the same, add _count_ and the previous character to the encoded string
     ```python
     else:
         encoded += str(count) + prev
         prev = char
         count = 1
     ```
-5. After breaking out of the loop, make sure to add the last _count_ and character to the _encoded_ string before returning it
+5. After breaking out of the loop, make sure to add the last _count_ and character to the encoded string before returning it
     ```python
     encoded += str(count) + char
     return encoded

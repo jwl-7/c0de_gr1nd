@@ -33,7 +33,7 @@ def generate_primes(n):
     primes = []
     sieve = [True] * (n + 1)
     ```
-2. Loop over the numbers from 2 to _n_, we start at 2, since 1 is composite
+2. Loop over the numbers from 2 to _n_ &mdash; we start at 2, since 1 is composite
     ```python
     for i in range(2, n + 1):
     ```

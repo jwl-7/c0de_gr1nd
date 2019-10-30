@@ -33,8 +33,8 @@ def is_well_formed(s):
 1. The string is processed one bracket at a time starting from the left
 2. If the character is an open bracket, it is pushed to the stack
 3. If the character is a close bracket:
-    1. The stack is empty - the string is False
-    2. The close bracket does not match the open bracket popped off the stack - the string is False
+    1. The stack is empty &mdash; the string is False
+    2. The close bracket does not match the open bracket popped off the stack &mdash; the string is False
 4. After processing the string, if the stack is empty, then the string is well-formed
 
 ## Code Dissection

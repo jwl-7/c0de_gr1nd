@@ -37,7 +37,7 @@ def look_and_say(n):
 * The first loop is used to generate each entry up to _n_, while the second loop is used to process the previous entry
 
 ## Code Dissection
-1. Initialize a result variable to the first entry in the sequence which is '1'
+1. Initialize a result variable to the first entry in the sequence, which is '1'
     ```python
     s = '1'
     ```
@@ -63,14 +63,14 @@ def look_and_say(n):
     if prev == char:
         count += 1
     ```
-5. Otherwise, add the match count and digit we just processed to _tmp_ and then set _prev_ to the current digit
+5. Otherwise, add the match count and digit we just processed to _tmp_, then set _prev_ to the current digit
     ```python
     else:
         tmp += str(count) + prev
         prev = char
         count = 1
     ```
-6. Add to _tmp_ one last time when breaking out of the inner loop, and then set _s_ to _tmp_ so that the outer loop can process the entry
+6. Add to _tmp_ one last time when breaking out of the inner loop, then set _s_ to _tmp_ so that the outer loop can process the entry
     ```python
     tmp += str(count) + char
     s = tmp

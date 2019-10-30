@@ -48,7 +48,7 @@ def power(x, y):
         y = -y
         x = 1 / x
     ```
-3. Create a loop that runs until _y_ == 0
+3. Loop until _y_ == 0
     ```python
     while y:
     ```

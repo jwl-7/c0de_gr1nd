@@ -34,19 +34,19 @@ The solution uses two stacks:
     ```
 
 ## Code Dissection - enqueue
-1. Push _x_ to the _input_ stack
+1. Push _x_ to the input stack
     ```python
     self.input.append(x)
     ```
 
 ## Code Dissection - dequeue
-1. If the _output_ stack is empty, pop all the elements from the _input_ stack and push them to the _output_ stack
+1. If the output stack is empty, pop all the elements from the input stack and push them to the output stack
     ```python
     if not self.output:
         while self.input:
             self.output.append(self.input.pop())
     ```
-2. Return the last element from the _output_ stack
+2. Return the last element from the output stack
     ```python
     return self.output.pop()
     ```

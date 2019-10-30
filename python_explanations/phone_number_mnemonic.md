@@ -132,7 +132,7 @@ def phone_mnemonic_recursive(phone_number):
             '9': 'WXYZ',
         }
     ```
-2. Create a function that builds a mnemonic -- this will be called recursively
+2. Create a function that builds a mnemonic &mdash; this will be called recursively
     ```python
     def build_mnemonic(i):
     ```
@@ -158,7 +158,7 @@ def phone_mnemonic_recursive(phone_number):
     mnemonics = []
     current = [0] * len(phone_number)
     ```
-4. Call the recursive function and then return the list of mnemonics when it has been built
+4. Call the recursive function, then return the list of mnemonics when it has been built
     ```python
     build_mnemonic(0)
     return mnemonics

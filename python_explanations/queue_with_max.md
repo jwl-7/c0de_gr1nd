@@ -57,21 +57,21 @@ class QueueWithMax:
 * The solution combines the implementation of a stack with a `max()` function and a queue using two stacks
 
 ## Code Dissection - max
-1. Check if the _input_ stack is not empty
+1. Check if the input stack is not empty
     ```python
     if not self.input.empty():
     ```
-    1. If the _output_ stack is empty, return the _input_ stack's max
+    1. If the output stack is empty, return the input stack's max
         ```python
         if self.output.empty():
             return self.input.max()
         ```
-    2. If the _output_ stack is not empty, return the max of _input_ stack's max and _output_ stack's max
+    2. If the output stack is not empty, return the max of input stack's max and output stack's max
         ```python
         else:
             return max(self.input.max(), self.output.max())
         ```
-2. If the _input_ stack is empty, but the _output_ stack is not empty, return the _output_ stack's max
+2. If the input stack is empty, but the output stack is not empty, return the output stack's max
     ```python
     elif not self.output.empty():
         return self.output.max()

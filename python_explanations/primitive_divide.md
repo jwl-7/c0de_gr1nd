@@ -36,7 +36,7 @@ def divide(x, y):
     ```python
     while x >= y:
     ```
-3. Create a temporary _y_ and multiple variable that will help with optimizing the algorithm
+3. Create a temporary _y_ and multiple variable that helps with optimizing the algorithm
     ```python
     y2 = y
     multiple = 1

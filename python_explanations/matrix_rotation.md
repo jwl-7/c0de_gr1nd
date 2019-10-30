@@ -28,20 +28,20 @@ def rotate_matrix(square_matrix):
 
 ## Explanation
 While the solution is little bit of code golf, it relies on 2 basic steps:
-1. Find the transpose of the matrix -- this is the matrix flipped over its diagonal
+1. Find the transpose of the matrix &mdash; this is the matrix flipped over its diagonal
 2. Reverse each row in the transpose
 
 ## Code Dissection
-1. Find the transpose of the matrix and reverse each row in the transpose
+1. Find the transpose of the matrix, and reverse each row in the transpose
     ```python
     square_matrix[:] = [[row[i] for row in square_matrix[::-1]] for i in range(len(square_matrix))]
     ```
     Let's break down some of the list comprehension involved here:
-    * This statement would create a matrix _x_ that is the exact same as the original matrix
+    * This statement creates a matrix _x_ that is the exact same as the original matrix
         ```python
         x = [square_matrix[i] for i in range(len(square_matrix))]
         ```
-    * This statement would also create a matrix _x_ that is the exact same as the original matrix
+    * This statement also creates a matrix _x_ that is the exact same as the original matrix
         ```python
         x = [row for row in square_matrix]
         ```

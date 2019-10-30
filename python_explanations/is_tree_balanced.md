@@ -57,7 +57,7 @@ def is_balanced_binary_tree(tree):
 * The height for a non-empty tree/subtree = (max(height(_p.left_), height(_p.right_))) + 1
 
 ## Code Dissection - height
-1. If the _tree_ is empty, return the height as 0
+1. If the tree is empty, return the height as 0
     ```python
     if not tree:
         return 0
@@ -80,7 +80,7 @@ def is_balanced_binary_tree(tree):
     ```
 
 ## Code Dissection - is_balanced_binary_tree
-1. Return whether or not the _tree_ is height-balanced
+1. Return whether or not the tree is height-balanced
     ```python
     return height(tree) != -1
     ```

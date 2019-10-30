@@ -89,19 +89,19 @@ To test for the 4 cases above, we need to understand how to grab the 4 edges of 
 4. _y_ + height = top edge
 
 ## Code Dissection - is_intersect
-1. Test for case 1 - R1's right edge is left of R2's left edge
+1. Case 1 &mdash; R1's right edge is left of R2's left edge
     ```python
     R1.x + R1.width < R2.x
     ```
-2. Test for case 2 - R1's left edge is right of R2's right edge
+2. Case 2 &mdash; R1's left edge is right of R2's right edge
     ```python
     R1.x > R2.x + R2.width
     ```
-3. Test for case 3 - R1's bottom edge is above R2's top edge
+3. Case 3 &mdash; R1's bottom edge is above R2's top edge
     ```python
     R1.y > R2.y + R2.height
     ```
-4. Test for case 4 - R1's top edge is below R2's bottom edge
+4. Case 4 &mdash; R1's top edge is below R2's bottom edge
     ```python
     R1.y + R1.height < R2.y
     ```

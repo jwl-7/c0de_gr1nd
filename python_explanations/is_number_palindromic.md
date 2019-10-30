@@ -35,7 +35,7 @@ def is_palindrome_number_pythonic(x):
     1. Extract the last digit in the number
     2. Append the extracted digit to the reversed number
     3. Remove the last digit from the number
-* The pythonic solution uses slice notation to reverse a string representation of the number and then convert it back to an integer
+* The pythonic solution uses slice notation to reverse a string representation of the number, then converts it back to an integer
 * After the reversed number is computed, it is compared to the original number to check if it is palindromic
     * If the reversed number is equal to the original number, then the number is a palindrome
 * Both solutions have similar performance, but the pythonic solution has a more consistent runtime
@@ -46,12 +46,12 @@ def is_palindrome_number_pythonic(x):
     if x < 0:
         return False
     ```
-2. Create a variable to hold the reversed number and a temporary variable to hold a copy of the original number
+2. Initialize variables to hold the reversed number and a copy of the original number
     ```python
     reverse = 0
     tmp = x
     ```
-3. Loop until the temporary variable is empty, which will be the case when we have computed the reversed number
+3. Loop until the temporary variable is empty, which happens when the reversed number has been computed
     ```python
     while tmp:
     ```
@@ -70,11 +70,11 @@ def is_palindrome_number_pythonic(x):
     ```
 
 ## Pythonic Code Dissection
-1. Use built-in functions to convert the number to a string, use slice notation to reverse the number string, convert the reversed number string back to an integer, and then compare the reversed number to the original number to test for palindromicity
+1. Use built-in functions to convert the number to a string, use slice notation to reverse the number string, convert the reversed number string back to an integer, then compare the reversed number to the original number to test for palindromicity
     ```python
     return False if x < 0 else x == int(str(x)[::-1])
     ```
-    Let's separate concise one-liner into multiple lines for easier readability:
+    Let's separate this concise one-liner into multiple lines for easier readability:
     ```python
     if x < 0:
         return False

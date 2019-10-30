@@ -31,7 +31,7 @@ def add_two_numbers(L1, L2):
 * The solution is based off the grade-school algorithm for addition, which is to compute the sum of the digits in the corresponding nodes in the two lists while handling the carry-out
 
 ## Code Dissection
-1. Create a dummy node that will point to the sum list and a variable for use with the addition
+1. Create a dummy node and a variable to help with the addition
     ```python
     dummy = tail = ListNode()
     num = 0

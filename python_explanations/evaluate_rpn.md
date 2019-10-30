@@ -58,26 +58,26 @@ result <- pop from the stack
 ```
 
 ## Code Dissection
-1. Create an empty _stack_ and a string that contains the _operators_
+1. Create an empty stack and a string that contains the arithmetic operators
     ```python
     stack = []
     operators = '+-*/'
     ```
-2. Loop over each _token_ in the _expression_, which are separated by commas
+2. Loop over each comma separated token in the expression
     ```python
     for token in expression.split(','):
     ```
-3. If the _token_ is a number, push it to the stack
+3. If the token is a number, push it to the stack
     ```python
     if token not in operators:
         stack.append(int(token))
     ```
-4. If the _token_ is an operator, then pop two operands off the stack
+4. If the token is an operator, then pop two operands off the stack
     ```python
     y = stack.pop()
     x = stack.pop()
     ```
-5. Depending on the operator, use the appropriate computation for the result, and push the result to the stack
+5. Depending on the operator, perform the appropriate computation, and push the result to the stack
     ```python
     if token == '+':
         result = x + y
@@ -90,7 +90,7 @@ result <- pop from the stack
     stack.append(result)
     ```
     * `int(x / y)` is used, because the problem only wants integers as answers
-6. Return the final result in the stack
+6. Return the final result from the stack
     ```python
     return stack[0]
     ```

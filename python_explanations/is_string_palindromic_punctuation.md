@@ -46,12 +46,12 @@ def is_palindrome_pythonic(s):
 * `str.lower()` returns a copy of _str_ with lowercase characters
 
 ## Code Dissection
-1. Create a start and end pointer that correlate to the start and end index of the string
+1. Create a start and end pointer that correlate to the start and end indices of the string
     ```python
     start = 0
     end = len(s) - 1
     ```
-2. Loop through the string until the two pointers meet in the middle, which is the case if the string is a palindrome
+2. Loop through the string until the two pointers meet in the middle, which is the case that the string is a palindrome
     ```python
     while start < end:
     ```
@@ -75,7 +75,7 @@ def is_palindrome_pythonic(s):
     start += 1
     end -= 1
     ```
-6. Return `True` if the two pointers meet and the function breaks out of the while loop, because that means the string is palindromic
+6. Return True if the two pointers meet and the function breaks out of the while loop, because that means the string is palindromic
     ```python
     return True
     ```

@@ -36,7 +36,7 @@ def inorder_traversal(tree):
 
 ## Explanation
 * For an explanation on computing the next node in an inorder traversal: [Compute the Successor](successor_in_tree.md)
-* The solution iterates to the leftmost node, the first node in the traversal, and then keeps finding the successor to the current node until reaching the rightmost element
+* The solution iterates to the leftmost node, the first node in the traversal, then keeps finding the successor to the current node until reaching the rightmost element
 
 ## Code Dissection
 1. Create an empty list to store the inorder traversal

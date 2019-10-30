@@ -44,7 +44,7 @@ def k_largest_in_binary_heap(A, k):
     max_heap = []
     result = []
     ```
-2. Add the largest element from _A_ to our new *max_heap*
+2. Add the largest element from _A_ to our new max-heap
     ```python
     max_heap.append((-A[0], 0))
     ```
@@ -53,21 +53,21 @@ def k_largest_in_binary_heap(A, k):
     ```python
     for _ in range(k):
     ```
-4. Find the index of the largest element in *max_heap*
+4. Find the index of the largest element in the max-heap
     ```python
     largest_idx = max_heap[0][1]
     ```
-5. Add the largest element in *max_heap* to _result_
+5. Add the largest element in the max-heap to _result_
     ```python
     result.append(-heapq.heappop(max_heap)[0])
     ```
-6. Get the left child's index of the largest element in *max_heap*, and if it exists, push it to *max_heap*
+6. Get the left child's index of the largest element in the max-heap; if it exists, push it to the max-heap
     ```python
     left = 2 * largest_idx + 1
     if left < len(A):
         heapq.heappush(max_heap, (-A[left], left))
     ```
-7. Get the right child's index of the largest element in *max_heap*, and if it exists, push it to *max_heap*
+7. Get the right child's index of the largest element in the max-heap; if it exists, push it to the max-heap
     ```python
     right = 2 * largest_idx + 2
     if right < len(A):

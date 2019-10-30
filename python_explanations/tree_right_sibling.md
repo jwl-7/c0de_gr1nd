@@ -27,11 +27,11 @@ def construct_right_sibling(tree):
 ```
 
 ## Explanation
-* The solution traverses the tree level-by-level from left -> right
+* The solution traverses the tree level-by-level from [left -> right]
 * For each level, the next fields for the nodes on the level below are processed
 
 ## Code Dissection
-1. Start traversing from the root of the _tree_ using a pointer that will represent the starting node for each level
+1. Start traversing from the root of the tree using a pointer that will represent the starting node for each level
     ```python
     while tree:
         curr = tree
@@ -53,7 +53,7 @@ def construct_right_sibling(tree):
     ```python
     curr = curr.next
     ```
-    * If _curr_ = `None`, then that means we are done processing the current level
+    * If _curr_ = None, then that means we are done processing the current level
 6. Go to the next level below starting on the left
     ```python
     tree = tree.left

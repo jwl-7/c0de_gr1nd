@@ -60,13 +60,13 @@ def exterior_binary_tree(tree):
 ```
 
 ## Explanation
-1. Traverse the nodes in the left boundary top -> down
-2. Traverse the leaf nodes in the left subtree left -> right
-3. Traverse the leaf nodes in the right subtree left -> right
-4. Traverse the nodes in the right boundary bottom -> up
+1. Traverse the nodes in the left boundary [top -> down]
+2. Traverse the leaf nodes in the left subtree [left -> right]
+3. Traverse the leaf nodes in the right subtree [left -> right]
+4. Traverse the nodes in the right boundary [bottom -> up]
 
 ## Code Dissection - exterior_binary_tree
-1. Check for an empty _tree_
+1. Check for an empty tree
     ```python
     if not tree:
         return []
@@ -75,23 +75,23 @@ def exterior_binary_tree(tree):
     ```python
     exterior = [tree]
     ```
-3. Traverse the nodes in the left boundary top -> down
+3. Traverse the nodes in the left boundary [top -> down]
     ```python
     left_boundary(tree.left)
     ```
-4. Traverse the leaf nodes in the left subtree left -> right
+4. Traverse the leaf nodes in the left subtree [left -> right]
     ```python
     leaves(tree.left)
     ```
-5. Traverse the leaf nodes in the right subtree left -> right
+5. Traverse the leaf nodes in the right subtree [left -> right]
     ```python
     leaves(tree.right)
     ```
-6. Traverse the nodes in the right boundary bottom -> up
+6. Traverse the nodes in the right boundary [bottom -> up]
     ```python
     right_boundary(tree.right)
     ```
-7. Return the _exterior_ traversal
+7. Return the exterior traversal
     ```python
     return exterior
     ```
@@ -102,7 +102,7 @@ def exterior_binary_tree(tree):
     if not tree or (not tree.left and not tree.right):
         return
     ```
-2. Append the current node to the _exterior_ list
+2. Append the current node to the exterior list
     ```python
     exterior.append(tree)
     ```
@@ -127,7 +127,7 @@ def exterior_binary_tree(tree):
     else:
         left_boundary(tree.right)
     ```
-3. Append the current node to the _exterior_ list
+3. Append the current node to the exterior list
     ```python
     exterior.append(tree)
     ```
@@ -138,7 +138,7 @@ def exterior_binary_tree(tree):
     if not tree:
         return
     ```
-2. If the node is a leaf node, append it to the _exterior_ list and return to prevent unnecessary recursive calls
+2. If the node is a leaf node, append it to the exterior list, then return to prevent unnecessary recursive calls
     ```python
     if not tree.left and not tree.right:
         exterior.append(tree)

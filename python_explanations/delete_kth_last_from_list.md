@@ -26,27 +26,27 @@ def remove_kth_last(L, k):
 
 ## Explanation
 * The solution uses two pointers to traverse the list:
-    1. First, the _fast_ pointer moves _k_ steps
-    2. Then, the _slow_ pointer and the _fast_ pointer move one step at a time until the _fast_ pointer reaches the tail of the list
+    1. First, the fast pointer moves _k_ steps
+    2. Then, the slow pointer and the fast pointer move one step at a time until the fast pointer reaches the tail of the list
 * When the _fast_ pointer is at the tail of the list, the _slow_ pointer is at the (_k_ + 1)th last node
-* If the _fast_ pointer is at the tail of the list before iterating the _slow_ pointer, then it is the head node that needs to be removed
+* If the fast pointer is at the tail of the list before iterating the slow pointer, then it is the head node that needs to be removed
 
 ## Code Dissection
-1. Initialize a _slow_ and _fast_ pointer to the head of the list
+1. Initialize a slow pointer and fast pointer to the head of _L_
     ```python
     slow = fast = L
     ```
-2. Iterate the _fast_ pointer _k_ steps
+2. Move the fast pointer _k_ steps
     ```python
     for _ in range(k):
         fast = fast.next
     ```
-3. If the _fast_ pointer is at the tail of the list, remove the head
+3. If the fast pointer is at the tail, remove the head
     ```python
     if not fast:
         return L.next
     ```
-4. Iterate the _slow_ and _fast_ pointer until the _fast_ pointer reaches the tail
+4. Move the slow and fast pointer until the fast pointer reaches the tail
     ```python
     while fast.next:
         fast = fast.next

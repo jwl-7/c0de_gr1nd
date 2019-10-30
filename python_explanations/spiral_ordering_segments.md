@@ -92,7 +92,7 @@ The solution uses the following steps in a loop:
     if col_start < col_end:
         spiral.extend([square_matrix[i][col_start] for i in reversed(range(row_start + 1, row_end))])
     ```
-8. Increment and decrement the start and end positions of the row and column variables -- eventually these variables will meet each other at the same value
+8. Increment and decrement the start and end positions of the row and column variables &mdash; eventually these variables will meet each other at the same value
     ```python
     row_start += 1
     col_start += 1

@@ -30,9 +30,9 @@ def even_odd_merge(L):
 
 ## Explanation
 * The solution uses two pointers to traverse the list:
-    1. The _even_ pointer, which starts at the head of the list
-    2. The _odd_ pointer, which starts at the node after the head (which will also be the *odd_head*)
-* As we traverse through the list, the _even_ and _odd_ next pointers are used to connect nodes to an even and odd list respectively
+    1. The even pointer &mdash; starts at the head of the list
+    2. The odd pointer &mdash; starts at the node after the head (the odd head)
+* As we traverse through the list, the even's and odd's next pointers are used to connect nodes to an even and odd list respectively
 * The two lists are merged by connecting the tail of the even list to the head of the odd list
 * The original list head is not touched and will be the head of the even-odd list
 
@@ -42,21 +42,21 @@ def even_odd_merge(L):
     if not L:
         return L
     ```
-2. Initialize an _even_ pointer to the head and an _odd_ and *odd_head* pointer to the next node
+2. Initialize an even pointer to the head of _L_ and an odd pointer/head to the next node
     ```python
     even = L
     odd = odd_head = even.next
     ```
-3. Traverse until _odd_ pointer hits the end of the list
+3. Traverse until the odd pointer hits the end of the list
     ```python
     while odd and odd.next:
     ```
-4. Set the _even_ next pointer to point to the next even node, and set the _odd_ next pointer to point to the next odd node
+4. Set even's next pointer to the next even node, and set odd's next pointer to the next odd node
     ```python
     even.next = even.next.next
     odd.next = odd.next.next
     ```
-5. Move the _even_ and _odd_ pointer to the next even and odd nodes respectively
+5. Move the even and odd pointers to the next even and odd nodes respectively
     ```python
     even = even.next
     odd = odd.next
