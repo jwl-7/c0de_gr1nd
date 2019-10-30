@@ -12,7 +12,16 @@ Output: 7
 
 ## Solution
 ```python
-BLANK
+def square_root(k):
+    left = 0
+    right = k
+    while left <= right:
+        mid = (left + right) // 2
+        if mid * mid <= k:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return left - 1
 ```
 
 ## Explanation
