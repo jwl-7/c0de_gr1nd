@@ -68,7 +68,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |6.1|[Interconvert Strings and Integers](./python_explanations/string_integer_interconversion.md)|[Python](./python_solutions/string_integer_interconversion.py)|_O(n)_|_O(n)_|
 |6.2|[Base Conversion](./python_explanations/convert_base.md)|[Python](./python_solutions/convert_base.py)|_O(nlogn)_|_O(n)_|
-|6.3|[Compute the Spreadsheet Column Encoding](./python_explanations/spreadsheet_encoding.md)|[Python](./python_solutions/spreadsheet_encoding.py)|_O(n)_|_O(n)_|
+|6.3|[Compute the Spreadsheet Column Encoding](./python_explanations/spreadsheet_encoding.md)|[Python](./python_solutions/spreadsheet_encoding.py)|_O(n)_|_O(1)_|
 |6.4|[Replace and Remove](./python_explanations/replace_and_remove.md)|[Python](./python_solutions/replace_and_remove.py)|_O(n)_|_O(1)_|
 |6.5|[Test Palindromicity](./python_explanations/is_string_palindromic_punctuation.md)|[Python](./python_solutions/is_string_palindromic_punctuation.py)|_O(n)_|_O(1)_|
 |6.6|[Reverse All the Words in a Sentence](./python_explanations/reverse_words.md)|[Python](./python_solutions/reverse_words.py)|_O(n)_|_O(1)_|
