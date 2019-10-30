@@ -133,7 +133,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
     * `t_hash - ord(t[i]) * h` removes the leading (high-order) digit
     * `+ ord(t[i+m])` adds the trailing (low-order) digit
     * `% q` completes the formula, also helps prevent negative hash values
-8. Return -1 if the substring can't be found
+8. Set a return for if the substring can't be found
     ```python
     return -1
     ```
@@ -162,7 +162,7 @@ Simple overview of the Rabin-Karp string-searching algorithm:
         return i
     ```
     * `t[i:i+m] == s` is a brute-force comparison of the match to the substring -- this is to make sure that the match is not a hash collision
-5. Return -1 if the substring can't be found
+5. Set a return for if the substring can't be found
     ```python
     return -1
     ```
