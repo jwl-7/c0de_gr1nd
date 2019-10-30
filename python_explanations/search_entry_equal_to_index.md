@@ -27,7 +27,32 @@ def search_entry_equal_to_its_index(A):
 ```
 
 ## Explanation
-* BLANK
+* The solution uses the iterative implementation of a binary search
 
 ## Code Dissection
-1. BLANK
+1. Set a left and right pointer at the start and end of the array respectively
+    ```python
+    left = 0
+    right = len(A) - 1
+    ```
+2. Loop until the left and right pointer meet each other
+    ```python
+    while left <= right:
+    ```
+3. Compute the mid pointer
+    ```python
+    mid = (left + right) // 2
+    ```
+4. Check if _k_ is at _mid_
+    ```python
+    if A[mid] < mid:
+        left = mid + 1
+    elif A[mid] > mid:
+        right = mid - 1
+    else:
+        return mid
+    ```
+5. There is no index _i_ that equals _i_
+    ```python
+    return -1
+    ```
