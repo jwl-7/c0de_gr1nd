@@ -49,7 +49,7 @@ def partition(A, left, right):
         * Discard elements <= pivot
     3. If there are less than _k_ - 1 elements > pivot:
         * Discard elements >= pivot
-* The `partition()` function is an implementation of [Lomuto's partition scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme)
+* The `partition()` function is an implementation of the [Lomuto partition scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme)
 
 ## Code Dissection - find_kth_largest
 1. Set a left and right pointer at the start and end of the array respectively
@@ -93,7 +93,7 @@ def partition(A, left, right):
     ```
     * After this process:
         1. _A_[_left_ : *new_pivot*] contains elements > pivot
-        2. _A_[*new_pivot+1* : _right+1_] contains elements < pivot
+        2. _A_[*new_pivot*+1 : _right_+1] contains elements < pivot
 3. Return the new pivot index
     ```python
     return new_pivot
