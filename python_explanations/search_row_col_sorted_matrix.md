@@ -35,7 +35,35 @@ def matrix_search(A, x):
 ```
 
 ## Explanation
-* BLANK
+* If _x_ < _A_[0][_n_-1], then _x_ > elements in row 0
+* If _x_ > _A_[0][_n_-1], then _x_ <> elements in col _n_-1
 
 ## Code Dissection
-1. BLANK
+1. Start the search from the top-right corner
+    ```python
+    row = 0
+    col = len(A[0]) - 1
+    ```
+2. Loop until we've searched each column and each row
+    ```python
+    while row < len(A) and col >= 0:
+    ```
+3. If there's a match, then return True
+    ```python
+    if A[row][col] == x:
+        return True
+    ```
+4. Eliminate row from the search
+    ```python
+    elif A[row][col] < x:
+        row += 1
+    ```
+5. Eliminate col from the search
+    ```python
+    else:
+        col -= 1
+    ```
+6. If the number doesn't exist, then return False
+    ```python
+    return False
+    ```
