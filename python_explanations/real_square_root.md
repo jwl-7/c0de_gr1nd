@@ -25,7 +25,32 @@ def square_root(x):
 ```
 
 ## Explanation
-* BLANK
+* If _x_ < 1.0, the initial interval is [_x_, 1.0]
+* If _x_ >= 1.0, the initial interval is [1.0, _x_]
 
 ## Code Dissection
-1. BLANK
+1. Set the left and right pointers such that the inital search interval is [_x_, 1.0] if _x_ < 1.0, else [1.0, _x_]
+    ```python
+    left = x if x < 1.0 else 1.0
+    right = 1.0 if x < 1.0 else x
+    ```
+2. Loop until the two pointers meet (may not be exact, since there is float tolerance)
+    ```python
+    while not math.isclose(left, right):
+    ```
+    * `math.isclose()` is necessary since we are dealing with floats
+3. Compute the mid pointer
+    ```python
+    mid = (left + right) / 2
+    ```
+4. Search for the real square root
+    ```python
+    if mid * mid <= x:
+        left = mid
+    else:
+        right = mid
+    ```
+5. Return the real square root
+    ```python
+    return left
+    ```
