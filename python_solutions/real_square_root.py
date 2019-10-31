@@ -4,8 +4,10 @@ from test_framework import generic_test
 
 
 def square_root(x):
-    left = x if x < 1.0 else 1.0
-    right = 1.0 if x < 1.0 else x
+    if x < 1.0:
+        left, right = x, 1.0
+    else:
+        left, right = 1.0, x
     while not math.isclose(left, right):
         mid = (left + right) / 2
         if mid * mid <= x:

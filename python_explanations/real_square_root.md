@@ -13,8 +13,10 @@ Output: 8654.72774144241
 ## Solution
 ```python
 def square_root(x):
-    left = x if x < 1.0 else 1.0
-    right = 1.0 if x < 1.0 else x
+    if x < 1.0:
+        left, right = x, 1.0
+    else:
+        left, right = 1.0, x
     while not math.isclose(left, right):
         mid = (left + right) / 2
         if mid * mid <= x:
@@ -31,8 +33,10 @@ def square_root(x):
 ## Code Dissection
 1. Set the left and right pointers such that the inital search interval is [_x_, 1.0] if _x_ < 1.0, else [1.0, _x_]
     ```python
-    left = x if x < 1.0 else 1.0
-    right = 1.0 if x < 1.0 else x
+    if x < 1.0:
+        left, right = x, 1.0
+    else:
+        left, right = 1.0, x
     ```
 2. Loop until the two pointers meet (may not be exact, since there is float tolerance)
     ```python
