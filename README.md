@@ -150,6 +150,7 @@ the pursuit of ameloriation as a programmer
 |11.5|[Compute the Real Square Root](./python_explanations/real_square_root.md)|[Python](./python_solutions/real_square_root.py)|_O(log<sup>k</sup>&frasl;<sub>s</sub>)_|_O(1)_|
 |11.6|[Search in a 2D Sorted Array](./python_explanations/search_row_col_sorted_matrix.md)|[Python](./python_solutions/search_row_col_sorted_matrix.py)|_O(m+n)_|_O(1)_|
 |11.7|[Find the Min and Max Simultaneously](./python_explanations/search_for_min_max_in_array.md)|[Python](./python_solutions/search_for_min_max_in_array.py)|_O(n)_|_O(1)_|
+|11.8|[Find the *k*th Largest Element](./python_explanations/kth_largest_in_array.md)|[Python](./python_solutions/kth_largest_in_array.py)|_O(n)_|_O(1)_|
 
 <!---
 |11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
