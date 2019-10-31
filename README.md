@@ -44,7 +44,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |5.1|[The Dutch National Flag Problem](./python_explanations/dutch_national_flag.md)|[Python](./python_solutions/dutch_national_flag.py)|_O(n)_|_O(1)_|
 |5.2|[Increment an Arbitrary-Precision Integer](./python_explanations/int_as_array_increment.md)|[Python](./python_solutions/int_as_array_increment.py)|_O(n)_|_O(1)_|
-|5.3|[Multiply Two Arbitrary-Precision Integers](./python_explanations/int_as_array_multiply.md)|[Python](./python_solutions/int_as_array_multiply.py)|_O(nm)_|_O(n+m)_|
+|5.3|[Multiply Two Arbitrary-Precision Integers](./python_explanations/int_as_array_multiply.md)|[Python](./python_solutions/int_as_array_multiply.py)|_O(mn)_|_O(m+n)_|
 |5.4|[Advancing Through an Array](./python_explanations/advance_by_offsets.md)|[Python](./python_solutions/advance_by_offsets.py)|_O(n)_|_O(1)_|
 |5.5|[Delete Duplicates from a Sorted Array](./python_explanations/sorted_array_remove_dups.md)|[Python](./python_solutions/sorted_array_remove_dups.py)|_O(n)_|_O(1)_|
 |5.6|[Buy and Sell a Stock Once](./python_explanations/buy_and_sell_stock.md)|[Python](./python_solutions/buy_and_sell_stock.py)|_O(n)_|_O(1)_|
@@ -78,12 +78,12 @@ the pursuit of ameloriation as a programmer
 |6.10|[Compute All Valid IP Addresses](./python_explanations/valid_ip_addresses.md)|[Python](./python_solutions/valid_ip_addresses.py)|_O(1)_|_O(1)_|
 |6.11|[Write a String Sinusoidally](./python_explanations/snake_string.md)|[Python](./python_solutions/snake_string.py)|_O(n)_|_O(1)_|
 |6.12|[Implement Run-Length Encoding](./python_explanations/run_length_compression.md)|[Python](./python_solutions/run_length_compression.py)|_O(n)_|_O(n)_|
-|6.13|[Find the First Occurrence of a Substring](./python_explanations/substring_match.md)|[Python](./python_solutions/substring_match.py)|_O(n+m)_|_O(1)_|
+|6.13|[Find the First Occurrence of a Substring](./python_explanations/substring_match.md)|[Python](./python_solutions/substring_match.py)|_O(m+n)_|_O(1)_|
 
 ## Linked Lists
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
-|7.1|[Merge Two Sorted Lists](./python_explanations/sorted_lists_merge.md)|[Python](./python_solutions/sorted_lists_merge.py)|_O(n+m)_|_O(1)_|
+|7.1|[Merge Two Sorted Lists](./python_explanations/sorted_lists_merge.md)|[Python](./python_solutions/sorted_lists_merge.py)|_O(m+n)_|_O(1)_|
 |7.2|[Reverse a Single Sublist](./python_explanations/reverse_sublist.md)|[Python](./python_solutions/reverse_sublist.py)|_O(n)_|_O(1)_|
 |7.3|[Test for Cyclicity](./python_explanations/is_list_cyclic.md)|[Python](./python_solutions/is_list_cyclic.py)|_O(n)_|_O(1)_|
 |7.4|[Test for Overlapping Lists&mdash;Lists Are Cycle-Free](./python_explanations/do_terminated_lists_overlap.md)|[Python](./python_solutions/do_terminated_lists_overlap.py)|_O(n)_|_O(1)_|
@@ -95,7 +95,7 @@ the pursuit of ameloriation as a programmer
 |7.10|[Implement Even-Odd Merge](./python_explanations/even_odd_list_merge.md)|[Python](./python_solutions/even_odd_list_merge.py)|_O(n)_|_O(1)_|
 |7.11|[Test Whether a Singly Linked List Is Palindromic](./python_explanations/is_list_palindromic.md)|[Python](./python_solutions/is_list_palindromic.py)|_O(n)_|_O(1)_|
 |7.12|[Implement List Pivoting](./python_explanations/pivot_list.md)|[Python](./python_solutions/pivot_list.py)|_O(n)_|_O(1)_|
-|7.13|[Add List-Based Integers](./python_explanations/int_as_list_add.md)|[Python](./python_solutions/int_as_list_add.py)|_O(n+m)_|_O(max(n,m))_|
+|7.13|[Add List-Based Integers](./python_explanations/int_as_list_add.md)|[Python](./python_solutions/int_as_list_add.py)|_O(m+n)_|_O(m+n)_|
 
 ## Stacks and Queues
 | # | Title | Solution | Time | Space |
@@ -148,6 +148,7 @@ the pursuit of ameloriation as a programmer
 |11.3|[Search a Cyclically Sorted Array](./python_explanations/search_shifted_sorted_array.md)|[Python](./python_solutions/search_shifted_sorted_array.py)|_O(logn)_|_O(1)_|
 |11.4|[Compute the Integer Square Root](./python_explanations/int_square_root.md)|[Python](./python_solutions/int_square_root.py)|_O(logk)_|_O(1)_|
 |11.5|[Compute the Real Square Root](./python_explanations/real_square_root.md)|[Python](./python_solutions/real_square_root.py)|_O(log<sup>k</sup>&frasl;<sub>s</sub>)_|_O(1)_|
+|11.6|[Search in a 2D Sorted Array](./python_explanations/search_row_col_sorted_matrix.md)|[Python](./python_solutions/search_row_col_sorted_matrix.py)|_O(m+n)_|_O(1)_|
 
 <!---
 |11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
