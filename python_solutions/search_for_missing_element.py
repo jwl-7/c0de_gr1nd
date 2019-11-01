@@ -8,8 +8,23 @@ DuplicateAndMissing = collections.namedtuple('DuplicateAndMissing',
 
 
 def find_duplicate_missing(A):
-    # TODO - you fill in here.
-    return DuplicateAndMissing(0, 0)
+    x = A[0]
+    y = 0
+    for i in range(1, len(A)):
+        x ^= A[i] ^ i
+
+    set_bit = x & ~(x - 1)
+    for i, num in enumerate(A):
+        if i & set_bit:
+            y ^= i
+        if num & set_bit:
+            y ^= num
+
+    x ^= y
+    if y in A:
+        return DuplicateAndMissing(y, x)
+    else:
+        return DuplicateAndMissing(x, y)
 
 
 def res_printer(prop, value):
