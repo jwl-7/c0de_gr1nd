@@ -3,6 +3,7 @@ import collections
 from test_framework import generic_test
 from test_framework.test_failure import PropertyName
 
+
 MinMax = collections.namedtuple('MinMax', ('smallest', 'largest'))
 
 
