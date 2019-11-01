@@ -8,6 +8,9 @@ BLANK
 
 ## Solution
 ```python
+DuplicateAndMissing = collections.namedtuple('DuplicateAndMissing', ('duplicate', 'missing'))
+
+
 def find_duplicate_missing(A):
     x = A[0]
     y = 0

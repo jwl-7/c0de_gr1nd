@@ -3,8 +3,8 @@ import collections
 from test_framework import generic_test
 from test_framework.test_failure import PropertyName
 
-DuplicateAndMissing = collections.namedtuple('DuplicateAndMissing',
-                                             ('duplicate', 'missing'))
+
+DuplicateAndMissing = collections.namedtuple('DuplicateAndMissing', ('duplicate', 'missing'))
 
 
 def find_duplicate_missing(A):
