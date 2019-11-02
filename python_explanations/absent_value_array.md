@@ -29,7 +29,13 @@ def find_missing_element(stream):
 ```
 
 ## Explanation
-* BLANK
+* An array of 2<sup>16</sup> integers filled with zeroes will be referred to as a 'block'
+* The block will be used to represent the IP addresses without using up too much storage/memory
+1. First pass of the block: For every IP address, its leading 16 bits (MSBs) are used to index into the block and increment that spot by 1
+2. Second pass of the block: Find the first entry in the array less than 2<sup>16</sup> and get the index of that spot
+3. First pass of block2: Find all the IP addresses whose first 16 bits (LSBs) are equal to the entry retrieved in Step 2
+4. Second pass of block2: Find the first entry in block2 that is zero and return the index
+    * This means that some combination of the first 16 bits (LSBs) is missing
 
 ## Code Dissection
 1. BLANK
