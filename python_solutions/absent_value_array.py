@@ -1,10 +1,32 @@
+import itertools
+
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 
 
 def find_missing_element(stream):
-    # TODO - you fill in here.
-    return 0
+    block_size = 1 << 16
+    stream, stream_copy = itertools.tee(stream)
+
+    count_block = [0] * block_size
+    for ip in stream:
+        count_block[ip // block_size] += 1
+
+    block_idx = 0
+    for i, val in enumerate(count_block):
+        if val < block_size:
+            block_idx = i
+            break
+
+    block = [0] * block_size
+    stream = stream_copy
+    for ip in stream_copy:
+        if ip // block_size == block_idx:
+            block[ip % block_size] = 1
+
+    for i, val in enumerate(block):
+        if not val:
+            return block_idx * block_size + i
 
 
 def find_missing_element_wrapper(data):
