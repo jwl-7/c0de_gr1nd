@@ -2,8 +2,9 @@ from test_framework import generic_test
 
 
 def search_list(L, key):
-    # TODO - you fill in here.
-    return None
+    while L and L.data != key:
+        L = L.next
+    return L
 
 
 def search_list_wrapper(L, key):
