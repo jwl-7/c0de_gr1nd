@@ -20,6 +20,12 @@ def can_form_palindrome(s):
     return odd <= 1
 ```
 
+## Pythonic Solution
+```python
+def can_form_palindrome_pythonic(s):
+    return sum(count % 2 for count in collections.Counter(s).values()) <= 1
+```
+
 ## Explanation
 For a string to be permutable into a palindrome:
 1. If the string is of even length, each character should appear an even number of times
@@ -42,4 +48,10 @@ For a string to be permutable into a palindrome:
 4. Return whether or not the amount of odd character counts is less than or equal to 1
     ```python
     return odd <= 1
+    ```
+
+## Pythonic Code Dissection
+1. Return whether or not the amount of odd character counts is less than or equal to 1
+    ```python
+    return sum(count % 2 for count in collections.Counter(s).values()) <= 1
     ```
