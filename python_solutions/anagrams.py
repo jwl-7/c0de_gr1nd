@@ -7,10 +7,12 @@ def find_anagrams(dictionary):
     anagrams = collections.defaultdict(list)
     for s in dictionary:
         anagrams[''.join(sorted(s))].append(s)
-    return [
-        group for group in anagrams.values()
-        if len(group) >= 2
-    ]
+
+    groups = []
+    for group in anagrams.values():
+        if len(group) >= 2:
+            groups.append(group)
+    return groups
 
 
 if __name__ == '__main__':
