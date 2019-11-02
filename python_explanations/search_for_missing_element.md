@@ -1,9 +1,10 @@
 # Find the Duplicate and Missing Elements
 You are given an array of _n_ integers, each between 0 and _n_ - 1, inclusive. Exactly one element appears twice, implying that exactly one number between 0 and _n_ - 1 is missing from the array. How would you compute the duplicate and missing numbers?
 
-## Examples
+## Example
 ```
-BLANK
+ Input: [0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9]
+Output: (duplicate=4, missing=10)
 ```
 
 ## Solution
