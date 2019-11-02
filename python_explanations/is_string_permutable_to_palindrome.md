@@ -12,7 +12,12 @@ Output: False
 
 ## Solution
 ```python
-BLANK
+def can_form_palindrome(s):
+    odd = 0
+    for count in collections.Counter(s).values():
+        if count % 2:
+            odd += 1
+    return odd <= 1
 ```
 
 ## Explanation

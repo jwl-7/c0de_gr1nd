@@ -1,9 +1,14 @@
+import collections
+
 from test_framework import generic_test
 
 
 def can_form_palindrome(s):
-    # TODO - you fill in here.
-    return True
+    odd = 0
+    for count in collections.Counter(s).values():
+        if count % 2:
+            odd += 1
+    return odd <= 1
 
 
 if __name__ == '__main__':
