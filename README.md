@@ -152,6 +152,7 @@ the pursuit of ameloriation as a programmer
 |11.7|[Find the Min and Max Simultaneously](./python_explanations/search_for_min_max_in_array.md)|[Python](./python_solutions/search_for_min_max_in_array.py)|_O(n)_|_O(1)_|
 |11.8|[Find the *k*th Largest Element](./python_explanations/kth_largest_in_array.md)|[Python](./python_solutions/kth_largest_in_array.py)|_O(n)_|_O(1)_|
 |11.9|[Find the Missing IP Address](./python_explanations/absent_value_array.md)|[Python](./python_solutions/absent_value_array.py)|_O(nlogn)_|_O(n)_|
+|11.10|[Find the Duplicate and Missing Elements](./python_explanations/search_for_missing_element.md)|[Python](./python_solutions/search_for_missing_element.py)|_O(n)_|_O(1)_|
 
 <!---
 |11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
