@@ -22,6 +22,7 @@ the pursuit of ameloriation as a programmer
 * [Binary Trees](#binary-trees)
 * [Heaps](#heaps)
 * [Searching](#searching)
+* [Hash Tables](#hash-tables)
 * [Useful References](#useful-references)
 
 ## Primitive Types
@@ -154,8 +155,13 @@ the pursuit of ameloriation as a programmer
 |11.9|[Find the Missing IP Address](./python_explanations/absent_value_array.md)|[Python](./python_solutions/absent_value_array.py)|_O(nlogn)_|_O(n)_|
 |11.10|[Find the Duplicate and Missing Elements](./python_explanations/search_for_missing_element.md)|[Python](./python_solutions/search_for_missing_element.py)|_O(n)_|_O(1)_|
 
+## Hash Tables
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|12.1|[Test for Palindromic Permutations](./python_explanations/is_string_permutable_to_palindrome.md)|[Python](./python_solutions/is_string_permutable_to_palindrome.py)|_O(n)_|_O(n)_|
+
 <!---
-|11.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
