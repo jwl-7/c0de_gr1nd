@@ -21,7 +21,25 @@ def can_form_palindrome(s):
 ```
 
 ## Explanation
-* BLANK
+For a string to be permutable into a palindrome:
+1. If the string is of even length, each character should appear an even number of times
+2. If the string is of odd length, all but one character should appear and even number of times
 
 ## Code Dissection
-1. BLANK
+1. Initialize a counter to store the odd count
+    ```python
+    odd = 0
+    ```
+2. Loop over each character's count in the string
+    ```python
+    for count in collections.Counter(s).values():
+    ```
+3. If a character has an odd count, increment _odd_
+    ```python
+    if count % 2:
+        odd += 1
+    ```
+4. Return whether or not the amount of odd character counts is less than or equal to 1
+    ```python
+    return odd <= 1
+    ```
