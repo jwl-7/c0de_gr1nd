@@ -14,7 +14,13 @@ Output: False
 
 ## Solution
 ```python
-BLANK
+def is_letter_constructible_from_magazine(letter_text, magazine_text):
+    letter = collections.Counter(letter_text)
+    magazine = collections.Counter(magazine_text)
+    for char in letter:
+        if char not in magazine.keys() or letter[char] > magazine[char]:
+            return False
+    return True
 ```
 
 ## Explanation
