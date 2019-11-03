@@ -1,5 +1,5 @@
 # Test Whether a Singly Linked List Is Palindromic
-Write a program that tests whether a singly linked list is palindromic.
+Given a singly linked list, return whether or not it is palindromic.
 
 ## Examples
 ```

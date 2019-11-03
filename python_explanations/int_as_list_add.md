@@ -1,5 +1,5 @@
 # Add List-Based Integers
-Write a program which takes two singly linked lists of digits, and returns the list corresponding to the sum of the integers they represent. The least significant digit comes first.
+Given 2 singly linked lists that represent integers, compute the sum of the 2 integers. The numbering starts with the least significant digit.
 
 ## Example
 ```

@@ -1,5 +1,5 @@
 # Implement Cyclic Right Shift for Singly Linked Lists
-Write a program that takes as input a singly linked list and a nonnegative integer _k_, and returns the list cyclically shifted to the right by _k_.
+Given a singly linked list and a nonnegative integer _k_, rotate the list to the right _k_ places.
 
 ## Example
 ```

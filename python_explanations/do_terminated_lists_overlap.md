@@ -1,5 +1,5 @@
 # Test for Overlapping Lists&mdash;Lists Are Cycle-Free
-Write a program that takes two cycle-free singly linked lists, and determines if there exists a node that is common to both lists.
+Given 2 singly linked lists that do not contain any cycles, find the node where the 2 lists intersect.
 
 ## Example
 <img src='drawio_diagrams/do_terminated_lists_overlap.svg' width='80%'>

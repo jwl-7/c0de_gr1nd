@@ -1,7 +1,5 @@
 # Implement Even-Odd Merge
-Consider a singly linked list whose nodes are numbered starting at 0. Define the even-odd merge of the list to be the list of the even-numbered nodes followed by the odd-numbered nodes.
-
-Write a program that computes the even-odd merge.
+Given a singly linked list, group the even nodes together followed by the odd nodes.
 
 ## Examples
 ```

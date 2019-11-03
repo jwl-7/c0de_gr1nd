@@ -1,5 +1,5 @@
 # Remove Duplicates from a Sorted List
-Write a program that takes as input a singly linked list of integers in sorted order, and removes duplicates from it. The list should be sorted.
+Given a singly linked list of sorted integers, remove the duplicates.
 
 ## Example
 ```

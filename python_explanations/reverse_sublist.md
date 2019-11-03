@@ -1,7 +1,5 @@
 # Reverse a Single Sublist
-This problem is concerned with reversing a sublist within a list.
-
-Write a program which takes a singly linked list _L_ and two integers _s_ and _f_ as arguments, and reverses the order of the nodes from the *s*th node to *f*th node, inclusive. The numbering begins at 1, i.e., the head node is the first node. Do not allocate additional nodes.
+Given a linked list _L_ and two integers _s_ and _f_, reverse the order of the nodes from _s_ to _f_.
 
 ## Example
 ```
