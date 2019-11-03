@@ -1,5 +1,5 @@
 # Compute the _k_ Largest Elements in a Max-Heap
-Given a max-heap, represented as an array _A_, design an algorithm that computes the _k_ largest elements stored in the max-heap. You cannot modify the heap.
+Given a max-heap _A_, compute the _k_ largest elements stored in the max-heap without modifying it.
 
 ## Examples
 ```

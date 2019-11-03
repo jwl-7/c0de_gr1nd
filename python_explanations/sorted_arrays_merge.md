@@ -1,5 +1,5 @@
 # Merge Sorted Files
-Write a program that takes as input a set of sorted sequences and computes the union of these sequences as a sorted sequence.
+Given a set of sorted arrays of various sizes, merge them.
 
 ## Example
 ```

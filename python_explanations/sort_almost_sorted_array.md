@@ -1,5 +1,5 @@
 # Sort an Almost-Sorted Array
-Write a program which takes as input a very long sequence of numbers and prints the numbers in sorted order. Each number is at most _k_ away from its correctly sorted position.
+Given an array of numbers, where each element is at most _k_ away from its sorted position, sort the array.
 
 ## Examples
 ```

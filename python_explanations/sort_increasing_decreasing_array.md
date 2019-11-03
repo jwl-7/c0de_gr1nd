@@ -1,7 +1,5 @@
 # Sort an Increasing-Decreasing Array
-An array is said to be _k_-increasing-decreasing if elements repeteadly increase up to a certain index after which they decrease, then again increase, a total of _k_ times.
-
-Design an efficient algorithm for sorting a *k*-increasing-decreasing array.
+Given a _k_-increasing-decreasing array, sort it.
 
 ## Examples
 ```

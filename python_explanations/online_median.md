@@ -1,7 +1,5 @@
 # Compute the Median of Online Data
-You want to compute the running median of a sequence of numbers. The sequence is presented to you in a streaming fashion&mdash;you cannot back up to read an earlier value, and you need to output the median after reaching in each new element.
-
-Design an algorithm for computing the running median of a sequence.
+Given a running sequence of numbers, compute the running median after each new element.
 
 ## Examples
 ```
