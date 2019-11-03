@@ -1,5 +1,5 @@
 # Search a Sorted Array for Entry Equal to Its Index
-Design an efficient algorithm that takes a sorted array of distinct integers, and returns an index _i_ such that the element at index _i_ equals _i_.
+Given an array _A_ of distinct integers, return an index _i_ such that _A_[_i_] = _i_.
 
 ## Examples
 ```

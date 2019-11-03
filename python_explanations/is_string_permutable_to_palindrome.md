@@ -1,5 +1,5 @@
 # Test for Palindromic Permutations
-Write a program to test whether the letters forming a string can be permuted to form a palindrome.
+Given a string of letters, determine whether or not the letters can be arranged to form a palindrome.
 
 ## Examples
 ```

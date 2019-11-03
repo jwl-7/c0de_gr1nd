@@ -1,5 +1,5 @@
 # Search a Sorted Array for First Occurrence of _k_
-Write a method that takes a sorted array and a key and returns the index of the _first_ occurrence of that key in the array. Return -1 if the key does not appear in the array.
+Given a sorted array _A_ and an integer _k_, return the index of the first occurrence of _k_. Return -1 if _k_ isn't in the array.
 
 ## Examples
 ```

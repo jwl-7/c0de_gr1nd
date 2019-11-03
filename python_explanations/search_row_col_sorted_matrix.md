@@ -1,7 +1,5 @@
 # Search in a 2D Sorted Array
-Call a 2D array sorted if its rows and its columns are nondecreasing.
-
-Design an algorithm that takes a 2D sorted array and a number and checks whether that number appears in the array.
+Given a 2D sorted array _A_ and an integer _x_, return whether or not _x_ is in _A_.
 
 ## Examples
 |   |_C_<sub>0</sub>|_C_<sub>1</sub>|_C_<sub>2</sub>|_C_<sub>3</sub>|

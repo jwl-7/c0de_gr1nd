@@ -1,7 +1,5 @@
 # Search a Cyclically Sorted Array
-An array is said to be cyclically sorted if it is possible to cyclically shift its entries so that it becomes sorted.
-
-Design an _O(logn)_ algorithm for finding the position of the smallest element in a cyclically sorted array. Assume all elements are distinct.
+Given a cyclically sorted array of distinct elements, find the position of the smallest element in _O(logn)_ time.
 
 ## Examples
 ```

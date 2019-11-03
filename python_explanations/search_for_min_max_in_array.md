@@ -1,7 +1,5 @@
 # Find the Min and Max Simultaneously
-Given an array of comparable objects, you can find either the _min_ or the _max_ of the elements in the array with _n_ - 1 comparisons, where _n_ is the length of the array.
-
-Design an algorithm to find the min and max elements in an array.
+Given an array of numbers, compute the min and max elements of the array at the same time.
 
 ## Examples
 ```

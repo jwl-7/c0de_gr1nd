@@ -1,5 +1,5 @@
 # Compute the Integer Square Root
-Write a program which takes a nonnegative integer and returns the largest integer whose square is less than or equal to the given integer.
+Given a nonnegative integer _k_, return the largest integer whose square root is less than or equal to _k_.
 
 ## Examples
 ```

@@ -1,5 +1,5 @@
 # Compute the Real Square Root
-Implement a function which takes as input a floating point value and returns its square root.
+Given a floating point number _x_, return its square root.
 
 ## Examples
 ```

@@ -1,5 +1,5 @@
 # Find the *k*th Largest Element
-Design an algorithm for computing the *k*th largest element in an array.
+Given an array _A_ and an integer _k_, find the *k*th largest element in _A_.
 
 ## Examples
 ```
