@@ -1,5 +1,5 @@
 # Compute Binary Tree Nodes in Order of Increasing Depth
-Given a binary tree, return an array consisting of the keys at the same level. keys should appear in the order of the corresponding nodes' depths, breaking ties from left to right.
+Given a binary tree, return the level order traversal of its node keys.
 
 ## Example
 ```

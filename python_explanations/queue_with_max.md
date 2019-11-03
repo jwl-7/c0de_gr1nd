@@ -1,5 +1,5 @@
 # Implement a Queue with Max API
-Implement a queue with enqueue, dequeue, and max operations. The max operation returns the maximum element currently stored in the queue.
+Design a queue with a max() function.
 
 ## Solution
 ```python

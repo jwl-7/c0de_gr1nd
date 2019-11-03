@@ -1,5 +1,5 @@
 # Implement a Stack with Max API
-Design a stack that includes a max operation, in addition to push and pop. The max method should return the maximum value stored in the stack.
+Design a stack with a max() function.
 
 ## Solution
 ```python

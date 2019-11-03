@@ -1,7 +1,5 @@
 # Implement a Queue Using Stacks
-Queue insertion and deletion follows first-in, first-out semantics; stack insertion and deletion is last-in, first-out.
-
-How would you implement a queue given a library implementing stacks?
+Design a queue using two stacks.
 
 ## Solution
 ```python

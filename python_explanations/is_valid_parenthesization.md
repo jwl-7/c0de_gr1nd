@@ -1,7 +1,5 @@
 # Test a String over "{,},(,),[,]" for Well-Formedness
-A string over the characters "{,},(,),[,]" is said to be well-formed if the different types of brackets match in the correct order.
-
-Write a program that tests if a string made up of the characters '(',')','[',']',"{' and "}' is well-formed.
+Given a string containing '(', ')', '{', '}', '[' and ']', determine if the string is valid.
 
 ## Examples
 ```
