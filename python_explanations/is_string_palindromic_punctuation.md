@@ -1,7 +1,5 @@
 # Test Palindromicity
-For the purpose of this problem, define a palindromic string to be a string which when all the nonalphanumeric are removed it reads the same front to back ignoring case.
-
-Implement a function which takes as input a string _s_ and returns true if _s_ is a palindromic string.
+Given a string _s_, return whether or not the string is a palindrome. Ignore case and nonalphanumeric characters.
 
 ## Examples
 ```

@@ -1,5 +1,5 @@
 # Compute All Mnemonics for a Phone Number
-Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or four letters of the alphabet, as show in the figure below. Since words are easier to remember than numbers, it is natural to ask if a 7 or 10-digit phone number can be represented by a word. For example, "2276696" corresponds to "ACRONYM" as well as "ABPOMZN".
+The digits on a phone keypad correspond to letters as in the figure below.
 
 <table align='center'>
     <tr>
@@ -24,7 +24,7 @@ Each digit, apart from 0 and 1, in a phone keypad corresponds to one of three or
     </tr>
 </table>
 
-Write a program which takes as input a phone number, specified as a string of digits, and returns all possible character sequences that correspond to the phone number. The cell phone keypad is specified by a mapping that takes a digit and returns the corresponding set of characters. The character sequences do not have to be legal words or phrases.
+Given a string of digits, compute all the letter combinations possible.
 
 ## Example
 ```

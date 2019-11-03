@@ -1,5 +1,5 @@
 # Find the First Occurrence of a Substring
-Given two strings _s_ (the "search string") and _t_ (the "text"), find the first occurrence of _s_ in _t_.
+Given a substring _s_ and a string _t_, return the index of the first occurrence of _s_ in _t_.
 
 ## Examples
 ```

@@ -1,7 +1,5 @@
 # Reverse All the Words in a Sentence
-Given a string containing a set of words separated by whitespace, we would like to transform it to a string in which the words appear in reverse order. We do not need to keep the original string.
-
-Implement a function for reversing the words in a string _s_. Assume _s_ is a string encoded as a bytearray.
+Given a string _s_, reverse all the words in _s_. The string is a bytearray and the words are separated by whitespace.
 
 ## Examples
 ```

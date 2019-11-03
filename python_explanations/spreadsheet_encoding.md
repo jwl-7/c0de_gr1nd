@@ -1,7 +1,5 @@
 # Compute the Spreadsheet Column Encoding
-Spreadsheets often use an alphabetical encoding of the successive columns. Specifically, columns are identified by "A", "B", "C",..., "X", "Y", "Z", "AA", "AB",..., "ZZ", "AAA", "AAB",....
-
-Implement a function that converts a spreadsheet column id to the corresponding integer, with "A" corresponding to 1.
+Convert a spreadsheet column id to the corresponding integer. 'A' corresponds to 1.
 
 ## Examples
 ```
