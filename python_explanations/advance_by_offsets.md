@@ -1,7 +1,5 @@
 # Advancing Through an Array
-In a particular board game, a player has to try to advance through a sequence of positions. Each position has a nonnegative integer associated with it, representing the maximum you can advance from that position in one move. You begin at the first position, and win by getting to the last position.
-
-Write a program which takes an array of _n_ integers, where _A_[_i_] denotes the maximum you can advance from index _i_, and returns whether it is possible to advance to the last index starting from the beginning of the array.
+You're given an array of nonnegative integers, and start at the first index. Each element in the array represents how far you can jump from that position. Determine if it is possible to reach the last index in the array.
 
 ## Examples
 ```

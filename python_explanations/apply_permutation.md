@@ -1,6 +1,4 @@
 # Permute the Elements of an Array
-A permutation is a rearrangement of members of a sequence into a new sequence. A permutation can be specified by an array _P_, where _P_[_i_] represents the location of the element at _i_ in the permutation.
-
 Given an array _A_ of _n_ elements and a permutation _P_, apply _P_ to _A_.
 
 ## Examples

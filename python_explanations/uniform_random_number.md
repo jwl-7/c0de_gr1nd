@@ -1,9 +1,5 @@
 # Generate Uniform Random Numbers
-This problem is motivated by the following scenario. Six friends have to select a designated driver using a single unbiased coin. The process should be fair to everyone.
-
-How would you implement a random number generator that generates a random integer _i_ between _a_ and _b_, inclusive, given a random number generator that produces a zero or one with equal probability?
-
-All values in [_a_, _b_] should be equally likely.
+Given a random number generator that returns 0 or 1, generate a random integer _i_ between _a_ and _b_. Values in [_a_, _b_] should have equal probability.
 
 ## Examples
 ```

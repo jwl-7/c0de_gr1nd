@@ -1,5 +1,5 @@
 # Compute _x_ &#8725; _y_
-Given two positive integers, compute their quotient, using only the addition, subtraction, and shifting operators.
+Divide two positive integers using addition, subtraction, and bitwise operators.
 
 ## Examples
 ```
@@ -25,7 +25,8 @@ def divide(x, y):
 ```
 
 ## Explanation
-* The brute-force algorithm is to iteratively subtract _y_ from _x_ until _x_ < _y_; the quotient is the number of subtractions
+1. Iteratively subtract _y_ from _x_ until _x_ < _y_
+2. The quotient is the number of subtractions
 
 ## Code Dissection
 1. Initialize the quotient to zero

@@ -1,5 +1,5 @@
 # Rectangle Intersection
-Write a program which tests if two rectangles have a nonempty intersection. If the intersection is nonempty, return the rectangle formed by their intersection.
+Given two rectangles, check if they have a nonempty intersection. If so, return the rectangle formed by the intersection.
 
 ## Examples
 ```

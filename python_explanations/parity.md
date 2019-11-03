@@ -1,7 +1,5 @@
 # Computing the Parity of a Word
-The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0.
-
-How would you compute the parity of a very large number of 64-bit words?
+If a number has an odd number of 1-bits, then it has an odd parity. Conversely, if a number has an even number of 1-bits, then it has an even parity. Compute the parity of a 64-bit word.
 
 ## Examples
 ```
@@ -24,9 +22,8 @@ def parity(x):
 ```
 
 ## Explanation
-* The XOR of two bits is 0 if both bits are 0 or both bits are 1
+* The XOR of two bits = 0 if both bits are 0 or 1
 * The XOR of a group of bits is its parity
-* The parity of 64-bit integer [_b<sub>63</sub>_, ... ,_b<sub>0</sub>_] = the parity of the XOR of [_b<sub>63</sub>_, ... ,_b<sub>32</sub>_] and [_b<sub>31</sub>_, ... ,_b<sub>0</sub>_]
 
 ## Code Dissection
 1. XOR two 32-bit values = parity of 64-bit operand

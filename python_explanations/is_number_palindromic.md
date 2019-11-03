@@ -1,6 +1,5 @@
 # Check if a Decimal Integer is a Palindrome
-A palindromic string is one which reads the same forwards and backwards, such as the string 'racecar'.
-Write a program which determines if the decimal representation of an integer is a palindromic string.
+Given an integer _x_, determine whether or not its decimal representation is palindromic.
 
 ## Examples
 ```
@@ -35,10 +34,8 @@ def is_palindrome_number_pythonic(x):
     1. Extract the last digit in the number
     2. Append the extracted digit to the reversed number
     3. Remove the last digit from the number
-* The pythonic solution uses slice notation to reverse a string representation of the number, then converts it back to an integer
 * After the reversed number is computed, it is compared to the original number to check if it is palindromic
     * If the reversed number is equal to the original number, then the number is a palindrome
-* Both solutions have similar performance, but the pythonic solution has a more consistent runtime
 
 ## Code Dissection
 1. Check the sign of the number, because negative numbers cannot be palindromic

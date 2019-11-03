@@ -1,7 +1,5 @@
 # Swap Bits
-A 64-bit integer can be viewed as an array of 64-bits, with the bit at index 0 corresponding to the least significant bit (LSB), and the bit at index 63 corresponding to the most significant bit (MSB).
-
-Implement code that takes as input a 64-bit integer and swaps the bits at indices _i_ and _j_.
+Given a 64-bit integer, swap the bits at indices _i_ and _j_.
 
 ## Example
 * Let _x_ = 1234 in decimal
@@ -32,8 +30,8 @@ def swap_bits(x, i, j):
 ```
 
 ## Explanation
-* The _i_-th bit and _j_-th bit can be extracted using bitwise operators rather than looping through all the bits
-* Since we are dealing with 1s and 0s, if the swap is necessary, we only need to flip the bits
+1. Extract the _i_-th bit and _j_-th bit by shifting to the right
+2. If the swap is necessary, flip the bits to swap
 
 ## Code Dissection
 1. Extract the _i_-th bit

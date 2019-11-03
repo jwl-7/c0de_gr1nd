@@ -1,9 +1,5 @@
 # Compute _x_ &times; _y_ Without Arithmetical Operators
-Write a program that multiplies two nonnegative integers.
-The only operators you are allowed to use are:
-* assignment
-* the bitwise operators >>, <<, |, &, ~, ^
-* equality checks and Boolean combinations thereof
+Multiply two nonnegative integers using bitwise operators.
 
 ## Examples
 ```
@@ -34,8 +30,7 @@ def multiply(x, y):
 ```
 
 ## Explanation
-* The algorithm is based off the grade-school method for multiplication, which uses shifting and adding
-* Since we cannot use arithmetical operators, we have to define our own addition function
+* The algorithm is based off the grade-school multiplication algorithm
 
 Let's take a look at multiplying two binary numbers using shifts and adds
 <pre><code>

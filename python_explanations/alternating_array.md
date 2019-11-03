@@ -1,5 +1,6 @@
 # Computing an Alternation
-Write a program that takes an array _A_ of _n_ numbers, and rearranges _A_'s elements to get a new array _B_ having the property that
+You're given an array of _A_ of _n_ numbers. Rearrange the elements in _A_ to output an array _B_ with the structure:
+
 _B_[0] <= _B_[1] >= _B_[2] <= _B_[3] >= _B_[4] <= _B_[5] >= ...
 
 ## Examples
