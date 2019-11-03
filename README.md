@@ -7,7 +7,6 @@ the pursuit of ameloriation as a programmer
 * This repository features my solutions and explanations to the problems presented in </br>
   [Elements of Programming Interviews in Python](http://bit.ly/epipython)
 * The book solutions and test framework are from [EPI Judge](https://github.com/adnanaziz/EPIJudge)
-* THE PROBLEMS WILL SOON BE REWORDED INTO MY OWN WORDS
 
 ## Usage
 * Click the *Title* of the problem to view the problem description, example, solution, explanation, and code dissection
