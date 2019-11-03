@@ -16,11 +16,14 @@ Output: False
 ```python
 def is_letter_constructible_from_magazine(letter_text, magazine_text):
     letter = collections.Counter(letter_text)
-    magazine = collections.Counter(magazine_text)
-    for char in letter:
-        if char not in magazine.keys() or letter[char] > magazine[char]:
-            return False
-    return True
+    for char in magazine_text:
+        if char in letter:
+            letter[char] -= 1
+            if letter[char] == 0:
+                del letter[char]
+                if not letter:
+                    return True
+    return not letter
 ```
 
 ## Pythonic Solution
@@ -30,10 +33,16 @@ def is_letter_constructible_from_magazine_pythonic(letter_text, magazine_text):
 ```
 
 ## Explanation
-* BLANK
+* To construct the letter using the magazine, each character in the letter must also exist in the magazine for at least the same number of times
 
 ## Code Dissection
-1. BLANK
+1. Create tables for each character/count in the letter and magazine
+    ```python
+    letter = collections.Counter(letter_text)
+    magazine = collections.Counter(magazine_text)
+    ```
+    * The table structure is `{char: count}`
+2. Iterate over each 
 
 ## Pythonic Code Dissection
 1. BLANK
