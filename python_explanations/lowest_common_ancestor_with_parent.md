@@ -1,5 +1,5 @@
 # Compute the LCA When Nodes Have Parent Pointers
-Given two nodes in a binary tree, design an algorithm that computes their LCA. Assume that each node has a parent pointer.
+Given two nodes in a binary tree, compute the lowest common ancestor (LCA). The nodes have parent pointers.
 
 ## Examples
 ```

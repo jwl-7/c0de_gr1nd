@@ -1,5 +1,5 @@
 # Compute the *k*th Node in an Inorder Traversal
-Write a program that efficiently computes the *k*th node appearing in an inorder traversal. Assume that each node stores the number of nodes in the subtree rooted at that node.
+Given a binary tree and an integer _k_, compute the *k*th node in the inorder traversal. Each node contains the number of nodes in its subtree.
 
 ## Example
 ```

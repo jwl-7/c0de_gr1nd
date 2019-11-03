@@ -1,7 +1,5 @@
 # Test If a Binary Tree Is Height-Balanced
-A binary tree is said to be height-balanced if for each node in the tree, the difference in the height of its left and right subtrees is at most one. A perfect binary tree is height-balanced, as is a complete binary tree. A height-balanced binary tree does not have to be perfect or complete.
-
-Write a program that takes as input the root of a binary tree and checks whether the tree is height-balanced.
+Given a binary tree, determine whether or not it is height-balanced. A height-balanced tree is a binary tree in which the left and right subtrees of every node differ in height by at most 1.
 
 ## Examples
 ```

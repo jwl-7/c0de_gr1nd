@@ -1,9 +1,5 @@
 # Reconstruct a Binary Tree from a Preorder Traversal with Markers
-Many different binary trees have the same preorder traversal sequence.
-
-In this problem, the preorder traversal computation is modified to mark where a left or right child is empty.
-
-Design an algorithm for reconstructing a binary tree from a preorder traversal visit sequence that uses _null_ to mark empty children.
+Given a preorder sequence with null markers, reconstruct the binary tree.
 
 ## Example
 ```

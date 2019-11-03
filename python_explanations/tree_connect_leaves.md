@@ -1,5 +1,5 @@
 # Form a Linked List from the Leaves of a Binary Tree
-Given a binary tree, compute a linked list from the leaves of the binary tree. The leaves should appear in left-to-right order.
+Given a binary tree, construct a linked list from the leaves [left -> right].
 
 ## Example
 ```

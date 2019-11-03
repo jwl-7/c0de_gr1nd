@@ -1,7 +1,5 @@
 # Implement an Inorder Traversal with _O(1)_ Space
-The direct implementation of an inorder traversal using recursion has _O(h)_ space complexity, where _h_ is the height of the tree. Recursion can be removed with an explicit stack, but the space complexity remains _O(h)_.
-
-Write a nonrecursive program for computing the inorder traversal sequence for a binary tree. Assume nodes have parent fields.
+Given a binary tree, return the inorder traversal. The nodes contain parent pointers, and the solution must be iterative.
 
 ## Example
 ```

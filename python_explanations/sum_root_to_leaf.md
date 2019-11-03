@@ -1,7 +1,5 @@
 # Sum the Root-To-Leaf Paths in a Binary Tree
-Consider a binary tree in which each node contains a binary digit. A root-to-leaf path can be associated with a binary number&mdash;the MSB is at the root.
-
-Design an algorithm to compute the sum of the binary numbers represented by the root-to-leaf paths.
+Given a binary tree with nodes containing binary digits, compute the sum of its root-to-leaf path.
 
 ## Examples
 ```

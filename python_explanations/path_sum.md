@@ -1,7 +1,5 @@
 # Find a Root to Leaf Path with Specified Sum
-You are given a binary tree where each node is labeled with an integer. The path weight of a node in such a tree is the sum of the integers on the unique path from the root to that node.
-
-Write a program which takes as input an integer and a binary tree with integer node weights, and checks if there exists a leaf whose path weight equals the given integer.
+Given a binary tree and an integer, determine if the tree contains a root-to-leaf path such that the numbers add up to the given sum.
 
 ## Examples
 ```

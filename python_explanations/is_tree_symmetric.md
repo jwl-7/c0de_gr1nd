@@ -1,7 +1,5 @@
 # Test If a Binary Tree Is Symmetric
-A binary tree is symmetric if you can draw a vertical line through the root and then the left subtree is the mirror image of the right subtree.
-
-Write a program that checks whether a binary tree is symmetric.
+Given a binary tree, determine whether or not the tree is symmetric. A binary tree is symmetric if you can split it in the center and both sides mirror each other.
 
 ## Examples
 ```
