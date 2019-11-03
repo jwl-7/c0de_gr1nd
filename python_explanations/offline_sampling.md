@@ -1,7 +1,5 @@
 # Sample Offline Data
-This problem is motivated by the need for a company to select a random subset of its customers to roll out a new feature to.
-
-Implement an algorithm that takes as input an array of distinct elements and a size, and returns a subset of the given size of the array of elements. All subsets should be equally likely. Return the result in input array itself.
+Given an array _A_ of distinct integers, return a subset of _A_ of the given size _k_.
 
 ## Examples
 ```

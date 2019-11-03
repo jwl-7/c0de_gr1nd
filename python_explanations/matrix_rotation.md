@@ -1,5 +1,5 @@
 # Rotate a 2D Array
-Write a function that takes as input an _n_ &times; _n_ 2D array, and rotates the array by 90 degrees clockwise.
+Given an _n_ &times; _n_ 2D array, rotate the array 90 degrees clockwise.
 
 ## Examples
 * Let _C_ and _R_ represent column and row ids

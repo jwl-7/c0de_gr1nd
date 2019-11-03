@@ -1,7 +1,5 @@
 # Compute the Next Permutation
-There exist exactly _n_! permutations of _n_ elements. These can be totally ordered using the _dictionary ordering_&mdash;define permutation _p_ to appear before permutation _q_ if in the first place where _p_ and _q_ differ in their array representations, starting from index 0, the corresponding entry for _p_ is less than that for _q_.
-
-Write a program that takes as input a permutation, and returns the next permutation under dictionary ordering. If the permutation is the last permutation, return the empty array.
+Given a permutation, return the next permutation under dictionary ordering. If the permutation is the last, then return an empty array.
 
 ## Examples
 ```
@@ -35,7 +33,7 @@ def next_permutation(perm):
 ```
 
 ## Explanation
-The general algorithm for computing the next permutation:
+The algorithm for computing the next permutation:
 1. Find _i_ such that _p_[_i_] < _p_[_i_+1] and entries after index _i_ appear in decreasing order
 2. Find the smallest _p_[_j_] such that _p_[_j_] > _p_[_i_]  (note that _p_[_j_] occurs after _p_[_i_])
 3. Swap _p_[_j_] and _p_[_i_]

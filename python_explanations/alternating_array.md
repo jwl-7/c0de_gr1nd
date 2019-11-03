@@ -1,5 +1,5 @@
 # Computing an Alternation
-You're given an array of _A_ of _n_ numbers. Rearrange the elements in _A_ to output an array _B_ with the structure:
+Given an array _A_ of _n_ numbers. Rearrange the elements in _A_ to produce an array _B_ with the order:
 
 _B_[0] <= _B_[1] >= _B_[2] <= _B_[3] >= _B_[4] <= _B_[5] >= ...
 

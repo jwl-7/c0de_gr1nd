@@ -1,5 +1,5 @@
 # Buy and Sell a Stock Twice
-Write a program that computes the maximum profit that can be made by buying and selling a share at most twice. The second buy must be made on another date after the first sale.
+Given an array whose elements represent the daily stock price, find the maximum profit from buying and selling a share twice. The second buy must occur after the first buy.
 
 ## Examples
 ```

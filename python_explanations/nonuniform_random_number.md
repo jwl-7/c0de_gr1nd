@@ -1,5 +1,5 @@
 # Generate Nonuniform Random Numbers
-You are given _n_ numbers as well as probabilities _p_<sub>0</sub>, _p_<sub>1</sub>, ... , _p_ <sub>_n_-1</sub>, which sum up to 1. Given a random number generator that produces values in [0, 1) uniformly, how would you generate one of the _n_ numbers according to the specified probabilities?
+Given a random number generator that returns 0 or 1, generate one of the numbers in the given numbers array with the given probabilities.
 
 ## Example
 ```

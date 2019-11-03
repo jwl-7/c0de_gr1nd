@@ -1,5 +1,5 @@
 # Permute the Elements of an Array
-Given an array _A_ of _n_ elements and a permutation _P_, apply _P_ to _A_.
+Given an array _A_, reorder the elements to the permutation given in the index array _P_.
 
 ## Examples
 ```

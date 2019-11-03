@@ -1,5 +1,5 @@
 # Compute a Random Permutation
-Design an algorithm that creates uniformly random permutations of [0, 1, ... , _n_-1]. You are given a random number generator that returns in the set [0, 1, ... , _n_-1] with equal probability; use as few calls to it as possible.
+Given a random number generator that returns integers in the set [0, 1, ... , _n_-1], compute a random permutation of that set with equal probability.
 
 ## Examples
 ```

@@ -1,8 +1,8 @@
 # Compute Rows in Pascal's Triangle
-Write a program which takes as input a nonnegative integer _n_ and returns the first _n_ rows of Pascal's triangle.
+Given a nonnegative integer _n_, generate the first _n_ rows of Pascal's triangle.
 
 ## Example
-Here is a figure depicting the first five rows of a graphic that is known as Pascal's triangle:
+Here is a figure depicting the first five rows of Pascal's triangle:
 ```
         -----
         | 1 |
@@ -16,7 +16,7 @@ Here is a figure depicting the first five rows of a graphic that is known as Pas
 | 1 | 4 | 6 | 4 | 1 |
 ---------------------
 ```
-Each row contains one more entry than the previous one. Except for entries in the last row, each entry is adjacent to one or two numbers in the row below it. The first row holds 1. Each entry holds the sum of the numbers in the adjacent entries above it.
+Each number contains the sum of the two numbers directly above it.
 
 ## Solution
 ```python

@@ -1,5 +1,5 @@
 # Multiple Two Arbitrary-Precision Numbers
-Write a program that takes two arrays representing integers, and returns an integer representing their product.
+Given two arrays representing integers, multiply the two integers.
 
 ## Examples
 ```

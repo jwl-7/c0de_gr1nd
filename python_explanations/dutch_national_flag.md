@@ -1,5 +1,8 @@
 # Dutch National Flag Problem
-Write a program that takes an array _A_ and an index _i_ into _A_, and rearranges the elements such that all elements less than _A_[_i_] (the "pivot") appear first, followed by the elements equal to the pivot, followed by elements greater than the pivot.
+Given an array _A_ and an index _i_, sort the elements in the order:
+1. Elements < _A_[_i_]
+2. Elements == _A_[_i_]
+3. Elements > _A_[_i_]
 
 ## Examples
 ```

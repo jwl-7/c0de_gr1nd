@@ -1,5 +1,5 @@
 # Increment an Arbitrary-Precision Integer
-Write a program that takes as input an array of digits encoding a nonnegative decimal integer _D_ and updates the array to represent the integer _D_ &plus; 1.
+Given an array _A_ that represents a nonnegative integer, increment the number.
 
 ## Examples
 ```

@@ -1,5 +1,5 @@
 # Compute the Spiral Ordering of a 2D Array
-Write a program which takes an _n_ &times; _n_ 2D array and returns the spiral ordering of the array.
+Given an _n_ &times; _n_ 2D array, return the spiral ordering of the array.
 
 ## Examples
 * Let _C_ and _R_ represent column and row ids
