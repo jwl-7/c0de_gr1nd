@@ -23,8 +23,17 @@ def is_letter_constructible_from_magazine(letter_text, magazine_text):
     return True
 ```
 
+## Pythonic Solution
+```python
+def is_letter_constructible_from_magazine_pythonic(letter_text, magazine_text):
+    return not collections.Counter(letter_text) - collections.Counter(magazine_text)
+```
+
 ## Explanation
 * BLANK
 
 ## Code Dissection
+1. BLANK
+
+## Pythonic Code Dissection
 1. BLANK
