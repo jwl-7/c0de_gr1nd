@@ -1,23 +1,30 @@
+import collections
+
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 
 
 class LruCache:
+
     def __init__(self, capacity):
-        # TODO - you fill in here.
-        return
+        self.prices = collections.OrderedDict()
+        self.capacity = capacity
 
     def lookup(self, isbn):
-        # TODO - you fill in here.
-        return 0
+        if isbn not in self.prices:
+            return -1
+        self.prices.move_to_end(isbn, last=False)
+        return self.prices[isbn]
 
     def insert(self, isbn, price):
-        # TODO - you fill in here.
-        return
+        if isbn not in self.prices:
+            if len(self.prices) == self.capacity:
+                self.prices.popitem()
+            self.prices[isbn] = price
+        self.prices.move_to_end(isbn, last=False)
 
     def erase(self, isbn):
-        # TODO - you fill in here.
-        return True
+        return self.prices.pop(isbn, False) is not False
 
 
 def run_test(commands):
