@@ -159,6 +159,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |12.1|[Test for Palindromic Permutations](./python_explanations/is_string_permutable_to_palindrome.md)|[Python](./python_solutions/is_string_permutable_to_palindrome.py)|_O(n)_|_O(n)_|
 |12.2|[Is an Anonymous Letter Constructible?](./python_explanations/is_anonymous_letter_constructible.md)|[Python](./python_solutions/is_anonymous_letter_constructible.py)|_O(m+n)_|_O(n)_|
+|12.3|[Implement an ISBN Cache](./python_explanations/lru_cache.md)|[Python](./python_solutions/lru_cache.py)|_O(1)_|_O(1)_|
 
 <!---
 |12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
