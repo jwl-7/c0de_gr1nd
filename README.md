@@ -162,6 +162,7 @@ the pursuit of ameloriation as a programmer
 |12.3|[Implement an ISBN Cache](./python_explanations/lru_cache.md)|[Python](./python_solutions/lru_cache.py)|_O(1)_|_O(1)_|
 |12.4|[Compute the LCA, Optimizing for Close Ancestors](./python_explanations/lowest_common_ancestor_close_ancestor.md)|[Python](./python_solutions/lowest_common_ancestor_close_ancestor.py)|_O(h)_|_O(h)_|
 |12.5|[Find the Nearest Repeated Entries in an Array](./python_explanations/nearest_repeated_entries.md)|[Python](./python_solutions/nearest_repeated_entries.py)|_O(n)_|_O(d)_|
+|12.6|[Find the Smallest Subarray Covering All Values](./python_explanations/smallest_subarray_covering_set.md)|[Python](./python_solutions/smallest_subarray_covering_set.py)|_O(n)_|_O(n)_|
 
 <!---
 |12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
