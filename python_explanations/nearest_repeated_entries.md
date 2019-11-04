@@ -12,7 +12,15 @@ Output: 3
 
 ## Solution
 ```python
-BLANK
+def find_nearest_repetition(paragraph):
+    table = {}
+    closest = float('inf')
+    for i, s in enumerate(paragraph):
+        if s in table:
+            distance = i - table[s]
+            closest = min(closest, distance)
+        table[s] = i
+    return closest if closest != float('inf') else -1
 ```
 
 ## Explanation

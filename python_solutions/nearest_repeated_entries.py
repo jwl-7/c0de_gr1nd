@@ -2,8 +2,14 @@ from test_framework import generic_test
 
 
 def find_nearest_repetition(paragraph):
-    # TODO - you fill in here.
-    return 0
+    table = {}
+    closest = float('inf')
+    for i, s in enumerate(paragraph):
+        if s in table:
+            distance = i - table[s]
+            closest = min(closest, distance)
+        table[s] = i
+    return closest if closest != float('inf') else -1
 
 
 if __name__ == '__main__':
