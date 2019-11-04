@@ -43,4 +43,27 @@ def lca(node0, node1):
 * If one of the current nodes is already in the hash table, then its the LCA
 
 ## Code Dissection
-1. BLANK
+1. Create a simple hash table to store the visited nodes
+    ```python
+    ancestors = set()
+    ```
+2. Loop while either node exists and the LCA hasn't been found
+    ```python
+    while node0 or node1:
+    ```
+3. For _node0_, traverse up the tree, add the visited node to the hash table &mdash; if the node is already in the table, then it's the LCA
+    ```python
+    if node0:
+        if node0 in ancestors:
+            return node0
+        ancestors.add(node0)
+        node0 = node0.parent
+    ```
+4. For _node1_, traverse up the tree, add the visited node to the hash table &mdash; if the node is already in the table, then it's the LCA
+    ```python
+    if node1:
+        if node1 in ancestors:
+            return node1
+        ancestors.add(node1)
+        node1 = node1.parent
+    ```
