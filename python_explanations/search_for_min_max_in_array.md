@@ -4,10 +4,10 @@ Given an array of numbers, compute the min and max elements of the array at the 
 ## Examples
 ```
  Input: [1, 2, 3, 4, 5]
-Output: (1, 5)
+Output: MinMax(smallest=1, largest=5)
 
  Input: [5, -4, -6, 5, -3, 7, 5, -3]
-Output: (-6, 7)
+Output: MinMax(smallest=-6, largest=7)
 ```
 
 ## Solution

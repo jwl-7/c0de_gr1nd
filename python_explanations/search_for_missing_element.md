@@ -4,7 +4,7 @@ Given an array of _n_ numbers, each between 0 and _n_ - 1, find the missing numb
 ## Example
 ```
  Input: [0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9]
-Output: (duplicate=4, missing=10)
+Output: DuplicateAndMissing(duplicate=4, missing=10)
 ```
 
 ## Solution
