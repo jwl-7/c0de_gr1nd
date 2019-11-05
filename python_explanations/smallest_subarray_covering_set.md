@@ -38,7 +38,11 @@ def find_smallest_subarray_covering_set(paragraph, keywords):
 ```
 
 ## Explanation
-* BLANK
+The approach to solve this problem is referred to as a sliding window:
+1. Create a hash map of the subarray/substring that stores its characters/counts
+2. Find a window in the text that contains all the characters in the subarray
+3. Remove as much of the window until it does not contain the subarray
+4. Slide the window over and keep trying
 
 ## Code Dissection
 1. BLANK
