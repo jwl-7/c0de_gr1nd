@@ -169,8 +169,13 @@ the pursuit of ameloriation as a programmer
 |12.10|[Compute All String Decompositions](./python_explanations/string_decompositions_into_dictionary_words.md)|[Python](./python_solutions/string_decompositions_into_dictionary_words.py)|_O(mnk)_|_O(nk)_|
 |12.11|[Test the Collatz Conjecture](./python_explanations/collatz_checker.md)|[Python](./python_solutions/collatz_checker.py)|_O(1)_|_O(1)_|
 
+## Sorting
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|13.1|[Compute the Intersection of Two Sorted Arrays](./python_explanations/intersect_sorted_arrays.md)|[Python](./python_solutions/intersect_sorted_arrays.py)|_O(m+n)_|_O(m+n)_|
+
 <!---
-|12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
