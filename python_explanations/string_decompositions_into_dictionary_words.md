@@ -1,5 +1,5 @@
 # Compute All String Decompositions
-Given a sentence string and an array of words, find the substrings in the sentence that can make up the words. Order of the characters do not matter.
+Given a sentence string and an array of words, find the starting indices of substrings that concatenate into each word.
 
 ## Examples
 ```
