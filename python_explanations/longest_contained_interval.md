@@ -27,7 +27,13 @@ def longest_contained_range(A):
 ```
 
 ## Explanation
-* BLANK
+1. Convert the array into a set of numbers
+2. Iterate through the set
+3. If the number _x_ is the start of a sequence (_x_ - 1 is not in the set):
+    * Test _y_ = _x_ + 1, _x_ + 2, ...
+    * Stop at the first _y_ that is not in the set
+4. The length of the sequence is _y_ - _x_
+5. Compare each length to the longest sequence
 
 ## Code Dissection
 1. BLANK
