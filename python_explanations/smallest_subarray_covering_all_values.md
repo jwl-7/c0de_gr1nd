@@ -14,6 +14,9 @@ Output: Subarray(start=3, end=5)
 
 ## Solution
 ```python
+Subarray = collections.namedtuple('Subarray', ('start', 'end'))
+
+
 def find_smallest_sequentially_covering_subset(paragraph, keywords):
     key_lookup = {}
     for i, s in enumerate(keywords):
