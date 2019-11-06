@@ -14,7 +14,16 @@ Sequence: [1, 3, 4, 2]
 
 ## Solution
 ```python
-BLANK
+def longest_contained_range(A):
+    A = set(A)
+    longest = 0
+    for x in A:
+        if x - 1 not in A:
+            y = x + 1
+            while y in A:
+                y += 1
+            longest = max(longest, y - x)
+    return longest
 ```
 
 ## Explanation
