@@ -2,8 +2,7 @@ from test_framework import generic_test
 
 
 def intersect_two_sorted_arrays(A, B):
-    # TODO - you fill in here.
-    return []
+    return sorted(set(A) & set(B))
 
 
 if __name__ == '__main__':
