@@ -36,4 +36,27 @@ def longest_contained_range(A):
 5. Compare each length to the longest sequence
 
 ## Code Dissection
-1. BLANK
+1. Convert _A_ into a set, and initialize length of the longest sequence
+    ```python
+    A = set(A)
+    longest = 0
+    ```
+2. Loop over each number in the set
+    ```python
+    for x in A:
+    ```
+3. If the number _x_ is the start of a sequence, keep testing for _y_ until _y_ is not in the set
+    ```python
+    if x - 1 not in A:
+        y = x + 1
+        while y in A:
+            y += 1
+    ```
+4. Compare the length of the sequence (_y_ - _x_) to the longest length so far
+    ```python
+    longest = max(longest, y - x)
+    ```
+5. Return the longest consecutive subsequence
+    ```python
+    return longest
+    ```
