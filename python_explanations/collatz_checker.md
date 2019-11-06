@@ -19,7 +19,11 @@ def test_collatz_conjecture(n):
 ```
 
 ## Explanation
-* BLANK
+* This conjecture in mathematics has been around since 1937, and it's unsolved
+* Anyway, this code is what I call IQ Level 700 &mdash; the problem only wants us to test if the collatz conjecture is true, but it also assumes it's true, and if a bunch of math geniuses haven't figured it out, then I'm just going to assume it's true and return true for any positive number
 
 ## Code Dissection
-1. BLANK
+1. Return true for positive numbers
+    ```python
+    return n > 0
+    ```
