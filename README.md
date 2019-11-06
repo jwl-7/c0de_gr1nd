@@ -22,6 +22,7 @@ the pursuit of ameloriation as a programmer
 * [Heaps](#heaps)
 * [Searching](#searching)
 * [Hash Tables](#hash-tables)
+* [Sorting](#sorting)
 * [Useful References](#useful-references)
 
 ## Primitive Types
