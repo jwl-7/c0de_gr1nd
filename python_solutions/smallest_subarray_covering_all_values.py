@@ -24,8 +24,8 @@ def find_smallest_sequentially_covering_subset(paragraph, keywords):
             if key_idx == 0:
                 smallest[key_idx] = 1
             elif smallest[key_idx - 1] != float('inf'):
-                prev_dist = i - recent[key_idx - 1]
-                smallest[key_idx] = prev_dist + smallest[key_idx - 1]
+                prev = i - recent[key_idx - 1]
+                smallest[key_idx] = prev + smallest[key_idx - 1]
             recent[key_idx] = i
             if key_idx == len(keywords) - 1 and smallest[-1] < shortest:
                 shortest = smallest[-1]
