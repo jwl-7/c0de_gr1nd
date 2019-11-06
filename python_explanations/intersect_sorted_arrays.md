@@ -14,11 +14,17 @@ Output: [3, 4]
 
 ## Solution
 ```python
-BLANK
+def intersect_two_sorted_arrays(A, B):
+    return sorted(set(A) & set(B))
 ```
 
 ## Explanation
-* BLANK
+* Using `set()` removes the duplicates
+* The bitwise and operator `&` computes the intersection
+* `sorted()` is necessary for the result to be in order, but it can slow the solution down
 
 ## Code Dissection
-1. BLANK
+1. Return the intersection of two sorted arrays
+    ```python
+    return sorted(set(A) & set(B))
+    ```
