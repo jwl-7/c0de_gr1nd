@@ -1,15 +1,15 @@
 # Find the Length of a Longest Contained Interval
-Given an array of integers, find the length of the longest ordered subset.
+Given an array of integers, find the length of the longest consecutive subsequence.
 
 ## Examples
 ```
-   Input: [5, 7, -4, -2, 0, 1, 4, 3]
-  Output: 5
-Sequence: [-4, -2, 0, 1, 4]
-
-   Input: [4, 3, -9, -8, 11, 1, 10, 8, 7, 6, -6, -1]
+   Input: [2, 3, 1, 5]
   Output: 3
-Sequence: []
+Sequence: [2, 3, 1]
+
+   Input: [1, 7, 3, 6, 4, 20, 2]
+  Output: 4
+Sequence: [1, 3, 4, 2]
 ```
 
 ## Solution
