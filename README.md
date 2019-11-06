@@ -164,6 +164,7 @@ the pursuit of ameloriation as a programmer
 |12.5|[Find the Nearest Repeated Entries in an Array](./python_explanations/nearest_repeated_entries.md)|[Python](./python_solutions/nearest_repeated_entries.py)|_O(n)_|_O(d)_|
 |12.6|[Find the Smallest Subarray Covering All Values](./python_explanations/smallest_subarray_covering_set.md)|[Python](./python_solutions/smallest_subarray_covering_set.py)|_O(n)_|_O(n)_|
 |12.7|[Find Smallest Subarray Sequentially Covering All Values](./python_explanations/smallest_subarray_covering_all_values.md)|[Python](./python_solutions/smallest_subarray_covering_all_values.py)|_O(n)_|_O(m)_|
+|12.8|[Find the Longest Subarray with Distinct Entries](./python_explanations/longest_subarray_with_distinct_values.md)|[Python](./python_solutions/longest_subarray_with_distinct_values.py)|_O(n)_|_O(k)_|
 
 <!---
 |12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
