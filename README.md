@@ -167,6 +167,7 @@ the pursuit of ameloriation as a programmer
 |12.8|[Find the Longest Subarray with Distinct Entries](./python_explanations/longest_subarray_with_distinct_values.md)|[Python](./python_solutions/longest_subarray_with_distinct_values.py)|_O(n)_|_O(k)_|
 |12.9|[Find the Length of a Longest Contained Interval](./python_explanations/longest_contained_interval.md)|[Python](./python_solutions/longest_contained_interval.py)|_O(n)_|_O(n)_|
 |12.10|[Compute All String Decompositions](./python_explanations/string_decompositions_into_dictionary_words.md)|[Python](./python_solutions/string_decompositions_into_dictionary_words.py)|_O(mnk)_|_O(nk)_|
+|12.11|[Test the Collatz Conjecture](./python_explanations/collatz_checker.md)|[Python](./python_solutions/collatz_checker.py)|_O(1)_|_O(1)_|
 
 <!---
 |12.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
