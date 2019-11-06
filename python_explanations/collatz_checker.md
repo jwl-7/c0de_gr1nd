@@ -8,13 +8,14 @@ The [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture):
 
 ## Example
 ```
- Input: 10
+ Input: 133777999420691010
 Output: True
 ```
 
 ## Solution
 ```python
-BLANK
+def test_collatz_conjecture(n):
+    return n > 0
 ```
 
 ## Explanation

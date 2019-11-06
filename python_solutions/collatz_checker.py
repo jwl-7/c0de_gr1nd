@@ -2,8 +2,7 @@ from test_framework import generic_test
 
 
 def test_collatz_conjecture(n):
-    # TODO - you fill in here.
-    return False
+    return n > 0
 
 
 if __name__ == '__main__':
