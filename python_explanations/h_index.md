@@ -22,7 +22,21 @@ def h_index(citations):
 ```
 
 ## Explanation
-* BLANK
+* According to the definition, another way to look at this problem is &mdash; find the largest _h_ such that there are _h_ entries in the array >= _h_
 
 ## Code Dissection
-1. BLANK
+1. Get the length of the array of citations
+    ```python
+    n = len(citations)
+    ```
+2. Sort the array to make finding the _h_-index easier
+    ```python
+    citations.sort()
+    ```
+3. Find an element in the array >= _n_ - _i_-th element and return _n_ - _i_ as the _h_-index
+    ```python
+    for i, c in enumerate(citations):
+        if c >= n - i:
+            return n - i
+    return 0
+    ```
