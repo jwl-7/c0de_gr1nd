@@ -1,5 +1,5 @@
 # Delete Duplicates from a Sorted Array
-Given a sorted array, remove all the duplicates. Don't use built-in functions.
+Given a sorted array, remove all the duplicates. Return the number of valid elements after removal. Don't use built-in functions.
 
 ## Examples
 ```
