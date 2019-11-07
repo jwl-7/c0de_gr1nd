@@ -12,7 +12,13 @@ Output: 10
 
 ## Solution
 ```python
-BLANK
+def h_index(citations):
+    n = len(citations)
+    citations.sort()
+    for i, c in enumerate(citations):
+        if c >= n - i:
+            return n - i
+    return 0
 ```
 
 ## Explanation

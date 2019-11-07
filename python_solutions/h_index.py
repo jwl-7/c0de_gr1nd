@@ -2,7 +2,11 @@ from test_framework import generic_test
 
 
 def h_index(citations):
-    # TODO - you fill in here.
+    n = len(citations)
+    citations.sort()
+    for i, c in enumerate(citations):
+        if c >= n - i:
+            return n - i
     return 0
 
 
