@@ -5,12 +5,12 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def delete_duplicates(A):
-    valid = 0
-    for i in range(1, len(A)):
-        if A[valid] != A[i]:
-            valid += 1
-            A[valid] = A[i]
-    return valid + 1
+    idx = 1
+    for x in A[1:]:
+        if x != A[idx-1]:
+            A[idx] = x
+            idx += 1
+    return idx
 
 
 @enable_executor_hook
