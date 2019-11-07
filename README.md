@@ -174,6 +174,7 @@ the pursuit of ameloriation as a programmer
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
 |13.1|[Compute the Intersection of Two Sorted Arrays](./python_explanations/intersect_sorted_arrays.md)|[Python](./python_solutions/intersect_sorted_arrays.py)|_O(m+n)_|_O(m+n)_|
+|13.2|[Merge Two Sorted Arrays](./python_explanations/two_sorted_arrays_merge.md)|[Python](./python_solutions/two_sorted_arrays_merge.py)|_O(nlogn)_|_O(1)_|
 
 <!---
 |13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
