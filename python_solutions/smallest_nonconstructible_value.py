@@ -2,8 +2,14 @@ from test_framework import generic_test
 
 
 def smallest_nonconstructible_value(A):
-    # TODO - you fill in here.
-    return 0
+    A.sort()
+    x = 1
+    for num in A:
+        if num <= x:
+            x += num
+        else:
+            break
+    return x
 
 
 if __name__ == '__main__':

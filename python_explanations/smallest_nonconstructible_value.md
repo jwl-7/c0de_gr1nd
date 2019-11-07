@@ -6,13 +6,21 @@ Given an array of positive integers, find the smallest integer that cannot be re
  Input: [1, 2, 3, 4]
 Output: 11
 
- Input: [1, 3, 2, 8]
-Output: 7
+ Input: [1, 2, 6, 10, 11, 15]
+Output: 4
 ```
 
 ## Solution
 ```python
-BLANK
+def smallest_nonconstructible_value(A):
+    A.sort()
+    x = 1
+    for num in A:
+        if num <= x:
+            x += num
+        else:
+            break
+    return x
 ```
 
 ## Explanation
