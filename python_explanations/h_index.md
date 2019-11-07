@@ -1,5 +1,5 @@
 # Computing the H-Index
-Given an array of citations (nonnegative integers), find the [h-index](https://en.wikipedia.org/wiki/H-index).
+Given an array of citations (nonnegative integers), find the [h-index](https://en.wikipedia.org/wiki/H-index). "A scientist has index _h_ if _h_ of his/her _N_ papers have at least _h_ citations each, and the other _N_ − _h_ papers have no more than _h_ citations each."
 
 ## Examples
 ```
