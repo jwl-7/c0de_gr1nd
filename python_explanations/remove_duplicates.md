@@ -9,7 +9,14 @@ Output: [['ABC', '1'], ['Foo', '1']]
 
 ## Solution
 ```python
-BLANK
+def eliminate_duplicate(A):
+    A.sort()
+    idx = 1
+    for x in A[1:]:
+        if x != A[idx-1]:
+            A[idx] = x
+            idx += 1
+    del A[:idx]
 ```
 
 ## Explanation

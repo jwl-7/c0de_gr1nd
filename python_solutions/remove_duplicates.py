@@ -5,18 +5,27 @@ from test_framework.test_utils import enable_executor_hook
 
 
 class Name:
+
     def __init__(self, first_name, last_name):
-        self.first_name, self.last_name = first_name, last_name
+        self.first_name = first_name
+        self.last_name = last_name
 
     def __lt__(self, other):
-        return (self.first_name < other.first_name
-                if self.first_name != other.first_name else
-                self.last_name < other.last_name)
+        return (
+            self.first_name < other.first_name
+            if self.first_name != other.first_name
+            else self.last_name < other.last_name
+        )
 
 
 def eliminate_duplicate(A):
-    # TODO - you fill in here.
-    return
+    A.sort()
+    idx = 1
+    for x in A[1:]:
+        if x != A[idx-1]:
+            A[idx] = x
+            idx += 1
+    del A[:idx]
 
 
 @enable_executor_hook
