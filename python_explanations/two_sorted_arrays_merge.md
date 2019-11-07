@@ -1,5 +1,5 @@
 # Merge Two Sorted Arrays
-Given two sorted arrays of integers, merge the second array into the first in sorted order.
+Given two sorted arrays of integers _A_ and _B_, merge _B_ into _A_ as one sorted array.
 
 ## Example
 ```
