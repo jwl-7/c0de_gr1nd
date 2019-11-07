@@ -14,8 +14,13 @@ def merge_two_sorted_arrays(A, m, B, n):
         n -= 1
 
 
+def merge_two_sorted_arrays_pythonic(A, m, B, n):
+    A[m:] = B
+    A.sort()
+
+
 def merge_two_sorted_arrays_wrapper(A, m, B, n):
-    merge_two_sorted_arrays(A, m, B, n)
+    merge_two_sorted_arrays_pythonic(A, m, B, n)
     return A
 
 

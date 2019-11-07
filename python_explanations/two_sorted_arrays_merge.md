@@ -25,6 +25,13 @@ def merge_two_sorted_arrays(A, m, B, n):
         n -= 1
 ```
 
+## Pythonic Solution
+```python
+def merge_two_sorted_arrays_pythonic(A, m, B, n):
+    A[m:] = B
+    A.sort()
+```
+
 ## Explanation
 * BLANK
 
