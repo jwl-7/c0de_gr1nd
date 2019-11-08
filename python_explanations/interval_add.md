@@ -39,7 +39,7 @@ There are 3 cases that need to be addressed:
 
 Let _x_ = disjoint intervals and _y_ = new interval:
 1. Before: _x_.right < _y_.left
-2. Overlap: _x_.left >= _y_.left and _x_.right <= _y_.right
+2. Overlap: _y_.left <= _x_.left <= _y_.right
 3. After: _x_.left > _y_.right
 
 ## Code Dissection
