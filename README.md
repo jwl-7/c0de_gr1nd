@@ -180,6 +180,7 @@ the pursuit of ameloriation as a programmer
 |13.5|[Smallest Nonconstructible Value](./python_explanations/smallest_nonconstructible_value.md)|[Python](./python_solutions/smallest_nonconstructible_value.py)|_O(nlogn)_|_O(1)_|
 |13.6|[Render a Calendar](./python_explanations/calendar_rendering.md)|[Python](./python_solutions/calendar_rendering.py)|_O(nlogn)_|_O(n)_|
 |13.7|[Merging Intervals](./python_explanations/interval_add.md)|[Python](./python_solutions/interval_add.py)|_O(n)_|_O(n)_|
+|13.8|[Compute the Union of Intervals](./python_explanations/intervals_union.md)|[Python](./python_solutions/intervals_union.py)|_O(nlogn)_|_O(n)_|
 
 <!---
 |13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
