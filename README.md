@@ -178,6 +178,7 @@ the pursuit of ameloriation as a programmer
 |13.3|[Computing the H-Index](./python_explanations/h_index.md)|[Python](./python_solutions/h_index.py)|_O(nlogn)_|_O(1)_|
 |13.4|[Remove First-Name Duplicates](./python_explanations/remove_duplicates.md)|[Python](./python_solutions/remove_duplicates.py)|_O(nlogn)_|_O(1)_|
 |13.5|[Smallest Nonconstructible Value](./python_explanations/smallest_nonconstructible_value.md)|[Python](./python_solutions/smallest_nonconstructible_value.py)|_O(nlogn)_|_O(1)_|
+|13.6|[Render a Calendar](./python_explanations/calendar_rendering.md)|[Python](./python_solutions/calendar_rendering.py)|_O(nlogn)_|_O(n)_|
 
 <!---
 |13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
