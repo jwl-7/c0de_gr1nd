@@ -50,4 +50,27 @@ Let's look at an example:
 4. Thus, the salary threshold _c_ = 25.0
 
 ## Code Dissection
-1. BLANK
+1. Grab the number of salaries, sort the salaries, and initialize an unadjusted salary sum
+    ```python
+    n = len(current_salaries)
+    current_salaries.sort()
+    unadjusted = 0.0
+    ```
+2. Loop through the salaries and adjust the cap
+    ```python
+    people = n - i
+    adjusted = curr * people
+    ```
+3. If we have found a cap beyond the target, then we know where the threshold lies
+    ```python
+    if unadjusted + adjusted >= target_payroll:
+        return (target_payroll - unadjusted) / people
+    ```
+4. If we haven't found a cap beyond the target, then add the current salary to the unadjusted sum
+    ```python
+    unadjusted += curr
+    ```
+5. If the target payroll > existing payroll, then there is no threshold
+    ```python
+    return -1
+    ```
