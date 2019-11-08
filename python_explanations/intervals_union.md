@@ -1,7 +1,7 @@
 # Compute the Union of Intervals
 Given a set of intervals, compute their union. The intervals may have open or closed ends.
 
-## Examples
+## Example
 ```
 False = open end
  True = closed end
