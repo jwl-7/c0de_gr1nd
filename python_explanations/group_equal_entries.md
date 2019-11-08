@@ -17,7 +17,11 @@ def group_by_age(people):
 ```
 
 ## Explanation
-* BLANK
+* While the problem only asks for equal ages to be adjacent, any other sorting algorithm beyond something like a quicksort uses additional space complexity
+* The book's solution uses 2 hash tables to maintain subarrays for different types of elements to swap elements around, which not only uses additional space but is way slower
 
 ## Code Dissection
-1. BLANK
+1. Sort the array using the age as a key
+    ```python
+    people.sort(key=lambda x: x.age)
+    ```
