@@ -44,4 +44,35 @@ def find_max_simultaneous_events(A):
 4. The max counter value is the max number of overlapping intervals
 
 ## Code Dissection
-1. BLANK
+1. Create an endpoints array using all the start/finish times of the events
+    ```python
+    endpoints = [
+        x for event in A for x in (
+            Endpoint(event.start, True),
+            Endpoint(event.finish, False)
+        )
+    ]
+    ```
+2. Sort the endpoints array by the event time, and use *is_start* as a tiebreaker for equal times
+    ```python
+    endpoints.sort(key=lambda x: (x.time, not x.is_start))
+    ```
+    * If two times are equal, the start time will come before a finish time
+3. Create a counter variable and variable to store the result
+    ```python
+    max_events = 0
+    num_events = 0
+    ```
+4. Loop through _endpoints_: increment *num_events* for start times, decrement for finish times
+    ```python
+    for event in endpoints:
+        if event.is_start:
+            num_events += 1
+            max_events = max(num_events, max_events)
+        else:
+            num_events -= 1
+    ```
+5. Return the max simultaneous events (max number of overlapping intervals)
+    ```python
+    return max_events
+    ```
