@@ -181,6 +181,7 @@ the pursuit of ameloriation as a programmer
 |13.6|[Render a Calendar](./python_explanations/calendar_rendering.md)|[Python](./python_solutions/calendar_rendering.py)|_O(nlogn)_|_O(n)_|
 |13.7|[Merging Intervals](./python_explanations/interval_add.md)|[Python](./python_solutions/interval_add.py)|_O(n)_|_O(n)_|
 |13.8|[Compute the Union of Intervals](./python_explanations/intervals_union.md)|[Python](./python_solutions/intervals_union.py)|_O(nlogn)_|_O(n)_|
+|13.9|[Partitioning and Sorting an Array with Many Repeated Entries](./python_explanations/group_equal_entries.md)|[Python](./python_solutions/group_equal_entries.py)|_O(nlogn)_|_O(1)_|
 
 <!---
 |13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
