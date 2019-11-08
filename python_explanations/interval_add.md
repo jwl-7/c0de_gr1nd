@@ -38,9 +38,9 @@ There are 3 cases that need to be addressed:
 3. Disjoint intervals that come after the new interval
 
 Let _x_ = disjoint intervals and _y_ = new interval:
-1.  Before: _x_.right < _y_.left
+1. Before: _x_.right < _y_.left
 2. Overlap: _x_.left >= _y_.left and _x_.right <= _y_.right
-3.   After: _x_.left > _y_.right
+3. After: _x_.left > _y_.right
 
 ## Code Dissection
 1. Create a new list to store the merge, an iterator variable, and store the length of the disjoint intervals array
