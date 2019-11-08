@@ -10,13 +10,13 @@ class Team:
     Player = collections.namedtuple('Player', ('height'))
 
     def __init__(self, height):
-        self._players = [Team.Player(h) for h in height]
+        self.players = [Team.Player(h) for h in height]
 
-    # Checks if team0 can be placed in front of team1.
     @staticmethod
     def valid_placement_exists(team0, team1):
-        # TODO - you fill in here.
-        return True
+        team0.players.sort()
+        team1.players.sort()
+        return all(x < y for x, y in zip(team0.players, team1.players))
 
 
 @enable_executor_hook
