@@ -26,7 +26,18 @@ def valid_placement_exists(team0, team1):
 ```
 
 ## Explanation
-* BLANK
+1. Sort both teams' player heights
+2. Compare the teams' player heights in pairs to check if Team 0 can stand in front of Team 1
 
 ## Code Dissection
-1. BLANK
+1. Sort both teams' player heights
+    ```python
+    team0.players.sort()
+    team1.players.sort()
+    ```
+2. Check if Team 0 can stand in front of Team 1
+    ```python
+    return all(x < y for x, y in zip(team0.players, team1.players))
+    ```
+    * `zip()` puts the player heights in pairs
+    * `all()` will only return True if each comparison is True
