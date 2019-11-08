@@ -16,7 +16,7 @@ def find_max_simultaneous_events(A):
             Endpoint(event.finish, False)
         )
     ]
-    endpoints.sort(key=lambda x: (x[0], not x[1]))
+    endpoints.sort(key=lambda x: (x.time, not x.is_start))
     max_events = 0
     num_events = 0
     for event in endpoints:
