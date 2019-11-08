@@ -27,7 +27,34 @@ def stable_sort_list(L):
 ```
 
 ## Explanation
-* BLANK
+* For an explanation on merging two sorted lists: [Merge Two Sorted Lists](#sorted_lists_merge.md)
+* The solution implements a merge sort
 
 ## Code Dissection
-1. BLANK
+1. Set the base case: L is empty or a single node
+    ```python
+    if not L or not L.next:
+        return L
+    ```
+2. Using a slow and fast pointer, find the midpoint of the list
+    ```python
+    prev = None
+    slow = fast = L
+    while fast and fast.next:
+        prev = slow
+        fast = fast.next.next
+        slow = slow.next
+    ```
+3. Split the list into two parts
+    ```python
+    prev.next = None
+    ```
+4. Create the two half lists
+    ```python
+    sorted_l1 = stable_sort_list(L)
+    sorted_l2 = stable_sort_list(slow)
+    ```
+5. Merge the two parts and return the sorted list
+    ```python
+    return merge_two_sorted_lists(sorted_l1, sorted_l2)
+    ```
