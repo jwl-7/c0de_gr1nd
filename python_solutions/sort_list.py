@@ -14,9 +14,9 @@ def stable_sort_list(L):
         slow = slow.next
     prev.next = None
 
-    sorted_l1 = stable_sort_list(L)
-    sorted_l2 = stable_sort_list(slow)
-    return merge_two_sorted_lists(sorted_l1, sorted_l2)
+    L1 = stable_sort_list(L)
+    L2 = stable_sort_list(slow)
+    return merge_two_sorted_lists(L1, L2)
 
 
 if __name__ == '__main__':
