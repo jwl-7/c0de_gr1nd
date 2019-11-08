@@ -5,12 +5,12 @@ from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
+
 Person = collections.namedtuple('Person', ('age', 'name'))
 
 
 def group_by_age(people):
-    # TODO - you fill in here.
-    return
+    people.sort(key=lambda x: x.age)
 
 
 @enable_executor_hook

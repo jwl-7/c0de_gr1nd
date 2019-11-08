@@ -9,7 +9,11 @@ Output: [[1, 'Sally'], [1, 'Joe'], [2, 'Bob'], [2, 'Alice'], [3, 'John'], [4, 'F
 
 ## Solution
 ```python
-BLANK
+Person = collections.namedtuple('Person', ('age', 'name'))
+
+
+def group_by_age(people):
+    people.sort(key=lambda x: x.age)
 ```
 
 ## Explanation
