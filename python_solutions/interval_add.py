@@ -5,12 +5,26 @@ from test_framework import generic_test
 from test_framework.test_failure import PropertyName
 from test_framework.test_utils import enable_executor_hook
 
+
 Interval = collections.namedtuple('Interval', ('left', 'right'))
 
 
 def add_interval(disjoint_intervals, new_interval):
-    # TODO - you fill in here.
-    return []
+    i = 0
+    n = len(disjoint_intervals)
+    merged = []
+    while i < n and disjoint_intervals[i].right < new_interval.left:
+        merged.append(disjoint_intervals[i])
+        i += 1
+    while i < n and disjoint_intervals[i].left <= new_interval.right:
+        new_interval = Interval(
+            min(new_interval.left, disjoint_intervals[i].left),
+            max(new_interval.right, disjoint_intervals[i].right)
+        )
+        i += 1
+    merged.append(new_interval)
+    merged += disjoint_intervals[i:]
+    return merged
 
 
 @enable_executor_hook
