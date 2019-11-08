@@ -19,17 +19,10 @@ Conclusion: Team 0 cannot be placed in front of Team 1
 
 ## Solution
 ```python
-class Team:
-    Player = collections.namedtuple('Player', ('height'))
-
-    def __init__(self, height):
-        self.players = [Team.Player(h) for h in height]
-
-    @staticmethod
-    def valid_placement_exists(team0, team1):
-        team0.players.sort()
-        team1.players.sort()
-        return all(x < y for x, y in zip(team0.players, team1.players))
+def valid_placement_exists(team0, team1):
+    team0.players.sort()
+    team1.players.sort()
+    return all(x < y for x, y in zip(team0.players, team1.players))
 ```
 
 ## Explanation
