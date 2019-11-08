@@ -1,5 +1,5 @@
 # Compute the Union of Intervals
-Given a set of intervals, compute their union.
+Given a set of intervals, compute their union. The intervals may have open or closed ends.
 
 ## Examples
 ```
@@ -38,7 +38,18 @@ def union_of_intervals(intervals):
 ```
 
 ## Explanation
-* BLANK
+* We are basically testing for overlaps with the added condition of the open/closed endpoints
+
+There are 2 cases to address:
+1. The previous interval in the result and the current interval overlap, in which case compute the union of the two intervals
+2. They do not overlap, in which case just add the interval to the result
+
+For overlapping intervals&mdash;Let _x_ = previous interval in the result and _y_ = current interval:
+1. _y_.left <= _x_.right
+2. If _y_.left == _x_.right, then one of the endpoints must be closed
+3. _y_.right >= _x_.right
+4. If _y_.right == _x_.right, then _x_'s endpoint must be closed
+* All of these conditions must be true before computing the union of two overlapping intervals
 
 ## Code Dissection
 1. BLANK
