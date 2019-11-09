@@ -186,8 +186,13 @@ the pursuit of ameloriation as a programmer
 |13.11|[Implement a Fast Sorting Algorithm for Lists](./python_explanations/sort_list.md)|[Python](./python_solutions/sort_list.py)|_O(nlogn)_|_O(logn)_|
 |13.12|[Compute a Salary Threshold](./python_explanations/find_salary_threshold.md)|[Python](./python_solutions/find_salary_threshold.py)|_O(nlogn)_|_O(n)_|
 
+## Binary Search Trees
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|14.1|[Test If a Binary Tree Satisfies the BST Property](./python_explanations/is_tree_a_bst.md)|[Python](./python_solutions/is_tree_a_bst.py)|_O(n)_|_O(h)_|
+
 <!---
-|13.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|14.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
