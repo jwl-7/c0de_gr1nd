@@ -35,7 +35,10 @@ def is_binary_tree_bst(tree, low=float('-inf'), high=float('inf')):
 ```
 
 ## Explanation
-* BLANK
+* For any root, every node in its left subtree must be <= the key at the root
+* For any root, every node in its right subtree must be >= the key at the root
+* The nodes in the left subtree must be in the range [_low_ -> _root_]
+* The nodes in the right subtree must be in the range [_root_ -> _high_]
 
 ## Code Dissection
 1. BLANK
