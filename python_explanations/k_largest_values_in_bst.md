@@ -1,5 +1,5 @@
 # Find the _k_ Largest Elements in a BST
-BLANK
+Given a BST and an integer _k_, return the _k_ largest elements in descending order.
 
 ## Example
 ```
