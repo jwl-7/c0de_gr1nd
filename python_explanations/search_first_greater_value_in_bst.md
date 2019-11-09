@@ -17,7 +17,15 @@ Output: 4
 
 ## Solution
 ```python
-BLANK
+def find_first_greater_than_k(tree, k):
+    result = None
+    while tree:
+        if tree.data > k:
+            result = tree
+            tree = tree.left
+        else:
+            tree = tree.right
+    return result
 ```
 
 ## Explanation
