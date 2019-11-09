@@ -33,7 +33,8 @@ def rebuild_bst_from_preorder(preorder_sequence):
 ```
 
 ## Explanation
-* BLANK
+* Since this is a BST, we can identify which nodes lie in the left and right subtree respectively since the root is the first node in the preorder sequence
+* Making use of the recursive call stack, the solution identifies and connects the nodes based on the range of numbers less than or greater than the root
 
 ## Code Dissection
 1. BLANK
