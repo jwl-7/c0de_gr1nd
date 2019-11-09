@@ -29,7 +29,7 @@ def find_first_greater_than_k(tree, k):
 ```
 
 ## Explanation
-* Descend down the tree from the root and eliminate subtrees based on their root's value
+* Descend the tree from the root and eliminate subtrees based on their root's value
 * Update the result while traversing until reaching the bottom of the tree
 
 ## Code Dissection
@@ -37,7 +37,7 @@ def find_first_greater_than_k(tree, k):
     ```python
     result = None
     ```
-2. Descend down the tree from the root until reaching the bottom
+2. Descend the tree from the root until reaching the bottom
     ```python
     while tree:
     ```
