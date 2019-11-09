@@ -18,7 +18,13 @@ Output: 2
 
 ## Solution
 ```python
-BLANK
+def find_LCA(tree, s, b):
+    while not s.data <= tree.data <= b.data:
+        if s.data < tree.data:
+            tree = tree.left
+        else:
+            tree = tree.right
+    return tree
 ```
 
 ## Explanation
