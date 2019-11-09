@@ -41,4 +41,19 @@ def is_binary_tree_bst(tree, low=float('-inf'), high=float('inf')):
 * The nodes in the right subtree must be in the range [_root_ -> _high_]
 
 ## Code Dissection
-1. BLANK
+1. Base case: stop recursing once we hit the end of a subtree
+    ```python
+    if not tree:
+        return True
+    ```
+2. Validate the tree and return True/False
+    ```python
+    return (
+        low <= tree.data <= high and
+        is_binary_tree_bst(tree.left, low, tree.data) and
+        is_binary_tree_bst(tree.right, tree.data, high)
+    )
+    ```
+    1. `low <= tree.data <= high` check if the root is between the _low_ and _high_ range
+    2. `(tree.left, low, tree.data)` check if the nodes in the left subtree are in the range [_low_ -> _root_]
+    3. `(tree.right, tree.data, high)` check if the nodes in the right subtree are in the range [_root_ -> _high_]
