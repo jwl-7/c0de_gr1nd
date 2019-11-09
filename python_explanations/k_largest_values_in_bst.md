@@ -15,7 +15,17 @@ Output: [4, 5]
 
 ## Solution
 ```python
-BLANK
+def find_k_largest_in_bst(tree, k):
+    def helper(tree):
+        if tree and len(result) < k:
+            helper(tree.right)
+            if len(result) < k:
+                result.append(tree.data)
+                helper(tree.left)
+
+    result = []
+    helper(tree)
+    return result
 ```
 
 ## Explanation
