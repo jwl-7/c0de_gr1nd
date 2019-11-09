@@ -29,7 +29,34 @@ def find_k_largest_in_bst(tree, k):
 ```
 
 ## Explanation
-* BLANK
+* The solution performs a reverse inorder traversal
 
-## Code Dissection
-1. BLANK
+## Code Dissection - helper
+1. Recurse the right subtree
+    ```python
+    if tree and len(result) < k:
+        helper(tree.right)
+    ```
+2. Add the value to the result, if we are still searching for elements
+    ```python
+    if len(result) < k:
+        result.append(tree.data)
+    ```
+3. Recurse the left subtree, which results in a reverse inorder traversal
+    ```python
+    helper(tree.left)
+    ```
+
+## Code Dissection - find_k_largest_in_bst
+1. Create an array to hold the _k_ largest elements
+    ```python
+    result = []
+    ```
+2. Call the recursive `helper()` function to perform a reverse inorder traversal
+    ```python
+    helper(tree)
+    ```
+3. Return the _k_ largest elements
+    ```python
+    return result
+    ```
