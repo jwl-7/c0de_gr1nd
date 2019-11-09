@@ -1,11 +1,8 @@
 # Compute the LCA in a BST
-Given two nodes in a BST, find the lowest common ancestor.
+Given two nodes _s_ and _b_ in a BST, find the lowest common ancestor. _s_ <= _b_
 
 ## Example
 ```
-s = node 1
-b = node 2
-
         4
        / \
       2   5
