@@ -32,4 +32,21 @@ Since the tree is a BST and _s_ <= _b_, there are 4 cases:
 4. _s_ and _b_ > _root_, LCA is in right subtree
 
 ## Code Dissection
-1. BLANK
+1. Traverse the tree until we find a key such that _s_ <= _root_ <= _b_
+    ```python
+    while not s.data <= tree.data <= b.data:
+    ```
+2. If _s_ < _root_, then search the left subtree
+    ```python
+    if s.data < tree.data:
+        tree = tree.left
+    ```
+3. Otherwise, search the right subtree
+    ```python
+    else:
+        tree = tree.right
+    ```
+4. Return the LCA of the BST
+    ```python
+    return tree
+    ```
