@@ -29,7 +29,30 @@ def find_first_greater_than_k(tree, k):
 ```
 
 ## Explanation
-* BLANK
+* Descend down the tree from the root and eliminate subtrees based on their root's value
+* Update the result while traversing until reaching the bottom of the tree
 
 ## Code Dissection
-1. BLANK
+1. Create an empty result variable&mdash;note that the problem wants the answer to be the node itself and not its value
+    ```python
+    result = None
+    ```
+2. Descend down the tree from the root until reaching the bottom
+    ```python
+    while tree:
+    ```
+3. If the node's key > _k_, update the result and keep going left
+    ```python
+    if tree.data > k:
+        result = tree
+        tree = tree.left
+    ```
+4. If the node's key <= _k_, skip the left subtree and go right
+    ```python
+    else:
+        tree = tree.right
+    ```
+5. Return the final result after traversing
+    ```python
+    return result
+    ```
