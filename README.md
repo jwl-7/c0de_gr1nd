@@ -192,6 +192,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |14.1|[Test If a Binary Tree Satisfies the BST Property](./python_explanations/is_tree_a_bst.md)|[Python](./python_solutions/is_tree_a_bst.py)|_O(n)_|_O(h)_|
 |14.2|[Find the First Key Greater Than a Given Value in a BST](./python_explanations/search_first_greater_value_in_bst.md)|[Python](./python_solutions/search_first_greater_value_in_bst.py)|_O(h)_|_O(1)_|
+|14.3|[Find the _k_ Largest Elements in a BST](./python_explanations/k_largest_values_in_bst.md)|[Python](./python_solutions/k_largest_values_in_bst.py)|_O(h+k)_|_O(k)_|
 
 <!---
 |14.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
