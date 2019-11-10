@@ -1,8 +1,10 @@
-# Caesar Cipher  
-Write a program that encrypts plaintext -> ciphertext using the caesar cipher.  
-Add a function that decrypts the ciphertext -> plaintext using frequency analysis.  
-Add a function that decrypts the ciphertext -> plaintext using brute force.  
-  
+# Caesar Cipher
+Write a program that encrypts plaintext -> ciphertext using the caesar cipher.
+
+Add a function that decrypts the ciphertext -> plaintext using frequency analysis.
+
+Add a function that decrypts the ciphertext -> plaintext using brute force.
+
 ## Examples
 ```
 Pick a mode [1-3]: 1
@@ -12,8 +14,8 @@ Enter shift key [1-26]: 5
 Encipherment
 -------------------------------------------
 [5] MJQQT BTWQI
-```  
-  
+```
+
 ```
 Pick a mode [1-3]: 2
 Enter ciphertext: MJQQT BTWQI
@@ -33,8 +35,8 @@ Top Possible Translations
 [11] BYFFI QILFX
 [8] EBIIL TLOIA
 [5] HELLO WORLD
-```  
-  
+```
+
 ```
 Pick a mode [1-3]: 3
 Enter ciphertext: MJQQT BTWQI
@@ -67,4 +69,4 @@ Brute Force
 [24] OLSSV DVYSK
 [25] NKRRU CUXRJ
 [26] MJQQT BTWQI
-```  
+```
