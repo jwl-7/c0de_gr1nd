@@ -8,7 +8,8 @@ Given three sorted arrays, compute a value from each array that forms the smalle
      [4, 5, 6],
      [7, 8, 9]
  ]
-Output: [3, 4, 7]
+Output: 4
+Minimum interval = [3, 4, 7]
 ```
 
 ## Solution
