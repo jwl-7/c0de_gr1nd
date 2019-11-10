@@ -15,7 +15,22 @@ Minimum distance = 7 - 3 = 4
 
 ## Solution
 ```python
-BLANK
+def find_closest_elements_in_sorted_arrays(sorted_arrays):
+    diff = float('inf')
+    tree = SortedDict()
+    for idx, array in enumerate(sorted_arrays):
+        i = iter(array)
+        nxt = next(i)
+        tree[(nxt, idx)] = i
+    while True:
+        min_val, min_idx = tree.peekitem(0)[0]
+        max_val = tree.peekitem()[0][0]
+        diff = min(diff, max_val - min_val)
+        i = tree.popitem(0)[1]
+        nxt = next(i, None)
+        if nxt is None:
+            return diff
+        tree[(nxt, min_idx)] = i
 ```
 
 ## Explanation
