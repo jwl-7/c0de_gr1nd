@@ -10,6 +10,7 @@ Given three sorted arrays, compute a value from each array that forms the smalle
  ]
 Output: 4
 Minimum interval = [3, 4, 7]
+Minimum distance = 7 - 3 = 4
 ```
 
 ## Solution
