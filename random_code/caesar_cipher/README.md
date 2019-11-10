@@ -1,8 +1,6 @@
 # Caesar Cipher
-Write a program that encrypts plaintext -> ciphertext using the caesar cipher.
-
-Add a function that decrypts the ciphertext -> plaintext using frequency analysis.
-
+Write a program that encrypts plaintext -> ciphertext using the caesar cipher.\
+Add a function that decrypts the ciphertext -> plaintext using frequency analysis.\
 Add a function that decrypts the ciphertext -> plaintext using brute force.
 
 ## Examples
