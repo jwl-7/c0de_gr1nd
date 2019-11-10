@@ -34,7 +34,12 @@ def find_closest_elements_in_sorted_arrays(sorted_arrays):
 ```
 
 ## Explanation
-* BLANK
+Let _s_ be the minimum value and _b_ be the maximum value in a set of 3 numbers:
+1. Get the first element from each sorted array&mdash;these are all the minimum values
+2. Remove _s_ from the set and replace it with the next element in the array that it belongs to
+3. The current distance is (_b_ - _s_)
+4. Keep comparing the current distance with the smallest distance so far
+5. Return the smallest distance
 
 ## Code Dissection
 1. BLANK
