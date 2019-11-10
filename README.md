@@ -195,6 +195,7 @@ the pursuit of ameloriation as a programmer
 |14.3|[Find the _k_ Largest Elements in a BST](./python_explanations/k_largest_values_in_bst.md)|[Python](./python_solutions/k_largest_values_in_bst.py)|_O(h+k)_|_O(k)_|
 |14.4|[Compute the LCA in a BST](./python_explanations/lowest_common_ancestor_in_bst.md)|[Python](./python_solutions/lowest_common_ancestor_in_bst.py)|_O(h)_|_O(1)_|
 |14.5|[Reconstruct a BST from Traversal Data](./python_explanations/bst_from_preorder.md)|[Python](./python_solutions/bst_from_preorder.py)|_O(n)_|_O(h)_|
+|14.6|[Find the Closest Entries in Three Sorted Arrays](./python_explanations/minimum_distance_3_sorted_arrays.md)|[Python](./python_solutions/minimum_distance_3_sorted_arrays.py)|_O(nlogk)_|_O(1)_|
 
 <!---
 |14.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
