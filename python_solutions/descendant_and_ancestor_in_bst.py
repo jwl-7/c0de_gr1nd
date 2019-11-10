@@ -5,8 +5,7 @@ from test_framework.binary_tree_utils import must_find_node
 from test_framework.test_utils import enable_executor_hook
 
 
-def pair_includes_ancestor_and_descendant_of_m(possible_anc_or_desc_0,
-                                               possible_anc_or_desc_1, middle):
+def pair_includes_ancestor_and_descendant_of_m(node0, node1, middle):
     # TODO - you fill in here.
     return True
 
