@@ -1,9 +1,10 @@
-# Enumerate Numbers of the Form _a_ &plus; _b_&radic;<span style='text-decoration:overline;'><small>2</small></span>
-BLANK
+# Enumerate Numbers of the Form _a_ &plus; _b_ &radic;2
+Given an integer _k_, compute the _k_ smallest numbers for _a_ &plus; _b_ &radic;2 where _a_ and _b_ are nonnegative integers.
 
-## Examples
+## Example
 ```
-BLANK
+ Input: k = 4
+Output: [0.0, 1.0, 1.4142135623730951, 2.0]
 ```
 
 ## Solution
