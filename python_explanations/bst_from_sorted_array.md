@@ -27,7 +27,25 @@ def build_min_height_bst_from_sorted_array(A):
 ```
 
 ## Explanation
-* BLANK
+* Given that the array is sorted&mdash;for a minimum height tree, the root will be the middle element in the array
 
 ## Code Dissection
-1. BLANK
+1. Base case: if _A_ is empty, then return
+    ```python
+    if not A:
+        return None
+    ```
+2. Compute the middle index in _A_, then add the middle element as the root
+    ```python
+    mid = len(A) // 2
+    root = BinaryTreeNode(A[mid])
+    ```
+3. Build the left and right subtrees
+    ```python
+    root.left = build_min_height_bst_from_sorted_array(A[:mid])
+    root.right = build_min_height_bst_from_sorted_array(A[mid+1:])
+    ```
+4. Return the root of the BST
+    ```python
+    return root
+    ```
