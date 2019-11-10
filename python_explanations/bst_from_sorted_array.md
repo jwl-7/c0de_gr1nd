@@ -16,7 +16,14 @@ Output:
 
 ## Solution
 ```python
-BLANK
+def build_min_height_bst_from_sorted_array(A):
+    if not A:
+        return None
+    mid = len(A) // 2
+    root = BinaryTreeNode(A[mid])
+    root.left = build_min_height_bst_from_sorted_array(A[:mid])
+    root.right = build_min_height_bst_from_sorted_array(A[mid+1:])
+    return root
 ```
 
 ## Explanation
