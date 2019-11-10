@@ -1,4 +1,4 @@
-# Enumerate Numbers of the Form _a_ &plus; _b_ <math><msqrt><mi>2</mi></msqrt></math>
+# Enumerate Numbers of the Form _a_ &plus; _b_&radic;<span style='text-decoration:overline;'><small>2</small></span>
 BLANK
 
 ## Examples
