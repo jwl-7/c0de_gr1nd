@@ -59,7 +59,16 @@ def search_bst(tree, node):
 ```
 
 ## Explanation
-* BLANK
+1. Set an _a_ to _node0_ and _b_ to _node1_
+2. Move _a_ and _b_ down the tree until:
+    1. _a_ or _b_ is the _middle_ node
+    2. _a_ is _b_ or _b_ is _a_
+    3. We get to the bottom of the tree without reaching the first two cases
+3. Check the results from the search:
+    1. If _a_ or _b_ is _middle_, then _a_ or _b_ is an ancestor of _middle_
+    2. If _a_ is _b_ or _b_ is _a_, then the _middle_ can't be between _a_ and _b_
+4. If _a_ or _b_ is an ancestor of middle, then check if _middle_ is an ancestor of _node0_ or _node1_ by moving down the tree
+5. If _middle_ is an ancestor of _node0_ or _node1_ at this point, then the 3 nodes are ordered
 
 ## Code Dissection
 1. BLANK
