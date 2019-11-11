@@ -199,6 +199,7 @@ the pursuit of ameloriation as a programmer
 |14.7|[Enumerate Numbers of the Form _a_ &plus; _b_ &radic;2](./python_explanations/a_b_sqrt2.md)|[Python](./python_solutions/a_b_sqrt2.py)|_O(klogk)_|_O(k)_|
 |14.8|[Build a Minimum Height BST from a Sorted Array](./python_explanations/bst_from_sorted_array.md)|[Python](./python_solutions/bst_from_sorted_array.py)|_O(n)_|_O(logn)_|
 |14.9|[Test If Three BST Nodes Are Totally Ordered](./python_explanations/descendant_and_ancestor_in_bst.md)|[Python](./python_solutions/descendant_and_ancestor_in_bst.py)|_O(h)_|_O(1)_|
+|14.10|[The Range Lookup Problem](./python_explanations/range_lookup_in_bst.md)|[Python](./python_solutions/range_lookup_in_bst.py)|_O(n)_|_O(m)_|
 
 <!---
 |14.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
