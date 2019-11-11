@@ -15,7 +15,22 @@ Output: [1, 2, 3, 4]
 
 ## Solution
 ```python
-BLANK
+Interval = collections.namedtuple('Interval', ('left', 'right'))
+
+
+def range_lookup_in_bst(tree, interval):
+    def helper(tree):
+        if tree:
+            if interval.left < tree.data:
+                helper(tree.left)
+            if interval.left <= tree.data <= interval.right:
+                result.append(tree.data)
+            if interval.right > tree.data:
+                helper(tree.right)
+
+    result = []
+    helper(tree)
+    return result
 ```
 
 ## Explanation

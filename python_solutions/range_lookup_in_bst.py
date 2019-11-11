@@ -2,12 +2,23 @@ import collections
 
 from test_framework import generic_test
 
+
 Interval = collections.namedtuple('Interval', ('left', 'right'))
 
 
 def range_lookup_in_bst(tree, interval):
-    # TODO - you fill in here.
-    return []
+    def helper(tree):
+        if tree:
+            if interval.left < tree.data:
+                helper(tree.left)
+            if interval.left <= tree.data <= interval.right:
+                result.append(tree.data)
+            if interval.right > tree.data:
+                helper(tree.right)
+
+    result = []
+    helper(tree)
+    return result
 
 
 def range_lookup_in_bst_wrapper(tree, i):
