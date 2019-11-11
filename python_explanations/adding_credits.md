@@ -9,5 +9,20 @@ BLANK
 ## Explanation
 * BLANK
 
-## Code Dissection
+## Code Dissection - __init__
+1. BLANK
+
+## Code Dissection - insert
+1. BLANK
+
+## Code Dissection - remove
+1. BLANK
+
+## Code Dissection - lookup
+1. BLANK
+
+## Code Dissection - add_all
+1. BLANK
+
+## Code Dissection - max
 1. BLANK
