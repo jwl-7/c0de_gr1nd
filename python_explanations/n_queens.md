@@ -9,7 +9,6 @@ Nonattacking placement = no two queens can threaten each other:
 ## Example
 `Input: n = 4`
 
-
 <table>
     <tr>
         <td></td>
@@ -36,6 +35,39 @@ Nonattacking placement = no two queens can threaten each other:
         <td></td>
     </tr>
 </table>
+
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>&#9819;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>&#9819;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>&#9819;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>&#9819;</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+ORRRRR
+
+| A | B |
+|---|---|
+|<table><tr><td></td><td>&#9819;</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>&#9819;</td></tr><tr><td>&#9819;</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>&#9819;</td><td></td></tr></table>|<table><tr><td></td><td></td><td>&#9819;</td><td></td></tr><tr><td>&#9819;</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>&#9819;</td></tr><tr><td></td><td>&#9819;</td><td></td><td></td></tr></table>|
 
 ## Solution
 ```python
