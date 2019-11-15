@@ -4,12 +4,20 @@ from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
+
 NUM_PEGS = 3
 
 
 def compute_tower_hanoi(num_rings):
-    # TODO - you fill in here.
-    return []
+    def hanoi(ring, source, dest, spare):
+        if ring > 0:
+            hanoi(ring - 1, source, spare, dest)
+            result.append([source, dest])
+            hanoi(ring - 1, spare, dest, source)
+
+    result = []
+    hanoi(num_rings, 0, 1, 2)
+    return result
 
 
 @enable_executor_hook
