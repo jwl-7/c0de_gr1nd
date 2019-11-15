@@ -10,38 +10,32 @@ Nonattacking placement = no two queens can threaten each other:
 `Input: n = 4`
 
 
-<table align='center'>
+<table>
     <tr>
-        <td align='center'></td>
-        <td align='center'>&#9819;</td>
-        <td align='center'></td>
-        <td align='center'></td>
+        <td></td>
+        <td>&#9819;</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td align='center'></td>
-        <td align='center'></td>
-        <td align='center'></td>
-        <td align='center'>&#9819;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>&#9819;</td>
     </tr>
     <tr>
-        <td align='center'>&#9819;</td>
-        <td align='center'></td>
-        <td align='center'></td>
-        <td align='center'></td>
+        <td>&#9819;</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td align='center'></td>
-        <td align='center'></td>
-        <td align='center'>&#9819;</td>
-        <td align='center'></td>
+        <td></td>
+        <td></td>
+        <td>&#9819;</td>
+        <td></td>
     </tr>
 </table>
-
-|       |<span style='font-weight:normal'>&#9819;</span>|   |   |
-|-------|-------|-------|-------|
-|       |       |       |&#9819;|
-|&#9819;|       |       |       |
-|       |       |&#9819;|       |
 
 ## Solution
 ```python
