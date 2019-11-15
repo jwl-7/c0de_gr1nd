@@ -7,7 +7,10 @@ Nonattacking placement = no two queens can threaten each other:
 3. Queens can't be in same diagonal
 
 ## Example
-`Input: n = 4`
+```
+ Input: n = 4
+Output: [[1, 3, 0, 2], [2, 0, 3, 1]]
+```
 
 | A | B |
 |---|---|
