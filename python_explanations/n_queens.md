@@ -37,6 +37,12 @@ Nonattacking placement = no two queens can threaten each other:
     </tr>
 </table>
 
+|       |<span style='font-weight:normal'>&#9819;</span>|   |   |
+|-------|-------|-------|-------|
+|       |       |       |&#9819;|
+|&#9819;|       |       |       |
+|       |       |&#9819;|       |
+
 ## Solution
 ```python
 BLANK
