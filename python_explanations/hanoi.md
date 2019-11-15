@@ -29,7 +29,9 @@ def compute_tower_hanoi(num_rings):
 ```
 
 ## Explanation
-1. Move a tower of 
+1. Move a tower of (height - 1) to the auxiliary pole, using the target pole
+2. Move the remaining ring to the target pole
+3. Move the tower of (height - 1) from the auxiliary pole to the target pole, using the source pole
 
 ## Code Dissection
 1. BLANK
