@@ -9,11 +9,11 @@ NUM_PEGS = 3
 
 
 def compute_tower_hanoi(num_rings):
-    def hanoi(ring, source, dest, spare):
+    def hanoi(ring, source, target, aux):
         if ring > 0:
-            hanoi(ring - 1, source, spare, dest)
-            result.append([source, dest])
-            hanoi(ring - 1, spare, dest, source)
+            hanoi(ring - 1, source, aux, target)
+            result.append([source, target])
+            hanoi(ring - 1, aux, target, source)
 
     result = []
     hanoi(num_rings, 0, 1, 2)
