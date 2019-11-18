@@ -10,8 +10,6 @@ Given a set of 3 pegs with rings on one peg in sorted order (largest on bottom),
     ---|---     |        |                     |     ---|---     |
 ----------------------------------      ----------------------------------
        A        B        C                     A        B        C
-
-Output:
 ```
 
 ## Solution
