@@ -7,11 +7,7 @@ def n_queens(n):
         if row == n:
             result.append(queens)
         for col in range(n):
-            if (
-                col not in queens and
-                row - col not in xy_diff and
-                row + col not in xy_sum
-            ):
+            if col not in queens and row - col not in xy_diff and row + col not in xy_sum:
                 dfs(queens + [col], xy_diff + [row - col], xy_sum + [row + col])
     result = []
     dfs([], [], [])
