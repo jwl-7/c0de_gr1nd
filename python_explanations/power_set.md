@@ -21,7 +21,7 @@ def generate_power_set(S):
 ```
 
 ## Explanation
-* BLANK
+* For any set _S_ with _n_ elements, there are 2<sup>_n_</sup> subsets where each number is in the range [0, 2<sup>_n_-1</sup>]
 
 ## Code Dissection
 1. BLANK
