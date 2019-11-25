@@ -207,6 +207,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |15.1|[The Towers of Hanoi Problem](./python_explanations/hanoi.md)|[Python](./python_solutions/hanoi.py)|_O(2<sup>n</sup>)_|_O(2<sup>n</sup>)_|
 |15.2|[Generate All Nonattacking Placements of _n_-Queens](./python_explanations/n_queens.md)|[Python](./python_solutions/n_queens.py)|_O(n!)_|_O(n)_|
+|15.3|[Generate Permutations](./python_explanations/permutations.md)|[Python](./python_solutions/permutations.py)|_O(n!)_|_O(n!)_|
 
 <!---
 |15.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
