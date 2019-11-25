@@ -1,5 +1,5 @@
 # Generate the Power Set
-Given a set, return its power set.
+Given a set of distinct integers, return all possible subsets.
 
 ## Example
 ```
