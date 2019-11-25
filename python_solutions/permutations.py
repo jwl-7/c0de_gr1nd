@@ -2,11 +2,12 @@ from test_framework import generic_test, test_utils
 
 
 def permutations(A):
-    def dfs(A, path):
-        if not A:
+    def dfs(options, path):
+        if not options:
             result.append(path)
-        for i in range(len(A)):
-            dfs(A[:i] + A[i+1:], path + [A[i]])
+            return
+        for i, num in enumerate(options):
+            dfs(options[:i] + options[i+1:], path + [num])
 
     result = []
     dfs(A, [])
