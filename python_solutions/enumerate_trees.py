@@ -11,7 +11,7 @@ def generate_all_binary_trees(num_nodes):
 
     result = []
     for num_left in range(num_nodes):
-        num_right = num_nodes - num_left - 1
+        num_right = num_nodes - 1 - num_left
         left_tree = generate_all_binary_trees(num_left)
         right_tree = generate_all_binary_trees(num_right)
         result += [
