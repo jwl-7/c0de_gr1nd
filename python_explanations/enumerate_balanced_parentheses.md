@@ -9,7 +9,19 @@ Output: ['((()))', '(()())', '(())()', '()(())', '()()()']
 
 ## Solution
 ```python
-BLANK
+def generate_balanced_parentheses(num_pairs):
+    def dfs(left, right, path):
+        if not left and not right:
+            result.append(path)
+            return
+        if left:
+            dfs(left - 1, right, path + '(')
+        if left < right:
+            dfs(left, right - 1, path + ')')
+
+    result = []
+    dfs(num_pairs, num_pairs, '')
+    return result
 ```
 
 ## Explanation
