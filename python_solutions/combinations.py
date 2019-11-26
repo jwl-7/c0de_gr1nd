@@ -2,8 +2,16 @@ from test_framework import generic_test, test_utils
 
 
 def combinations(n, k):
-    # TODO - you fill in here.
-    return []
+    def dfs(options, k, path):
+        if k == 0:
+            result.append(path)
+            return
+        for i, num in enumerate(options):
+            dfs(options[i+1:], k - 1, path + [num])
+
+    result = []
+    dfs(range(1, n + 1), k, [])
+    return result
 
 
 if __name__ == '__main__':
