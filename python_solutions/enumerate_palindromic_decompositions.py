@@ -1,7 +1,7 @@
 from test_framework import generic_test
 
 
-def palindrome_decompositions(input):
+def palindrome_decompositions(s):
     # TODO - you fill in here.
     return []
 
