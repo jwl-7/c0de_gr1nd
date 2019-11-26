@@ -24,7 +24,7 @@ def combinations(n, k):
 ```
 
 ## Explanation
-* For an explanation on computing all possible subsets: [Generate the Power Set](#power_set.md)
+* For an explanation on computing all possible subsets: [Generate the Power Set](power_set.md)
 * Use the same method as computing all possible subsets, except restrict the result to those subsets of size _k_
 
 ## Code Dissection - dfs
