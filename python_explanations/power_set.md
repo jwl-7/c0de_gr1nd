@@ -28,7 +28,7 @@ def generate_power_set(S):
     ```python
     result.append(path)
     ```
-2. Loop over the options (numbers in _S_), and build the paths (enumerations)
+2. Loop over the options (numbers in _S_), and build the paths (subsets)
     ```python
     for i, num in enumerate(options):
         dfs(options[i+1:], path + [num])

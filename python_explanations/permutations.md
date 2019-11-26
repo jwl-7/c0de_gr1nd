@@ -33,7 +33,7 @@ def permutations(A):
         result.append(path)
         return
     ```
-2. Loop over the options (numbers in _A_), and build the paths (enumerations)
+2. Loop over the options (numbers in _A_), and build the paths (permutations)
     ```python
     for i, num in enumerate(options):
         dfs(options[:i] + options[i+1:], path + [num])
