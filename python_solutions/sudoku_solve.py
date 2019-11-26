@@ -7,7 +7,7 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
-def solve_sudoku(partial_assignment):
+def solve_sudoku(board):
     # TODO - you fill in here.
     return True
 
