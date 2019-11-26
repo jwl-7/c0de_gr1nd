@@ -209,6 +209,7 @@ the pursuit of ameloriation as a programmer
 |15.2|[Generate All Nonattacking Placements of _n_-Queens](./python_explanations/n_queens.md)|[Python](./python_solutions/n_queens.py)|_O(n!)_|_O(n)_|
 |15.3|[Generate Permutations](./python_explanations/permutations.md)|[Python](./python_solutions/permutations.py)|_O(n!)_|_O(n!)_|
 |15.4|[Generate the Power Set](./python_explanations/power_set.md)|[Python](./python_solutions/power_set.py)|_O(n2<sup>n</sup>)_|_O(n2<sup>n</sup>)_|
+|15.5|[Generate All Subsets of Size _k_](./python_explanations/combinations.md)|[Python](./python_solutions/combinations.py)|_O(C(n, k))_|_O(C(n, k))_|
 
 <!---
 |15.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
