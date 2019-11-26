@@ -2,8 +2,17 @@ from test_framework import generic_test
 
 
 def palindrome_decompositions(s):
-    # TODO - you fill in here.
-    return []
+    def dfs(s, path):
+        if not s:
+            result.append(path)
+            return
+        for i in range(1, len(s) + 1):
+            if s[:i] == s[:i][::-1]:
+                dfs(s[i:], path + [s[:i]])
+
+    result = []
+    dfs(s, [])
+    return result
 
 
 def comp(a, b):

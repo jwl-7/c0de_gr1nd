@@ -9,7 +9,18 @@ Output: [['a', 'a', 'b', 'b', 'c'], ['a', 'a', 'bb', 'c'], ['aa', 'b', 'b', 'c']
 
 ## Solution
 ```python
-BLANK
+def palindrome_decompositions(s):
+    def dfs(s, path):
+        if not s:
+            result.append(path)
+            return
+        for i in range(1, len(s) + 1):
+            if s[:i] == s[:i][::-1]:
+                dfs(s[i:], path + [s[:i]])
+
+    result = []
+    dfs(s, [])
+    return result
 ```
 
 ## Explanation
