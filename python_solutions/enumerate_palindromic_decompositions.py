@@ -2,13 +2,13 @@ from test_framework import generic_test
 
 
 def palindrome_decompositions(s):
-    def dfs(s, path):
-        if not s:
+    def dfs(options, path):
+        if not options:
             result.append(path)
             return
-        for i in range(1, len(s) + 1):
-            if s[:i] == s[:i][::-1]:
-                dfs(s[i:], path + [s[:i]])
+        for i in range(1, len(options) + 1):
+            if options[:i] == options[:i][::-1]:
+                dfs(options[i:], path + [options[:i]])
 
     result = []
     dfs(s, [])
