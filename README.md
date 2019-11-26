@@ -211,7 +211,7 @@ the pursuit of ameloriation as a programmer
 |15.4|[Generate the Power Set](./python_explanations/power_set.md)|[Python](./python_solutions/power_set.py)|_O(n2<sup>n</sup>)_|_O(n2<sup>n</sup>)_|
 |15.5|[Generate All Subsets of Size _k_](./python_explanations/combinations.md)|[Python](./python_solutions/combinations.py)|_O(C(n, k))_|_O(C(n, k))_|
 |15.6|[Generate Strings of Matched Parens](./python_explanations/enumerate_balanced_parentheses.md)|[Python](./python_solutions/enumerate_balanced_parentheses.py)|_O(4<sup>n</sup>&#8725;&radic;n)_|_O(4<sup>n</sup>&#8725;&radic;n)_|
-|15.7|[Generate Palindromic Decompositions](./python_explanations/enumerate_palindromic_decompositions.md)|[Python](./python_solutions/enumerate_palindromic_decompositions.py)|_O(BLANK)_|_O(BLANK)_|
+|15.7|[Generate Palindromic Decompositions](./python_explanations/enumerate_palindromic_decompositions.md)|[Python](./python_solutions/enumerate_palindromic_decompositions.py)|_O(n2<sup>n</sup>)_|_O(n2<sup>n</sup>)_|
 
 <!---
 |15.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
