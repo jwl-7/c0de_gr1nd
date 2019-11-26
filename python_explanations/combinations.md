@@ -40,7 +40,7 @@ def combinations(n, k):
         dfs(options[i+1:], k - 1, path + [num])
     ```
 
-## Code Dissection - generate_power_set
+## Code Dissection - combinations
 1. Create a list to store the result, run `dfs()`, then return the result
     ```python
     result = []
