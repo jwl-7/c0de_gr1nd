@@ -3,7 +3,7 @@ from test_framework import generic_test, test_utils
 
 def combinations(n, k):
     def dfs(options, k, path):
-        if k == 0:
+        if not k:
             result.append(path)
             return
         for i, num in enumerate(options):

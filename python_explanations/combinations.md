@@ -12,7 +12,7 @@ Output: [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
 ```python
 def combinations(n, k):
     def dfs(options, k, path):
-        if k == 0:
+        if not k:
             result.append(path)
             return
         for i, num in enumerate(options):
@@ -30,7 +30,7 @@ def combinations(n, k):
 ## Code Dissection - dfs
 1. If we've generated a subset of size _k_, then add it to the result
     ```python
-    if k == 0:
+    if not k:
         result.append(path)
         return
     ```
