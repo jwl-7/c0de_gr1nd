@@ -8,8 +8,42 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def solve_sudoku(board):
-    # TODO - you fill in here.
-    return True
+    def is_valid_move(board, row, col, move):
+        if any(board[row][i] == move for i in range(9)):
+            return False
+        if any(board[i][col] == move for i in range(9)):
+            return False
+
+        block_row = 3 * (row // 3)
+        block_col = 3 * (col // 3)
+
+        if any(
+            board[i][j] == move
+            for i in range(block_row, block_row + 3)
+            for j in range(block_col, block_col + 3)
+        ):
+            return False
+        return True
+
+    def backtrack(board, row, col):
+        while board[row][col]:
+            col += 1
+            if col == 9:
+                col = 0
+                row += 1
+            if row == 9:
+                return True
+
+        for x in range(1, 10):
+            if is_valid_move(board, row, col, x):
+                board[row][col] = x
+                if backtrack(board, row, col):
+                    return True
+
+        board[row][col] = 0
+        return False
+
+    backtrack(board, 0, 0)
 
 
 def assert_unique_seq(seq):

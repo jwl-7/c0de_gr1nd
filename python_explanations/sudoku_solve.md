@@ -26,7 +26,43 @@ Output: [[9, 7, 6, 5, 8, 4, 1, 3, 2],
 
 ## Solution
 ```python
-BLANK
+def solve_sudoku(board):
+    def is_valid_move(board, row, col, move):
+        if any(board[row][i] == move for i in range(9)):
+            return False
+        if any(board[i][col] == move for i in range(9)):
+            return False
+
+        block_row = 3 * (row // 3)
+        block_col = 3 * (col // 3)
+
+        if any(
+            board[i][j] == move
+            for i in range(block_row, block_row + 3)
+            for j in range(block_col, block_col + 3)
+        ):
+            return False
+        return True
+
+    def backtrack(board, row, col):
+        while board[row][col]:
+            col += 1
+            if col == 9:
+                col = 0
+                row += 1
+            if row == 9:
+                return True
+
+        for x in range(1, 10):
+            if is_valid_move(board, row, col, x):
+                board[row][col] = x
+                if backtrack(board, row, col):
+                    return True
+
+        board[row][col] = 0
+        return False
+
+    backtrack(board, 0, 0)
 ```
 
 ## Explanation
