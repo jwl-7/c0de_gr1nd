@@ -11,7 +11,7 @@ def gray_code(num_bits):
 
     result = gray_code(num_bits - 1)
     for x in result[::-1]:
-        result.append(x + (1 << num_bits - 1))
+        result.append(x | 1 << num_bits - 1)
     return result
 
 
