@@ -215,9 +215,10 @@ the pursuit of ameloriation as a programmer
 |15.7|[Generate Palindromic Decompositions](./python_explanations/enumerate_palindromic_decompositions.md)|[Python](./python_solutions/enumerate_palindromic_decompositions.py)|_O(n2<sup>n</sup>)_|_O(n2<sup>n</sup>)_|
 |15.8|[Generate Binary Trees](./python_explanations/enumerate_trees.md)|[Python](./python_solutions/enumerate_trees.py)|_O(C(n))_|_O(C(n))_|
 |15.9|[Implement a Sudoku Solver](./python_explanations/sudoku_solve.md)|[Python](./python_solutions/sudoku_solve.py)|_O(9!<sup>9</sup>)_|_O(1)_|
+|15.10|[Compute a Gray Code](./python_explanations/gray_code.md)|[Python](./python_solutions/gray_code.py)|_O(2<sup>n</sup>)_|_O(2<sup>n</sup>)_|
 
 <!---
-|15.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
