@@ -213,6 +213,7 @@ the pursuit of ameloriation as a programmer
 |15.6|[Generate Strings of Matched Parens](./python_explanations/enumerate_balanced_parentheses.md)|[Python](./python_solutions/enumerate_balanced_parentheses.py)|_O(C(k))_|_O(C(k))_|
 |15.7|[Generate Palindromic Decompositions](./python_explanations/enumerate_palindromic_decompositions.md)|[Python](./python_solutions/enumerate_palindromic_decompositions.py)|_O(n2<sup>n</sup>)_|_O(n2<sup>n</sup>)_|
 |15.8|[Generate Binary Trees](./python_explanations/enumerate_trees.md)|[Python](./python_solutions/enumerate_trees.py)|_O(C(n))_|_O(C(n))_|
+|15.9|[Implement a Sudoku Solver](./python_explanations/sudoku_solve.md)|[Python](./python_solutions/sudoku_solve.py)|_O(9!<sup>9</sup>)_|_O(1)_|
 
 <!---
 |15.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
