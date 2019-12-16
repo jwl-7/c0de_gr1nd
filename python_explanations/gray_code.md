@@ -9,7 +9,14 @@ Output: [0, 1, 3, 2]
 
 ## Solution
 ```python
-BLANK
+def gray_code(num_bits):
+    if num_bits == 0:
+        return [0]
+
+    result = gray_code(num_bits - 1)
+    for x in result[::-1]:
+        result.append(x + (1 << num_bits - 1))
+    return result
 ```
 
 ## Explanation
