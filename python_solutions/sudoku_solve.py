@@ -11,7 +11,7 @@ def solve_sudoku(board):
     def is_valid_move(board, row, col, move):
         if any(board[row][i] == move for i in range(9)):
             return False
-        if any(board[i][col] == move for i in range(9)):
+        if any(board[j][col] == move for j in range(9)):
             return False
 
         block_row = 3 * (row // 3)
