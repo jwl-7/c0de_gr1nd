@@ -24,6 +24,7 @@ the pursuit of ameloriation as a programmer
 * [Hash Tables](#hash-tables)
 * [Sorting](#sorting)
 * [Binary Search Trees](#binary-search-trees)
+* [Recursion](#recursion)
 * [Useful References](#useful-references)
 
 ## Primitive Types
