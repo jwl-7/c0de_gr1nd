@@ -1,6 +1,8 @@
 # Compute a Gray Code
 Given a nonnegative integer _n_, return the _n_-bit gray code sequence.
 
+A Gray code is a binary numeral system where adjacent numbers in the sequence differ in a single bit.
+
 ## Example
 ```
  Input: 2
