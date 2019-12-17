@@ -18,7 +18,12 @@ There are 6 ways to reach the bottom-right corner:
 
 ## Solution
 ```python
-BLANK
+def number_of_ways(m, n):
+    dp = [1] * n
+    for _ in range(1, m):
+        for i in range(1, n):
+            dp[i] = dp[i-1] + dp[i]
+    return dp[-1]
 ```
 
 ## Explanation
