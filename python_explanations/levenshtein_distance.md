@@ -36,7 +36,9 @@ There are 3 operations to perform on a string to convert it:
 2. Delete character
 3. Replace character
 
-
+* While using a DP table to store the distance:
+    * If the last character in _A_ == last character in _B_, then nothing has changed and the distance is the same
+    * Otherwise, get the minimum distance between insert, delete, and replace
 
 ## Code Dissection
 1. BLANK
