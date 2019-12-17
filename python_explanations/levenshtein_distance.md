@@ -16,8 +16,7 @@ Output: 3
 ```python
 def levenshtein_distance(A, B):
     m, n = len(A), len(B)
-    dp = [[i] + [0] * n for i in range(m + 1)]
-    dp[0] = [j for j in range(n + 1)]
+    dp = [list(range(n + 1))] + [[i] + [0] * n for i in range(1, m + 1)]
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             insert = dp[i][j-1]
