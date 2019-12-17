@@ -30,7 +30,8 @@ def num_combinations_for_final_score(final_score, play_scores):
 ```
 
 ## Explanation
-* BLANK
+* The idea is to create a DP table the size of *play_scores* (rows) * *final_score* (columns) to store counts of all scores from 0 to *final_score*
+* Compute the number of combinations for each possible number of plays of each type
 
 ## Code Dissection
 1. BLANK
