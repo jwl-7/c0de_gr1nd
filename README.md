@@ -25,6 +25,7 @@ the pursuit of ameloriation as a programmer
 * [Sorting](#sorting)
 * [Binary Search Trees](#binary-search-trees)
 * [Recursion](#recursion)
+* [Dynamic Programming](#dynamic-programming)
 * [Useful References](#useful-references)
 
 ## Primitive Types
@@ -216,6 +217,11 @@ the pursuit of ameloriation as a programmer
 |15.8|[Generate Binary Trees](./python_explanations/enumerate_trees.md)|[Python](./python_solutions/enumerate_trees.py)|_O(C(n))_|_O(C(n))_|
 |15.9|[Implement a Sudoku Solver](./python_explanations/sudoku_solve.md)|[Python](./python_solutions/sudoku_solve.py)|_O(9!<sup>9</sup>)_|_O(1)_|
 |15.10|[Compute a Gray Code](./python_explanations/gray_code.md)|[Python](./python_solutions/gray_code.py)|_O(2<sup>n</sup>)_|_O(2<sup>n</sup>)_|
+
+## Dynamic Programming
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|16.1|[Count the Number of Score Combinations](./python_explanations/number_of_score_combinations.md)|[Python](./python_solutions/number_of_score_combinations.py)|_O(mn)_|_O(mn)_|
 
 <!---
 |16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
