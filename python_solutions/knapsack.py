@@ -4,6 +4,7 @@ import functools
 from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
 
+
 Item = collections.namedtuple('Item', ('weight', 'value'))
 
 
