@@ -2,8 +2,14 @@ from test_framework import generic_test
 
 
 def compute_binomial_coefficient(n, k):
-    # TODO - you fill in here.
-    return 0
+    k = min(k, n - k)
+    dp = [1] + [0] * k
+    for i in range(1, n + 1):
+        j = min(i, k)
+        while j > 0:
+            dp[j] += dp[j-1]
+            j -= 1
+    return dp[-1]
 
 
 if __name__ == '__main__':

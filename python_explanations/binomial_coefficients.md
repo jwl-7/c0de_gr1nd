@@ -14,7 +14,15 @@ Output: 220
 
 ## Solution
 ```python
-BLANK
+def compute_binomial_coefficient(n, k):
+    k = min(k, n - k)
+    dp = [1] + [0] * k
+    for i in range(1, n + 1):
+        j = min(i, k)
+        while j > 0:
+            dp[j] += dp[j-1]
+            j -= 1
+    return dp[-1]
 ```
 
 ## Explanation
