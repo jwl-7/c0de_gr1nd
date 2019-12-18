@@ -45,7 +45,9 @@ def is_pattern_contained_in_grid(grid, S):
 ```
 
 ## Explanation
-* BLANK
+* For some starting point in the matrix (_i_, _j_), search for the first entry in _S_
+* If the first entry in _S_ == (_i_, _j_), then check for the remainder of _S_ starting at a point adjacent to the current starting point
+* Since recursion is used to search for the remainder of _S_, cache the previously used starting points to avoid unnecessary repeated calls
 
 ## Code Dissection
 1. BLANK
