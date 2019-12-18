@@ -223,6 +223,7 @@ the pursuit of ameloriation as a programmer
 |---|-------|----------|------|-------|
 |16.1|[Count the Number of Score Combinations](./python_explanations/number_of_score_combinations.md)|[Python](./python_solutions/number_of_score_combinations.py)|_O(mn)_|_O(mn)_|
 |16.2|[Compute the Levenshtein Distance](./python_explanations/levenshtein_distance.md)|[Python](./python_solutions/levenshtein_distance.py)|_O(mn)_|_O(mn)_|
+|16.3|[Count the Number of Ways to Traverse a 2D Array](./python_explanations/number_of_traversals_matrix.md)|[Python](./python_solutions/number_of_traversals_matrix.py)|_O(mn)_|_O(n)_|
 
 <!---
 |16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
