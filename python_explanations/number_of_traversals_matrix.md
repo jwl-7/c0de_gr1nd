@@ -27,7 +27,24 @@ def number_of_ways(m, n):
 ```
 
 ## Explanation
-* BLANK
+* Starting at [1][1] in the grid/DP table, go through each square and record the number of unique paths to that square
+* We can ignore the first row and first column since there is only one way to get to those squares
+* Unique paths for any square are found by adding the unique paths going in down + unique paths going in right (paths from the squares to its top + its left)
+* The bottom-right square in the DP table will contain the total amount of unique paths
+* This solution can be optimized by using a 1D array since using a 2D array is redundant
 
 ## Code Dissection
-1. BLANK
+1. Create a DP table to store the number of unique paths to each square
+    ```python
+    dp = [1] * n
+    ```
+2. Go to each square and record the number of unique paths to that square
+    ```python
+    for _ in range(1, m):
+        for i in range(1, n):
+            dp[i] += dp[i-1]
+    ```
+3. Return the number of unique paths to the bottom-right corner
+    ```python
+    return dp[-1]
+    ```
