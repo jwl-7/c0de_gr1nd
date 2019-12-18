@@ -1,5 +1,5 @@
 # Search for a Sequence in a 2D Array
-Given a 2D array and a sequence of numbers, check if it's possible to traverse the sequence in the 2D array.
+Given a 2D array and a sequence of numbers, check if it's possible to traverse the sequence in the grid. The sequence must be traversed using adjacent squares in the correct order.
 
 ## Examples
 ```
