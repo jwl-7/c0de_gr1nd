@@ -227,6 +227,7 @@ the pursuit of ameloriation as a programmer
 |16.4|[Compute the Binomial Coefficients](./python_explanations/binomial_coefficients.md)|[Python](./python_solutions/binomial_coefficients.py)|_O(nk)_|_O(k)_|
 |16.5|[Search for a Sequence in a 2D Array](./python_explanations/is_string_in_matrix.md)|[Python](./python_solutions/is_string_in_matrix.py)|_O(mns)_|_O(s)_|
 |16.6|[The Knapsack Problem](./python_explanations/knapsack.md)|[Python](./python_solutions/knapsack.py)|_O(nw)_|_O(nw)_|
+|16.7|[The bedbathandbeyond.&#8203;com Problem](./python_explanations/is_string_decomposable_into_words.md)|[Python](./python_solutions/is_string_decomposable_into_words.py)|_O(n<sup>2</sup>w)_|_O(n<sup>2</sup>)_|
 
 <!---
 |16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
