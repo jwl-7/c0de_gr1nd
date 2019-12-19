@@ -16,9 +16,8 @@ Output: []
 ```python
 def decompose_into_dictionary_words(domain, dictionary):
     dlen = len(domain)
-    dp = [1] * (dlen + 1)
+    dp = [1] + [0] * dlen
     for i in range(1, dlen + 1):
-        dp[i] = 0
         for j in range(i):
             if dp[j] and domain[j:i] in dictionary:
                 dp[i] = i - j
