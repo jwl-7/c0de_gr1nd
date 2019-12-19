@@ -1,7 +1,7 @@
 from test_framework import generic_test
 
 
-def number_of_ways_to_top(top, maximum_step):
+def number_of_ways_to_top(n, k):
     # TODO - you fill in here.
     return 0
 
