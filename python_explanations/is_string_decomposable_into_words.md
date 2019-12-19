@@ -36,7 +36,13 @@ def decompose_into_dictionary_words(domain, dictionary):
 ```
 
 ## Explanation
-* BLANK
+There are two parts to the solution:
+1. Check if the domain can be segmented into a sequence of strings in the dictionary
+    * Using a DP table, go through the string checking for matches to words in the dictionary
+    * If a valid word is found, record the length of the word in the DP table
+2. If string can be decomposed, reconstruct the valid sequence found
+    * The lengths of the words in the sequence are found at the end of the DP table
+    * The sequence can be reconstructed by working backwards in the domain with the word lengths
 
 ## Code Dissection
 1. BLANK
