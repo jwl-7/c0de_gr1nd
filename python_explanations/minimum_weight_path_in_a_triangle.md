@@ -31,7 +31,21 @@ def minimum_path_weight(triangle):
 ```
 
 ## Explanation
-* BLANK
+* Traverse the triangle bottom-up, using the triangle itself as the DP table to keep track of the minimum weight path
 
 ## Code Dissection
-1. BLANK
+1. Check if the triangle is empty
+    ```python
+    if not triangle:
+        return 0
+    ```
+2. Traverse the triangle bottom-up, modifying it in place to keep track of the minimum sum path
+    ```python
+    for i in range(len(triangle) - 2, -1, -1):
+        for j in range(len(triangle[i])):
+            triangle[i][j] += min(triangle[i+1][j], triangle[i+1][j+1])
+    ```
+3. Return the top of the triangle (minimum weight path)
+    ```python
+    return triangle[0][0]
+    ```
