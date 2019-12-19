@@ -6,8 +6,24 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def decompose_into_dictionary_words(domain, dictionary):
-    # TODO - you fill in here.
-    return []
+    dlen = len(domain)
+    dp = [1] * (dlen + 1)
+    for i in range(1, dlen + 1):
+        dp[i] = 0
+        for j in range(i):
+            if dp[j] and domain[j:i] in dictionary:
+                dp[i] = i - j
+                break
+
+    if not dp[-1]:
+        return []
+
+    words = []
+    idx = dlen
+    while idx > 0:
+        words.append(domain[idx-dp[idx]:idx])
+        idx -= dp[idx]
+    return words[::-1]
 
 
 @enable_executor_hook
