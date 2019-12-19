@@ -229,6 +229,7 @@ the pursuit of ameloriation as a programmer
 |16.6|[The Knapsack Problem](./python_explanations/knapsack.md)|[Python](./python_solutions/knapsack.py)|_O(nw)_|_O(nw)_|
 |16.7|[The bedbathandbeyond.&#8203;com Problem](./python_explanations/is_string_decomposable_into_words.md)|[Python](./python_solutions/is_string_decomposable_into_words.py)|_O(n<sup>2</sup>w)_|_O(n<sup>2</sup>)_|
 |16.8|[Find the Minimum Weight Path in a Triangle](./python_explanations/minimum_weight_path_in_a_triangle.md)|[Python](./python_solutions/minimum_weight_path_in_a_triangle.py)|_O(n<sup>2</sup>)_|_O(1)_|
+|16.9|[Pick Up Coins for Maximum Gain](./python_explanations/picking_up_coins.md)|[Python](./python_solutions/picking_up_coins.py)|_O(n<sup>2</sup>)_|_O(n<sup>2</sup>)_|
 
 <!---
 |16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
