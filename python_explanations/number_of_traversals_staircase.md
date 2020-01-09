@@ -28,7 +28,28 @@ def number_of_ways_to_top(n, k):
 ```
 
 ## Explanation
-* BLANK
+* Recursive formula: _moves_(_n_, _k_) = _moves_(_n_ - 1, _k_) + _moves_(_n_ - 2, _k_) + ..._moves_(_n_ - _k_, _k_)
 
-## Code Dissection
-1. BLANK
+## Code Dissection - number_of_ways_to_top
+1. Return the number of ways to reach the _n_-th stair
+    ```python
+    return helper(n + 1, k)
+    ```
+
+## Code Dissection - helper
+1. Create the DP table
+    ```python
+    dp = [1, 1] + [0] * (n - 2)
+    ```
+2. Climb the stairs from 1 to _k_ steps at a time to the _n_-th stair
+    ```python
+    for i in range(2, n):
+        j = 1
+        while j <= k and j <= i:
+            dp[i] += dp[i-j]
+            j += 1
+    ```
+3. Return the number of ways to reach the top
+    ```python
+    return dp[-1]
+    ```
