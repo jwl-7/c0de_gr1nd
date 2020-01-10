@@ -1,5 +1,5 @@
 # Find the Longest Nondecreasing Subsequence
-Given an array of numbers, return the length of the longest nondecreasing subsequence.
+Given an array of numbers, return the length of the longest increasing subsequence.
 
 ## Examples
 ```
