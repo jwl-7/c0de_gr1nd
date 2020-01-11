@@ -2,6 +2,7 @@ import collections
 
 from test_framework import generic_test
 
+
 PairedTasks = collections.namedtuple('PairedTasks', ('task_1', 'task_2'))
 
 
