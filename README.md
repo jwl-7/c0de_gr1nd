@@ -232,6 +232,7 @@ the pursuit of ameloriation as a programmer
 |16.9|[Pick Up Coins for Maximum Gain](./python_explanations/picking_up_coins.md)|[Python](./python_solutions/picking_up_coins.py)|_O(n<sup>2</sup>)_|_O(n<sup>2</sup>)_|
 |16.10|[Count the Number of Moves to Climb Stairs](./python_explanations/number_of_traversals_staircase.md)|[Python](./python_solutions/number_of_traversals_staircase.py)|_O(mn)_|_O(mn)_|
 |16.11|[The Pretty Printing Problem](./python_explanations/pretty_printing.md)|[Python](./python_solutions/pretty_printing.py)|_O(mn)_|_O(n)_|
+|16.12|[Find the Longest Nondecreasing Subsequence](./python_explanations/longest_nondecreasing_subsequence.md)|[Python](./python_solutions/longest_nondecreasing_subsequence.py)|_O(n<sup>2</sup>)_|_O(n)_|
 
 <!---
 |16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
