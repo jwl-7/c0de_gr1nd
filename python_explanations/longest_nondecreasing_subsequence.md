@@ -24,7 +24,7 @@ def longest_nondecreasing_subsequence_length(A):
 ## Explanation
 Let _L_[_i_] = length of longest increasing subsequence of _A_[:_i_+1]
 * _L_[_i_] = 1 if _A_[_i_] < previous entries or
-* _L_[_i_] = _L_[_j_] + 1 if _A_[_i_] >= _A_[_j_] and _L_[_i_] <= _L_[_j_] =
+* _L_[_i_] = _L_[_j_] + 1 if _A_[_i_] >= _A_[_j_] and _L_[_i_] <= _L_[_j_]
 
 ## Code Dissection
 1. Create the DP table
