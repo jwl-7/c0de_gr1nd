@@ -23,7 +23,28 @@ def minimum_total_waiting_time(service_times):
 ```
 
 ## Explanation
-* BLANK
+* The idea is to perform the queries with the shortest service times first
 
 ## Code Dissection
-1. BLANK
+1. Get the number of queries, sort them, then initialize the total waiting time to zero
+    ```python
+    n = len(service_times)
+    service_times.sort()
+    total_time = 0
+    ```
+2. Loop through each query
+    ```python
+    for i, time in enumerate(service_times):
+    ```
+3. Calculate the number of queries left to the process
+    ```python
+    queries = n - (i + 1)
+    ```
+4. Add the current query service time * number of remaining queries to the total waiting time
+    ```python
+    total_time += time * queries
+    ```
+5. Return the minimal waiting time
+    ```python
+    return total_time
+    ```
