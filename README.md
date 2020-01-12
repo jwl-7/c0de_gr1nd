@@ -26,6 +26,7 @@ the pursuit of ameloriation as a programmer
 * [Binary Search Trees](#binary-search-trees)
 * [Recursion](#recursion)
 * [Dynamic Programming](#dynamic-programming)
+* [Greedy Algorithms and Invariants](#greedy-algorithms-and-invariants)
 * [Useful References](#useful-references)
 
 ## Primitive Types
