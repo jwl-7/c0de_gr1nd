@@ -24,7 +24,17 @@ def optimum_task_assignment(task_durations):
 ```
 
 ## Explanation
-* BLANK
+* The idea is to pair the longest task durations with the shortest task durations
 
 ## Code Dissection
-1. BLANK
+1. Sort the array of task durations to make it easy to find the shortest/longest tasks
+    ```python
+    task_durations.sort()
+    ```
+2. Pair the longest tasks with the shortest tasks and return the 2D array
+    ```python
+    return [
+        PairedTasks(task_durations[i], task_durations[~i])
+        for i in range(len(task_durations) // 2)
+    ]
+    ```
