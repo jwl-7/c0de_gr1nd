@@ -239,6 +239,7 @@ the pursuit of ameloriation as a programmer
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
 |17.1|[Compute an Optimum Assignment of Tasks](./python_explanations/task_pairing.md)|[Python](./python_solutions/task_pairing.py)|_O(nlogn)_|_O(n)_|
+|17.2|[Schedule to Minimize Waiting Time](./python_explanations/minimum_waiting_time.md)|[Python](./python_solutions/minimum_waiting_time.py)|_O(nlogn)_|_O(1)_|
 
 <!---
 |17.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
