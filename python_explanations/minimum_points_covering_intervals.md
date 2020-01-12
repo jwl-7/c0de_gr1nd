@@ -27,7 +27,31 @@ def find_minimum_visits(intervals):
 ```
 
 ## Explanation
-* BLANK
+1. Find the minimal right endpoint
+2. Find the first interval not covered by the minimal right endpoint
+3. Continue from that interval's right endpoint
 
 ## Code Dissection
-1. BLANK
+1. Sort the intervals by the right endpoints
+    ```python
+    intervals.sort(key=lambda x: x.right)
+    ```
+2. Initialize the previous right endpoint to -infinity and the total numbers (visits to _intervals_) to zero
+    ```python
+    prev_right = float('-inf')
+    total = 0
+    ```
+3. Loop through the intervals, starting at the first interval with the minimal right endpoint
+    ```python
+    for interval in intervals:
+    ```
+4. Find the first interval not covered by the minimal right endpoint, then continue from that interval's right endpoint
+    ```python
+    if interval.left > prev_right:
+        prev_right = interval.right
+        total += 1
+    ```
+5. Return the minimal set of numbers that covers all the intervals
+    ```python
+    return total
+    ```
