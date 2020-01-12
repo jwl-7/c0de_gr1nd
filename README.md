@@ -234,8 +234,13 @@ the pursuit of ameloriation as a programmer
 |16.11|[The Pretty Printing Problem](./python_explanations/pretty_printing.md)|[Python](./python_solutions/pretty_printing.py)|_O(mn)_|_O(n)_|
 |16.12|[Find the Longest Nondecreasing Subsequence](./python_explanations/longest_nondecreasing_subsequence.md)|[Python](./python_solutions/longest_nondecreasing_subsequence.py)|_O(n<sup>2</sup>)_|_O(n)_|
 
+## Greedy Algorithms and Invariants
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+|17.1|[Compute an Optimum Assignment of Tasks](./python_explanations/task_pairing.md)|[Python](./python_solutions/task_pairing.py)|_O(nlogn)_|_O(n)_|
+
 <!---
-|16.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|17.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
