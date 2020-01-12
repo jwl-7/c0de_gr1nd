@@ -12,7 +12,18 @@ Output: 3
 
 ## Solution
 ```python
-BLANK
+Interval = collections.namedtuple('Interval', ('left', 'right'))
+
+
+def find_minimum_visits(intervals):
+    intervals.sort(key=lambda x: x.right)
+    prev_right = float('-inf')
+    total = 0
+    for interval in intervals:
+        if interval.left > prev_right:
+            prev_right = interval.right
+            total += 1
+    return total
 ```
 
 ## Explanation
