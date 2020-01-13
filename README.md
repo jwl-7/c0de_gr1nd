@@ -245,6 +245,7 @@ the pursuit of ameloriation as a programmer
 |17.5|[Find the Majority Element](./python_explanations/majority_element.md)|[Python](./python_solutions/majority_element.py)|_O(n)_|_O(1)_|
 |17.6|[The Gasup Problem](./python_explanations/refueling_schedule.md)|[Python](./python_solutions/refueling_schedule.py)|_O(n)_|_O(1)_|
 |17.7|[Compute the Maximum Water Trapped by a Pair of Vertical Lines](./python_explanations/max_trapped_water.md)|[Python](./python_solutions/max_trapped_water.py)|_O(n)_|_O(1)_|
+|17.8|[Compute the Largest Rectangle Under the Skyline](./python_explanations/largest_rectangle_under_skyline.md)|[Python](./python_solutions/largest_rectangle_under_skyline.py)|_O(n)_|_O(n)_|
 
 <!---
 |17.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
