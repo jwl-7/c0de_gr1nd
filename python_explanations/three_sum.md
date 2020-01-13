@@ -36,7 +36,40 @@ def has_three_sum(A, t):
 ```
 
 ## Explanation
-* BLANK
+* To find 3 numbers _i_, _j_, _k_ that add up to the target _t_:
+    * We look for _A_[_i_] + _A_[_j_] + _A_[_k_] = _t_
+* This implies that we can also look for _A_[_j_] + _A_[_k_] = _t_ - _A_[_i_]
+* Thus, we can use the solution to the 2-Sum problem to solve the 3-sum problem by checking if any number in _A_ can be added to two numbers that add up to _t_
 
-## Code Dissection
-1. BLANK
+## Code Dissection - has_two_sum
+1. Set two pointers at the start and end of the array respectively
+    ```python
+    i = 0
+    j = len(A) - 1
+    ```
+2. Loop until the two pointers meet each other and search the array
+    ```python
+    if A[i] + A[j] == t:
+        return True
+    elif A[i] + A[j] < t:
+        i += 1
+    else:
+        j -= 1
+    ```
+    * If the 2 numbers < _t_, increment the head pointer _i_
+    * If the 2 numbers > _t_, decrement the tail pointer _j_
+3. If the search failed, then there are not 2 numbers that add up to the target
+    ```python
+    return False
+    ```
+
+## Code Dissection - has_three_sum
+1. Sort the array to avoid having to use additional space
+    ```python
+    A.sort()
+    ```
+2. Use `has_two_sum()` to check if any number _x_ in _A_ can be added to two other numbers in _A_ that add up to the target _t_
+    ```python
+    return any(has_two_sum(A, t - x) for x in A)
+    ```
+    * This searches for any _A_[_i_] such that _A_[_j_] + _A_[_k_] = _t_ - _A_[_i_]
