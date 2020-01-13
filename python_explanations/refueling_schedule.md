@@ -14,7 +14,18 @@ Output: 4
 
 ## Solution
 ```python
-BLANK
+MPG = 20
+
+
+def find_ample_city(gallons, distances):
+    start = 0
+    gas = 0
+    for i in range(len(gallons)):
+        gas += gallons[i] - distances[i] // MPG
+        if gas < 0:
+            start = i + 1
+            gas = 0
+    return start
 ```
 
 ## Explanation
