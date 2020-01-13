@@ -27,6 +27,7 @@ the pursuit of ameloriation as a programmer
 * [Recursion](#recursion)
 * [Dynamic Programming](#dynamic-programming)
 * [Greedy Algorithms and Invariants](#greedy-algorithms-and-invariants)
+* [Graphs](#graphs)
 * [Useful References](#useful-references)
 
 ## Primitive Types
@@ -247,8 +248,12 @@ the pursuit of ameloriation as a programmer
 |17.7|[Compute the Maximum Water Trapped by a Pair of Vertical Lines](./python_explanations/max_trapped_water.md)|[Python](./python_solutions/max_trapped_water.py)|_O(n)_|_O(1)_|
 |17.8|[Compute the Largest Rectangle Under the Skyline](./python_explanations/largest_rectangle_under_skyline.md)|[Python](./python_solutions/largest_rectangle_under_skyline.py)|_O(n)_|_O(n)_|
 
+## Graphs
+| # | Title | Solution | Time | Space |
+|---|-------|----------|------|-------|
+
 <!---
-|17.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
+|18.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
 -->
 
 ## Random Code &mdash; Not from EPI
