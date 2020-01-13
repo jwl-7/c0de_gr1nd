@@ -29,7 +29,26 @@ def find_ample_city(gallons, distances):
 ```
 
 ## Explanation
-* BLANK
+* Travel to each city on the circular route; if we run out of gas, set the next city as the new starting point
 
 ## Code Dissection
-1. BLANK
+1. Set the starting point as the first city and initialize the gas tank to zero
+    ```python
+    start = 0
+    gas = 0
+    ```
+2. Travel to each city on the route and keep recalculating the amount of gas left in the tank
+    ```python
+    for i in range(len(gallons)):
+        gas += gallons[i] - distances[i] // MPG
+    ```
+3. If we run out of gas, set the new starting point as the next city and reset the gas tank
+    ```python
+    if gas < 0:
+        start = i + 1
+        gas = 0
+    ```
+4. Return the index of the city at which we can travel to all the other cities
+    ```python
+    return start
+    ```
