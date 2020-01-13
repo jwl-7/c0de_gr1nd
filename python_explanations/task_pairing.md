@@ -1,5 +1,5 @@
 # Compute an Optimum Assignment of Tasks
-Given an array of task durations, assign the tasks to workers such that the work is completed in the minimum time possible. Each worker can be assigned two tasks.
+Given an array of task durations, assign the tasks to workers such that the work is completed in the minimum time possible. Each worker can be assigned 2 tasks.
 
 ## Examples
 ```
