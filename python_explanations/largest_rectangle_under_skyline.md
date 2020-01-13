@@ -7,6 +7,8 @@ BLANK
 ```
  Input: [3, 3, 4, 3, 2]
 Output: 12
+
+Size of largest rectangle = 4 * 3 = 12
 ```
 
 ## Solution
