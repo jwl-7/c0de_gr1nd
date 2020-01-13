@@ -2,7 +2,7 @@
 BLANK
 
 ## Example
-<img src='drawio_diagrams/largest_rectangle_under_skyline.svg' width='70%'>
+<img src='drawio_diagrams/largest_rectangle_under_skyline.svg' width='40%'>
 
 ```
  Input: [3, 3, 4, 3, 2]
