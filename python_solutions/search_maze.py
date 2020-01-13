@@ -6,8 +6,8 @@ from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
-WHITE, BLACK = range(2)
 
+WHITE, BLACK = range(2)
 Coordinate = collections.namedtuple('Coordinate', ('x', 'y'))
 
 
@@ -17,13 +17,19 @@ def search_maze(maze, s, e):
 
 
 def path_element_is_feasible(maze, prev, cur):
-    if not ((0 <= cur.x < len(maze)) and
-            (0 <= cur.y < len(maze[cur.x])) and maze[cur.x][cur.y] == WHITE):
+    if not (
+        0 <= cur.x < len(maze) and
+        0 <= cur.y < len(maze[cur.x]) and
+        maze[cur.x][cur.y] == WHITE
+    ):
         return False
-    return cur == (prev.x + 1, prev.y) or \
-           cur == (prev.x - 1, prev.y) or \
-           cur == (prev.x, prev.y + 1) or \
-           cur == (prev.x, prev.y - 1)
+
+    return (
+        cur == (prev.x + 1, prev.y) or
+        cur == (prev.x - 1, prev.y) or
+        cur == (prev.x, prev.y + 1) or
+        cur == (prev.x, prev.y - 1)
+    )
 
 
 @enable_executor_hook
