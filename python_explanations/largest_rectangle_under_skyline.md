@@ -1,5 +1,5 @@
 # Compute the Largest Rectangle Under the Skyline
-BLANK
+Given an array of integers that represent the heights of buildings, find the area of the largest rectangle under the skyline. Each building is 1 width.
 
 ## Example
 <img src='drawio_diagrams/largest_rectangle_under_skyline.svg' width='40%'>
