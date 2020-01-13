@@ -242,6 +242,7 @@ the pursuit of ameloriation as a programmer
 |17.2|[Schedule to Minimize Waiting Time](./python_explanations/minimum_waiting_time.md)|[Python](./python_solutions/minimum_waiting_time.py)|_O(nlogn)_|_O(1)_|
 |17.3|[The Interval Covering Problem](./python_explanations/minimum_points_covering_intervals.md)|[Python](./python_solutions/minimum_points_covering_intervals.py)|_O(nlogn)_|_O(1)_|
 |17.4|[The 3-Sum Problem](./python_explanations/three_sum.md)|[Python](./python_solutions/three_sum.py)|_O(nlogn)_|_O(1)_|
+|17.5|[Find the Majority Element](./python_explanations/majority_element.md)|[Python](./python_solutions/majority_element.py)|_O(n)_|_O(1)_|
 
 <!---
 |17.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
