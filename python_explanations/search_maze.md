@@ -69,10 +69,55 @@ def search_maze(maze, start, end):
 ```
 
 ## Explanation
-* BLANK
+* From the start position, try moving left, right, up, and down:
+    * If we find an open path (0), add it to the solution path
+    * If we find a closed path (1), ignore it and try the next move
+* If the current solution path fails, backtrack
 
 ## Code Dissection - search_maze
-1. BLANK
+1. Create empty solution path, run `dfs()`, and return the path
+    ```python
+    path = []
+    dfs(start)
+    return path
+    ```
 
 ## Code Dissection - dfs
-1. BLANK
+1. Check if current position is open (0) and in the maze
+    ```python
+    if not (
+        0 <= curr.x < len(maze) and
+        0 <= curr.y < len(maze[curr.x]) and
+        maze[curr.x][curr.y] == 0
+    ):
+        return False
+    ```
+2. If the current position is valid, add it to the solution path
+    ```python
+    path.append(curr)
+    ```
+3. Mark the current cell as 1 to avoid repitition
+    ```python
+    maze[curr.x][curr.y] = 1
+    ```
+4. Stop the search if we have reached the end
+    ```python
+    if curr == end:
+        return True
+    ```
+5. Map a set of coordinates for moving left, right, up, and down
+    ```python
+    moves = map(Coordinate,
+                (curr.x - 1, curr.x + 1, curr.x, curr.x),
+                (curr.y, curr.y, curr.y - 1, curr.y + 1))
+    ```
+6. Check if any of the possible moves work
+    ```python
+    if any(map(dfs, moves)):
+        return True
+    ```
+7. Navigation failed, remove last coordinate in path and backtrack
+    ```python
+    del path[-1]
+    return False
+    ```
