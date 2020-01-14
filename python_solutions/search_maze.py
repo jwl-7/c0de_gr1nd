@@ -8,12 +8,38 @@ from test_framework.test_utils import enable_executor_hook
 
 
 WHITE, BLACK = range(2)
+
 Coordinate = collections.namedtuple('Coordinate', ('x', 'y'))
 
 
-def search_maze(maze, s, e):
-    # TODO - you fill in here.
-    return []
+def search_maze(maze, start, end):
+    def dfs(curr):
+        if not (
+            0 <= curr.x < len(maze) and
+            0 <= curr.y < len(maze[curr.x]) and
+            maze[curr.x][curr.y] == 0
+        ):
+            return False
+
+        path.append(curr)
+        maze[curr.x][curr.y] = 1
+
+        if curr == end:
+            return True
+
+        moves = map(Coordinate,
+                    (curr.x - 1, curr.x + 1, curr.x, curr.x),
+                    (curr.y, curr.y, curr.y - 1, curr.y + 1))
+
+        if any(map(dfs, moves)):
+            return True
+
+        del path[-1]
+        return False
+
+    path = []
+    dfs(start)
+    return path
 
 
 def path_element_is_feasible(maze, prev, cur):

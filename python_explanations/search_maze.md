@@ -35,11 +35,44 @@ The maze cannot be navigated from start to end.
 
 ## Solution
 ```python
-BLANK
+Coordinate = collections.namedtuple('Coordinate', ('x', 'y'))
+
+
+def search_maze(maze, start, end):
+    def dfs(curr):
+        if not (
+            0 <= curr.x < len(maze) and
+            0 <= curr.y < len(maze[curr.x]) and
+            maze[curr.x][curr.y] == 0
+        ):
+            return False
+
+        path.append(curr)
+        maze[curr.x][curr.y] = 1
+
+        if curr == end:
+            return True
+
+        moves = map(Coordinate,
+                    (curr.x - 1, curr.x + 1, curr.x, curr.x),
+                    (curr.y, curr.y, curr.y - 1, curr.y + 1))
+
+        if any(map(dfs, moves)):
+            return True
+
+        del path[-1]
+        return False
+
+    path = []
+    dfs(start)
+    return path
 ```
 
 ## Explanation
 * BLANK
 
-## Code Dissection
+## Code Dissection - search_maze
+1. BLANK
+
+## Code Dissection - dfs
 1. BLANK
