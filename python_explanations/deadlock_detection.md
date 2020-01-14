@@ -20,10 +20,10 @@ Output: False
 ```python
 def is_deadlocked(graph):
     def has_cycle(curr):
-        if curr.color == GraphVertex.GRAY:
+        if curr.color == GraphVertex.GREY:
             return True
 
-        curr.color = GraphVertex.GRAY
+        curr.color = GraphVertex.GREY
 
         for nxt in curr.edges:
             if nxt.color != GraphVertex.BLACK and has_cycle(nxt):

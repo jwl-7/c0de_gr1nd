@@ -6,7 +6,7 @@ from test_framework.test_utils import enable_executor_hook
 
 class GraphVertex:
 
-    WHITE, GRAY, BLACK = range(3)
+    WHITE, GREY, BLACK = range(3)
 
     def __init__(self):
         self.color = GraphVertex.WHITE
@@ -15,10 +15,10 @@ class GraphVertex:
 
 def is_deadlocked(graph):
     def has_cycle(curr):
-        if curr.color == GraphVertex.GRAY:
+        if curr.color == GraphVertex.GREY:
             return True
 
-        curr.color = GraphVertex.GRAY
+        curr.color = GraphVertex.GREY
 
         for nxt in curr.edges:
             if nxt.color != GraphVertex.BLACK and has_cycle(nxt):
