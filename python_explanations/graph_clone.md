@@ -9,11 +9,22 @@ Output: [[0, 1], [1, 0], [1, 2], [2, 1], [2, 3], [3, 2]]
 
 ## Solution
 ```python
-BLANK
+def clone_graph(graph):
+    def dfs(vertex):
+        if vertex not in visited:
+            copy = visited[vertex] = GraphVertex(vertex.label)
+            copy.edges = map(dfs, vertex.edges)
+        return visited[vertex]
+
+    visited = {}
+    return dfs(graph)
 ```
 
 ## Explanation
 * BLANK
 
-## Code Dissection
+## Code Dissection - clone_graph
+1. BLANK
+
+## Code Dissection - dfs
 1. BLANK
