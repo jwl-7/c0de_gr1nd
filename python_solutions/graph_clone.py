@@ -5,6 +5,7 @@ from test_framework.test_failure import TestFailure
 
 
 class GraphVertex:
+
     def __init__(self, label):
         self.label = label
         self.edges = []
