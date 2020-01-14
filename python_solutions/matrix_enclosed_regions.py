@@ -4,12 +4,12 @@ from test_framework import generic_test
 def fill_surrounded_regions(board):
     m = len(board)
     n = len(board[0])
-    keep = [xy for k in range(m + n) for xy in ((0, k), (m - 1, k), (k, 0), (k, n - 1))]
-    while keep:
-        x, y = keep.pop()
+    boundary = [xy for k in range(m + n) for xy in ((0, k), (m - 1, k), (k, 0), (k, n - 1))]
+    while boundary:
+        x, y = boundary.pop()
         if 0 <= x < m and 0 <= y < n and board[x][y] == 'W':
             board[x][y] = 'X'
-            keep += (x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)
+            boundary += (x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)
     board[:] = [['B' if char != 'X' else 'W' for char in row] for row in board]
 
 
