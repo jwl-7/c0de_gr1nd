@@ -3,17 +3,17 @@ Given a 2D array filled with 'W's and 'B's, replace every 'W' in an enclosed reg
 
 ## Example
 ```
- Input: [['B', 'B', 'W'],
-         ['W', 'W', 'W'],
-         ['B', 'W', 'W'],
-         ['B', 'B', 'B'],
-         ['W', 'W', 'W']]
+ Input: [['B', 'B', 'B', 'B'],
+         ['B', 'W', 'W', 'B'],
+         ['B', 'W', 'W', 'B'],
+         ['W', 'B', 'B', 'B'],
+         ['B', 'B', 'W', 'B']]
 
-Output: [['B', 'B', 'W'],
-         ['W', 'W', 'W'],
-         ['B', 'W', 'W'],
-         ['B', 'B', 'B'],
-         ['W', 'W', 'W']]
+Output: [['B', 'B', 'B', 'B'],
+         ['B', 'B', 'B', 'B'],
+         ['B', 'B', 'B', 'B'],
+         ['W', 'B', 'B', 'B'],
+         ['B', 'B', 'W', 'B']]
 ```
 
 ## Solution
