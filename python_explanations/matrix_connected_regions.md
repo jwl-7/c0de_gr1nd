@@ -36,7 +36,26 @@ def flip_color(x, y, image):
 ```
 
 ## Explanation
-* BLANK
+* Flip the color at the start position, then try moving left, right, up, and down
+* Using a DFS style algorithm, we can travel along a path flipping adjacent entries using the recursive call stack
 
 ## Code Dissection
-1. BLANK
+1. Store the color of the starting position, then flip its color
+    ```python
+    color = image[x][y]
+    image[x][y] ^= 1
+    ```
+2. Define a set of coordinates for moving left, right, up, and down
+    ```python
+    moves = (x, y + 1), (x, y - 1), (x + 1, y), (x - 1, y)
+    ```
+3. Loop through the possible moves, checking if they are the same color as the starting point (_color_), and flip adjacent entries
+    ```python
+    for nxt_x, nxt_y in moves:
+        if (
+            0 <= nxt_x < len(image) and
+            0 <= nxt_y < len(image[nxt_x]) and
+            image[nxt_x][nxt_y] == color
+        ):
+            flip_color(nxt_x, nxt_y, image)
+    ```
