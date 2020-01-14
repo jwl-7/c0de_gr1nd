@@ -13,7 +13,11 @@ Given a maze represented by a binary matrix, determine if it is possible to navi
         start = [2, 2]
         end   = [1, 4]
 Output: [Coordinate(x=2, y=2), Coordinate(x=1, y=2), Coordinate(x=1, y=1),
-         Coordinate(x=2, y=1), Coordinate(x=3, y=1), Coordinate(x=4, y=1),Coordinate(x=5, y=1), Coordinate(x=6, y=1), Coordinate(x=6, y=2),Coordinate(x=5, y=2), Coordinate(x=4, y=2), Coordinate(x=3, y=2),Coordinate(x=3, y=3), Coordinate(x=2, y=3), Coordinate(x=1, y=3),Coordinate(x=1, y=4)]
+         Coordinate(x=2, y=1), Coordinate(x=3, y=1), Coordinate(x=4, y=1),
+         Coordinate(x=5, y=1), Coordinate(x=6, y=1), Coordinate(x=6, y=2),
+         Coordinate(x=5, y=2), Coordinate(x=4, y=2), Coordinate(x=3, y=2),
+         Coordinate(x=3, y=3), Coordinate(x=2, y=3), Coordinate(x=1, y=3),
+         Coordinate(x=1, y=4)]
 
 The maze can be navigated from start to end.
 
