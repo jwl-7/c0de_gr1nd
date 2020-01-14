@@ -116,7 +116,7 @@ def search_maze(maze, start, end):
     if any(map(dfs, moves)):
         return True
     ```
-7. Navigation failed, remove last coordinate in path and backtrack
+7. Navigation failed, remove last coordinate in _path_ and backtrack
     ```python
     del path[-1]
     return False
