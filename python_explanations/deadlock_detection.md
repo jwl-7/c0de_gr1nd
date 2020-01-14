@@ -9,7 +9,7 @@ Given a directed graph, determine whether or not it contains a cycle.
 Output: True
 ```
 
-<img src='drawio_diagrams/deadlock_detection2.svg' width='60%'>
+<img src='drawio_diagrams/deadlock_detection2.svg' width='50%'>
 
 ```
  Input: [[0, 1], [1, 2], [2, 3]]
