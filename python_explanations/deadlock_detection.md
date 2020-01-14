@@ -39,7 +39,14 @@ def is_deadlocked(graph):
 ```
 
 ## Explanation
-* BLANK
+* Detect a cycle in a graph by using DFS that keeps track of vertices via colors
+    * WHITE = vertex has not yet been visited (initial color)
+    * GREY = vertex has been visited
+    * BLACK = visited neighboring vertices and left the vertex
+* Traverse the graph:
+    * Process the vertex if color = WHITE
+    * Ignore the vertex if color = BLACK
+    * Graph contains cycle if color = GREY
 
 ## Code Dissection
 1. BLANK
