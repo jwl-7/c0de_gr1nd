@@ -1,5 +1,5 @@
 # Search a Maze
-BLANK
+Given a maze represented by a binary matrix, determine if it is possible to navigate from the given start coordinates to the given end coordinates. 1's represent closed walls, and 0's represent open paths. Return the path from start to end if navigation is possible.
 
 ## Examples
 ```
