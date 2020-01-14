@@ -21,10 +21,25 @@ def clone_graph(graph):
 ```
 
 ## Explanation
-* BLANK
+* Perform a DFS on the vertex _u_, using its list of neighbors to find vertices and a cache to keep track of visited ones
 
 ## Code Dissection - clone_graph
-1. BLANK
+1. Create an empty cache and run `dfs()`
+    ```python
+    visited = {}
+    return dfs(graph)
+    ```
 
 ## Code Dissection - dfs
-1. BLANK
+1. If the vertex is not in the cache, then add a copy of it
+    ```python
+    copy = visited[vertex] = GraphVertex(vertex.label)
+    ```
+2. Find the neighboring vertices
+    ```python
+    copy.edges = map(dfs, vertex.edges)
+    ```
+3. Return the copy of the vertex
+    ```python
+    return visited[vertex]
+    ```
