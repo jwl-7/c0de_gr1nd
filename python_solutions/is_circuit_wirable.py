@@ -1,3 +1,4 @@
+import collections
 import functools
 
 from test_framework import generic_test
@@ -5,14 +6,27 @@ from test_framework.test_utils import enable_executor_hook
 
 
 class GraphVertex:
+
     def __init__(self):
-        self.d = -1
+        self.color = -1
         self.edges = []
 
 
 def is_any_placement_feasible(graph):
-    # TODO - you fill in here.
-    return True
+    def bfs(s):
+        s.color = 0
+        q = collections.deque([s])
+        while q:
+            curr = q.popleft()
+            for v in curr.edges:
+                if v.color == -1:
+                    v.color = curr.color + 1
+                    q.append(v)
+                elif v.color == curr.color:
+                    return False
+        return True
+
+    return all(bfs(v) for v in graph if v.color == -1)
 
 
 @enable_executor_hook
