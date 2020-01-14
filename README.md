@@ -251,7 +251,7 @@ the pursuit of ameloriation as a programmer
 ## Graphs
 | # | Title | Solution | Time | Space |
 |---|-------|----------|------|-------|
-|18.1|[Search a Maze](./python_explanations/search_maze.md)|[Python](./python_solutions/search_maze.py)|_O(|V|+|E|)_|_O(|V|+|E|)_|
+|18.1|[Search a Maze](./python_explanations/search_maze.md)|[Python](./python_solutions/search_maze.py)|_O(\|V\|+\|E\|)_|_O(\|V\|+\|E\|)_|
 
 <!---
 |18.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
