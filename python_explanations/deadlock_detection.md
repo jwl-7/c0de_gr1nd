@@ -48,5 +48,33 @@ def is_deadlocked(graph):
     * Ignore the vertex if color = BLACK
     * Graph contains cycle if color = GREY
 
-## Code Dissection
-1. BLANK
+## Code Dissection - is_deadlocked
+1. Traverse the graph and look for a cycle
+    ```python
+    for vertex in graph:
+        if vertex.color == GraphVertex.WHITE and has_cycle(vertex):
+            return True
+    return False
+    ```
+
+## Code Dissection - has_cycle
+1. If we come across a grey vertex, then we have found a cycle (edge from grey vertex back to a grey vertex)
+    ```python
+    if curr.color == GraphVertex.GREY:
+        return True
+    ```
+2. Set the vertex color to GREY on visit
+    ```python
+    curr.color = GraphVertex.GREY
+    ```
+3. Traverse the neighbor vertices
+    ```python
+    for nxt in curr.edges:
+        if nxt.color != GraphVertex.BLACK and has_cycle(nxt):
+            return True
+    ```
+4. After we finish processing a vertex, set the color to BLACK
+    ```python
+    curr.color = GraphVertex.BLACK
+        return False
+    ```
