@@ -254,6 +254,7 @@ the pursuit of ameloriation as a programmer
 |18.1|[Search a Maze](./python_explanations/search_maze.md)|[Python](./python_solutions/search_maze.py)|_O(\|V\|+\|E\|)_|_O(\|V\|+\|E\|)_|
 |18.2|[Paint a Boolean Matrix](./python_explanations/matrix_connected_regions.md)|[Python](./python_solutions/matrix_connected_regions.py)|_O(\|V\|+\|E\|)_|_O(1)_|
 |18.3|[Compute Enclosed Regions](./python_explanations/matrix_enclosed_regions.md)|[Python](./python_solutions/matrix_enclosed_regions.py)|_O(mn)_|_O(m+n)_|
+|18.4|[Deadlock Detection](./python_explanations/deadlock_detection.md)|[Python](./python_solutions/deadlock_detection.py)|_O(\|V\|+\|E\|)_|_O(\|V\|)_|
 
 <!---
 |18.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
