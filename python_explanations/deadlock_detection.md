@@ -18,7 +18,24 @@ Output: False
 
 ## Solution
 ```python
-BLANK
+def is_deadlocked(graph):
+    def has_cycle(curr):
+        if curr.color == GraphVertex.GRAY:
+            return True
+
+        curr.color = GraphVertex.GRAY
+
+        for nxt in curr.edges:
+            if nxt.color != GraphVertex.BLACK and has_cycle(nxt):
+                return True
+
+        curr.color = GraphVertex.BLACK
+        return False
+
+    for vertex in graph:
+        if vertex.color == GraphVertex.WHITE and has_cycle(vertex):
+            return True
+    return False
 ```
 
 ## Explanation
