@@ -256,6 +256,7 @@ the pursuit of ameloriation as a programmer
 |18.3|[Compute Enclosed Regions](./python_explanations/matrix_enclosed_regions.md)|[Python](./python_solutions/matrix_enclosed_regions.py)|_O(mn)_|_O(m+n)_|
 |18.4|[Deadlock Detection](./python_explanations/deadlock_detection.md)|[Python](./python_solutions/deadlock_detection.py)|_O(\|V\|+\|E\|)_|_O(\|V\|)_|
 |18.5|[Clone a Graph](./python_explanations/graph_clone.md)|[Python](./python_solutions/graph_clone.py)|_O(\|V\|+\|E\|)_|_O(\|V\|+\|E\|)_|
+|18.6|[Making Wired Connections](./python_explanations/is_circuit_wirable.md)|[Python](./python_solutions/is_circuit_wirable.py)|_O(\|V\|+\|E\|)_|_O(\|V\|)_|
 
 <!---
 |18.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
