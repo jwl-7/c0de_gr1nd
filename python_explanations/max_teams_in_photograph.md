@@ -12,7 +12,18 @@ Output: 5
 
 ## Solution
 ```python
-BLANK
+def find_largest_number_teams(graph):
+    def dfs(s):
+        s.max_distance = max(
+            ((vertex.max_distance
+                if vertex.max_distance != 0
+                else dfs(vertex)) + 1
+                for vertex in s.edges),
+            default=1
+        )
+        return s.max_distance
+
+    return max(dfs(v) for v in graph if v.max_distance == 0)
 ```
 
 ## Explanation

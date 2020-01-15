@@ -5,15 +5,24 @@ from test_framework.test_utils import enable_executor_hook
 
 
 class GraphVertex:
+
     def __init__(self):
         self.edges = []
-        # Set max_distance = 0 to indicate unvisitied vertex.
         self.max_distance = 0
 
 
 def find_largest_number_teams(graph):
-    # TODO - you fill in here.
-    return 0
+    def dfs(s):
+        s.max_distance = max(
+            ((vertex.max_distance
+                if vertex.max_distance != 0
+                else dfs(vertex)) + 1
+                for vertex in s.edges),
+            default=1
+        )
+        return s.max_distance
+
+    return max(dfs(v) for v in graph if v.max_distance == 0)
 
 
 @enable_executor_hook
