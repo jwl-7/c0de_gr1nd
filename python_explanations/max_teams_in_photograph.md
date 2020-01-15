@@ -7,7 +7,7 @@ Given a set of teams and the heights of their players, determine the maximum num
 Output: 2
 
  Input: [[0, 1], [3, 4], [0, 2], [0, 4], [2, 4], [2, 3], [1, 3], [1, 4], [1, 2], [0, 3]]
-Outupt: 5
+Output: 5
 ```
 
 ## Solution
@@ -16,7 +16,8 @@ BLANK
 ```
 
 ## Explanation
-* BLANK
+* The goal is to find a sequence of teams where a team can stand behind the one before it
+* Form a DAG (Directed Acyclic Graph) with topological sorting, and find the longest valid path
 
 ## Code Dissection
 1. BLANK
