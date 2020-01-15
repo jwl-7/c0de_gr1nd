@@ -258,10 +258,7 @@ the pursuit of ameloriation as a programmer
 |18.5|[Clone a Graph](./python_explanations/graph_clone.md)|[Python](./python_solutions/graph_clone.py)|_O(\|V\|+\|E\|)_|_O(\|V\|+\|E\|)_|
 |18.6|[Making Wired Connections](./python_explanations/is_circuit_wirable.md)|[Python](./python_solutions/is_circuit_wirable.py)|_O(\|V\|+\|E\|)_|_O(\|V\|)_|
 |18.7|[Transform One String to Another](./python_explanations/string_transformability.md)|[Python](./python_solutions/string_transformability.py)|_O(nd)_|_O(d)_|
-
-<!---
-|18.BLANK|[BLANK](./python_explanations/BLANK.md)|[Python](./python_solutions/BLANK.py)|_O(BLANK)_|_O(BLANK)_|
--->
+|18.8|[Team Photo Day&mdash;2](./python_explanations/max_teams_in_photograph.md)|[Python](./python_solutions/max_teams_in_photograph.py)|_O(\|V\|+\|E\|)_|_O(\|E\|)_|
 
 ## Random Code &mdash; Not from EPI
 | Title | Solution | Time | Space |
