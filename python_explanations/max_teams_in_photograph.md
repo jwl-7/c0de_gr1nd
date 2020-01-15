@@ -30,5 +30,21 @@ def find_largest_number_teams(graph):
 * The goal is to find a sequence of teams where a team can stand behind the one before it
 * Form a DAG (Directed Acyclic Graph) with topological sorting, and find the longest valid path
 
-## Code Dissection
-1. BLANK
+## Code Dissection - find_largest_number_teams
+1. Run `dfs()` on all the vertices to find the longest path
+    ```python
+    return max(dfs(v) for v in graph if v.max_distance == 0)
+    ```
+
+## Code Dissection - dfs
+1. From the starting vertex (_s_), find its neighbors and compute the longest path
+    ```python
+    s.max_distance = max(
+        ((vertex.max_distance
+            if vertex.max_distance != 0
+            else dfs(vertex)) + 1
+            for vertex in s.edges),
+        default=1
+    )
+    return s.max_distance
+    ```
