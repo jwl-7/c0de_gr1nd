@@ -1,20 +1,13 @@
 # Team Photo Day&mdash;2
-Given two teams and the heights of the players in the teams, determine if it's possible to get everyone in the photo.
+Given a set of teams and the heights of their players, determine the maximum number of teams that can be photographed at the same time with everyone in the photo.
 
 ## Examples
 ```
- Input: Team 0 - [1, 5, 4]
-        Team 1 - [2, 3, 4]
-Output: False
-Conclusion: Team 0 cannot be placed in front of Team 1
-            Team 1 cannot be placed in front of Team 0
+ Input: [[2, 7], [3, 6], [3, 4], [1, 5]]
+Output: 2
 
-
- Input: Team 0 - [2, 3, 4]
-        Team 1 - [0, 3, 2]
-Output: True
-Conclusion: Team 0 cannot be placed in front of Team 1
-            Team 1 can be placed in front of Team 0
+ Input: [[0, 1], [3, 4], [0, 2], [0, 4], [2, 4], [2, 3], [1, 3], [1, 4], [1, 2], [0, 3]]
+Outupt: 5
 ```
 
 ## Solution
