@@ -1,9 +1,17 @@
 # Making Wired Connections
 BLANK
 
-## Examples
+## Example
 ```
-BLANK
+0----1
+|    |
+|    |
+3----2
+
+ Input: [[0, 2], [1, 3], [3, 1], [2, 0]]
+Output: True
+
+The vertices can be divided into the two groups: {0, 2} and {1, 3}
 ```
 
 ## Solution
