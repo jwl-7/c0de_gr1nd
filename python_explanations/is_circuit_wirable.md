@@ -1,5 +1,5 @@
 # Making Wired Connections
-BLANK
+Given a set of pins and a set of wires, determine if the pins can be placed on the left and right side of the PCB such that each wire is between each side.
 
 ## Example
 ```
