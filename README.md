@@ -1,5 +1,5 @@
 # c0de_gr1nd
-<img src="https://i.imgur.com/2GJnHcq.gif" width="420" height="302">
+<img src="https://github.com/user-attachments/assets/8937a532-7d7b-428a-8dd8-2f0cf50a5691" width="420" height="302">
 
 ## Introduction
 * This repository features my solutions and explanations to the problems presented in </br>
