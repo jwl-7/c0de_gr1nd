@@ -281,6 +281,3 @@
 * All contributers to the [EPI Judge](https://github.com/adnanaziz/EPIJudge)
 * [Brandon Hough](https://github.com/insomniac94) - Incubate distributed infomediaries
 * [Cory Walker](https://github.com/corywalker) - Mesh distributed mindshare
-
-## License
-This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
